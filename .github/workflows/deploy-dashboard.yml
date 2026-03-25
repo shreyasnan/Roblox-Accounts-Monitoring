@@ -1,0 +1,50 @@
+name: Rebuild & Deploy Dashboard
+
+on:
+  schedule:
+    # Runs daily at 6:00 AM UTC — adjust to your timezone
+    # For US Eastern (UTC-5): use "0 11 * * *" for 6am ET
+    # For US Pacific (UTC-8): use "0 14 * * *" for 6am PT
+    - cron: "0 11 * * *"
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate real listing data
+        run: python3 build_real_data.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
