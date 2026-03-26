@@ -167,13 +167,31 @@ class BrowserManager:
                 self._pw = sync_playwright().start()
                 self._browser = self._pw.chromium.launch(
                     headless=True,
-                    args=["--disable-blink-features=AutomationControlled"],
+                    args=[
+                        "--disable-blink-features=AutomationControlled",
+                        "--disable-features=IsolateOrigins,site-per-process",
+                        "--no-sandbox",
+                    ],
                 )
                 self._context = self._browser.new_context(
                     user_agent=random_ua(),
                     viewport={"width": 1920, "height": 1080},
                     locale="en-US",
+                    java_script_enabled=True,
+                    extra_http_headers={
+                        "Accept-Language": "en-US,en;q=0.9",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                        "Sec-Fetch-Dest": "document",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-User": "?1",
+                        "Upgrade-Insecure-Requests": "1",
+                    },
                 )
+                # Remove webdriver flag to appear more like a real browser
+                self._context.add_init_script("""
+                    Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+                """)
                 self._context.set_default_timeout(30_000)
                 self.using_playwright = True
                 log.info("Using Playwright (headless Chromium)")
@@ -200,12 +218,17 @@ class BrowserManager:
     def _get_pw(self, url, wait_selector, scroll):
         page = self._context.new_page()
         try:
-            page.goto(url, wait_until="domcontentloaded")
+            # Use networkidle for sites that load content dynamically
+            wait_until = "networkidle" if "ebay.com" in url else "domcontentloaded"
+            page.goto(url, wait_until=wait_until, timeout=30_000)
             if wait_selector:
                 try:
-                    page.wait_for_selector(wait_selector, timeout=15_000)
+                    page.wait_for_selector(wait_selector, timeout=20_000)
                 except PwTimeout:
-                    log.debug(f"  Selector '{wait_selector}' not found, continuing anyway")
+                    # Log what we actually got for debugging
+                    found_items = page.query_selector_all("li.s-card, .s-item, li")
+                    log.debug(f"  Selector '{wait_selector}' not found after 20s. "
+                              f"Page has {len(found_items)} <li> elements. URL: {url[:80]}")
             if scroll:
                 self._scroll_page(page)
             return page.content()
@@ -1150,6 +1173,16 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
 
     scraped = {}
 
+    def _scrape_source(scraper, game, source_name, fallback_url):
+        """Scrape one source for one game — used by ThreadPoolExecutor."""
+        try:
+            return source_name, scraper.scrape_game(game)
+        except Exception as e:
+            log.error(f"  {source_name} failed for {game}: {e}")
+            return source_name, {"total_on_site": 0, "search_url": fallback_url, "listings": []}
+
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
     for game in games:
         log.info(f"\n{'='*40}")
         log.info(f"Scraping: {game}")
@@ -1157,28 +1190,20 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
 
         scraped[game] = {}
 
-        # Eldorado.gg
-        try:
-            scraped[game]["Eldorado.gg"] = eldorado.scrape_game(game)
-        except Exception as e:
-            log.error(f"  Eldorado.gg failed for {game}: {e}")
-            scraped[game]["Eldorado.gg"] = {"total_on_site": 0, "search_url": ELDORADO_URLS.get(game, ""), "listings": []}
-        polite_delay()
+        # Run all 3 sources in parallel for each game
+        with ThreadPoolExecutor(max_workers=3) as executor:
+            futures = {
+                executor.submit(_scrape_source, eldorado, game, "Eldorado.gg",
+                                ELDORADO_URLS.get(game, "")),
+                executor.submit(_scrape_source, u7buy, game, "U7Buy",
+                                U7BUY_URLS.get(game, "")),
+                executor.submit(_scrape_source, ebay, game, "eBay",
+                                f"https://www.ebay.com/sch/i.html?_nkw={EBAY_SEARCH_TERMS.get(game, '')}"),
+            }
+            for future in as_completed(futures):
+                source_name, result = future.result()
+                scraped[game][source_name] = result
 
-        # U7Buy
-        try:
-            scraped[game]["U7Buy"] = u7buy.scrape_game(game)
-        except Exception as e:
-            log.error(f"  U7Buy failed for {game}: {e}")
-            scraped[game]["U7Buy"] = {"total_on_site": 0, "search_url": U7BUY_URLS.get(game, ""), "listings": []}
-        polite_delay()
-
-        # eBay
-        try:
-            scraped[game]["eBay"] = ebay.scrape_game(game)
-        except Exception as e:
-            log.error(f"  eBay failed for {game}: {e}")
-            scraped[game]["eBay"] = {"total_on_site": 0, "search_url": f"https://www.ebay.com/sch/i.html?_nkw={EBAY_SEARCH_TERMS.get(game, '')}", "listings": []}
         polite_delay()
 
     browser.stop()
