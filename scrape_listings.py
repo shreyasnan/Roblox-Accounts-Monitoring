@@ -246,10 +246,10 @@ class EldoradoScraper:
     NAME = "Eldorado.gg"
 
     # CSS selectors (these may need updating if Eldorado changes their layout)
-    LISTING_CARD = "a.offer-card, div.offer-card, [class*='OfferCard'], [class*='offer-item'], tr.offer-row"
-    TITLE_SEL = "[class*='title'], [class*='name'], h3, h4, .offer-title"
-    PRICE_SEL = "[class*='price'], [class*='Price'], .offer-price"
-    SELLER_SEL = "[class*='seller'], [class*='Seller'], .seller-name"
+    LISTING_CARD = "a[href*='/oa/'], a.offer-card, div.offer-card, [class*='OfferCard'], [class*='offer-item'], eld-acc-offer-item"
+    TITLE_SEL = ".offer-title, [class*='title'], [class*='name'], h3, h4"
+    PRICE_SEL = "eld-offer-price, eld-offer-price strong, [class*='price'], [class*='Price'], .offer-price"
+    SELLER_SEL = ".username, [class*='seller'], [class*='Seller'], .seller-name"
     RATING_SEL = "[class*='rating'], [class*='Rating'], .seller-rating"
     NEXT_PAGE = "a[class*='next'], button[class*='next'], [aria-label='Next'], a[rel='next']"
 
@@ -667,9 +667,53 @@ class EbayScraper:
 
     NAME = "eBay"
 
+    # Keywords that indicate a listing is NOT an actual game account
+    JUNK_KEYWORDS = [
+        "gift card", "giftcard", "robux card", "v-bucks card", "vbucks card",
+        "toy", "figure", "figurine", "plush", "stuffed", "action figure",
+        "t-shirt", "tshirt", "shirt", "hoodie", "hat", "cap", "clothing",
+        "phone case", "case for", "sticker", "decal", "poster", "wall art",
+        "book", "guide", "manual", "strategy guide", "handbook",
+        "lego", "board game", "card game", "trading card", "pin",
+        "mug", "cup", "keychain", "lanyard", "backpack", "bag",
+        "mouse pad", "mousepad", "controller skin", "vinyl",
+        "birthday", "party supplies", "invitation", "cake topper",
+        "costume", "cosplay", "mask", "wig",
+        "coloring book", "notebook", "journal", "diary",
+        "blanket", "pillow", "bedding", "curtain",
+        "watch", "bracelet", "necklace", "jewelry",
+        "funko", "pop!", "blind bag", "mystery box toy",
+        "dvd", "blu-ray", "soundtrack", "cd",
+    ]
+
+    # Keywords that indicate a listing IS likely an account or in-game item
+    ACCOUNT_KEYWORDS = [
+        "account", "acc ", "acct", "login", "email access", "full access",
+        "stacked", "og ", "rare", "skins", "level ", "lvl ",
+        "inventory", "items", "robux", "v-bucks", "vbucks",
+        "rank", "limited", "limiteds", "cape", "hypixel",
+        "prime", "game library", "steam level", "csgo", "cs2",
+        "age verified", "voice chat", "join date", "creation date",
+    ]
+
     def __init__(self, browser: BrowserManager, max_pages: int = 0):
         self.browser = browser
         self.max_pages = max_pages
+
+    def _is_relevant_listing(self, title: str) -> bool:
+        """Filter out non-account listings (merch, gift cards, toys, etc.)."""
+        title_lower = title.lower()
+
+        # Reject if it matches junk keywords
+        if any(kw in title_lower for kw in self.JUNK_KEYWORDS):
+            return False
+
+        # Accept if it matches account keywords
+        if any(kw in title_lower for kw in self.ACCOUNT_KEYWORDS):
+            return True
+
+        # For ambiguous titles, accept by default (let categorize_listing sort them)
+        return True
 
     def scrape_game(self, game: str) -> dict:
         search_term = EBAY_SEARCH_TERMS.get(game)
@@ -713,8 +757,23 @@ class EbayScraper:
             page_num += 1
             polite_delay()
 
+        # Use filtered count rather than eBay's raw total, since the raw total
+        # includes irrelevant results (merch, gift cards, toys, etc.)
+        filtered_total = len(all_listings)
+        if total_on_site and filtered_total:
+            # Estimate true account count: scale the site total by the
+            # ratio of relevant listings we found on the pages we scraped
+            pages_scraped_raw = page_num * 60  # approximate items seen before filtering
+            relevance_ratio = filtered_total / max(pages_scraped_raw, filtered_total)
+            estimated_total = max(filtered_total, int(total_on_site * relevance_ratio))
+        else:
+            estimated_total = filtered_total
+
+        log.info(f"    eBay {game}: {filtered_total} relevant listings scraped "
+                 f"(raw site total: {total_on_site}, estimated relevant: {estimated_total})")
+
         return {
-            "total_on_site": total_on_site or len(all_listings),
+            "total_on_site": estimated_total,
             "search_url": f"https://www.ebay.com/sch/i.html?_nkw={search_term}",
             "listings": all_listings,
         }
@@ -726,6 +785,12 @@ class EbayScraper:
         return f"{base_url}&_pgn={page}&_skc={offset}"
 
     def _extract_total(self, soup: BeautifulSoup) -> int:
+        # New eBay: plain h1/h2 with "X results for ..."
+        for heading in soup.select("h1, h2"):
+            match = re.search(r"([\d,]+)\s*(?:results?|items?)", heading.get_text(), re.IGNORECASE)
+            if match:
+                return int(match.group(1).replace(",", ""))
+        # Legacy selector
         results_heading = soup.select_one("h1.srp-controls__count-heading, .srp-controls__count-heading")
         if results_heading:
             match = re.search(r"([\d,]+)", results_heading.get_text())
@@ -736,31 +801,81 @@ class EbayScraper:
     def _parse_listings(self, soup: BeautifulSoup) -> list:
         listings = []
 
-        # eBay uses .s-item for search result items
-        items = soup.select(".s-item")
+        # New eBay (2025+): li.s-card  |  Legacy: li.s-item
+        items = soup.select("li.s-card")
+        if items:
+            return self._parse_new_cards(items)
 
+        # Fallback to legacy .s-item selectors
+        items = soup.select(".s-item")
         for item in items:
             try:
-                # Skip the first "result" which is often a header/placeholder
                 title_el = item.select_one(".s-item__title span, .s-item__title")
                 title = safe_text(title_el)
                 if not title or title.lower() in ("shop on ebay", "results matching fewer words"):
                     continue
+                if not self._is_relevant_listing(title):
+                    log.debug(f"    Skipping irrelevant eBay listing: {title[:50]}")
+                    continue
 
-                # Price
                 price_el = item.select_one(".s-item__price")
                 price_text = safe_text(price_el)
-                # Handle range prices like "$5.00 to $10.00" — take the lower
+                if " to " in price_text:
+                    price_text = price_text.split(" to ")[0]
+                price = parse_price(price_text)
+
+                link = item.select_one("a.s-item__link")
+                url = link["href"] if link and link.get("href") else ""
+                if url and "?" in url:
+                    url = url.split("?")[0]
+
+                item_id = ""
+                id_match = re.search(r"/itm/(\d+)", url)
+                if id_match:
+                    item_id = id_match.group(1)
+
+                shipping_el = item.select_one(".s-item__shipping, .s-item__freeXDays")
+                shipping = safe_text(shipping_el)
+
+                seller_el = item.select_one(".s-item__seller-info, .s-item__seller-info-text")
+                seller = safe_text(seller_el)
+
+                listings.append({
+                    "title": title, "price": price, "itemId": item_id,
+                    "url": url, "shipping": shipping, "seller": seller,
+                })
+            except Exception as e:
+                log.debug(f"    Error parsing eBay item: {e}")
+                continue
+        return listings
+
+    def _parse_new_cards(self, cards) -> list:
+        """Parse eBay's new (2025+) s-card layout."""
+        listings = []
+        for card in cards:
+            try:
+                # Title
+                title_link = card.select_one("a.s-card__link")
+                title = safe_text(title_link)
+                if not title or title.lower() in ("shop on ebay", "results matching fewer words"):
+                    continue
+                if not self._is_relevant_listing(title):
+                    log.debug(f"    Skipping irrelevant eBay listing: {title[:50]}")
+                    continue
+
+                # Price — dedicated .s-card__price element
+                price_el = card.select_one(".s-card__price")
+                price_text = safe_text(price_el)
                 if " to " in price_text:
                     price_text = price_text.split(" to ")[0]
                 price = parse_price(price_text)
 
                 # URL
-                link = item.select_one("a.s-item__link")
-                url = link["href"] if link and link.get("href") else ""
-                # Clean eBay tracking params
-                if url and "?" in url:
-                    url = url.split("?")[0]
+                url = ""
+                if title_link and title_link.get("href"):
+                    url = title_link["href"]
+                    if url and "?" in url:
+                        url = url.split("?")[0]
 
                 # Item ID from URL
                 item_id = ""
@@ -768,30 +883,41 @@ class EbayScraper:
                 if id_match:
                     item_id = id_match.group(1)
 
-                # Shipping
-                shipping_el = item.select_one(".s-item__shipping, .s-item__freeXDays")
-                shipping = safe_text(shipping_el)
+                # Shipping — look in attribute rows
+                shipping = ""
+                for row in card.select(".s-card__attribute-row"):
+                    text = safe_text(row).lower()
+                    if "delivery" in text or "shipping" in text or "free" in text:
+                        shipping = safe_text(row)
+                        break
 
-                # Seller info (if visible)
-                seller_el = item.select_one(".s-item__seller-info, .s-item__seller-info-text")
-                seller = safe_text(seller_el)
+                # Seller — in secondary attributes, e.g. "hpmarket 98.2% positive (3K)"
+                seller = ""
+                secondary = card.select_one(".su-card-container__attributes__secondary")
+                if secondary:
+                    for row in secondary.select(".s-card__attribute-row"):
+                        text = safe_text(row)
+                        if "positive" in text.lower() or "%" in text:
+                            # Extract seller name (before the percentage)
+                            parts = re.split(r"\s+\d", text, maxsplit=1)
+                            seller = parts[0].strip() if parts else text
+                            break
 
                 listings.append({
-                    "title": title,
-                    "price": price,
-                    "itemId": item_id,
-                    "url": url,
-                    "shipping": shipping,
-                    "seller": seller,
+                    "title": title, "price": price, "itemId": item_id,
+                    "url": url, "shipping": shipping, "seller": seller,
                 })
             except Exception as e:
-                log.debug(f"    Error parsing eBay item: {e}")
+                log.debug(f"    Error parsing eBay s-card: {e}")
                 continue
-
         return listings
 
     def _has_next_page(self, soup: BeautifulSoup) -> bool:
-        next_btn = soup.select_one("a.pagination__next, a[aria-label='Go to next search page']")
+        # New eBay + legacy selectors
+        next_btn = soup.select_one(
+            "a[aria-label*='next' i], a[aria-label*='Next'], "
+            "a.pagination__next, a[aria-label='Go to next search page']"
+        )
         return next_btn is not None and not next_btn.get("disabled")
 
 

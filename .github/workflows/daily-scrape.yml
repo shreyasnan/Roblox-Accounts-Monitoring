@@ -50,8 +50,8 @@ jobs:
               html = f.read()
           replacement = 'const dashboardData = ' + data + ';'
           html = re.sub(
-              r'const dashboardData = \{.*?\n\};',
-              lambda m: replacement,
+              r'const dashboardData = \{.*?\n\};\n\n// Platform colors',
+              lambda m: replacement + '\n\n// Platform colors',
               html,
               count=1,
               flags=re.DOTALL
