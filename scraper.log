@@ -502,3 +502,967 @@ fatal: empty ident name (for <runner@runnervm46oaq.1g4t3qgps21unjxaf3d34wvqdb.ex
 2026-03-26 06:43:31,089 [INFO]   Items / Currency: 126 listings
 2026-03-26 06:43:31,089 [INFO]   Age Verified: 2 listings
 2026-03-26 06:43:31,089 [INFO]   General: 70 listings
+2026-03-26 06:50:34,788 [INFO] ============================================================
+2026-03-26 06:50:34,788 [INFO] Scraper started at 2026-03-26T06:50:34.788778
+2026-03-26 06:50:34,788 [INFO] Games: Roblox, Fortnite, Minecraft, Steam
+2026-03-26 06:50:34,788 [INFO] Max pages per source: unlimited
+2026-03-26 06:50:34,788 [INFO] ============================================================
+2026-03-26 06:50:34,789 [DEBUG] Using selector: EpollSelector
+2026-03-26 06:50:36,699 [INFO] Using Playwright (headless Chromium)
+2026-03-26 06:50:36,702 [INFO] 
+========================================
+2026-03-26 06:50:36,702 [INFO] Scraping: Roblox
+2026-03-26 06:50:36,702 [INFO] ========================================
+2026-03-26 06:50:36,703 [INFO]   [Eldorado.gg] Scraping Roblox — https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 06:50:36,703 [INFO]     Page 1: https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 06:50:36,703 [INFO]   [U7Buy] Scraping Roblox — https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 06:50:36,705 [INFO]   [eBay] Scraping Roblox — https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 06:50:36,706 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 06:50:36,708 [DEBUG] Starting new HTTPS connection (1): www.u7buy.com:443
+2026-03-26 06:50:36,754 [WARNING]   Attempt 1/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d51dc0 (otid=0x7f89f3d92b80) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:36,755 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d65700 (otid=0x7f89f3d93ed0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:37,158 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 06:50:37,159 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 06:50:37,159 [INFO]     Page 1: https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 06:50:37,160 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/roblox/roblox-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f770f2c0 (otid=0x7f89f3d93d80) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:39,005 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d65700 (otid=0x7f89f3d93ed0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:39,023 [WARNING]   Attempt 2/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d51dc0 (otid=0x7f89f3d92b80) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:40,420 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/roblox/roblox-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f770f2c0 (otid=0x7f89f3d93d80) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:40,559 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d65700 (otid=0x7f89f3d93ed0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:41,166 [WARNING]   Attempt 3/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d51dc0 (otid=0x7f89f3d92b80) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:43,576 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 06:50:43,681 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/roblox/roblox-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f770f2c0 (otid=0x7f89f3d93d80) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:43,706 [ERROR]   All 3 attempts failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 06:50:43,706 [INFO]     eBay Roblox: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-26 06:50:46,565 [ERROR]   All 3 attempts failed for https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 06:50:49,927 [INFO] 
+========================================
+2026-03-26 06:50:49,928 [INFO] Scraping: Fortnite
+2026-03-26 06:50:49,928 [INFO] ========================================
+2026-03-26 06:50:49,928 [INFO]   [Eldorado.gg] Scraping Fortnite — https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 06:50:49,928 [INFO]     Page 1: https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 06:50:49,929 [INFO]   [U7Buy] Scraping Fortnite — https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 06:50:49,931 [INFO]   [eBay] Scraping Fortnite — https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 06:50:49,932 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 06:50:49,932 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7ecc0 (otid=0x7f89f3d928b0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:49,933 [WARNING]   Attempt 1/3 failed for https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7e040 (otid=0x7f89f3d92460) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:50,105 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 06:50:50,106 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 06:50:50,106 [INFO]     Page 1: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 06:50:50,107 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/fortnite/fortnite-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7cd80 (otid=0x7f89f3d92670) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:51,697 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7ecc0 (otid=0x7f89f3d928b0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:53,153 [WARNING]   Attempt 2/3 failed for https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7e040 (otid=0x7f89f3d92460) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:53,379 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/fortnite/fortnite-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7cd80 (otid=0x7f89f3d92670) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:54,085 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7ecc0 (otid=0x7f89f3d928b0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:55,614 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/fortnite/fortnite-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7cd80 (otid=0x7f89f3d92670) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:56,110 [WARNING]   Attempt 3/3 failed for https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3d7e040 (otid=0x7f89f3d92460) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:50:57,190 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 06:50:57,569 [ERROR]   All 3 attempts failed for https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 06:50:57,653 [ERROR]   All 3 attempts failed for https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 06:50:57,653 [INFO]     eBay Fortnite: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-26 06:51:00,526 [INFO] 
+========================================
+2026-03-26 06:51:00,526 [INFO] Scraping: Minecraft
+2026-03-26 06:51:00,526 [INFO] ========================================
+2026-03-26 06:51:00,526 [INFO]   [Eldorado.gg] Scraping Minecraft — https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 06:51:00,527 [INFO]   [U7Buy] Scraping Minecraft — https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 06:51:00,527 [INFO]     Page 1: https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 06:51:00,527 [INFO]   [eBay] Scraping Minecraft — https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 06:51:00,530 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 06:51:00,530 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3dbba40 (otid=0x7f89f3d91d10) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:00,531 [WARNING]   Attempt 1/3 failed for https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de0340 (otid=0x7f89f3d91c50) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:00,690 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 06:51:00,691 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 06:51:00,691 [INFO]     Page 1: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 06:51:00,692 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/minecraft/minecraft-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3dba840 (otid=0x7f89f3d92970) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:02,098 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3dbba40 (otid=0x7f89f3d91d10) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:02,549 [WARNING]   Attempt 2/3 failed for https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de0340 (otid=0x7f89f3d91c50) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:04,034 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3dbba40 (otid=0x7f89f3d91d10) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:04,162 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/minecraft/minecraft-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3dba840 (otid=0x7f89f3d92970) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:04,640 [WARNING]   Attempt 3/3 failed for https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de0340 (otid=0x7f89f3d91c50) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:06,653 [ERROR]   All 3 attempts failed for https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 06:51:06,653 [INFO]     eBay Minecraft: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-26 06:51:06,917 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 06:51:07,591 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/minecraft/minecraft-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3dba840 (otid=0x7f89f3d92970) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:10,127 [ERROR]   All 3 attempts failed for https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 06:51:12,436 [INFO] 
+========================================
+2026-03-26 06:51:12,436 [INFO] Scraping: Steam
+2026-03-26 06:51:12,436 [INFO] ========================================
+2026-03-26 06:51:12,437 [INFO]   [Eldorado.gg] Scraping Steam — https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 06:51:12,437 [INFO]     Page 1: https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 06:51:12,437 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de2ec0 (otid=0x7f89f3d916e0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:12,438 [INFO]   [U7Buy] Scraping Steam — https://www.u7buy.com/steam/steam-accounts
+2026-03-26 06:51:12,439 [INFO]   [eBay] Scraping Steam — https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 06:51:12,439 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 06:51:12,440 [WARNING]   Attempt 1/3 failed for https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3df0dc0 (otid=0x7f89f3d91380) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:12,686 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 06:51:12,687 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 06:51:12,687 [INFO]     Page 1: https://www.u7buy.com/steam/steam-accounts
+2026-03-26 06:51:12,688 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/steam/steam-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de3d80 (otid=0x7f89f3d91590) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:14,570 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/steam/steam-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de3d80 (otid=0x7f89f3d91590) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:15,027 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de2ec0 (otid=0x7f89f3d916e0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:15,816 [WARNING]   Attempt 2/3 failed for https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3df0dc0 (otid=0x7f89f3d91380) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:16,537 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/steam/steam-accounts: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de3d80 (otid=0x7f89f3d91590) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:17,209 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3de2ec0 (otid=0x7f89f3d916e0) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:17,929 [WARNING]   Attempt 3/3 failed for https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x7f89f3df0dc0 (otid=0x7f89f3d91380) current active started main>
+	Expected: <greenlet.greenlet object at 0x7f89f55ab8c0 (otid=0x7f89f55da6d0) suspended active started main>
+2026-03-26 06:51:19,710 [ERROR]   All 3 attempts failed for https://www.u7buy.com/steam/steam-accounts
+2026-03-26 06:51:19,729 [ERROR]   All 3 attempts failed for https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 06:51:19,729 [INFO]     eBay Steam: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-26 06:51:19,737 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 06:51:21,849 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,850 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,853 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,855 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,856 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,862 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,863 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,867 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,868 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,870 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,872 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,873 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,875 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,876 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,880 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,881 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,882 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,885 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,886 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,888 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,889 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,892 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,895 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,897 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,899 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,899 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,900 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,904 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,904 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,907 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,909 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,911 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,914 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,915 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,915 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,916 [ERROR] Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...been closed')>) at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py:111>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: cannot switch to a different thread (which happens to have exited)
+2026-03-26 06:51:21,978 [ERROR] Git push failed: Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <runner@runnervm46oaq.j0dt1v4j3kvu3apyzpie0zbfdh.ex.internal.cloudapp.net>) not allowed
+
+2026-03-26 06:51:21,978 [INFO] 
+============================================================
+2026-03-26 06:51:21,978 [INFO] SCRAPE COMPLETE
+2026-03-26 06:51:21,978 [INFO] ============================================================
+2026-03-26 06:51:21,978 [INFO] Total listings found:   0
+2026-03-26 06:51:21,978 [INFO] Total listings scraped: 0
+2026-03-26 06:51:21,979 [INFO] Output: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/dashboard_data.json
+2026-03-26 06:51:21,979 [INFO] Backup: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/scrape_history/dashboard_data_20260326_065121.json
+2026-03-26 06:51:21,979 [INFO] 
+2026-03-26 06:51:21,979 [INFO]   Roblox: 0 total | avg $0
+2026-03-26 06:51:21,979 [INFO]   Fortnite: 0 total | avg $0
+2026-03-26 06:51:21,979 [INFO]   Minecraft: 0 total | avg $0
+2026-03-26 06:51:21,979 [INFO]   Steam: 0 total | avg $0
+2026-03-26 06:51:21,979 [INFO] 
+2026-03-26 06:51:21,991 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,992 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,992 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,992 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,993 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,993 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,993 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,994 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,994 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-23' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,994 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-15' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,995 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,995 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,995 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,996 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,996 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-20' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,996 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,997 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,997 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-32' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,997 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-24' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,998 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-25' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,998 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-26' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,999 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-27' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,999 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:21,999 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-29' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,000 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-30' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,000 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-31' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,000 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-33' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,001 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,001 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-35' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,001 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-36' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,002 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-37' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,002 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-38' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,002 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-39' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,003 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-40' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,003 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-41' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-26 06:51:22,003 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-42' coro=<BrowserContext.new_page() done, defined at /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py:328> exception=TargetClosedError('BrowserContext.new_page: Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_browser_context.py", line 331, in new_page
+    return from_channel(await self._channel.send("newPage", None))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserContext.new_page: Target page, context or browser has been closed
