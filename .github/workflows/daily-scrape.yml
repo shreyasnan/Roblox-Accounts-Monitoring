@@ -55,7 +55,7 @@ jobs:
           old_html = html
           html = re.sub(
               r'const dashboardData = .*?;\s*\n+\s*// Platform colors',
-              replacement + '\n\n// Platform colors',
+              lambda m: replacement + '\n\n// Platform colors',
               html,
               count=1,
               flags=re.DOTALL
