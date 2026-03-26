@@ -1245,6 +1245,17 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
     with open(backup_file, "w", encoding="utf-8") as f:
         json.dump(dashboard, f, indent=2, ensure_ascii=False)
 
+    # Save to SQLite database for historical analysis
+    try:
+        from db import get_connection, init_db, insert_scrape_run
+        db_conn = get_connection()
+        init_db(db_conn)
+        run_id = insert_scrape_run(db_conn, dashboard)
+        db_conn.close()
+        log.info(f"Saved to SQLite database (run_id={run_id})")
+    except Exception as e:
+        log.warning(f"Failed to save to SQLite: {e}")
+
     # Push to GitHub so the live dashboard updates
     git_push(output_file)
 

@@ -7,6 +7,8 @@ on:
       - 'scrape_history/**'
       - 'scraper.log'
       - 'dashboard_data.json'
+      - 'price_trends.json'
+      - 'history.db'
   workflow_dispatch:
 
 permissions:
