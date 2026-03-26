@@ -390,3 +390,115 @@
 2026-03-25 22:18:40,355 [INFO]   Minecraft: 0 total | avg $0
 2026-03-25 22:18:40,355 [INFO]   Steam: 0 total | avg $0
 2026-03-25 22:18:40,356 [INFO] 
+2026-03-26 06:40:26,899 [INFO] ============================================================
+2026-03-26 06:40:26,899 [INFO] Scraper started at 2026-03-26T06:40:26.899958
+2026-03-26 06:40:26,900 [INFO] Games: Roblox, Fortnite, Minecraft, Steam
+2026-03-26 06:40:26,900 [INFO] Max pages per source: unlimited
+2026-03-26 06:40:26,900 [INFO] ============================================================
+2026-03-26 06:40:26,900 [DEBUG] Using selector: EpollSelector
+2026-03-26 06:40:27,547 [INFO] Using Playwright (headless Chromium)
+2026-03-26 06:40:27,547 [INFO] 
+========================================
+2026-03-26 06:40:27,547 [INFO] Scraping: Roblox
+2026-03-26 06:40:27,547 [INFO] ========================================
+2026-03-26 06:40:27,547 [INFO]   [Eldorado.gg] Scraping Roblox — https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 06:40:27,547 [INFO]     Page 1: https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 06:40:35,381 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 06:40:35,448 [INFO]     No more pages available.
+2026-03-26 06:40:38,817 [INFO]   [U7Buy] Scraping Roblox — https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 06:40:38,819 [DEBUG] Starting new HTTPS connection (1): www.u7buy.com:443
+2026-03-26 06:40:39,189 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 06:40:39,201 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 06:40:39,201 [INFO]     Page 1: https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 06:40:56,265 [DEBUG]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found, continuing anyway
+2026-03-26 06:41:01,574 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 06:41:03,301 [INFO]   [eBay] Scraping Roblox — https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 06:41:03,301 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 06:41:11,484 [INFO]     No listings found on page 1, stopping.
+2026-03-26 06:41:11,485 [INFO]     eBay Roblox: 0 relevant listings scraped (raw site total: 354, estimated relevant: 0)
+2026-03-26 06:41:13,282 [INFO] 
+========================================
+2026-03-26 06:41:13,282 [INFO] Scraping: Fortnite
+2026-03-26 06:41:13,282 [INFO] ========================================
+2026-03-26 06:41:13,283 [INFO]   [Eldorado.gg] Scraping Fortnite — https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 06:41:13,283 [INFO]     Page 1: https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 06:41:20,617 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 06:41:20,722 [INFO]     No more pages available.
+2026-03-26 06:41:23,327 [INFO]   [U7Buy] Scraping Fortnite — https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 06:41:23,507 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 06:41:23,508 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 06:41:23,508 [INFO]     Page 1: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 06:41:40,914 [DEBUG]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found, continuing anyway
+2026-03-26 06:41:46,245 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 06:41:48,037 [INFO]   [eBay] Scraping Fortnite — https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 06:41:48,037 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 06:41:55,810 [INFO]     No listings found on page 1, stopping.
+2026-03-26 06:41:55,810 [INFO]     eBay Fortnite: 0 relevant listings scraped (raw site total: 15, estimated relevant: 0)
+2026-03-26 06:41:59,276 [INFO] 
+========================================
+2026-03-26 06:41:59,276 [INFO] Scraping: Minecraft
+2026-03-26 06:41:59,276 [INFO] ========================================
+2026-03-26 06:41:59,276 [INFO]   [Eldorado.gg] Scraping Minecraft — https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 06:41:59,276 [INFO]     Page 1: https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 06:42:06,294 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 06:42:06,358 [INFO]     No more pages available.
+2026-03-26 06:42:09,800 [INFO]   [U7Buy] Scraping Minecraft — https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 06:42:10,051 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 06:42:10,060 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 06:42:10,060 [INFO]     Page 1: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 06:42:26,905 [DEBUG]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found, continuing anyway
+2026-03-26 06:42:32,261 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 06:42:35,665 [INFO]   [eBay] Scraping Minecraft — https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 06:42:35,665 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 06:42:43,657 [INFO]     No listings found on page 1, stopping.
+2026-03-26 06:42:43,657 [INFO]     eBay Minecraft: 0 relevant listings scraped (raw site total: 31, estimated relevant: 0)
+2026-03-26 06:42:46,274 [INFO] 
+========================================
+2026-03-26 06:42:46,274 [INFO] Scraping: Steam
+2026-03-26 06:42:46,274 [INFO] ========================================
+2026-03-26 06:42:46,274 [INFO]   [Eldorado.gg] Scraping Steam — https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 06:42:46,274 [INFO]     Page 1: https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 06:42:53,052 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 06:42:53,116 [INFO]     No more pages available.
+2026-03-26 06:42:56,579 [INFO]   [U7Buy] Scraping Steam — https://www.u7buy.com/steam/steam-accounts
+2026-03-26 06:42:56,755 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 06:42:56,764 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 06:42:56,764 [INFO]     Page 1: https://www.u7buy.com/steam/steam-accounts
+2026-03-26 06:43:13,864 [DEBUG]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found, continuing anyway
+2026-03-26 06:43:19,161 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 06:43:21,614 [INFO]   [eBay] Scraping Steam — https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 06:43:21,614 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 06:43:29,199 [INFO]     No listings found on page 1, stopping.
+2026-03-26 06:43:29,200 [INFO]     eBay Steam: 0 relevant listings scraped (raw site total: 418, estimated relevant: 0)
+2026-03-26 06:43:31,088 [ERROR] Git push failed: Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <runner@runnervm46oaq.1g4t3qgps21unjxaf3d34wvqdb.ex.internal.cloudapp.net>) not allowed
+
+2026-03-26 06:43:31,088 [INFO] 
+============================================================
+2026-03-26 06:43:31,088 [INFO] SCRAPE COMPLETE
+2026-03-26 06:43:31,089 [INFO] ============================================================
+2026-03-26 06:43:31,089 [INFO] Total listings found:   80,355
+2026-03-26 06:43:31,089 [INFO] Total listings scraped: 224
+2026-03-26 06:43:31,089 [INFO] Output: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/dashboard_data.json
+2026-03-26 06:43:31,089 [INFO] Backup: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/scrape_history/dashboard_data_20260326_064331.json
+2026-03-26 06:43:31,089 [INFO] 
+2026-03-26 06:43:31,089 [INFO]   Roblox: 17,235 total | avg $8.3
+2026-03-26 06:43:31,089 [INFO]   Fortnite: 53,600 total | avg $43.96
+2026-03-26 06:43:31,089 [INFO]   Minecraft: 2,851 total | avg $20.97
+2026-03-26 06:43:31,089 [INFO]   Steam: 6,669 total | avg $7.02
+2026-03-26 06:43:31,089 [INFO] 
+2026-03-26 06:43:31,089 [INFO]   OG / Veteran Account: 53 listings
+2026-03-26 06:43:31,089 [INFO]   Items / Currency: 126 listings
+2026-03-26 06:43:31,089 [INFO]   Age Verified: 2 listings
+2026-03-26 06:43:31,089 [INFO]   General: 70 listings
