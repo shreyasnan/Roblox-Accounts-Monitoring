@@ -731,7 +731,11 @@ class EbayScraper:
             url = self._page_url(base_url, page_num)
             log.info(f"    Page {page_num}: {url}")
 
-            html = self.browser.get_page_html(url)
+            html = self.browser.get_page_html(
+                url,
+                wait_selector="li.s-card, .s-item, .srp-results",
+                scroll=True,
+            )
             if not html:
                 break
 
