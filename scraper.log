@@ -2930,3 +2930,357 @@ fatal: unable to auto-detect email address (got 'vibrant-gifted-tesla@claude.(no
 2026-03-26 08:14:02,264 [INFO]   Minecraft: 0 total | avg $0
 2026-03-26 08:14:02,264 [INFO]   Steam: 0 total | avg $0
 2026-03-26 08:14:02,264 [INFO] 
+2026-03-26 15:29:04,076 [INFO] ============================================================
+2026-03-26 15:29:04,077 [INFO] Scraper started at 2026-03-26T15:29:04.077669
+2026-03-26 15:29:04,078 [INFO] Games: Roblox, Fortnite, Minecraft, Steam
+2026-03-26 15:29:04,078 [INFO] Max pages per source: unlimited
+2026-03-26 15:29:04,079 [INFO] ============================================================
+2026-03-26 15:29:04,079 [DEBUG] Using selector: EpollSelector
+2026-03-26 15:29:05,474 [INFO] Using Playwright (headless Chromium)
+2026-03-26 15:29:05,474 [INFO] 
+========================================
+2026-03-26 15:29:05,474 [INFO] Scraping: Roblox
+2026-03-26 15:29:05,474 [INFO] ========================================
+2026-03-26 15:29:05,474 [INFO]   [Eldorado.gg] Scraping Roblox — https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 15:29:05,474 [INFO]     Page 1: https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 15:29:13,262 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 15:29:13,332 [INFO]     No more pages available.
+2026-03-26 15:29:16,371 [INFO]   [U7Buy] Scraping Roblox — https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 15:29:16,373 [DEBUG] Starting new HTTPS connection (1): www.u7buy.com:443
+2026-03-26 15:29:16,971 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 15:29:16,972 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 15:29:16,972 [INFO]     Page 1: https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 15:29:44,679 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Roblox Accounts for Sale | Cheap, Safe & Fast | U7BUY', <li> count: 125, URL: https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 15:29:44,679 [DEBUG]   Page body preview: Categories
+Roblox Games
+Genshin Impact
+Search For Games
+EN | USD
+Sell
+Log In
+Roblox
+Robux
+Accounts
+Items
+Boosting
+Gift Cards
+Roblox Games
+Robux Tax Calculator
+Home
+Accounts
+Roblox Accounts
+Roblox Acco
+2026-03-26 15:29:50,063 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 15:29:52,376 [INFO]   [eBay] Scraping Roblox — https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 15:29:52,376 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 15:29:52,377 [DEBUG] Starting new HTTPS connection (1): www.ebay.com:443
+2026-03-26 15:29:52,916 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 HTTP/1.1" 200 None
+2026-03-26 15:29:53,682 [INFO]     Found 60 listings (total so far: 60)
+2026-03-26 15:29:56,588 [INFO]     Page 2: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=2&_skc=61
+2026-03-26 15:29:56,857 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=2&_skc=61 HTTP/1.1" 200 None
+2026-03-26 15:29:57,618 [DEBUG]     Skipping irrelevant eBay listing: Rank 33(Max) - Rebirth9 - Equip 99 (Max) Pet - Max
+2026-03-26 15:29:57,628 [DEBUG]     Skipping irrelevant eBay listing: MaxRank - Rebirth9 - Equip 99 (Max) Pet - Max Hatc
+2026-03-26 15:29:57,649 [DEBUG]     Skipping irrelevant eBay listing: New ListingRoblox Da Hood Account With Special Bon
+2026-03-26 15:29:57,659 [INFO]     Found 57 listings (total so far: 117)
+2026-03-26 15:30:00,888 [INFO]     Page 3: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=3&_skc=121
+2026-03-26 15:30:01,147 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=3&_skc=121 HTTP/1.1" 200 None
+2026-03-26 15:30:01,843 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Pink Wire Drop⚡Fast Service + Disc
+2026-03-26 15:30:01,858 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 80 Pink Wire⚡Fast Service + Discou
+2026-03-26 15:30:01,887 [INFO]     Found 58 listings (total so far: 175)
+2026-03-26 15:30:04,592 [INFO]     Page 4: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=4&_skc=181
+2026-03-26 15:30:04,863 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=4&_skc=181 HTTP/1.1" 200 None
+2026-03-26 15:30:05,676 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Mixed Book Drop⚡Fast Service + Dis
+2026-03-26 15:30:05,686 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Blue Book Drop⚡Fast Service + Disc
+2026-03-26 15:30:05,687 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Black Green Book Drop⚡Fast Service
+2026-03-26 15:30:05,689 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Yellow Book Drop⚡Fast Service + Di
+2026-03-26 15:30:05,706 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 White Book Drop⚡Fast Service + Dis
+2026-03-26 15:30:05,706 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2025 Candy bag/Pump Truckload Base
+2026-03-26 15:30:05,710 [INFO]     Found 54 listings (total so far: 229)
+2026-03-26 15:30:09,057 [INFO]     Page 5: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=5&_skc=241
+2026-03-26 15:30:09,158 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=5&_skc=241 HTTP/1.1" 307 0
+2026-03-26 15:30:09,276 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Droblox%2Baccount%26_sop%3D12%26LH_BIN%3D1%26_pgn%3D5%26_skc%3D241&iid=84e2a57f-beaa-4359-8306-a2b6527d74cd&iim=TNTIuMTX&iia=JqU0LjEzpj&iiz=jiGMC4yMDk*pDd HTTP/1.1" 200 6134
+2026-03-26 15:30:09,278 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:30:09,278 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:30:16,864 [DEBUG]     Skipping irrelevant eBay listing: Rolling Pin – Roblox Assassin! Exotic Knife | In-G
+2026-03-26 15:30:16,873 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Pineapple Painting Drop⚡Fast Servi
+2026-03-26 15:30:16,899 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Black Yellow Book Drop⚡Fast Servic
+2026-03-26 15:30:16,908 [INFO]     Found 57 listings (total so far: 286)
+2026-03-26 15:30:19,959 [INFO]     Page 6: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=6&_skc=301
+2026-03-26 15:30:20,210 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=6&_skc=301 HTTP/1.1" 200 None
+2026-03-26 15:30:21,185 [DEBUG]     Skipping irrelevant eBay listing: Rolling Pin – Roblox Assassin! Exotic Knife | In-G
+2026-03-26 15:30:21,218 [DEBUG]     Skipping irrelevant eBay listing: SECRET Kitty Tophat. Bubblegum Simulator Infinity.
+2026-03-26 15:30:21,219 [DEBUG]     Skipping irrelevant eBay listing: 💎Unverified 2015 - Tickets Beanie, DasviDinoHat, M
+2026-03-26 15:30:21,225 [INFO]     Found 54 listings (total so far: 340)
+2026-03-26 15:30:21,265 [INFO]     eBay Roblox: 340 relevant listings scraped (raw site total: 353, estimated relevant: 340)
+2026-03-26 15:30:24,855 [INFO] 
+========================================
+2026-03-26 15:30:24,855 [INFO] Scraping: Fortnite
+2026-03-26 15:30:24,855 [INFO] ========================================
+2026-03-26 15:30:24,855 [INFO]   [Eldorado.gg] Scraping Fortnite — https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 15:30:24,855 [INFO]     Page 1: https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 15:30:32,386 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 15:30:32,491 [INFO]     No more pages available.
+2026-03-26 15:30:34,711 [INFO]   [U7Buy] Scraping Fortnite — https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 15:30:35,006 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 15:30:35,009 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 15:30:35,009 [INFO]     Page 1: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 15:31:02,269 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Fortnite Accounts for Sale | Cheap, Safe & Fast | U7BUY', <li> count: 162, URL: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 15:31:02,269 [DEBUG]   Page body preview: Categories
+Roblox Games
+Genshin Impact
+Search For Games
+EN | USD
+Sell
+Log In
+Fortnite
+V-Bucks
+Accounts
+Items
+Boosting
+Vbucks Card
+Skins
+Home
+Accounts
+Fortnite Accounts
+Fortnite Accounts for Sale
+4.9
+2
+2026-03-26 15:31:07,606 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 15:31:09,898 [INFO]   [eBay] Scraping Fortnite — https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 15:31:09,898 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 15:31:09,976 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-26 15:31:10,109 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dfortnite%2Baccount%26_sop%3D12%26LH_BIN%3D1&iid=086e908a-77ff-4c3f-8a80-2fde31d5bb8b&iim=kNTIuMTB&iia=jQU0LjEzEm&iiz=ITRMC4yMDk*SQz HTTP/1.1" 200 None
+2026-03-26 15:31:10,135 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:31:10,135 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:31:17,740 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite: The Last Laugh Bundle - Ninte
+2026-03-26 15:31:17,774 [INFO]     Found 72 listings (total so far: 72)
+2026-03-26 15:31:17,849 [INFO]     eBay Fortnite: 72 relevant listings scraped (raw site total: 15, estimated relevant: 72)
+2026-03-26 15:31:21,586 [INFO] 
+========================================
+2026-03-26 15:31:21,586 [INFO] Scraping: Minecraft
+2026-03-26 15:31:21,586 [INFO] ========================================
+2026-03-26 15:31:21,586 [INFO]   [Eldorado.gg] Scraping Minecraft — https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 15:31:21,586 [INFO]     Page 1: https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 15:31:28,726 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 15:31:28,790 [INFO]     No more pages available.
+2026-03-26 15:31:31,875 [INFO]   [U7Buy] Scraping Minecraft — https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 15:31:32,038 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 15:31:32,041 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 15:31:32,041 [INFO]     Page 1: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 15:32:00,044 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Minecraft Accounts for sale | Cheap MC Account | U7BUY', <li> count: 126, URL: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 15:32:00,044 [DEBUG]   Page body preview: Categories
+Roblox Games
+Genshin Impact
+Search For Games
+EN | USD
+Sell
+Log In
+Minecraft
+Hypixel Coins
+Accounts
+Home
+Accounts
+Minecraft Accounts
+Minecraft Accounts for Sale
+4.9
+5008 reviews
+Server
+Hypix
+2026-03-26 15:32:05,370 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 15:32:07,159 [INFO]   [eBay] Scraping Minecraft — https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 15:32:07,159 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 15:32:07,281 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-26 15:32:07,471 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dminecraft%2Baccount%2Bjava%26_sop%3D12%26LH_BIN%3D1&iid=3ac27c0a-9062-4a2e-80b2-50b649079e0f&iim=LNTIuMTi&iia=ATU0LjEzsT&iiz=emFMC4yMDk*qec HTTP/1.1" 200 6127
+2026-03-26 15:32:07,472 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:32:07,472 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:32:15,532 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Redeem Codes - Menace&Home&Purple Heart 
+2026-03-26 15:32:15,536 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Redeem Codes - Menace&Home&Purple Heart 
+2026-03-26 15:32:15,536 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Home Cape | Menace Cape - Java & Bedro
+2026-03-26 15:32:15,538 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Experience: Villager Rescue Cape (Java A
+2026-03-26 15:32:15,538 [DEBUG]     Skipping irrelevant eBay listing: Minecraft-Menace Cape Twitch Drops Global Code--Ja
+2026-03-26 15:32:15,539 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Redeem Codes - Menace&Home&Purple Heart 
+2026-03-26 15:32:15,540 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Rare 8 Cape Account + Zombie Horse Cape 
+2026-03-26 15:32:15,541 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Rare 12 Cape Account Including Zombie Ho
+2026-03-26 15:32:15,541 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Redeem Codes - Menace&Home&Purple Heart 
+2026-03-26 15:32:15,542 [DEBUG]     Skipping irrelevant eBay listing: Minecon 2011 Cape Account - No ban Hypixel - Java 
+2026-03-26 15:32:15,542 [DEBUG]     Skipping irrelevant eBay listing: Rare 6 Cape Minecraft Account Combo - Founder's, M
+2026-03-26 15:32:15,544 [DEBUG]     Skipping irrelevant eBay listing: Rare Minecraft Experience Cape Account - Including
+2026-03-26 15:32:15,545 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Vanilla Cape Accounts (Feel free to reac
+2026-03-26 15:32:15,547 [DEBUG]     Skipping irrelevant eBay listing: (Original account holder) selling Minecraft Java a
+2026-03-26 15:32:15,551 [DEBUG]     Skipping irrelevant eBay listing: Minecraft 16 Cape Account RAREOpens in a new windo
+2026-03-26 15:32:15,553 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Menace Cape + Java & Bedrock (PC XBOX PS
+2026-03-26 15:32:15,554 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Home Cape + Java & Bedrock (PC XBOX PSN)
+2026-03-26 15:32:15,554 [DEBUG]     Skipping irrelevant eBay listing: ⛏Minecraft - Menace Cape & Home Cape | Java & Bedr
+2026-03-26 15:32:15,556 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java Edition account with founders capeO
+2026-03-26 15:32:15,559 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Copper Cape - Bedrock & Java EditionOp
+2026-03-26 15:32:15,561 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Home Cape | Menace Cape  - Java & Bedr
+2026-03-26 15:32:15,561 [DEBUG]     Skipping irrelevant eBay listing: Minecraft : Purple Heart Cape - Java & Bedrock Edi
+2026-03-26 15:32:15,563 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Home Cape Twitch Cape -  Java & Bedroc
+2026-03-26 15:32:15,563 [DEBUG]     Skipping irrelevant eBay listing: Minecraft TikTok Menace Cape Drops Skin – Java & B
+2026-03-26 15:32:15,565 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Purple Heart Cape Twitch Cape - Java &
+2026-03-26 15:32:15,565 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Menace&Home Cape Twitch Cape -  Java &
+2026-03-26 15:32:15,567 [DEBUG]     Skipping irrelevant eBay listing: MINECRAFT Purple Heart Cape Java & Bedrock Edition
+2026-03-26 15:32:15,567 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Copper Cape and Core  - Java & Bedrock [
+2026-03-26 15:32:15,569 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Copper Cape Twitch Drops Skin – Java & B
+2026-03-26 15:32:15,571 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Home Cape Twitch Drops Skin – Java & Bed
+2026-03-26 15:32:15,572 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - McDonald’s Add-On ❗️ | Java & Bedrock 
+2026-03-26 15:32:15,574 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Menace Cape Twitch Cape - Java & Bedro
+2026-03-26 15:32:15,575 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java & Bedrock - Allay Hoodie 🔥 XBOX Dig
+2026-03-26 15:32:15,575 [DEBUG]     Skipping irrelevant eBay listing: Cherry Blossom Minecraft Cape Account - Dm for Pri
+2026-03-26 15:32:15,576 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java & Bedrock Edition Purple Heart Cape
+2026-03-26 15:32:15,578 [DEBUG]     Skipping irrelevant eBay listing: Minecraft: Copper + Menace + Home Cape Codes Java 
+2026-03-26 15:32:15,579 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Copper Cape - JAVA & BEDROCK - FAST DELI
+2026-03-26 15:32:15,579 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Moss Mask Twitch Drops Skin – Java & Bed
+2026-03-26 15:32:15,580 [DEBUG]     Skipping irrelevant eBay listing: Rare 16 Cape Minecraft 2016 Minecon Cape Account (
+2026-03-26 15:32:15,581 [DEBUG]     Skipping irrelevant eBay listing: Minecraft x Movie : McDonald’s Add-On FULL SET add
+2026-03-26 15:32:15,582 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java & Bedrock COPPER CAPE Code!Opens in
+2026-03-26 15:32:15,583 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Migrator Cape Account (Message about Pri
+2026-03-26 15:32:15,585 [DEBUG]     Skipping irrelevant eBay listing: ✅ Minecraft Purple Heart Twitch Drop Cape 💜Java & 
+2026-03-26 15:32:15,585 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Pride Cape Account - Bedrock Edition Exc
+2026-03-26 15:32:15,586 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Rare 8 Cape Account - Founder's, Vanilla
+2026-03-26 15:32:15,586 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Hoodie Copper Golem Drops Skin – Java & 
+2026-03-26 15:32:15,587 [DEBUG]     Skipping irrelevant eBay listing: Realms Cape Minecraft Account – Extremely Exclusiv
+2026-03-26 15:32:15,588 [INFO]     Found 30 listings (total so far: 30)
+2026-03-26 15:32:15,645 [INFO]     eBay Minecraft: 30 relevant listings scraped (raw site total: 31, estimated relevant: 30)
+2026-03-26 15:32:19,323 [INFO] 
+========================================
+2026-03-26 15:32:19,323 [INFO] Scraping: Steam
+2026-03-26 15:32:19,323 [INFO] ========================================
+2026-03-26 15:32:19,323 [INFO]   [Eldorado.gg] Scraping Steam — https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 15:32:19,323 [INFO]     Page 1: https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 15:32:26,042 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 15:32:26,106 [INFO]     No more pages available.
+2026-03-26 15:32:27,950 [INFO]   [U7Buy] Scraping Steam — https://www.u7buy.com/steam/steam-accounts
+2026-03-26 15:32:28,118 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 15:32:28,122 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 15:32:28,122 [INFO]     Page 1: https://www.u7buy.com/steam/steam-accounts
+2026-03-26 15:32:55,640 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Steam Accounts with Games for Sale | U7BUY', <li> count: 129, URL: https://www.u7buy.com/steam/steam-accounts
+2026-03-26 15:32:55,640 [DEBUG]   Page body preview: Categories
+Roblox Games
+Genshin Impact
+Search For Games
+EN | USD
+Sell
+Log In
+Steam
+Accounts
+Items
+Gift Cards
+Home
+Accounts
+Steam Accounts
+Steam Accounts for Sale
+4.9
+1268 reviews
+Price
+Usa
+Brazil
+Cybe
+2026-03-26 15:33:00,959 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 15:33:04,089 [INFO]   [eBay] Scraping Steam — https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 15:33:04,090 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 15:33:04,185 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-26 15:33:04,315 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1&iid=1066bdf2-c1af-4b4f-a095-b659c2644cc5&iim=aNTIuMTY&iia=fbU0LjEzXy&iiz=pAHMC4yMDk*jfm HTTP/1.1" 200 6126
+2026-03-26 15:33:04,316 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:33:04,317 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:33:11,922 [DEBUG]     Skipping irrelevant eBay listing: [STEAM] Rocket League Account w/ Slurpee DECAL + M
+2026-03-26 15:33:11,957 [DEBUG]     Skipping irrelevant eBay listing: Selling steam account that’s worth 300+ with DLCsO
+2026-03-26 15:33:11,975 [INFO]     Found 58 listings (total so far: 58)
+2026-03-26 15:33:13,801 [INFO]     Page 2: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=2&_skc=61
+2026-03-26 15:33:13,879 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=2&_skc=61 HTTP/1.1" 307 0
+2026-03-26 15:33:14,012 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1%26_pgn%3D2%26_skc%3D61&iid=8321a5b4-07c9-4454-a6b1-a17f5747e933&iim=WNTIuMTE&iia=rHU0LjEzkN&iiz=fPzMC4yMDk*rQv HTTP/1.1" 200 None
+2026-03-26 15:33:14,014 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:33:14,014 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:33:21,523 [DEBUG]     Skipping irrelevant eBay listing: Escape From Tarkov Edge of Darkness + Arenas - USA
+2026-03-26 15:33:21,531 [DEBUG]     Skipping irrelevant eBay listing: Fallout 4 PC Game COMPLETE w/ Season Pass, Surviva
+2026-03-26 15:33:21,543 [DEBUG]     Skipping irrelevant eBay listing: Rambo The Video Game Pc Dvd Windows doesn't requir
+2026-03-26 15:33:21,550 [DEBUG]     Skipping irrelevant eBay listing: Bethesda Fallout 4 PC Action Role Playing Game Man
+2026-03-26 15:33:21,551 [DEBUG]     Skipping irrelevant eBay listing: Hammerwatch Anniversary Edition - PC Region Free S
+2026-03-26 15:33:21,552 [DEBUG]     Skipping irrelevant eBay listing: 2016 Roller Coaster Tycoon World PC DVD-ROM Game b
+2026-03-26 15:33:21,568 [INFO]     Found 54 listings (total so far: 112)
+2026-03-26 15:33:24,125 [INFO]     Page 3: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=3&_skc=121
+2026-03-26 15:33:24,198 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=3&_skc=121 HTTP/1.1" 307 0
+2026-03-26 15:33:24,315 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1%26_pgn%3D3%26_skc%3D121&iid=2cc0660c-2f9f-437a-9a14-7e1c9b841e85&iim=SNTIuMTN&iia=WBU0LjEzCs&iiz=YBaMC4yMDk*GYI HTTP/1.1" 200 6141
+2026-03-26 15:33:24,316 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:33:24,316 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:33:32,121 [DEBUG]     Skipping irrelevant eBay listing: Prey (PC / DVD-ROM) NEWOpens in a new window or ta
+2026-03-26 15:33:32,124 [DEBUG]     Skipping irrelevant eBay listing: 9 Years of Shadows GoG PC Key (NO CD/DVD)Opens in 
+2026-03-26 15:33:32,132 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil 4 Remake - Leon RPD Costume + Cat Ea
+2026-03-26 15:33:32,137 [DEBUG]     Skipping irrelevant eBay listing: Among The Sleep Enhanced Edition - Region Free Ste
+2026-03-26 15:33:32,138 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil 4 Mercenaries - Leon RPD Costume Unl
+2026-03-26 15:33:32,152 [DEBUG]     Skipping irrelevant eBay listing: Who Pressed Mute On Uncle Marcus Steam PC Key (NO 
+2026-03-26 15:33:32,153 [DEBUG]     Skipping irrelevant eBay listing: Railway Empire (PC / DVD-ROM) NEWOpens in a new wi
+2026-03-26 15:33:32,158 [INFO]     Found 53 listings (total so far: 165)
+2026-03-26 15:33:33,715 [INFO]     Page 4: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=4&_skc=181
+2026-03-26 15:33:33,815 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=4&_skc=181 HTTP/1.1" 307 0
+2026-03-26 15:33:34,020 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1%26_pgn%3D4%26_skc%3D181&iid=a1954397-4956-45fa-81fc-ca2d40d17438&iim=aNTIuMTb&iia=psU0LjEzYq&iiz=BqWMC4yMDk*LGA HTTP/1.1" 200 6134
+2026-03-26 15:33:34,022 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:33:34,022 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:33:41,509 [DEBUG]     Skipping irrelevant eBay listing: selling this csgo prime account with Sticker | Zyw
+2026-03-26 15:33:41,511 [DEBUG]     Skipping irrelevant eBay listing: ATARI Vault (PC DVD-ROM, 2018) Steam Activation # 
+2026-03-26 15:33:41,515 [DEBUG]     Skipping irrelevant eBay listing: Autonauts vs Piratebots - Region Free Steam PC Key
+2026-03-26 15:33:41,527 [DEBUG]     Skipping irrelevant eBay listing: The Bookwalker: Thief of Tales - Steam Key (PC)Ope
+2026-03-26 15:33:41,549 [INFO]     Found 56 listings (total so far: 221)
+2026-03-26 15:33:43,698 [INFO]     Page 5: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=5&_skc=241
+2026-03-26 15:33:43,763 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=5&_skc=241 HTTP/1.1" 307 0
+2026-03-26 15:33:43,902 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1%26_pgn%3D5%26_skc%3D241&iid=2eabe3f6-d89d-4ff4-af4e-ad8e9640228d&iim=JNTIuMTi&iia=UfU0LjEzcL&iiz=ClxMC4yMDk*rAr HTTP/1.1" 200 6137
+2026-03-26 15:33:43,903 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:33:43,903 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:33:51,712 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil 4 Mercenaries S+ Ranks for Leon RPD 
+2026-03-26 15:33:51,753 [DEBUG]     Skipping irrelevant eBay listing: Letter Quest: Grimm's Journey Steam CD Key (NO CD/
+2026-03-26 15:33:51,755 [DEBUG]     Skipping irrelevant eBay listing: PC BIOHAZARD Resident Evil Requiem Steelbook Korea
+2026-03-26 15:33:51,769 [DEBUG]     Skipping irrelevant eBay listing: Roller Coaster Tycoon World PC DVD-ROM Game by Ata
+2026-03-26 15:33:51,769 [INFO]     Found 56 listings (total so far: 277)
+2026-03-26 15:33:54,206 [INFO]     Page 6: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=6&_skc=301
+2026-03-26 15:33:54,273 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=6&_skc=301 HTTP/1.1" 307 0
+2026-03-26 15:33:54,417 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1%26_pgn%3D6%26_skc%3D301&iid=c0901de6-5627-4393-bca3-92b0dc6461aa&iim=ONTIuMTP&iia=DGU0LjEziH&iiz=yePMC4yMDk*sDl HTTP/1.1" 200 None
+2026-03-26 15:33:54,433 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:33:54,433 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:34:01,832 [DEBUG]     Skipping irrelevant eBay listing: Project Highrise [ Architect's Edition ] (PC / CD-
+2026-03-26 15:34:01,851 [DEBUG]     Skipping irrelevant eBay listing: Paleo Pines Steam Key USA | fast message deliveryO
+2026-03-26 15:34:01,878 [DEBUG]     Skipping irrelevant eBay listing: LEGO Harry Potter: Years 1-4 Pc Account For SteamO
+2026-03-26 15:34:01,891 [INFO]     Found 57 listings (total so far: 334)
+2026-03-26 15:34:03,760 [INFO]     Page 7: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=7&_skc=361
+2026-03-26 15:34:03,906 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1&_pgn=7&_skc=361 HTTP/1.1" 307 0
+2026-03-26 15:34:04,025 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1%26_pgn%3D7%26_skc%3D361&iid=9d609b46-a4a2-4ec4-b827-e5eb9ba02cca&iim=nNTIuMTB&iia=uwU0LjEzVc&iiz=maeMC4yMDk*QCB HTTP/1.1" 200 6131
+2026-03-26 15:34:04,027 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-26 15:34:04,027 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-26 15:34:11,356 [DEBUG]     Skipping irrelevant eBay listing: Selling steam account that’s worth 300+ with DLCsO
+2026-03-26 15:34:11,361 [DEBUG]     Skipping irrelevant eBay listing: Escape From Tarkov Lvl 41 Unheard AccountOpens in 
+2026-03-26 15:34:11,373 [DEBUG]     Skipping irrelevant eBay listing: PAYDAY 2 Halloween 2014 Humble Bundle MasksOpens i
+2026-03-26 15:34:11,379 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil 4 Mercenaries - Leon RPD Costume Unl
+2026-03-26 15:34:11,401 [INFO]     Found 52 listings (total so far: 386)
+2026-03-26 15:34:11,448 [INFO]     eBay Steam: 386 relevant listings scraped (raw site total: 416, estimated relevant: 386)
+2026-03-26 15:34:16,428 [INFO] Saved to SQLite database (run_id=3)
+2026-03-26 15:34:16,458 [ERROR] Git push failed: Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <runner@runnervm46oaq.x2310omwxaoufa14tpb3rrhhha.gx.internal.cloudapp.net>) not allowed
+
+2026-03-26 15:34:16,458 [INFO] 
+============================================================
+2026-03-26 15:34:16,458 [INFO] SCRAPE COMPLETE
+2026-03-26 15:34:16,458 [INFO] ============================================================
+2026-03-26 15:34:16,458 [INFO] Total listings found:   82,411
+2026-03-26 15:34:16,458 [INFO] Total listings scraped: 1022
+2026-03-26 15:34:16,458 [INFO] Output: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/dashboard_data.json
+2026-03-26 15:34:16,458 [INFO] Backup: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/scrape_history/dashboard_data_20260326_153416.json
+2026-03-26 15:34:16,458 [INFO] 
+2026-03-26 15:34:16,458 [INFO]   Roblox: 17,743 total | avg $58.24
+2026-03-26 15:34:16,458 [INFO]   Fortnite: 54,693 total | avg $80.0
+2026-03-26 15:34:16,458 [INFO]   Minecraft: 2,882 total | avg $24.89
+2026-03-26 15:34:16,458 [INFO]   Steam: 7,093 total | avg $151.4
+2026-03-26 15:34:16,459 [INFO] 
+2026-03-26 15:34:16,459 [INFO]   OG / Veteran Account: 116 listings
+2026-03-26 15:34:16,459 [INFO]   Items / Currency: 368 listings
+2026-03-26 15:34:16,459 [INFO]   Age Verified: 3 listings
+2026-03-26 15:34:16,459 [INFO]   General: 588 listings
