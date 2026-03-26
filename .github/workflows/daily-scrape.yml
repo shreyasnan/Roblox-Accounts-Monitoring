@@ -1,0 +1,40 @@
+name: Daily Marketplace Scrape
+
+on:
+  schedule:
+    # Runs every day at 8:00 AM UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    # Also allows manual runs from the GitHub Actions tab
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # needed to commit dashboard_data.json back to the repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright beautifulsoup4 lxml requests
+          playwright install chromium --with-deps
+
+      - name: Run scraper
+        run: python scrape_listings.py --verbose
+
+      - name: Commit updated dashboard data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboard_data.json scrape_history/
+          git diff --cached --quiet || git commit -m "chore: daily scrape $(date -u '+%Y-%m-%d')"
+          git push
