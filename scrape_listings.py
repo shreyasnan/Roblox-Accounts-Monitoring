@@ -1173,16 +1173,6 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
 
     scraped = {}
 
-    def _scrape_source(scraper, game, source_name, fallback_url):
-        """Scrape one source for one game — used by ThreadPoolExecutor."""
-        try:
-            return source_name, scraper.scrape_game(game)
-        except Exception as e:
-            log.error(f"  {source_name} failed for {game}: {e}")
-            return source_name, {"total_on_site": 0, "search_url": fallback_url, "listings": []}
-
-    from concurrent.futures import ThreadPoolExecutor, as_completed
-
     for game in games:
         log.info(f"\n{'='*40}")
         log.info(f"Scraping: {game}")
@@ -1190,20 +1180,28 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
 
         scraped[game] = {}
 
-        # Run all 3 sources in parallel for each game
-        with ThreadPoolExecutor(max_workers=3) as executor:
-            futures = {
-                executor.submit(_scrape_source, eldorado, game, "Eldorado.gg",
-                                ELDORADO_URLS.get(game, "")),
-                executor.submit(_scrape_source, u7buy, game, "U7Buy",
-                                U7BUY_URLS.get(game, "")),
-                executor.submit(_scrape_source, ebay, game, "eBay",
-                                f"https://www.ebay.com/sch/i.html?_nkw={EBAY_SEARCH_TERMS.get(game, '')}"),
-            }
-            for future in as_completed(futures):
-                source_name, result = future.result()
-                scraped[game][source_name] = result
+        # Eldorado.gg
+        try:
+            scraped[game]["Eldorado.gg"] = eldorado.scrape_game(game)
+        except Exception as e:
+            log.error(f"  Eldorado.gg failed for {game}: {e}")
+            scraped[game]["Eldorado.gg"] = {"total_on_site": 0, "search_url": ELDORADO_URLS.get(game, ""), "listings": []}
+        polite_delay()
 
+        # U7Buy
+        try:
+            scraped[game]["U7Buy"] = u7buy.scrape_game(game)
+        except Exception as e:
+            log.error(f"  U7Buy failed for {game}: {e}")
+            scraped[game]["U7Buy"] = {"total_on_site": 0, "search_url": U7BUY_URLS.get(game, ""), "listings": []}
+        polite_delay()
+
+        # eBay
+        try:
+            scraped[game]["eBay"] = ebay.scrape_game(game)
+        except Exception as e:
+            log.error(f"  eBay failed for {game}: {e}")
+            scraped[game]["eBay"] = {"total_on_site": 0, "search_url": f"https://www.ebay.com/sch/i.html?_nkw={EBAY_SEARCH_TERMS.get(game, '')}", "listings": []}
         polite_delay()
 
     browser.stop()
