@@ -40,8 +40,25 @@ jobs:
       - name: Run scraper
         run: python scrape_listings.py --verbose
 
-      - name: Rebuild dashboard HTML
-        run: python build_dashboard.py
+      - name: Embed fresh data into dashboard HTML
+        run: |
+          python3 -c "
+          import json, re
+          with open('dashboard_data.json') as f:
+              data = json.dumps(json.load(f))
+          with open('index.html') as f:
+              html = f.read()
+          html = re.sub(
+              r'const dashboardData = \{.*?\n\};',
+              'const dashboardData = ' + data + ';',
+              html,
+              count=1,
+              flags=re.DOTALL
+          )
+          with open('index.html', 'w') as f:
+              f.write(html)
+          print('Dashboard HTML updated with fresh data')
+          "
 
       - name: Commit updated data and HTML
         run: |

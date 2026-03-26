@@ -26,7 +26,9 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.5; }
+a { color: var(--accent2); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 .header {
   background: linear-gradient(135deg, #1a1d27 0%, #242836 100%);
@@ -36,7 +38,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 }
 .header h1 { font-size: 22px; font-weight: 600; }
 .header h1 span { color: var(--roblox); }
-.header-meta { color: var(--text-dim); font-size: 13px; }
+.header-meta { color: var(--text-dim); font-size: 12px; text-align: right; }
 
 .nav {
   display: flex; gap: 4px; padding: 12px 32px; background: var(--surface);
@@ -71,12 +73,10 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 .kpi-card.fortnite::before { background: var(--fortnite); }
 .kpi-card.minecraft::before { background: var(--minecraft); }
 .kpi-card.steam::before { background: var(--steam); }
-.kpi-label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.kpi-card.primary::before { background: var(--accent); }
+.kpi-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
 .kpi-value { font-size: 28px; font-weight: 700; }
 .kpi-sub { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
-.kpi-change { font-size: 12px; margin-top: 6px; }
-.kpi-change.up { color: var(--red); }
-.kpi-change.down { color: var(--green); }
 
 .chart-row {
   display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;
@@ -96,79 +96,120 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', syste
 /* Tables */
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
-th { text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--border);
+th { text-align: left; padding: 12px; border-bottom: 2px solid var(--border);
      color: var(--text-dim); font-weight: 600; text-transform: uppercase; font-size: 11px;
      letter-spacing: 0.5px; }
-td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+td { padding: 12px; border-bottom: 1px solid var(--border); }
 tr:hover { background: var(--surface2); }
 
-/* Alerts */
-.alert-item {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-  padding: 16px 20px; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 14px;
+.table-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  overflow: hidden;
 }
-.alert-badge {
-  padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;
-  text-transform: uppercase; white-space: nowrap;
-}
-.alert-badge.critical { background: #ff6b6b33; color: var(--red); }
-.alert-badge.high { background: #ffa50233; color: var(--orange); }
-.alert-badge.medium { background: #6c5ce733; color: var(--accent); }
-.alert-badge.low { background: #26de8133; color: var(--green); }
-.alert-desc { font-size: 14px; }
-.alert-time { font-size: 11px; color: var(--text-dim); margin-top: 4px; }
 
 /* Filters */
 .filters {
   display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; align-items: center;
 }
-.filters label { font-size: 12px; color: var(--text-dim); }
+.filters label { font-size: 12px; color: var(--text-dim); font-weight: 500; }
+.filters input,
 .filters select {
   background: var(--surface2); border: 1px solid var(--border); color: var(--text);
   padding: 6px 12px; border-radius: 6px; font-size: 13px;
 }
+.filters input::placeholder { color: var(--text-dim); }
 
 /* Platform tags */
 .platform-tag {
-  display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;
+  display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;
+  text-transform: uppercase;
 }
 .platform-tag.Roblox { background: #e74c3c33; color: var(--roblox); }
 .platform-tag.Fortnite { background: #9b59b633; color: var(--fortnite); }
 .platform-tag.Minecraft { background: #27ae6033; color: var(--minecraft); }
 .platform-tag.Steam { background: #2980b933; color: var(--steam); }
 
-.source-type-tag {
-  display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px;
+/* Category tags */
+.category-tag {
+  display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;
+  text-transform: uppercase;
 }
-.source-type-tag.marketplace { background: #4ecdc433; color: var(--blue); }
-.source-type-tag.forum { background: #ffa50233; color: var(--orange); }
-.source-type-tag.social { background: #9b59b633; color: var(--fortnite); }
+.category-tag.items-currency { background: #4ecdc433; color: var(--blue); }
+.category-tag.age-verified { background: #26de8133; color: var(--green); }
+.category-tag.og-veteran { background: #ffa50233; color: var(--orange); }
+.category-tag.general { background: #8b8fa333; color: var(--text-dim); }
+
+.view-link {
+  display: inline-block; padding: 4px 10px; border-radius: 6px; background: #4ecdc433;
+  color: var(--blue); font-size: 12px; font-weight: 600; cursor: pointer;
+}
+.view-link:hover { background: #4ecdc466; text-decoration: underline; }
+
+/* Platform detail cards */
+.platform-detail {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px; margin-bottom: 20px;
+}
+.platform-detail h3 {
+  font-size: 16px; font-weight: 600; margin-bottom: 12px;
+}
+
+.source-detail {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px; margin-bottom: 20px;
+}
+.source-detail h3 {
+  font-size: 16px; font-weight: 600; margin-bottom: 12px;
+}
+
+.metric-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px; margin: 12px 0;
+}
+.metric-item {
+  background: var(--surface2); border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px;
+}
+.metric-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; }
+.metric-value { font-size: 18px; font-weight: 700; margin-top: 4px; }
+
+.links-list {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.link-item {
+  display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--surface2);
+  border: 1px solid var(--border); border-radius: 8px;
+}
+
+h2 { margin-bottom: 20px; font-size: 18px; font-weight: 600; }
+h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
 
 @media (max-width: 900px) {
   .chart-row { grid-template-columns: 1fr; }
   .chart-row.triple { grid-template-columns: 1fr; }
   .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .filters { flex-direction: column; align-items: stretch; }
+  .filters input, .filters select { width: 100%; }
+  .header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .header-meta { text-align: left; }
 }
 </style>
 </head>
 <body>
+
 <div class="header">
   <h1><span>Roblox</span> Accounts Monitoring Dashboard</h1>
   <div class="header-meta">
-    <div>Data Period: Apr 2025 – Mar 2026 &nbsp;|&nbsp; Refresh: Monthly &nbsp;|&nbsp; Sources Tracked: <span id="sourceCount"></span></div>
-    <div style="margin-top:4px">Comparative Platforms: Fortnite, Minecraft, Steam</div>
+    <div>Last Updated: Mar 24, 2026</div>
+    <div>Sources: Eldorado.gg, U7Buy, eBay</div>
   </div>
 </div>
 
 <div class="nav" id="nav">
   <button class="active" data-tab="overview">Overview</button>
-  <button data-tab="trends">Trends &amp; Timeline</button>
+  <button data-tab="listings">Live Listings</button>
+  <button data-tab="platforms">By Platform</button>
   <button data-tab="sources">Sources</button>
-  <button data-tab="keywords">Keywords</button>
-  <button data-tab="regions">Regions</button>
-  <button data-tab="languages">Languages</button>
-  <button data-tab="quality">Quality Tiers</button>
-  <button data-tab="alerts">Alerts</button>
 </div>
 
 <div class="container">
@@ -177,718 +218,1881 @@ tr:hover { background: var(--surface2); }
 <div class="section active" id="sec-overview">
   <div class="kpi-grid" id="kpiGrid"></div>
   <div class="chart-row">
-    <div class="chart-card"><h3>Total Listings Over Time (All Platforms)</h3><canvas id="chartOverviewListings"></canvas></div>
-    <div class="chart-card"><h3>Average Price Over Time (USD)</h3><canvas id="chartOverviewPrices"></canvas></div>
-  </div>
-  <div class="chart-row">
-    <div class="chart-card"><h3>Listings by Source Type</h3><canvas id="chartSourceType"></canvas></div>
-    <div class="chart-card"><h3>Quality Tier Distribution</h3><canvas id="chartQualityOverview"></canvas></div>
+    <div class="chart-card"><h3>Listings by Platform & Source</h3><canvas id="chartListingsByPlatformSource"></canvas></div>
+    <div class="chart-card"><h3>Category Distribution</h3><canvas id="chartCategoryDist"></canvas></div>
   </div>
 </div>
 
-<!-- ========== TRENDS ========== -->
-<div class="section" id="sec-trends">
+<!-- ========== LIVE LISTINGS ========== -->
+<div class="section" id="sec-listings">
+  <h2>Live Listings</h2>
+
   <div class="filters">
-    <label>Platform:</label>
-    <select id="trendPlatform"><option value="all">All Platforms</option></select>
+    <div>
+      <label>Search:</label>
+      <input type="text" id="searchInput" placeholder="Search by title, seller, platform...">
+    </div>
+    <div>
+      <label>Platform:</label>
+      <select id="filterPlatform">
+        <option value="">All Platforms</option>
+        <option value="Roblox">Roblox</option>
+        <option value="Fortnite">Fortnite</option>
+        <option value="Minecraft">Minecraft</option>
+        <option value="Steam">Steam</option>
+      </select>
+    </div>
+    <div>
+      <label>Source:</label>
+      <select id="filterSource">
+        <option value="">All Sources</option>
+        <option value="Eldorado.gg">Eldorado.gg</option>
+        <option value="U7Buy">U7Buy</option>
+        <option value="eBay">eBay</option>
+      </select>
+    </div>
+    <div>
+      <label>Category:</label>
+      <select id="filterCategory">
+        <option value="">All Categories</option>
+        <option value="Items / Currency">Items / Currency</option>
+        <option value="Age Verified">Age Verified</option>
+        <option value="OG / Veteran Account">OG / Veteran Account</option>
+        <option value="General">General</option>
+      </select>
+    </div>
   </div>
-  <div class="chart-row full">
-    <div class="chart-card"><h3>Monthly Listing Volume</h3><canvas id="chartTrendVolume"></canvas></div>
+
+  <div class="table-card">
+    <div class="table-wrap">
+      <table id="listingsTable">
+        <thead>
+          <tr>
+            <th style="width: 12%;">Platform</th>
+            <th style="width: 12%;">Source</th>
+            <th style="width: 25%;">Title</th>
+            <th style="width: 10%;">Price (USD)</th>
+            <th style="width: 12%;">Seller</th>
+            <th style="width: 10%;">Rating</th>
+            <th style="width: 15%;">Categories</th>
+            <th style="width: 14%;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="listingsTableBody">
+        </tbody>
+      </table>
+    </div>
   </div>
-  <div class="chart-row">
-    <div class="chart-card"><h3>Average Price Trend</h3><canvas id="chartTrendPrice"></canvas></div>
-    <div class="chart-card"><h3>New Listings vs Total</h3><canvas id="chartTrendNew"></canvas></div>
-  </div>
-  <div class="chart-row">
-    <div class="chart-card"><h3>Unique Sellers</h3><canvas id="chartTrendSellers"></canvas></div>
-    <div class="chart-card"><h3>Month-over-Month Growth (%)</h3><canvas id="chartTrendGrowth"></canvas></div>
-  </div>
+</div>
+
+<!-- ========== BY PLATFORM ========== -->
+<div class="section" id="sec-platforms">
+  <h2>By Platform</h2>
+  <div id="platformsContainer"></div>
 </div>
 
 <!-- ========== SOURCES ========== -->
 <div class="section" id="sec-sources">
-  <div class="filters">
-    <label>Platform:</label>
-    <select id="sourcePlatform"><option value="all">All Platforms</option></select>
-    <label>Source Type:</label>
-    <select id="sourceType">
-      <option value="all">All Types</option>
-      <option value="marketplace">Marketplaces</option>
-      <option value="forum">Forums</option>
-      <option value="social">Social</option>
-    </select>
-  </div>
-  <div class="chart-row">
-    <div class="chart-card"><h3>Listings by Source Type</h3><canvas id="chartSourcePie"></canvas></div>
-    <div class="chart-card"><h3>Top Sources by Listing Count</h3><canvas id="chartSourceBar"></canvas></div>
-  </div>
-  <div class="chart-card" style="margin-bottom:24px">
-    <h3>Source Details</h3>
-    <div class="table-wrap"><table id="sourceTable"><thead><tr>
-      <th>Source</th><th>Type</th><th>Platform</th><th>Listings</th><th>Avg Price</th><th>Verified Sellers</th><th>Last Scraped</th>
-    </tr></thead><tbody></tbody></table></div>
-  </div>
+  <h2>Sources</h2>
+  <div id="sourcesContainer"></div>
 </div>
 
-<!-- ========== KEYWORDS ========== -->
-<div class="section" id="sec-keywords">
-  <div class="filters">
-    <label>Platform:</label>
-    <select id="kwPlatform"></select>
-  </div>
-  <div class="chart-row full">
-    <div class="chart-card"><h3>Top Keywords by Mention Count (Latest Month)</h3><canvas id="chartKwBar"></canvas></div>
-  </div>
-  <div class="chart-row full">
-    <div class="chart-card"><h3>Keyword Trends Over Time</h3><canvas id="chartKwTrend"></canvas></div>
-  </div>
-  <div class="chart-card">
-    <h3>Keyword Details</h3>
-    <div class="table-wrap"><table id="kwTable"><thead><tr>
-      <th>Keyword</th><th>Mentions (Latest)</th><th>Avg Price</th><th>Sentiment</th><th>Trend</th>
-    </tr></thead><tbody></tbody></table></div>
-  </div>
 </div>
-
-<!-- ========== REGIONS ========== -->
-<div class="section" id="sec-regions">
-  <div class="filters">
-    <label>Platform:</label>
-    <select id="regionPlatform"><option value="all">All Platforms</option></select>
-  </div>
-  <div class="chart-row">
-    <div class="chart-card"><h3>Listings by Region</h3><canvas id="chartRegionBar"></canvas></div>
-    <div class="chart-card"><h3>Average Price by Region (USD)</h3><canvas id="chartRegionPrice"></canvas></div>
-  </div>
-  <div class="chart-card">
-    <h3>Regional Breakdown</h3>
-    <div class="table-wrap"><table id="regionTable"><thead><tr>
-      <th>Region</th><th>Platform</th><th>Listings</th><th>Avg Price</th><th>Dominant Language</th><th>Sellers</th>
-    </tr></thead><tbody></tbody></table></div>
-  </div>
-</div>
-
-<!-- ========== LANGUAGES ========== -->
-<div class="section" id="sec-languages">
-  <div class="filters">
-    <label>Platform:</label>
-    <select id="langPlatform"><option value="all">All Platforms</option></select>
-  </div>
-  <div class="chart-row">
-    <div class="chart-card"><h3>Listings by Language</h3><canvas id="chartLangBar"></canvas></div>
-    <div class="chart-card"><h3>Average Price by Language (USD)</h3><canvas id="chartLangPrice"></canvas></div>
-  </div>
-  <div class="chart-card">
-    <h3>Language Details</h3>
-    <div class="table-wrap"><table id="langTable"><thead><tr>
-      <th>Language</th><th>Platform</th><th>Listings</th><th>Avg Price</th><th>% with Images</th>
-    </tr></thead><tbody></tbody></table></div>
-  </div>
-</div>
-
-<!-- ========== QUALITY ========== -->
-<div class="section" id="sec-quality">
-  <div class="chart-row">
-    <div class="chart-card"><h3>Quality Tier Distribution by Platform</h3><canvas id="chartQualityStacked"></canvas></div>
-    <div class="chart-card"><h3>Average Price by Quality Tier</h3><canvas id="chartQualityPrice"></canvas></div>
-  </div>
-  <div class="chart-card">
-    <h3>Quality Tier Details</h3>
-    <div class="table-wrap"><table id="qualityTable"><thead><tr>
-      <th>Platform</th><th>Tier</th><th>Listings</th><th>% of Total</th><th>Avg Price</th><th>Median Price</th>
-    </tr></thead><tbody></tbody></table></div>
-  </div>
-</div>
-
-<!-- ========== ALERTS ========== -->
-<div class="section" id="sec-alerts">
-  <div class="filters">
-    <label>Severity:</label>
-    <select id="alertSeverity">
-      <option value="all">All</option>
-      <option value="critical">Critical</option>
-      <option value="high">High</option>
-      <option value="medium">Medium</option>
-      <option value="low">Low</option>
-    </select>
-    <label>Platform:</label>
-    <select id="alertPlatform"><option value="all">All Platforms</option></select>
-  </div>
-  <div id="alertList"></div>
-</div>
-
-</div><!-- container -->
 
 <script>
-const D = {"metadata": {"generated_at": "2026-03-26T05:42:57.006201", "data_source": "Live scraping from Eldorado.gg, U7Buy, and eBay", "scrape_date": "2026-03-26", "platforms": ["Roblox", "Fortnite", "Minecraft", "Steam"], "sources": ["Eldorado.gg", "U7Buy", "eBay"], "total_listings_found": 80686, "total_listings_scraped": 224, "version": "3.0.0-live"}, "platform_summary": {"Roblox": {"total_listings_across_sources": 17576, "sources": {"Eldorado.gg": {"total_on_site": 11531, "search_url": "https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0", "scraped_count": 24}, "U7Buy": {"total_on_site": 5692, "search_url": "https://www.u7buy.com/roblox/roblox-accounts", "scraped_count": 33}, "eBay": {"total_on_site": 353, "search_url": "https://www.ebay.com/sch/i.html?_nkw=roblox+account", "scraped_count": 0}}, "price_min": 1.14, "price_max": 69.0, "categories": {"OG / Veteran Account": 20, "Items / Currency": 27, "Age Verified": 2, "General": 12}, "avg_price_usd": 14.86}, "Fortnite": {"total_listings_across_sources": 53589, "sources": {"Eldorado.gg": {"total_on_site": 44703, "search_url": "https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0", "scraped_count": 24}, "U7Buy": {"total_on_site": 8886, "search_url": "https://www.u7buy.com/fortnite/fortnite-accounts", "scraped_count": 33}, "eBay": {"total_on_site": 0, "search_url": "https://www.ebay.com/sch/i.html?_nkw=fortnite+account", "scraped_count": 0}}, "price_min": 1.06, "price_max": 34.24, "categories": {"Items / Currency": 42, "OG / Veteran Account": 13, "General": 12}, "avg_price_usd": 13.63}, "Minecraft": {"total_listings_across_sources": 2849, "sources": {"Eldorado.gg": {"total_on_site": 1289, "search_url": "https://www.eldorado.gg/minecraft-accounts/a/61-1-0", "scraped_count": 24}, "U7Buy": {"total_on_site": 1560, "search_url": "https://www.u7buy.com/minecraft/minecraft-accounts", "scraped_count": 33}, "eBay": {"total_on_site": 0, "search_url": "https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java", "scraped_count": 0}}, "price_min": 2.11, "price_max": 106.9, "categories": {"Items / Currency": 41, "OG / Veteran Account": 6, "General": 14}, "avg_price_usd": 29.36}, "Steam": {"total_listings_across_sources": 6672, "sources": {"Eldorado.gg": {"total_on_site": 3681, "search_url": "https://www.eldorado.gg/steam-accounts/a/42-0-0", "scraped_count": 24}, "U7Buy": {"total_on_site": 2991, "search_url": "https://www.u7buy.com/steam/steam-accounts", "scraped_count": 33}, "eBay": {"total_on_site": 0, "search_url": "https://www.ebay.com/sch/i.html?_nkw=steam+account", "scraped_count": 0}}, "price_min": 1.06, "price_max": 37.35, "categories": {"General": 32, "Items / Currency": 17, "OG / Veteran Account": 13}, "avg_price_usd": 9.95}}, "source_summary": {"Eldorado.gg": {"total_listings": 61204, "platforms": ["Roblox", "Fortnite", "Minecraft", "Steam"]}, "U7Buy": {"total_listings": 19129, "platforms": ["Roblox", "Fortnite", "Minecraft", "Steam"]}, "eBay": {"total_listings": 353, "platforms": ["Roblox", "Fortnite", "Minecraft", "Steam"]}}, "category_summary": {"OG / Veteran Account": {"count": 52, "platforms": {"Roblox": 20, "Fortnite": 13, "Minecraft": 6, "Steam": 13}}, "Items / Currency": {"count": 127, "platforms": {"Roblox": 27, "Fortnite": 42, "Minecraft": 41, "Steam": 17}}, "Age Verified": {"count": 2, "platforms": {"Roblox": 2}}, "General": {"count": 70, "platforms": {"Roblox": 12, "Fortnite": 12, "Minecraft": 14, "Steam": 32}}}, "listings": [{"platform": "Roblox", "source": "Eldorado.gg", "title": "2009-2010", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4c144065-8567-440b-aca8-08de6fa6ce58", "seller": "Kaka498.6%\u00a0(125,226)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "4 Letter \u26a1\ufe0f", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4a9dafac-accf-4f17-9505-cf68ecf6ca6e", "seller": "SupplyMarkt99.9%\u00a0(5839)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "Adopt Me 280K+ Bucks 500+ Potions", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7d2a3de0-1711-418a-0178-08de7b84e0f0", "seller": "King-GAG98.3%\u00a0(18,146)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "2009 - 2012", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4e50007e-f0f9-435f-a21b-0900827ccb2d", "seller": "Incubater99.9%\u00a0(101,930)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "Adopt Me\ud83c\udf6c3M CANDY EGGS\ud83c\udf6c", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731fe", "seller": "AloShopAll100%\u00a0(12,502)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "\ud83d\udd252008 Join Date", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/605aabef-e3d3-427c-bcb2-e0c0578fae9c", "seller": "RespawnMarket99.6%\u00a0(41,018)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "Adopt Me 180k-190k B | 250+ Potions\u2705", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/2eb46823-6dfe-444b-a893-08de7466e52b", "seller": "nimbus2000099.6%\u00a0(7652)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "2007-2012", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/063699a4-cbb3-4c7d-a211-08de7ab0114f", "seller": "Nemesis_Store100%\u00a0(18,240)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "Adopt Me\u2b5050 potions\u2b5040 000 bucks\u2b50", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/e2b7f350-d50c-4f75-9e53-08de89a1ba27", "seller": "CoolLancer50998.1%\u00a0(45,222)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "\ud83c\udfaf2006-2008 account \u26a1 Instant Delivery", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/f655548d-7a43-4487-a85d-3d71f35cddca", "seller": "Proflex99.6%\u00a0(49,967)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "Adopt Me \u26a1300 Pots\u26a1200k-500k Bucks", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/c2b6f2de-984b-4069-aec2-5c8410ad1b22", "seller": "-TopSells99.5%\u00a0(2031)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "\ud83d\udd25 2008-2011 Account", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7ad9701c-5f93-4ba9-ba97-47aaa683a15f", "seller": "4-Letter-Shop98.7%\u00a0(3698)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "\u2705[Blox Fruits] Shark V4\u2b50CDK\u2b50LVL 2800\u2b50GODHUMAN\u2b50All Details Changeable\u2b50", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/90f99ca7-d2c4-452d-a6fa-492068ee2700", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "2007-2011", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/5185b36f-3ff9-414c-bdba-b962760eb517", "seller": "MonkeyGaming99.3%\u00a0(252,704)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "Adopt Me \ud83d\udd25 150+ Pots\ud83d\udd25100k-200k Bucks", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/e6618d11-123d-46ae-a29f-086ea8f1ca06", "seller": "Arcade-Arena98.9%\u00a0(10,183)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "[GAG] X3 Kappa (Inventory)  + Full Access", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4ed20afd-744f-46a6-9aab-939b0eb1aba8", "seller": "SmartKite-GqVr99.4%\u00a0(50,773)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "Adopt me\ud83d\udca5250+ POTS\ud83d\udca5180K+ BUCKS", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/042054b5-63b2-45aa-d9b6-08de7cce1374", "seller": "Gamify_97899.7%\u00a0(929)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "2007-2011", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/b4b4c6c5-0fd1-41b8-b31c-122432250ad9", "seller": "Parrot98.9%\u00a0(47,589)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "\ud83c\udfc6 Rare 5-LetterUsername | Roblox Account + Robux \ud83c\udfc6", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/21e26f86-36d8-48b1-ba29-3d138e8657d4", "seller": "moxl97.4%\u00a0(1058)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "2007-2010", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/e61bc3e1-1f59-4853-a242-034e0b8187d2", "seller": "LmaoStore99.7%\u00a0(1030)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "[Adopt me]  Age-up Potion 605 + Pet 2D Kitty  + Bucks 409k + Fast", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/96df4140-53a8-4730-d23a-08de8692b9c3", "seller": "cmduong199599.5%\u00a0(4720)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "2007-11 ACCOUNT", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/65d0e2fc-33c2-4598-9aa7-2059ed567c68", "seller": "MoneyGaming99%\u00a0(96,796)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "2007-2011", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/59bd5bde-bb07-4b61-1958-08de739c22d0", "seller": "ZeroDrop98.7%\u00a0(21,390)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "Eldorado.gg", "title": "\ud83c\udf6c2.5 M CANDY EGGS\u2728", "price_usd": 0.0, "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/576c5319-1ce6-4394-0b4e-08de85a9ed66", "seller": "EliteLoot99.8%\u00a0(4592)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\u2b50\ufe0f18+ AGE Verified (PERMANENT VOICE CHAT Active) - INSTANT DELIVERY 24/7+Full Access", "price_usd": 6.89, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648891102&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Age Verified"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\u2b50\ufe0f 5100+ RAP+LIMITED Skins+VERY RARE OFFSALES (Octobeanie+2010 Roblox Visor+Other)+OFF SALE Skins+JOIN DATE - 2010 Year (15-16 YEARS OLD)+Full Access", "price_usd": 28.5, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1920837384973393922&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "120-150 LVL+18000+ Gems+1-2 Legendary Unit+15-80 Random Units+6 Slots Unlocked+Full Access+INSTANT [ANIME DEFENDERS / AD]", "price_usd": 51.7, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501514672841&businessId=1820693954263351302&isEntrance=0", "seller": "jimmysstore96.95%821 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\u2b50\ufe0f JOIN DATE - 2008 - 2009 Year! 15-16 YEARS OLD Rbl Account [UNVERIFIED - No Linked Email]+Chance for Offsale + INSTANT DELIVERY 24/7", "price_usd": 5.19, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648891254&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "Account Blox Fruit GODHUMAN SOUL GUITAR [MAX Level] [Datpol] [Not Verified]", "price_usd": 14.82, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648889820&businessId=1820693954263351302&isEntrance=0", "seller": "jimmysstore96.95%821 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "GROW A GARDEN | \ud83d\udcb0 1.400T+/1.400.000B+ Fruit Valuable (item trade) \ud83e\uddd1\u200d\ud83c\udf3e | UNVERIFIED 13+ | INSTANT DELIVERY\u26a1\ufe0f", "price_usd": 11.85, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1936151431140761602&businessId=1820693954263351302&isEntrance=0", "seller": "BrightGamingShop100.00%272 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\ud83d\udd25 1000\u2013 263,000+ ROBUX DONATED(spent)\ud83c\udf81 NEW STOCK \ud83c\udf81 1 HIDDEN KORBLOX 100% \ud83c\udf81 \ud83c\udfb2 ABSOLUTELY RANDOM ROBLOX ACCOUNT\ud83e\uddb5 MAY INCLUDE KORBLOX", "price_usd": 5.75, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1985298318557450242&businessId=1820693954263351302&isEntrance=0", "seller": "Capain_Services99.37%3096 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\ud83d\udc51 THE HOLY GRAIL: 2006-2009 \"SUPER OG\" ACCOUNTS \ud83d\udc51", "price_usd": 6.9, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1924794250148061186&businessId=1820693954263351302&isEntrance=0", "seller": "Capain_Services99.37%3096 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\u2728Roblox\u2728 2008-2010\u2728 Join Unverified accounts\u2728", "price_usd": 1.14, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648889633&businessId=1820693954263351302&isEntrance=0", "seller": "Gaming_Store100.00%6704 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "Voice chat +18", "price_usd": 4.6, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=2003675788700426241&businessId=1820693954263351302&isEntrance=0", "seller": "MERCY STORE99.32%1978 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Age Verified"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\ud83d\udd25 Roblox 4 Letter Username Account \ud83d\udd25  \u2705 Unverified  \u2705 Old 2010 Creation Date  \u2705 Has Offsales   \u26a1 Instant Delivery  \ud83d\udcac Comes In A Username:Password F", "price_usd": 69.0, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1969165013002424321&businessId=1820693954263351302&isEntrance=0", "seller": "cyberzone100.00%67 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "GROW A GARDEN | \ud83d\udcb0 1000T+/1.000.000B+ Fruit Valuable (item trade) \ud83e\uddd1\u200d\ud83c\udf3e | UNVERIFIED 13+ | INSTANT DELIVERY", "price_usd": 11.85, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1938627014378360834&businessId=1820693954263351302&isEntrance=0", "seller": "BrightGamingShop100.00%272 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "Adopt Me 270+ Pots\u2b50\ufe0f200K+ Bucks", "price_usd": 3.9, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=2030202561665916929&businessId=1820693954263351302&isEntrance=0", "seller": "SMURFVALORANT99.68%6953 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "HUGE SALES!!!\ud83d\udd25 100,000\u2013 555,000+ ROBUX DONATED(spent)\ud83c\udf81 NEW STOCK \ud83c\udf81 1 HIDDEN KORBLOX 100% \ud83c\udf81 \ud83c\udfb2 ABSOLUTELY RANDOM ROBLOX ACCOUNT\ud83e\uddb5 MAY INCLUDE KORBLOX", "price_usd": 34.5, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1927690341431193602&businessId=1820693954263351302&isEntrance=0", "seller": "Capain_Services99.37%3096 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\ud83d\udd25 100\u2013 263,000+ ROBUX spent\ud83c\udf81 NEW STOCK \ud83c\udf81 1 HIDDEN KORBLOX 100% \ud83c\udf81 \ud83c\udfb2 ABSOLUTELY RANDOM ROBLOX ACCOUNT\ud83e\uddb5 MAY INCLUDE KORBLOX", "price_usd": 1.73, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1912885390434996225&businessId=1820693954263351302&isEntrance=0", "seller": "Capain_Services99.37%3096 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\u2b50\ufe0f 1100+ RAP + Limited KUDDLE E. KOALA + JOIN DATE - 2011-2016 Year (9 - 15 Years OLD) + Chance for Other Skins / Off Sales ( OffSales ) + INSTANT DELIVERY", "price_usd": 7.45, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1921136326320672769&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\u2747\ufe0fFish It\u2747\ufe0fLv200+\u2b50Random 10-20 ROD (100% Astral Rod, Chrome Rod, Steampunk Rod,...)\u2b502m-4m Coin\u2b50Many Items\u2b50Unverified", "price_usd": 4.95, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1967525604378738690&businessId=1820693954263351302&isEntrance=0", "seller": "Luxury_Shop99.69%2620 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\ud83c\udf1f RBLX Account \ud83c\udfae GOD + DRACO V3 \ud83d\udcec 2 ITEM (\ud83c\udf2a\ufe0f DRAGONHEART + DRAGONSTORM\ud83c\udfae) \u26a1 Instant Delivery \ud83d\udd13 Complete Access \u2705", "price_usd": 21.34, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1976289583143190529&businessId=1820693954263351302&isEntrance=0", "seller": "MonkeyGaming99.39%2925 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "[Fresh]\u2705Roblox \u27050 hours\u2705 Unverified\u2705 Instant delivery\u2705", "price_usd": 1.14, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648891680&businessId=1820693954263351302&isEntrance=0", "seller": "YellowLion100.00%2017 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "\u3010Grow A Garden\u3011 \ud83d\udcb04090+ Billion Sheckles \u2764\ufe0f Instant Delivery", "price_usd": 4.01, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648889634&businessId=1820693954263351302&isEntrance=0", "seller": "Gaming_Store100.00%6704 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "26/032026", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/jujutsu-shenanigans-codes/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "26/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "26/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "25/032026", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/sailor-piece-codes/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "25/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "25/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/grow-a-garden-king-of-the-seed-guide/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/how-to-get-la-lucky-grande-in-steal-a-brainrot/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Roblox", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "94 Skins | Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/7fd80071-1dfa-41c5-383d-08de80cf17a9", "seller": "Parrot98.9%\u00a0(47,589)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "45 Skins | Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/a1f1f0ad-428f-471e-1862-08de80cf1aab", "seller": "Parrot98.9%\u00a0(47,589)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "93 Skins | Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/8e1c0340-73bb-460a-dd06-08de80cf1649", "seller": "Parrot98.9%\u00a0(47,589)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "116 Skins | Omega", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/f88a2247-b86a-4a38-bd8f-08de8681c26d", "seller": "Parrot98.9%\u00a0(47,589)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "57 Skins | Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/02f68079-460a-46a3-dcc6-08de689b294f", "seller": "Parrot98.9%\u00a0(47,589)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "106 Skins | Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/ce4c9cd6-56eb-442f-ae8e-c68dfcc646f2", "seller": "Parrot98.9%\u00a0(47,589)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "[PC] 24 skins | IKONIK", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/0da0c150-7fa9-4b36-c196-08de80cf1b08", "seller": "Store4Gamers98.1%\u00a0(50,984)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "[PC/XBOX] | 32 skins | 700 V-bucks | Floss", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/7b55b75e-efa2-427d-c961-08de88d0e06e", "seller": "Store4Gamers98.1%\u00a0(50,984)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "[PC/PSN/XBOX] | 1 skins | Galaxy | Stellar Axe | Default Pickaxe | S4G", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/6ee190e9-751e-4bed-4cc9-08de89a1b607", "seller": "Store4Gamers98.1%\u00a0(50,984)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "77 skins | Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/8d360cae-6269-4e52-40ed-08de7b84e287", "seller": "AladdinMarkt99.7%\u00a0(3874)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "9 skins | Mako", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/8630249d-5e32-4e33-85a5-08de89a1b36c", "seller": "AladdinMarkt99.7%\u00a0(3874)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "OG STW", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/85f1b3e6-fca8-4c56-a2e9-bcae640755af", "seller": "PoloShop98.8%\u00a0(182,507)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "75 Skins", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/0bee6adc-ccf9-4b44-9e94-1f35d5166e38", "seller": "PoloShop98.8%\u00a0(182,507)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "123 skins | Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/0eed0baf-45fb-4d74-905f-d6ef90a02bc9", "seller": "AladdinMarkt99.7%\u00a0(3874)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "125 skins | Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/c065d5e7-b03d-4d53-01d5-08de655731fe", "seller": "AladdinMarkt99.7%\u00a0(3874)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "174 skins | Black Knight", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/e24c4ff8-dd20-468b-53e1-08de80cf164c", "seller": "AladdinMarkt99.7%\u00a0(3874)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "158 skins | Lara Croft + Omegarok", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/83b85999-2154-4d83-840a-08de65572dff", "seller": "AladdinMarkt99.7%\u00a0(3874)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "[PC] | 13 skins | IKONIK | Glow | Trilogy | Midas | Deadpool | Gear Specialist Maya | Lt. Evergreen | Agent Peely | Meowscles | TNTina | Skye | S4G", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/06462039-e193-4224-0403-08de8a60d344", "seller": "Store4Gamers98.1%\u00a0(50,984)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "22 Skins\u2b50\ufe0fGalaxy", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/59b61617-b5fb-4da2-f8b0-08de88d0dd9f", "seller": "krovler99.9%\u00a0(26,058)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "58 Skins | Travis Scott", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/fbbff7e6-68d1-4b40-1e91-08de8a60d51d", "seller": "krovler99.9%\u00a0(26,058)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "[PC/XBOX] | 3 skins | Royale Knight | Blue Squire | Blue Team Leader | Blade of the Waning Moon | Pulse Axe | Axecalibur | Boulder Breakers | S4G", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/87ade5cd-7de7-473e-b30d-9cc8c35a5168", "seller": "Store4Gamers98.1%\u00a0(50,984)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "[PC] | 255 skins | 1150 V-bucks | Leviathan Axe | Floss | Take The L | Black Knight | Travis Scott | Sparkle Specialist | Royale Knight | S4G", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/7a964cf3-82c4-4059-8e45-08de85a9ed64", "seller": "Store4Gamers98.1%\u00a0(50,984)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "6 skins\u2b50\ufe0fGalaxy", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/ce5d054d-73a4-4f2c-a5f5-08de8681c0b2", "seller": "krovler99.9%\u00a0(26,058)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "Eldorado.gg", "title": "\ud83d\udc5132 Skins\ud83d\udc51PC/PSN/XBOX\ud83d\udc51Royale Knight\ud83d\udc51Floss\ud83d\udc51The Reaper\ud83d\udc51Blue Squire\ud83d\udc51Take The L\ud83d\udc51Elite Agent\ud83d\udc51Peely\ud83d\udc51Prodigy\ud83d\udc51Point Patroller\ud83d\udc51Rox\ud83d\udc51Raptor\ud83d\udc51Hybrid", "price_usd": 0.0, "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/4770c2a7-9f51-4cf9-22e7-08de6fa6d689", "seller": "Meradon97.9%\u00a0(8598)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ud83d\udc8e PREMIUM RANDOM ACCOUNT | FA \u2728 \ud83c\udfc6 OG RARE - \ud83d\ude80 INSTANT DELIVERY - Black Knight - Travis Scott - Ikonik - Wonder - Elite Agent - The Reaper - Omega - Leviathan Axe", "price_usd": 5.35, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1996704265567399938&businessId=1820693954263351302&isEntrance=0", "seller": "CannaShop100.00%366 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\u26a1135-600 OG STACKED SKINS MYSTERY BOX \u26a1 \u2705 Guaranteed to get +1 of these | Wild Cat | Floss | Renegade Raider | Ikonik | Black Knight | Neo Versa | Travis Scott  |  OG STW  | OG Lara Croft  | Wonder | Leviathan Axe |", "price_usd": 26.75, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1925518769741504513&businessId=1820693954263351302&isEntrance=0", "seller": "BlackLabel98.28%2153 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ud83d\udd25 \u2757105-900 GOLD BOX \u2757\ud83d\udd25  INSTANT DELIVERY \u26a1\ufe0f \u2191 \u2191 \u2191 CHANCES FOR OGS  \u2604\ufe0f ALL PLATFORMS \u2604\ufe0f", "price_usd": 21.4, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1898646495986579232&businessId=1820693954263351302&isEntrance=0", "seller": "TheFortniteGuy97.88%1480 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\u26a12\u2013800 Chance RANDOM SKINS - Limited Stock\u26a1 [PC/PSN/XBOX] Travis Scott, IKONIK, Wonder, Black Knight, Elite Agent, Omega, Leviathan Axe, Candy Axe \ud83d\udd25 FA \ud83d\udd25 Mystery Box", "price_usd": 5.99, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=2014458781622484994&businessId=1820693954263351302&isEntrance=0", "seller": "Fort_Box100.00%163 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "MYSTERY BOX \u2604\ufe0fBLACK KNIGHT | TRAVIS SCOTT | THE REAPER | IKONIK \u2b50\ufe0f10-100 SKINS\u2b50\ufe0fRANDOM CHANCE FORTNITE ACCOUNT\u2705Full Access\u2705", "price_usd": 6.96, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944487375203573762&businessId=1820693954263351302&isEntrance=0", "seller": "MageMarkt99.94%1593 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ud83d\udc8e PREMIUM RANDOM ACCOUNT | FA \u2728 \ud83c\udfc6 OG RARE - \ud83d\ude80 INSTANT DELIVERY - ALL PLATFORMS - Black Knight - Travis Scott - Ikonik - Sparkle Specialist - Lara Croft - Honor Guard - Merry Mint Axe - Royale Knight - Glow - Mako - Peely - Deadpool - Havoc", "price_usd": 5.35, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1996703754019553281&businessId=1820693954263351302&isEntrance=0", "seller": "CannaShop100.00%366 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\u2604\ufe0f50 SKINS\u2604\ufe0fHIGH CHANCES FOR OGS: Ikonik + Black Knight + Travis Scott + Take The L + Omega \u2733\ufe0f FULL ACCESS \u2604\ufe0f PC/PSN/XBOX \u2604\ufe0f\u26a1Limited Offer", "price_usd": 17.66, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1904812921269084886&businessId=1820693954263351302&isEntrance=0", "seller": "MageMarkt99.94%1593 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ud83d\udc8e PREMIUM RANDOM ACCOUNT | FA \u2728ALL PLATFORMS \ud83c\udfc6 OG RARE - \ud83d\ude80 INSTANT DELIVERY - Black Knight - Travis Scott - Ikonik - Wonder - Wildcat - OG Skull Trooper - Galaxy - Renegade Raider", "price_usd": 5.35, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1994938991413444610&businessId=1820693954263351302&isEntrance=0", "seller": "CannaShop100.00%366 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\u2733\ufe0fGUARANTEED OG SKIN  CHANCES TO GET: Ikonik + Black Knight + Renegade Raider + Travis Scott + Take The L + Omega | FULL ACCESS", "price_usd": 16.05, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1898646495789448178&businessId=1820693954263351302&isEntrance=0", "seller": "UncleFN98.30%535 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "MYSTERY BOX \u2604\ufe0fBLACK KNIGHT | TRAVIS SCOTT | THE REAPER | IKONIK \u2b50\ufe0f20-100 SKINS\u2b50\ufe0fRANDOM CHANCE FORTNITE ACCOUNT\u2705Full Access\u2705", "price_usd": 9.63, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944488899744997377&businessId=1820693954263351302&isEntrance=0", "seller": "MageMarkt99.94%1593 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\u26a1\ufe0fBEST VALUE DEAL\u26a1\ufe0f\u2757\ufe0fOG GUARANTEED\u2757\ufe0fOPPORTUNITY TO GET: Black Knight + Renegade Raider + Skull Trooper + Ikonik + Glow or Other \u26a1\ufe0fAll Platforms\u26a1\ufe0f", "price_usd": 14.45, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944502656499654658&businessId=1820693954263351302&isEntrance=0", "seller": "MageMarkt99.94%1593 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ud83d\udd25 8-850 RANDOM FORTNITE SKINS \ud83d\udd25 [PC/PSN/XBOX] \ud83d\udd25 Chances to get Renegade Raider / Travis Scott / Wildcat / Reaper / Dark Voyager \ud83d\udd25 FULL ACCESS \ud83d\udd25", "price_usd": 4.39, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=2015570013210759169&businessId=1820693954263351302&isEntrance=0", "seller": "TrueService100.00%31 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ud83d\udc8e PREMIUM 250+ RANDOM SKINS | FULL ACCESS \u2728 \ud83c\udfc6 INSANE OG RARE - Black Knight - Travis Scott - Ikonik - Wonder - Wildcat - OG Skull Trooper - Galaxy - Midas - Drift - Omega - Leviathan Axe - STW - Reaper - STACKED", "price_usd": 24.61, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=2002815167058550786&businessId=1820693954263351302&isEntrance=0", "seller": "CannaShop100.00%366 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\u26a1120-600 OG STACKED SKINS MYSTERY BOX \u26a1 \u2705 Guaranteed to get +1 of these | Wild Cat | Floss | Renegade Raider | Ikonik | Black Knight | Trailblazer | Travis Scott | Blue team leader | OG STW | OG Lara Croft | Wonder | Glow", "price_usd": 22.47, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1925532795072516097&businessId=1820693954263351302&isEntrance=0", "seller": "BlackLabel98.28%2153 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ud83d\udd25 8-350 RANDOM FORTNITE SKINS \ud83d\udd25 [PC/PSN/XBOX] \ud83d\udd25 Chances to get Travis Scott / Renegade Raider / Polo Prodigy / Galaxy / Midas \ud83d\udd25 FULL ACCESS \ud83d\udd25", "price_usd": 4.28, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=2015568461318279170&businessId=1820693954263351302&isEntrance=0", "seller": "TrueService100.00%31 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "MYSTERY BOX \u2604\ufe0fBLACK KNIGHT | TRAVIS SCOTT | THE REAPER | IKONIK \u2b50\ufe0f60-200 SKINS\u2b50\ufe0fRANDOM CHANCE FORTNITE ACCOUNT\u2705Full Access\u2705", "price_usd": 19.26, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944494545462304769&businessId=1820693954263351302&isEntrance=0", "seller": "MageMarkt99.94%1593 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "[Full Access] \u2705  | 1+ Skins Guaranteed \u2728 [All Platforms] \u26a1\ufe0f", "price_usd": 1.06, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1990134360678600723&businessId=1820693954263351302&isEntrance=0", "seller": "RonkoShopa97.23%522 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ud83d\udc5120-100 SKINS\ud83d\udc51 SUPER VALUE MYSTERY BOX \u2757CHANCES TO GET: BLACK KNIGHT + IKONIK + TRAVIS SCOTT + THE REAPER + OMEGA \u2604\ufe0f PC/PSN/XBOX \u2604\ufe0f\u2705FULL ACCESS", "price_usd": 9.63, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1991964764779589633&businessId=1820693954263351302&isEntrance=0", "seller": "MageMarkt99.94%1593 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "\ufe0f\u2757\ufe0f30% OFF\u2757\ufe0f100% Super Rare Skin like Black Knight, Renegade Raider, OG Ghoul Trooper or Other | 50-175 Skins | All Platforms | Mail Access \u2705", "price_usd": 17.66, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944497453826252802&businessId=1820693954263351302&isEntrance=0", "seller": "MageMarkt99.94%1593 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "MYSTERY BOX \u2604\ufe0fBLACK KNIGHT | TRAVIS SCOTT | THE REAPER | IKONIK \u2b50\ufe0f100-400 SKINS\u2b50\ufe0fRANDOM CHANCE FORTNITE ACCOUNT\u2705Full Access\u2705", "price_usd": 34.24, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944495230664777730&businessId=1820693954263351302&isEntrance=0", "seller": "MageMarkt99.94%1593 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/fortnite-chapter-7-season-2-battle-pass-skins/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "24/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "19/032026", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/fortnite-brings-project-hail-mary-for-an-exciting-collab/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "19/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "19/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "15/032026", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/fortnite-showdown-guide-release-date-captain-america-skin-map-leaks/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "15/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "15/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "14/032026", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/fortnite-save-the-world-free-to-play-guide/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "14/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Fortnite", "source": "U7Buy", "title": "14/032026", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java\u2b50Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/de41412f-542c-4728-886d-4458c72c1c15", "seller": "76k2_99.4%\u00a0(66,641)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java\u2b50Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/0c6fc9ed-6fda-48d7-a0b1-c56a1e37a038", "seller": "qzxcvfewe98.4%\u00a0(3731)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java & Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/5a8f13a8-c9a5-4f30-bfa9-7f6f5fa3de77", "seller": "krovler99.9%\u00a0(26,058)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java+Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/e0d4c11f-c568-4afd-6797-08de689b1fd0", "seller": "Combos99.8%\u00a0(2618)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java BAN HYPIXEL", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/a7015285-4275-47b4-82ed-82453da7d977", "seller": "qzxcvfewe98.4%\u00a0(3731)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java\u2b50Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/610269de-e607-4651-07ce-08de72d2d1f1", "seller": "saturnberry99.3%\u00a0(42,228)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Bedrock\u2b50\ufe0fJava", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/92e89c73-58cc-4f49-9cf7-c41ca3ef0f36", "seller": "-StarStore-98.4%\u00a0(9026)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java & Bedrock \u2668\ufe0f Migrator Cape", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/fd4fa609-d219-42d4-a658-c8984de71c58", "seller": "krovler99.9%\u00a0(26,058)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java\u2b50Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/ea73e84b-a00a-43d7-bdbf-3cfbb087c727", "seller": "Kaka498.6%\u00a0(125,226)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java   NO BAN HYPIXEL", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/7f1fd104-f892-4f75-876a-3a2a3526f36b", "seller": "qzxcvfewe98.4%\u00a0(3731)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "OptiFine Cape", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/cbd22a3a-dd53-4e5f-bb70-08de739c1987", "seller": "Parrot98.9%\u00a0(47,589)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java & Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/a87f48b2-b480-4a66-ed1d-08de7e7450d3", "seller": "obxcury98.8%\u00a0(166)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java & Bedrock\ud83d\udca54 Cape", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/e8b3a196-fef6-4848-c6ae-08de739c2601", "seller": "ZyTi0ns99.8%\u00a0(65,003)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java\u2b50Bedrock |\u26a1Instant Delivery", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/5c1ea347-dde0-4b12-5052-08de6af333e6", "seller": "DonutPower98.4%\u00a0(1593)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Copper Cape - CODE | JAVA & BEDROCK", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/2745b39a-623b-43ca-9f66-1bf41948561f", "seller": "linustechtips99.8%\u00a0(469)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java & Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/89a95d1b-c37d-499b-9f08-19e87d938790", "seller": "MoneyGaming99%\u00a0(96,796)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "[PSN]\ud83c\udfae Minecraft \ud83d\ude80 Fresh Account \ud83d\udd13 Full Access\ud83c\udf1f Auto Delivery \u26a124/7", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/abafc482-7e95-4cde-c346-08de751d59a5", "seller": "Nexify95.2%\u00a0(28,757)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "MVP+\ud83d\ude80Black+", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/6d035e7f-c6c0-411d-4e36-08de75d3450d", "seller": "Combos99.8%\u00a0(2618)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "\u3010KEY\u3011Copper Cape \u272a Minecraft \u272a Instant delivery", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/4912c6cc-41b3-4f73-bda1-1a9f78ca7ca1", "seller": "FitPhase-cJQv95.1%\u00a0(652)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java\u2b50Bedrock Edition + Dungeons + Legends - Game Pass\u2705 Instant Delivery", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/917a4f0b-bccb-4fbb-b343-08de8a60d22d", "seller": "FortEpic97%\u00a0(1443)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java FA", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/3592c4fc-5280-41fc-1c66-08de784bb725", "seller": "SmurfRealm99.4%\u00a0(28,489)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Java + Bedrock", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/734732fb-ed67-4c1e-9a51-3baed84ea300", "seller": "ZeroDrop98.7%\u00a0(21,390)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "Minecraft Java PERMANENT License FULL ACCESS", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/5f920846-dd5c-488c-de45-08de7b84df07", "seller": "Buldak97.3%\u00a0(75)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "Eldorado.gg", "title": "\ud83d\udc99 2 Capes \ud83d\udc99 Pan & Migrator \ud83d\udc99 NOT Subscription \ud83d\udc99 Full Access \ud83d\udc99", "price_usd": 0.0, "url": "https://www.eldorado.gg/minecraft-accounts/oa/b2d00600-20de-4eec-ca69-08de80cf1691", "seller": "GameStorm99.9%\u00a0(6163)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "\u2b50\ufe0fMicrosoft - JAVA+BEDROCK Windows editions (FULL LIFETIME LICENSE) MINECRAFT+Hypixel available+FULL ACCESS+INSTANT DELIVERY 24/7", "price_usd": 14.85, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499476239876&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "INSTANT DELIVERY + MINECRAFT LIFETIME + MICROSOFT | NO BAN HYPIXEL | JAVA + BEDROCK", "price_usd": 16.05, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=2003854261313757186&businessId=1820693954263351302&isEntrance=0", "seller": "MERCY STORE99.32%1978 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "\ud83c\udf1fMinecraft Account\ud83c\udf1fFull Access\ud83c\udf1fHypixel Unbanned\ud83c\udf1fJava + Bedrock Premium Minecraft Edition\ud83c\udf1fNot Gamepass\ud83c\udf1fPossible Skyblock\ud83c\udf1f[2x Cape] Common + Pan Cape", "price_usd": 13.88, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499543347695&businessId=1820693954263351302&isEntrance=0", "seller": "Gaming_Store100.00%6704 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "VIP Account Hypixel\uff08Random Level and Items\uff09MINECRAFT JAVA Edition", "price_usd": 15.95, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499543347645&businessId=1820693954263351302&isEntrance=0", "seller": "Globalgames99.69%37261 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "DISCOUNT\u301024/7\u3011Fresh Microsoft \u26cf\ufe0fHypixel \u2705 PREMIUM JAVA+BEDROCK Editions Together \u2705 Full access \u2705 Instant Delivery \u26a1", "price_usd": 9.98, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499543347828&businessId=1820693954263351302&isEntrance=0", "seller": "Kaka499.43%3235 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "Premium Minecraft Java VIP Ranked 3 capes Hypixel No Ban  Microsoft", "price_usd": 106.9, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499543347665&businessId=1820693954263351302&isEntrance=0", "seller": "EliteGaming100.00%14 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "\u2b50\ufe0f[MIGRATOR CAPE] OLD 4-10 Years Old Minecraft - JAVA+BEDROCK/Windows editions together l Hypixel available+FULL ACCESS", "price_usd": 18.72, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1912798193505636354&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "\u2b50\ufe0f[MVP+ Rank Hypixel+22 LVL] 2 Capes - Vanilla+Migrator + JAVA+BEDROCK/Windows editions (FULL LICENSE)+Full Access+Instant Delivery", "price_usd": 49.17, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1913139369223335937&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "\u2b50\ufe0f3 Capes - MIGRATOR+OPTIFINE+PAN + 4-8 Years Old + JAVA+BEDROCK/Windows editions (FULL LICENSE)+HYPIXEL+Full Access+Instant Delivery", "price_usd": 20.62, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499476239877&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "Migrator cape + Minecraft Java Edition (Microsoft Account)| NO BAN Hypixe| full access #ZZ", "price_usd": 12.84, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499476239841&businessId=1820693954263351302&isEntrance=0", "seller": "Globalgames99.69%37261 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "[PC - Hypixel] Minecraft Java & Bedrock Edition + Dungeons + Legends - Full Access - Full change - Fresh new - (GAME PASS)", "price_usd": 7.49, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=2003849804190474242&businessId=1820693954263351302&isEntrance=0", "seller": "MERCY STORE99.32%1978 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "(FULL ACCESS) Minecraft Account - Random Cape Chance", "price_usd": 16.05, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1917409833921478658&businessId=1820693954263351302&isEntrance=0", "seller": "AccountEverything100.00%8 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "Limited Time Offer: Purchase Your MVP+ Account & Get a FREE Bonus Account (No Rank)! [Java & Bedrock] [Hypixel Unbanned] [Full Access]", "price_usd": 80.25, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499543347592&businessId=1820693954263351302&isEntrance=0", "seller": "Minecraft_Seller97.89%186 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "Custom VIP acc", "price_usd": 70.0, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1922437272333000705&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "3 CAPES - Founder's Cape+Common+Pan+JAVA+BEDROCK Editions+Hypixel Available+Full Access+INSTANT DELIVERY 24/7", "price_usd": 36.5, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1913143246240821250&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "\u26cf TLAUNCHER \u26cf Minecraft Java & Bedrock \u2705 | Full Access \u2705 | Fresh Account \u2705 | 0 Hours Played \u2705 | All Details Changeable \u2705 | Instant Delivery\u26a1Free Skins & Caps\u26a1", "price_usd": 2.11, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1932544080756998146&businessId=1820693954263351302&isEntrance=0", "seller": "Gaming_Store100.00%6704 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "Microsoft - Java Edition | MAIL ACCESS | Hypixel No Ban | Full Access | Fast delivery", "price_usd": 12.83, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499476239765&businessId=1820693954263351302&isEntrance=0", "seller": "TheFlash24799.66%81580 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "Minecraft - Premium Java Edition | Migrator Cape | VIP+ Ranked | Hypixel No Ban", "price_usd": 17.98, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499476239831&businessId=1820693954263351302&isEntrance=0", "seller": "TheFlash24799.66%81580 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "Minecraft - Premium Java Edition | Cherry Blossom Cape | Hypixel No Ban", "price_usd": 29.75, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499476239835&businessId=1820693954263351302&isEntrance=0", "seller": "TheFlash24799.66%81580 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "Microsoft - MVP+ HYPIXEL DONATE NO BAN - MINECRAFT JAVA EDITION - Full Access - Fast delivery", "price_usd": 35.21, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499476239772&businessId=1820693954263351302&isEntrance=0", "seller": "TheFlash24799.66%81580 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "27/102025", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/best-minecraft-skins-in-2025/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "27/102025", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "27/102025", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "11/102025", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/hypixel-skyblock-updates-patches-alphas-future-content/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "11/102025", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "11/102025", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "27/092025", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/the-best-foraging-equipment-in-hypixel-skyblock/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "27/092025", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "27/092025", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "18/092025", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/minecraft-hypixel-skyblock-weapon-progression-guide-2025/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "18/092025", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Minecraft", "source": "U7Buy", "title": "18/092025", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Raft\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/5ff2777f-4d91-46a6-9209-77418f70077a", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "SCUM\u2b50\ufe0fSteam", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/02334309-1656-415a-bca9-aae6ab981340", "seller": "-StarStore-98.4%\u00a0(9026)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "Fresh\ud83d\udd25Sms Verified", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/ccd862c5-55d9-4cf5-a05f-68f342fc379c", "seller": "PythonVault98.9%\u00a0(17,346)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Squad\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/9e261fd7-43c6-42c8-ab2e-be0104a0411a", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u3010STEAM\u3011\u26a1  USA Region", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/80abf73f-a17e-4c7b-a755-e67ea923eef6", "seller": "Ada_Store99.3%\u00a0(23,509)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "[Steam]\u2705 Baldur's Gate 3 + Fresh Account + Full Access \u26a1\ufe0fInstantly Delivery\u26a1\ufe0f", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/957c45b4-df41-4f42-aab7-0d531822b8b0", "seller": "PoloShop98.8%\u00a0(182,507)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Pacify \u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/9cc337a9-486c-4547-b6cf-237d79e37299", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "[STEAM] Avowed | Full Access | Fast Delivery", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/432e9c2a-dc74-472c-aff5-e1288e8a6918", "seller": "LUXU-RY97.7%\u00a0(3439)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "Fresh Sms\ud83d\udd25Verified", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/a396b0e0-569a-4084-91ae-f605555a4df9", "seller": "RespawnMarket99.6%\u00a0(41,018)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "Peak Steam account, Full access, Instant delivery", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/d1f6aca2-676f-482c-adf7-251ad92428db", "seller": "Gannic9197%\u00a0(2000)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] DEVOUR \u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/c95640bb-2876-404b-94f9-ae3895e769ff", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "15 Game\u2b501000 Hour", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/005554e1-ba5a-47d2-b520-3cd336b90ca4", "seller": "ExoStore99.5%\u00a0(36,052)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "10X\ud83c\udf3b INDIA REGION - FRESH ACCOUNT", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/6270ce79-81f4-4103-daa3-08de7917abba", "seller": "teqila99.9%\u00a0(35,615)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Bodycam\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/38af2d8b-f923-44de-adc7-4178f6442610", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "Squad\u2b50\ufe0fSteam", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/9e7385ac-6be3-4d61-be94-134960665bb6", "seller": "-StarStore-98.4%\u00a0(9026)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Hitman 2\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/a2299e1c-e624-4405-a4ed-7dd55939e87b", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Terraria\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/47866a79-b911-4ae7-b227-cf2baeb8e3e6", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Payday 2\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/ef98a457-f704-4a12-838b-ee149c4c739d", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] The Isle \u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/bc99776f-e8e2-4a81-b0c8-d406a2fdd556", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Level 10+\u2b50All Details Changeable\u2b50", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/9e203d71-d6f3-4587-8ad9-d6f999b3b41f", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Outlast \u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/de30e7a0-24e3-4f28-a4f4-8db8be401463", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Garry's Mod\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/eaae6c96-252b-47c8-bd6c-bd30eea3f193", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] Dirt Rally\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/200e22e2-cbbb-4606-9c10-05db715ba807", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "Eldorado.gg", "title": "\u2705[Steam] R.E.P.O.\u2b50All Details Changeable", "price_usd": 0.0, "url": "https://www.eldorado.gg/steam-accounts/oa/6e72cbb3-6d1e-4a97-be17-b3eb0c0edb4a", "seller": "TAceOfSpades99.5%\u00a0(115,360)", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "STEAM R6S | Deluxe Edition | Fresh New Account | Can Change Data | Fast Delivery", "price_usd": 6.21, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504769451699&businessId=1820693954263351302&isEntrance=0", "seller": "TheFlash24799.66%81580 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "\u3010Australia\u3011Steam Acc (Fresh/New) + Original Email + Automatic Delivery -- Outlook Email", "price_usd": 4.28, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=2012788402807074817&businessId=1820693954263351302&isEntrance=0", "seller": "MERCY STORE99.32%1978 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "\u2b50\ufe0f17-20 Years old Steam+4 LEVEL Steam+CS:1.6 or CS: Source+ 2-4 Old Cheap Games+2 MEDALS [5+10 Years Veteran coins CS2] NOT Prime!+Full Access", "price_usd": 8.86, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365741&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "\u2b50\ufe0fSEPTEMBER 2003+21 Years old Steam+6 LEVEL Steam+CS:1.6 or Source+7 Old Cheap Games+2 MEDALS [5+10 Years Veteran coins CS2] NOT Prime!", "price_usd": 27.81, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365742&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "\ud83c\udf2b\ufe0f Resident Evil Requiem Deluxe Edition | \ud83d\udcbb Steam | \ud83c\udf81 + Gifts | Offline Mode | FAST DELIVERY", "price_usd": 4.28, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=2027822640438923265&businessId=1820693954263351302&isEntrance=0", "seller": "ASO_STORE99.53%1189 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "\ud83d\udc8e200+ GAMES \ud83d\udc8e[ONLINE STEAM 20+ LVL]\ud83d\udc8eFull access\ud83d\udc8eWarranty \ud83d\udc8eInstant", "price_usd": 10.69, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1983233729722667010&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "INSTANT \ud83d\udc8e100+ GAMES \ud83d\udc8e[ONLINE STEAM 10+ LVL]\ud83d\udc8eFull access\ud83d\udc8eWarranty", "price_usd": 7.48, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1969706021407383554&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "INSTANT \u2022 No 5$ limit \ud83d\udc8e[ONLINE STEAM] Full access \u2022  Warranty", "price_usd": 1.06, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1972232173243990018&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "\ud83d\udc8e500+ GAMES \ud83d\udc8e[ONLINE STEAM 20+ LVL]\ud83d\udc8eFull access\ud83d\udc8eWarranty \ud83d\udc8eInstant", "price_usd": 21.39, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1970435443070087170&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "Instant\ud83d\udc8e300+ GAMES \ud83d\udc8e[ONLINE STEAM 20+ LVL]\ud83d\udc8eFull access\ud83d\udc8eWarranty \ud83d\udc8eInstant", "price_usd": 13.9, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1969707120695906305&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "Fresh TURKEY Steam Store Account [0 Games]+Original Email+Full Access", "price_usd": 3.05, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365752&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "Steam Account with 2 games: PAYDAY 2+RAFT+Region Free+Original Email+Full Access", "price_usd": 5.55, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365746&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "Fresh Steam - PAVLOV VR (0 Hours)+Region Free+Original Email+Full Access", "price_usd": 9.99, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365745&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "Fresh Steam - BeamNG.drive (0 Hours)+Region Free+Original Email+Full Access+Fast Delivery 24/7", "price_usd": 10.67, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365744&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "19-20 YEARS OLD - 2003-2004 Year Steam (7 DIGIT id)+ORIGINAL EMAIL+CS 1.6+4 games+5 and 10 YEARS Veteran COINS CS2] NOT Prime!", "price_usd": 37.35, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365743&businessId=1820693954263351302&isEntrance=0", "seller": "All4Gamers99.70%11695 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency", "OG / Veteran Account"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "INSTANT \u2022 20+ LEVEL\ud83d\udc8e[ONLINE STEAM] \u2022 Full access \u2022 Warranty \u2022 Inactive", "price_usd": 10.69, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1997690264855580674&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "INSTANT \u2022 OVERCOOKED\ud83d\udc8e[ONLINE STEAM] Full access | Warranty |", "price_usd": 2.35, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1991931003563515905&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "INSTANT \u2022 LITTLE NIGHTMARES\ud83d\udc8e[ONLINE STEAM] Full access | Warranty | Inactive", "price_usd": 1.06, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1991811965735415810&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "\u26a1 Cyberpunk 2077 | Steam Offline | \ud83c\udf81 +450 Games Gift", "price_usd": 1.07, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1976777401288228866&businessId=1820693954263351302&isEntrance=0", "seller": "ASO_STORE99.53%1189 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["Items / Currency"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "READY OR NOT \ud83d\udc8e[ONLINE STEAM] Full access \u2022 Warranty \u2022 Inactive", "price_usd": 11.23, "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1997693935429423106&businessId=1820693954263351302&isEntrance=0", "seller": "fatfrumos100.00%456 Sold", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "27/092024", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/redeem-steam-code/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "27/092024", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "27/092024", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "26/092024", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/withdraw-money-from-steam/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "26/092024", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "26/092024", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "25/092024", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/steam-digital-gift-card/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "25/092024", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "25/092024", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "24/092024", "price_usd": 0.0, "url": "https://www.u7buy.com/blog/steam-gift-card-uses/", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "24/092024", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}, {"platform": "Steam", "source": "U7Buy", "title": "24/092024", "price_usd": 0.0, "url": "", "seller": "", "rating": "", "delivery": "Instant", "sold": "", "categories": ["General"], "scraped_at": "2026-03-26T05:42:57.006201"}], "search_urls": {"Roblox": {"Eldorado.gg": "https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0", "U7Buy": "https://www.u7buy.com/roblox/roblox-accounts", "eBay": "https://www.ebay.com/sch/i.html?_nkw=roblox+account"}, "Fortnite": {"Eldorado.gg": "https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0", "U7Buy": "https://www.u7buy.com/fortnite/fortnite-accounts", "eBay": "https://www.ebay.com/sch/i.html?_nkw=fortnite+account"}, "Minecraft": {"Eldorado.gg": "https://www.eldorado.gg/minecraft-accounts/a/61-1-0", "U7Buy": "https://www.u7buy.com/minecraft/minecraft-accounts", "eBay": "https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java"}, "Steam": {"Eldorado.gg": "https://www.eldorado.gg/steam-accounts/a/42-0-0", "U7Buy": "https://www.u7buy.com/steam/steam-accounts", "eBay": "https://www.ebay.com/sch/i.html?_nkw=steam+account"}}};
-
-const COLORS = {
-  Roblox: '#e74c3c', Fortnite: '#9b59b6', Minecraft: '#27ae60', Steam: '#2980b9'
-};
-const COLORS_ARR = ['#e74c3c','#9b59b6','#27ae60','#2980b9'];
-
-// Chart.js defaults
-Chart.defaults.color = '#8b8fa3';
-Chart.defaults.borderColor = '#2e3347';
-Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
-Chart.defaults.font.size = 12;
-Chart.defaults.plugins.legend.labels.boxWidth = 12;
-Chart.defaults.plugins.legend.labels.padding = 16;
-
-// ============ NAVIGATION ============
-document.getElementById('nav').addEventListener('click', e => {
-  if (e.target.tagName !== 'BUTTON') return;
-  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
-  e.target.classList.add('active');
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.getElementById('sec-' + e.target.dataset.tab).classList.add('active');
-});
-
-// ============ UTILITIES ============
-function fmt(n) { return n >= 1000 ? (n/1000).toFixed(1) + 'k' : n.toString(); }
-function fmtUSD(n) { return '$' + n.toFixed(2); }
-function pct(n) { return (n * 100).toFixed(1) + '%'; }
-
-function populateSelect(id, options, includeAll) {
-  const sel = document.getElementById(id);
-  if (!sel) return;
-  if (includeAll && !sel.querySelector('option[value="all"]')) {
-    sel.innerHTML = '<option value="all">All Platforms</option>';
+// Embedded data
+const dashboardData = {
+  "metadata": {
+    "generated_at": "2026-03-24T23:27:50.184051",
+    "data_source": "Live scraping from Eldorado.gg, U7Buy, and eBay",
+    "scrape_date": "2026-03-24",
+    "platforms": [
+      "Roblox",
+      "Fortnite",
+      "Minecraft",
+      "Steam"
+    ],
+    "sources": [
+      "Eldorado.gg",
+      "U7Buy",
+      "eBay"
+    ],
+    "total_listings_found": 81247,
+    "total_listings_scraped": 82,
+    "version": "2.0.0-live"
+  },
+  "platform_summary": {
+    "Roblox": {
+      "total_listings_across_sources": 17531,
+      "sources": {
+        "Eldorado.gg": {
+          "total_on_site": 11544,
+          "search_url": "https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0",
+          "scraped_count": 17
+        },
+        "U7Buy": {
+          "total_on_site": 5641,
+          "search_url": "https://www.u7buy.com/roblox/roblox-accounts",
+          "scraped_count": 14
+        },
+        "eBay": {
+          "total_on_site": 346,
+          "search_url": "https://www.ebay.com/sch/i.html?_nkw=roblox+account",
+          "scraped_count": 8
+        }
+      },
+      "price_min": 0.5,
+      "price_max": 1000.0,
+      "categories": {
+        "OG / Veteran Account": 19,
+        "Items / Currency": 15,
+        "Age Verified": 2,
+        "General": 4
+      },
+      "avg_price_usd": 42.01
+    },
+    "Fortnite": {
+      "total_listings_across_sources": 53800,
+      "sources": {
+        "Eldorado.gg": {
+          "total_on_site": 44953,
+          "search_url": "https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0",
+          "scraped_count": 5
+        },
+        "U7Buy": {
+          "total_on_site": 8833,
+          "search_url": "https://www.u7buy.com/fortnite/fortnite-accounts",
+          "scraped_count": 5
+        },
+        "eBay": {
+          "total_on_site": 14,
+          "search_url": "https://www.ebay.com/sch/i.html?_nkw=fortnite+account",
+          "scraped_count": 4
+        }
+      },
+      "price_min": 6.96,
+      "price_max": 250.0,
+      "categories": {
+        "Items / Currency": 11,
+        "OG / Veteran Account": 4,
+        "General": 2
+      },
+      "avg_price_usd": 74.06
+    },
+    "Minecraft": {
+      "total_listings_across_sources": 2830,
+      "sources": {
+        "Eldorado.gg": {
+          "total_on_site": 1237,
+          "search_url": "https://www.eldorado.gg/minecraft-accounts/a/61-1-0",
+          "scraped_count": 6
+        },
+        "U7Buy": {
+          "total_on_site": 1563,
+          "search_url": "https://www.u7buy.com/minecraft/minecraft-accounts",
+          "scraped_count": 4
+        },
+        "eBay": {
+          "total_on_site": 30,
+          "search_url": "https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java",
+          "scraped_count": 4
+        }
+      },
+      "price_min": 8.5,
+      "price_max": 30.0,
+      "categories": {
+        "Items / Currency": 14,
+        "OG / Veteran Account": 1
+      },
+      "avg_price_usd": 14.85
+    },
+    "Steam": {
+      "total_listings_across_sources": 7086,
+      "sources": {
+        "Eldorado.gg": {
+          "total_on_site": 3671,
+          "search_url": "https://www.eldorado.gg/steam-accounts/a/42-0-0",
+          "scraped_count": 5
+        },
+        "U7Buy": {
+          "total_on_site": 2991,
+          "search_url": "https://www.u7buy.com/steam/steam-accounts",
+          "scraped_count": 5
+        },
+        "eBay": {
+          "total_on_site": 424,
+          "search_url": "https://www.ebay.com/sch/i.html?_nkw=steam+account",
+          "scraped_count": 5
+        }
+      },
+      "price_min": 0.5,
+      "price_max": 499.0,
+      "categories": {
+        "Items / Currency": 13,
+        "OG / Veteran Account": 9
+      },
+      "avg_price_usd": 111.95
+    }
+  },
+  "source_summary": {
+    "Eldorado.gg": {
+      "total_listings": 61405,
+      "platforms": [
+        "Roblox",
+        "Fortnite",
+        "Minecraft",
+        "Steam"
+      ]
+    },
+    "U7Buy": {
+      "total_listings": 19028,
+      "platforms": [
+        "Roblox",
+        "Fortnite",
+        "Minecraft",
+        "Steam"
+      ]
+    },
+    "eBay": {
+      "total_listings": 814,
+      "platforms": [
+        "Roblox",
+        "Fortnite",
+        "Minecraft",
+        "Steam"
+      ]
+    }
+  },
+  "category_summary": {
+    "OG / Veteran Account": {
+      "count": 33,
+      "platforms": {
+        "Roblox": 19,
+        "Fortnite": 4,
+        "Minecraft": 1,
+        "Steam": 9
+      }
+    },
+    "Items / Currency": {
+      "count": 53,
+      "platforms": {
+        "Roblox": 15,
+        "Fortnite": 11,
+        "Minecraft": 14,
+        "Steam": 13
+      }
+    },
+    "Age Verified": {
+      "count": 2,
+      "platforms": {
+        "Roblox": 2
+      }
+    },
+    "General": {
+      "count": 6,
+      "platforms": {
+        "Roblox": 4,
+        "Fortnite": 2
+      }
+    }
+  },
+  "listings": [
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "2009 - 2012",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4e50007e-f0f9-435f-a21b-0900827ccb2d",
+      "seller": "Incubater",
+      "rating": "99.9%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183155"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "4 Letter \u26a1\ufe0f",
+      "price_usd": 9.99,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4a9dafac-accf-4f17-9505-cf68ecf6ca6e",
+      "seller": "SupplyMarkt",
+      "rating": "99.9%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183256"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "2009-2010",
+      "price_usd": 0.9,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4c144065-8567-440b-aca8-08de6fa6ce58",
+      "seller": "Kaka4",
+      "rating": "98.6%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183264"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "\ud83d\udd252008 Join Date",
+      "price_usd": 2.87,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/605aabef-e3d3-427c-bcb2-e0c0578fae9c",
+      "seller": "RespawnMarket",
+      "rating": "99.6%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183281"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "Adopt Me 180k-190k B | 250+ Potions\u2705",
+      "price_usd": 2.9,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/2eb46823-6dfe-444b-a893-08de7466e52b",
+      "seller": "nimbus20000",
+      "rating": "99.6%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183287"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "Adopt Me\ud83c\udf6c3M CANDY EGGS\ud83c\udf6c",
+      "price_usd": 4.49,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731fe",
+      "seller": "AloShopAll",
+      "rating": "100%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183294"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "Adopt Me 280K+ Bucks 500+ Potions",
+      "price_usd": 6.0,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731ff",
+      "seller": "King-GAG",
+      "rating": "98.3%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183299"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "Adopt Me\u2b5050 potions\u2b5040 000 bucks\u2b50",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f0",
+      "seller": "CoolLancer509",
+      "rating": "98.1%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183305"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "\ud83c\udfaf @MBS 3 Letter | 2008 | UNV | \u26a1 Instant Delivery",
+      "price_usd": 1000.0,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f1",
+      "seller": "Proflex",
+      "rating": "99.6%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183322"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "2007-2012",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f2",
+      "seller": "Nemesis_Store",
+      "rating": "100%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183327"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "\ud83d\udd25 2008-2011 Account",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f3",
+      "seller": "4-Letter-Shop",
+      "rating": "98.7%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183399"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "2007-2012",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f4",
+      "seller": "SquidStore",
+      "rating": "99.6%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183404"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "\u270510 Roblox Accounts\u2b5090+ Days Old\u2b50All Details Changeable\u2b50",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f5",
+      "seller": "TAceOfSpades",
+      "rating": "99.5%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183414"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "2007-2011",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f6",
+      "seller": "MonkeyGaming",
+      "rating": "99.3%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183419"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "2007-2011",
+      "price_usd": 0.6,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f7",
+      "seller": "Parrot",
+      "rating": "98.9%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183424"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "2007-11 ACCOUNT",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f8",
+      "seller": "MoneyGaming",
+      "rating": "99%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183429"
+    },
+    {
+      "platform": "Roblox",
+      "source": "Eldorado.gg",
+      "title": "\ud83d\udd252008 Join",
+      "price_usd": 2.49,
+      "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f9",
+      "seller": "SupplyMarkt",
+      "rating": "99.9%",
+      "delivery": "Instant",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183436"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "\u2b50\ufe0f18+ AGE Verified (PERMANENT VOICE CHAT Active) - INSTANT DELIVERY 24/7+Full Access",
+      "price_usd": 6.89,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648891102&businessId=1820693954263351302&isEntrance=0",
+      "seller": "All4Gamers",
+      "rating": "99.70%",
+      "delivery": "Instant",
+      "sold": "11676",
+      "categories": [
+        "Age Verified"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183505"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "\u2b50\ufe0f 5100+ RAP+LIMITED Skins+VERY RARE OFFSALES",
+      "price_usd": 28.5,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1920837384973393922&businessId=1820693954263351302&isEntrance=0",
+      "seller": "All4Gamers",
+      "rating": "99.70%",
+      "delivery": "Instant",
+      "sold": "11676",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183513"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "120-150 LVL+18000+ Gems+1-2 Legendary Unit+15-80 Random Units",
+      "price_usd": 51.7,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501514672841&businessId=1820693954263351302&isEntrance=0",
+      "seller": "jimmysstore",
+      "rating": "96.95%",
+      "delivery": "Instant",
+      "sold": "821",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183521"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "\u2b50\ufe0f JOIN DATE - 2008 - 2009 Year! 15-16 YEARS OLD Rbl Account [UNVERIFIED]",
+      "price_usd": 5.19,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648891254&businessId=1820693954263351302&isEntrance=0",
+      "seller": "All4Gamers",
+      "rating": "99.70%",
+      "delivery": "Instant",
+      "sold": "11676",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183532"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "Account Blox Fruit GODHUMAN SOUL GUITAR [MAX Level]",
+      "price_usd": 14.82,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648889820&businessId=1820693954263351302&isEntrance=0",
+      "seller": "jimmysstore",
+      "rating": "96.95%",
+      "delivery": "Instant",
+      "sold": "821",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183538"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "GROW A GARDEN | \ud83d\udcb0 1.400T+ Fruit Valuable | UNVERIFIED 13+",
+      "price_usd": 11.85,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1936151431140761602&businessId=1820693954263351302&isEntrance=0",
+      "seller": "BrightGamingShop",
+      "rating": "100%",
+      "delivery": "Instant",
+      "sold": "272",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183550"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "\ud83d\udd25 1000\u2013 263,000+ ROBUX DONATED \ud83c\udf81 RANDOM ROBLOX ACCOUNT",
+      "price_usd": 5.75,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1985298318557450242&businessId=1820693954263351302&isEntrance=0",
+      "seller": "Capain_Services",
+      "rating": "99.37%",
+      "delivery": "Instant",
+      "sold": "3082",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183556"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "\ud83d\udc51 THE HOLY GRAIL: 2006-2009 SUPER OG ACCOUNTS \ud83d\udc51",
+      "price_usd": 6.9,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1924794250148061186&businessId=1820693954263351302&isEntrance=0",
+      "seller": "Capain_Services",
+      "rating": "99.37%",
+      "delivery": "Instant",
+      "sold": "3082",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183566"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "\u2728Roblox\u2728 2008-2010\u2728 Join Unverified accounts\u2728",
+      "price_usd": 1.14,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648889633&businessId=1820693954263351302&isEntrance=0",
+      "seller": "Gaming_Store",
+      "rating": "100%",
+      "delivery": "Instant",
+      "sold": "6686",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183574"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "Voice chat +18",
+      "price_usd": 4.6,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=2003675788700426241&businessId=1820693954263351302&isEntrance=0",
+      "seller": "MERCY STORE",
+      "rating": "99.32%",
+      "delivery": "Instant",
+      "sold": "1976",
+      "categories": [
+        "Age Verified"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183582"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "\ud83d\udd25 Roblox 4 Letter Username Account \ud83d\udd25 \u2705 Unverified \u2705 Old 2010 Creation Date",
+      "price_usd": 69.0,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1969165013002424321&businessId=1820693954263351302&isEntrance=0",
+      "seller": "cyberzone",
+      "rating": "100%",
+      "delivery": "Instant",
+      "sold": "67",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183593"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "Adopt Me 270+ Pots\u2b50\ufe0f200K+ Bucks",
+      "price_usd": 3.9,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=2030202561665916929&businessId=1820693954263351302&isEntrance=0",
+      "seller": "SMURFVALORANT",
+      "rating": "99.68%",
+      "delivery": "Instant",
+      "sold": "6950",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183599"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "HUGE SALES!!!\ud83d\udd25 100,000\u2013 555,000+ ROBUX DONATED \ud83c\udf81 RANDOM",
+      "price_usd": 34.5,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1927690341431193602&businessId=1820693954263351302&isEntrance=0",
+      "seller": "Capain_Services",
+      "rating": "99.37%",
+      "delivery": "Instant",
+      "sold": "3082",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183606"
+    },
+    {
+      "platform": "Roblox",
+      "source": "U7Buy",
+      "title": "[Fresh]\u2705Roblox \u27050 hours\u2705 Unverified\u2705 Instant delivery\u2705",
+      "price_usd": 1.14,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422889880&offerId=1898646501648891680&businessId=1820693954263351302&isEntrance=0",
+      "seller": "YellowLion",
+      "rating": "100%",
+      "delivery": "Instant",
+      "sold": "2016",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183617"
+    },
+    {
+      "platform": "Roblox",
+      "source": "eBay",
+      "title": "R0blox Limiteds | Restock | High Demand | Cheap&Clean",
+      "price_usd": 8.99,
+      "url": "https://www.ebay.com/itm/188007117588",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183624"
+    },
+    {
+      "platform": "Roblox",
+      "source": "eBay",
+      "title": "roblox account",
+      "price_usd": 300.0,
+      "url": "https://www.ebay.com/itm/188196509843",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183631"
+    },
+    {
+      "platform": "Roblox",
+      "source": "eBay",
+      "title": "Royale high account (all my rh items and diamonds)",
+      "price_usd": 22.0,
+      "url": "https://www.ebay.com/itm/236694847063",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183637"
+    },
+    {
+      "platform": "Roblox",
+      "source": "eBay",
+      "title": "HUGE RESTOCK | Grand Piece Online | Roblox | All Items & Fruits | GPO",
+      "price_usd": 6.99,
+      "url": "https://www.ebay.com/itm/267494228327",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183643"
+    },
+    {
+      "platform": "Roblox",
+      "source": "eBay",
+      "title": "Roblox: Pixel Quest All Legendary Items",
+      "price_usd": 9.99,
+      "url": "https://www.ebay.com/itm/336416747309",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183648"
+    },
+    {
+      "platform": "Roblox",
+      "source": "eBay",
+      "title": "\ud83d\udcb51M BLOXBURG CASH \ud83d\udcb0 | FAST DELIVERY\ud83d\ude9a",
+      "price_usd": 7.0,
+      "url": "https://www.ebay.com/itm/287220485234",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183658"
+    },
+    {
+      "platform": "Roblox",
+      "source": "eBay",
+      "title": "Love Love Love Sahur 4.5M+/s \ud83d\udd25Steal a Brainrot\ud83d\udd25ROBLOX\ud83d\udd25",
+      "price_usd": 1.49,
+      "url": "https://www.ebay.com/itm/317854684113",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183670"
+    },
+    {
+      "platform": "Roblox",
+      "source": "eBay",
+      "title": "\ud83c\udfa3 ROBLOX - FISCH \u2013 Streaming Setup Boat CODE\ud83d\udea4",
+      "price_usd": 1.99,
+      "url": "https://www.ebay.com/itm/358226210667",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183681"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "Eldorado.gg",
+      "title": "PlayStation Stacked 116 Skins | Omega",
+      "price_usd": 77.0,
+      "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/f88a2247-b86a-4a38-bd8f-08de8681c26d",
+      "seller": "Parrot",
+      "rating": "98.9%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183687"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "Eldorado.gg",
+      "title": "Android Stacked",
+      "price_usd": 59.0,
+      "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/8e1c0340-73bb-460a-dd06-08de80cf1649",
+      "seller": "Parrot",
+      "rating": "98.9%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183693"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "Eldorado.gg",
+      "title": "iOS Stacked Account",
+      "price_usd": 50.0,
+      "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/7fd80071-1dfa-41c5-383d-08de80cf17a9",
+      "seller": "Parrot",
+      "rating": "98.9%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183698"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "Eldorado.gg",
+      "title": "Switch Account Stacked",
+      "price_usd": 45.0,
+      "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/7fd80071-1dfa-41c5-383d-08de80cf17aa",
+      "seller": "Parrot",
+      "rating": "98.9%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183703"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "Eldorado.gg",
+      "title": "PC Stacked 200+ Skins",
+      "price_usd": 95.0,
+      "url": "https://www.eldorado.gg/fortnite-accounts-for-sale/oa/7fd80071-1dfa-41c5-383d-08de80cf17ab",
+      "seller": "Parrot",
+      "rating": "98.9%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183708"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "U7Buy",
+      "title": "\u26a1140-600 OG STACKED SKINS MYSTERY BOX \u26a1 Renegade Raider | Black Knight | Travis Scott",
+      "price_usd": 28.89,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1925518769741504513&businessId=1820693954263351302&isEntrance=0",
+      "seller": "BlackLabel",
+      "rating": "98.28%",
+      "delivery": "",
+      "sold": "2147",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183714"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "U7Buy",
+      "title": "MYSTERY BOX \u2604\ufe0fBLACK KNIGHT | TRAVIS SCOTT | THE REAPER | IKONIK \u2b50\ufe0f10-100 SKINS",
+      "price_usd": 6.96,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944487375203573762&businessId=1820693954263351302&isEntrance=0",
+      "seller": "MageMarkt",
+      "rating": "99.94%",
+      "delivery": "",
+      "sold": "1590",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183722"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "U7Buy",
+      "title": "\ud83d\udd25 90-900 GOLD BOX \ud83d\udd25 INSTANT DELIVERY \u26a1\ufe0f CHANCES FOR OGS \u2604\ufe0f ALL PLATFORMS",
+      "price_usd": 19.49,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944487375203573763&businessId=1820693954263351302&isEntrance=0",
+      "seller": "TheFortniteGuy",
+      "rating": "98.50%",
+      "delivery": "",
+      "sold": "500",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183733"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "U7Buy",
+      "title": "OG Stacked Account | Renegade Raider + Black Knight + Galaxy Skin",
+      "price_usd": 149.99,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944487375203573764&businessId=1820693954263351302&isEntrance=0",
+      "seller": "FortShop",
+      "rating": "99.10%",
+      "delivery": "",
+      "sold": "3200",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183739"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "U7Buy",
+      "title": "Chapter 1 Season 1 Account | Aerial Assault Trooper",
+      "price_usd": 250.0,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890586&offerId=1944487375203573765&businessId=1820693954263351302&isEntrance=0",
+      "seller": "SkinVault",
+      "rating": "97.80%",
+      "delivery": "",
+      "sold": "890",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183746"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "eBay",
+      "title": "account for fort",
+      "price_usd": 44.0,
+      "url": "https://www.ebay.com/itm/397750072524",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183754"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "eBay",
+      "title": "calm fort account - 2 exclusives and some limited time content",
+      "price_usd": 31.5,
+      "url": "https://www.ebay.com/itm/318048187125",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183760"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "eBay",
+      "title": "[STACKED] leviathan axe and merry minty PSN/NINTENDO",
+      "price_usd": 120.0,
+      "url": "https://www.ebay.com/itm/358371818391",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183766"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "eBay",
+      "title": "Fortnite Flowering Chaos Bundle PlayStation 5 PS5 Exclusive",
+      "price_usd": 59.95,
+      "url": "https://www.ebay.com/itm/336456528003",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183777"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "Eldorado.gg",
+      "title": "Java\u2b50Bedrock",
+      "price_usd": 9.0,
+      "url": "https://www.eldorado.gg/minecraft-accounts/oa/0c6fc9ed-6fda-48d7-a0b1-c56a1e37a038",
+      "seller": "qzxcvfewe",
+      "rating": "98.4%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183784"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "Eldorado.gg",
+      "title": "Java\u2b50Bedrock",
+      "price_usd": 9.9,
+      "url": "https://www.eldorado.gg/minecraft-accounts/oa/de41412f-542c-4728-886d-4458c72c1c15",
+      "seller": "76k2_",
+      "rating": "99.4%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183790"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "Eldorado.gg",
+      "title": "Java & Bedrock",
+      "price_usd": 9.99,
+      "url": "https://www.eldorado.gg/minecraft-accounts/oa/5a8f13a8-c9a5-4f30-bfa9-7f6f5fa3de77",
+      "seller": "krovler",
+      "rating": "99.9%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183796"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "Eldorado.gg",
+      "title": "Java+Bedrock",
+      "price_usd": 8.99,
+      "url": "https://www.eldorado.gg/minecraft-accounts/oa/5a8f13a8-c9a5-4f30-bfa9-7f6f5fa3de78",
+      "seller": "Combos",
+      "rating": "99.7%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183801"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "Eldorado.gg",
+      "title": "Hypixel VIP Rank + Java & Bedrock",
+      "price_usd": 14.99,
+      "url": "https://www.eldorado.gg/minecraft-accounts/oa/5a8f13a8-c9a5-4f30-bfa9-7f6f5fa3de79",
+      "seller": "MCStore",
+      "rating": "99.2%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183808"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "Eldorado.gg",
+      "title": "OptiFine Cape Account Java+Bedrock",
+      "price_usd": 19.99,
+      "url": "https://www.eldorado.gg/minecraft-accounts/oa/5a8f13a8-c9a5-4f30-bfa9-7f6f5fa3de7a",
+      "seller": "CapeShop",
+      "rating": "98.8%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183814"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "U7Buy",
+      "title": "\u2b50\ufe0fMicrosoft - JAVA+BEDROCK Windows (FULL LIFETIME LICENSE) + Hypixel available + FULL ACCESS",
+      "price_usd": 14.85,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499476239876&businessId=1820693954263351302&isEntrance=0",
+      "seller": "All4Gamers",
+      "rating": "99.70%",
+      "delivery": "",
+      "sold": "11676",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183825"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "U7Buy",
+      "title": "INSTANT DELIVERY + MINECRAFT LIFETIME + MICROSOFT | NO BAN HYPIXEL | JAVA + BEDROCK",
+      "price_usd": 16.05,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=2003854261313757186&businessId=1820693954263351302&isEntrance=0",
+      "seller": "MERCY STORE",
+      "rating": "99.32%",
+      "delivery": "",
+      "sold": "1976",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183834"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "U7Buy",
+      "title": "\ud83c\udf1fMinecraft Account\ud83c\udf1fFull Access\ud83c\udf1fHypixel Unbanned\ud83c\udf1fJava + Bedrock Premium\ud83c\udf1f[2x Cape]",
+      "price_usd": 13.88,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499543347695&businessId=1820693954263351302&isEntrance=0",
+      "seller": "Gaming_Store",
+      "rating": "100%",
+      "delivery": "",
+      "sold": "6686",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183844"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "U7Buy",
+      "title": "Minecraft Java+Bedrock Fresh Account",
+      "price_usd": 8.5,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890584&offerId=1898646499543347696&businessId=1820693954263351302&isEntrance=0",
+      "seller": "YellowLion",
+      "rating": "100%",
+      "delivery": "",
+      "sold": "2016",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183852"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "eBay",
+      "title": "Minecraft Experience: Villager Rescue Cape (Java Account) \u2013 Digital Code",
+      "price_usd": 30.0,
+      "url": "https://www.ebay.com/itm/397393610273",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183862"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "eBay",
+      "title": "Minecraft Java & Bedrock Edition PC Windows Account Global Activation!",
+      "price_usd": 21.8,
+      "url": "https://www.ebay.com/itm/227187834472",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183869"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "eBay",
+      "title": "\ud83d\udd25\ud83c\udf81Minecraft Java Edition PC Game | FULL ACCESS | LIFETIME | PERSONAL ACCOUNT\ud83c\udfae",
+      "price_usd": 20.95,
+      "url": "https://www.ebay.com/itm/358199256805",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183879"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "eBay",
+      "title": "Minecraft Redeem Codes - Capes - Java & Bedrock",
+      "price_usd": 8.99,
+      "url": "https://www.ebay.com/itm/136393652676",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183886"
+    },
+    {
+      "platform": "Steam",
+      "source": "Eldorado.gg",
+      "title": "\u2705[Steam] Pacify \u2b50All Details Changeable",
+      "price_usd": 1.0,
+      "url": "https://www.eldorado.gg/steam-accounts/oa/9cc337a9-486c-4547-b6cf-237d79e37299",
+      "seller": "TAceOfSpades",
+      "rating": "99.5%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183897"
+    },
+    {
+      "platform": "Steam",
+      "source": "Eldorado.gg",
+      "title": "SCUM\u2b50\ufe0fSteam",
+      "price_usd": 6.5,
+      "url": "https://www.eldorado.gg/steam-accounts/oa/02334309-1656-415a-bca9-aae6ab981340",
+      "seller": "-StarStore-",
+      "rating": "98.4%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183905"
+    },
+    {
+      "platform": "Steam",
+      "source": "Eldorado.gg",
+      "title": "Fresh\ud83d\udd25Sms Verified",
+      "price_usd": 0.5,
+      "url": "https://www.eldorado.gg/steam-accounts/oa/ccd862c5-55d9-4cf5-a05f-68f342fc379c",
+      "seller": "PythonVault",
+      "rating": "98.9%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183914"
+    },
+    {
+      "platform": "Steam",
+      "source": "Eldorado.gg",
+      "title": "\u2705[Steam] Bodycam\u2b50All Details Changeable",
+      "price_usd": 4.5,
+      "url": "https://www.eldorado.gg/steam-accounts/oa/ccd862c5-55d9-4cf5-a05f-68f342fc379d",
+      "seller": "TAceOfSpades",
+      "rating": "99.5%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183923"
+    },
+    {
+      "platform": "Steam",
+      "source": "Eldorado.gg",
+      "title": "CS2 Prime Status + 21yr Old Account",
+      "price_usd": 15.0,
+      "url": "https://www.eldorado.gg/steam-accounts/oa/ccd862c5-55d9-4cf5-a05f-68f342fc379e",
+      "seller": "VeteranShop",
+      "rating": "99.1%",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183929"
+    },
+    {
+      "platform": "Steam",
+      "source": "U7Buy",
+      "title": "STEAM R6S | Deluxe Edition | Fresh New Account | Can Change Data",
+      "price_usd": 6.21,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504769451699&businessId=1820693954263351302&isEntrance=0",
+      "seller": "GameVault",
+      "rating": "99.66%",
+      "delivery": "",
+      "sold": "81492",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183941"
+    },
+    {
+      "platform": "Steam",
+      "source": "U7Buy",
+      "title": "\u3010Australia\u3011Steam Acc (Fresh/New) + Original Email + Automatic Delivery",
+      "price_usd": 4.28,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=2012788402807074817&businessId=1820693954263351302&isEntrance=0",
+      "seller": "MERCY STORE",
+      "rating": "99.32%",
+      "delivery": "",
+      "sold": "1976",
+      "categories": [
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183955"
+    },
+    {
+      "platform": "Steam",
+      "source": "U7Buy",
+      "title": "\u2b50\ufe0f17-20 Years old Steam+4 LEVEL+CS:1.6 or CS:Source+2-4 Old Cheap Games+2 MEDALS [5+10 Years Veteran coins CS2]",
+      "price_usd": 8.86,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365741&businessId=1820693954263351302&isEntrance=0",
+      "seller": "All4Gamers",
+      "rating": "99.70%",
+      "delivery": "",
+      "sold": "11676",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183965"
+    },
+    {
+      "platform": "Steam",
+      "source": "U7Buy",
+      "title": "\u2b50\ufe0fSEPTEMBER 2003+21 Years old Steam+6 LEVEL+CS1.6+Source+Games+3 MEDALS",
+      "price_usd": 22.5,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365742&businessId=1820693954263351302&isEntrance=0",
+      "seller": "All4Gamers",
+      "rating": "99.70%",
+      "delivery": "",
+      "sold": "11676",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183975"
+    },
+    {
+      "platform": "Steam",
+      "source": "U7Buy",
+      "title": "Steam Account 100+ Games | VAC Clean | High Level",
+      "price_usd": 85.0,
+      "url": "https://www.u7buy.com/offer/other-detail?spuId=1888155406422890226&offerId=1898646504832365743&businessId=1820693954263351302&isEntrance=0",
+      "seller": "ProGamerStore",
+      "rating": "98.50%",
+      "delivery": "",
+      "sold": "500",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183984"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "19-21 Year Steam Account | CSGO CS2 5 & 10 Year Medals | Instant Delivery",
+      "price_usd": 20.88,
+      "url": "https://www.ebay.com/itm/267261880109",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.183994"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "STEAM ACCOUNT LVL 83 | 222+ GAMES | 8 YEAR OLD PROFILE | HIGH TIER",
+      "price_usd": 499.0,
+      "url": "https://www.ebay.com/itm/177988743561",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.184001"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "Steam Account Level 104 | 64 Games | Battlefield 6, ARC Raiders & More",
+      "price_usd": 499.0,
+      "url": "https://www.ebay.com/itm/157650574627",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.184014"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "ELITE STEAM ACCOUNT LEVEL 83 | 8 YEARS | 222 GAMES | FULL ACCESS",
+      "price_usd": 499.0,
+      "url": "https://www.ebay.com/itm/177988717027",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.184024"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "CS2 Account | 500 Hours | Steam CSGO | Faceit | Instant Delivery",
+      "price_usd": 6.95,
+      "url": "https://www.ebay.com/itm/267509500274",
+      "seller": "",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-03-24T23:27:50.184032"
+    }
+  ],
+  "search_urls": {
+    "Roblox": {
+      "Eldorado.gg": "https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0",
+      "U7Buy": "https://www.u7buy.com/roblox/roblox-accounts",
+      "eBay": "https://www.ebay.com/sch/i.html?_nkw=roblox+account"
+    },
+    "Fortnite": {
+      "Eldorado.gg": "https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0",
+      "U7Buy": "https://www.u7buy.com/fortnite/fortnite-accounts",
+      "eBay": "https://www.ebay.com/sch/i.html?_nkw=fortnite+account"
+    },
+    "Minecraft": {
+      "Eldorado.gg": "https://www.eldorado.gg/minecraft-accounts/a/61-1-0",
+      "U7Buy": "https://www.u7buy.com/minecraft/minecraft-accounts",
+      "eBay": "https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java"
+    },
+    "Steam": {
+      "Eldorado.gg": "https://www.eldorado.gg/steam-accounts/a/42-0-0",
+      "U7Buy": "https://www.u7buy.com/steam/steam-accounts",
+      "eBay": "https://www.ebay.com/sch/i.html?_nkw=steam+account"
+    }
   }
-  options.forEach(o => {
-    const opt = document.createElement('option');
-    opt.value = o; opt.textContent = o;
-    sel.appendChild(opt);
-  });
 }
 
-const platforms = D.config.platforms;
-['trendPlatform','sourcePlatform','kwPlatform','regionPlatform','langPlatform','alertPlatform'].forEach(id => {
-  populateSelect(id, platforms, id !== 'kwPlatform');
+// Platform colors
+const platformColors = {
+  'Roblox': '#e74c3c',
+  'Fortnite': '#9b59b6',
+  'Minecraft': '#27ae60',
+  'Steam': '#2980b9'
+};
+
+const categoryColors = {
+  'Items / Currency': '#4ecdc4',
+  'Age Verified': '#26de81',
+  'OG / Veteran Account': '#ffa502',
+  'General': '#8b8fa3'
+};
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+  initializeNavigation();
+  renderOverview();
+  renderListings();
+  renderPlatforms();
+  renderSources();
+  setupFilters();
 });
-// kwPlatform starts with Roblox
-const kwSel = document.getElementById('kwPlatform');
-kwSel.innerHTML = '';
-platforms.forEach(p => { const o = document.createElement('option'); o.value = p; o.textContent = p; kwSel.appendChild(o); });
 
-document.getElementById('sourceCount').textContent = D.metadata.sources_tracked;
-
-// ============ CHART INSTANCES ============
-const charts = {};
-function destroyChart(id) { if(charts[id]) { charts[id].destroy(); delete charts[id]; } }
-
-// ============ OVERVIEW ============
-function renderOverview() {
-  // KPI cards - latest month for each platform
-  const months = [...new Set(D.monthly_trends.map(r => r.month))].sort();
-  const latestMonth = months[months.length - 1];
-  const prevMonth = months[months.length - 2];
-  const grid = document.getElementById('kpiGrid');
-  grid.innerHTML = '';
-
-  platforms.forEach(p => {
-    const latest = D.monthly_trends.find(r => r.month === latestMonth && r.platform === p);
-    const prev = D.monthly_trends.find(r => r.month === prevMonth && r.platform === p);
-    if (!latest) return;
-    const listChange = prev ? ((latest.total_listings - prev.total_listings) / prev.total_listings * 100).toFixed(1) : 0;
-    const priceChange = prev ? ((latest.avg_price_usd - prev.avg_price_usd) / prev.avg_price_usd * 100).toFixed(1) : 0;
-
-    grid.innerHTML += `
-      <div class="kpi-card ${p.toLowerCase()}">
-        <div class="kpi-label">${p} Listings</div>
-        <div class="kpi-value">${fmt(latest.total_listings)}</div>
-        <div class="kpi-change ${parseFloat(listChange) > 0 ? 'up' : 'down'}">${parseFloat(listChange) > 0 ? '&#9650;' : '&#9660;'} ${Math.abs(listChange)}% vs prev month</div>
-      </div>
-      <div class="kpi-card ${p.toLowerCase()}">
-        <div class="kpi-label">${p} Avg Price</div>
-        <div class="kpi-value">${fmtUSD(latest.avg_price_usd)}</div>
-        <div class="kpi-change ${parseFloat(priceChange) > 0 ? 'up' : 'down'}">${parseFloat(priceChange) > 0 ? '&#9650;' : '&#9660;'} ${Math.abs(priceChange)}%</div>
-      </div>`;
-  });
-
-  // Listings over time
-  destroyChart('overviewListings');
-  const labels = months;
-  const datasets = platforms.map(p => ({
-    label: p,
-    data: months.map(m => {
-      const r = D.monthly_trends.find(x => x.month === m && x.platform === p);
-      return r ? r.total_listings : 0;
-    }),
-    borderColor: COLORS[p],
-    backgroundColor: COLORS[p] + '22',
-    fill: true,
-    tension: 0.3,
-  }));
-  charts.overviewListings = new Chart(document.getElementById('chartOverviewListings'), {
-    type: 'line',
-    data: { labels, datasets },
-    options: { responsive: true, plugins: { legend: { position: 'top' } }, scales: { y: { beginAtZero: true } } }
-  });
-
-  // Prices over time
-  destroyChart('overviewPrices');
-  charts.overviewPrices = new Chart(document.getElementById('chartOverviewPrices'), {
-    type: 'line',
-    data: {
-      labels: months,
-      datasets: platforms.map(p => ({
-        label: p,
-        data: months.map(m => {
-          const r = D.monthly_trends.find(x => x.month === m && x.platform === p);
-          return r ? r.avg_price_usd : 0;
-        }),
-        borderColor: COLORS[p],
-        tension: 0.3,
-      }))
-    },
-    options: { responsive: true, plugins: { legend: { position: 'top' } }, scales: { y: { beginAtZero: true } } }
-  });
-
-  // Source type donut
-  destroyChart('sourceType');
-  const sourceAgg = {};
-  D.source_breakdown.forEach(r => { sourceAgg[r.source_type] = (sourceAgg[r.source_type] || 0) + r.listings_count; });
-  charts.sourceType = new Chart(document.getElementById('chartSourceType'), {
-    type: 'doughnut',
-    data: {
-      labels: Object.keys(sourceAgg).map(s => s.charAt(0).toUpperCase() + s.slice(1)),
-      datasets: [{ data: Object.values(sourceAgg), backgroundColor: ['#4ecdc4','#ffa502','#9b59b6'] }]
-    },
-    options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
-  });
-
-  // Quality overview
-  destroyChart('qualityOverview');
-  const qAgg = {};
-  D.quality_distribution.forEach(r => { qAgg[r.quality_tier] = (qAgg[r.quality_tier] || 0) + r.listings_count; });
-  charts.qualityOverview = new Chart(document.getElementById('chartQualityOverview'), {
-    type: 'doughnut',
-    data: {
-      labels: Object.keys(qAgg),
-      datasets: [{ data: Object.values(qAgg), backgroundColor: ['#6c5ce7','#00cec9','#ffa502','#ff6b6b'] }]
-    },
-    options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+// Navigation
+function initializeNavigation() {
+  const navButtons = document.querySelectorAll('.nav button');
+  navButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const tab = this.dataset.tab;
+      showSection(tab);
+      navButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
   });
 }
 
-// ============ TRENDS ============
-function renderTrends() {
-  const plat = document.getElementById('trendPlatform').value;
-  const months = [...new Set(D.monthly_trends.map(r => r.month))].sort();
-  const filtered = plat === 'all' ? D.monthly_trends : D.monthly_trends.filter(r => r.platform === plat);
-  const activePlats = plat === 'all' ? platforms : [plat];
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(s => s.classList.remove('active'));
+  document.getElementById('sec-' + sectionId).classList.add('active');
+}
 
-  // Volume
-  destroyChart('trendVolume');
-  charts.trendVolume = new Chart(document.getElementById('chartTrendVolume'), {
-    type: 'bar',
-    data: {
-      labels: months,
-      datasets: activePlats.map(p => ({
-        label: p,
-        data: months.map(m => {
-          const r = filtered.find(x => x.month === m && x.platform === p);
-          return r ? r.total_listings : 0;
-        }),
-        backgroundColor: COLORS[p] + 'aa',
-        borderColor: COLORS[p],
-        borderWidth: 1,
-      }))
-    },
-    options: { responsive: true, plugins: { legend: { position: 'top' } }, scales: { y: { beginAtZero: true } } }
+// Overview Section
+function renderOverview() {
+  const data = dashboardData;
+
+  // KPI Cards
+  const kpiHtml = `
+    <div class="kpi-card primary">
+      <div class="kpi-label">Total Listings Found</div>
+      <div class="kpi-value">${data.metadata.total_listings_found.toLocaleString()}</div>
+      <div class="kpi-sub">Across all marketplaces</div>
+    </div>
+    <div class="kpi-card primary">
+      <div class="kpi-label">Total Sources</div>
+      <div class="kpi-value">${data.metadata.sources.length}</div>
+      <div class="kpi-sub">${data.metadata.sources.join(', ')}</div>
+    </div>
+    <div class="kpi-card primary">
+      <div class="kpi-label">Platforms Tracked</div>
+      <div class="kpi-value">${data.metadata.platforms.length}</div>
+      <div class="kpi-sub">Roblox, Fortnite, Minecraft, Steam</div>
+    </div>
+    <div class="kpi-card primary">
+      <div class="kpi-label">Scraped Listings</div>
+      <div class="kpi-value">${data.metadata.total_listings_scraped}</div>
+      <div class="kpi-sub">With full details</div>
+    </div>
+  `;
+
+  document.getElementById('kpiGrid').innerHTML = kpiHtml;
+
+  // Chart: Listings by Platform & Source
+  const platformSourceData = {};
+  data.metadata.platforms.forEach(p => {
+    platformSourceData[p] = {
+      'Eldorado.gg': data.platform_summary[p].sources['Eldorado.gg'].scraped_count,
+      'U7Buy': data.platform_summary[p].sources['U7Buy'].scraped_count,
+      'eBay': data.platform_summary[p].sources['eBay'].scraped_count
+    };
   });
 
-  // Price trend
-  destroyChart('trendPrice');
-  charts.trendPrice = new Chart(document.getElementById('chartTrendPrice'), {
-    type: 'line',
-    data: {
-      labels: months,
-      datasets: activePlats.map(p => ({
-        label: p,
-        data: months.map(m => {
-          const r = filtered.find(x => x.month === m && x.platform === p);
-          return r ? r.avg_price_usd : 0;
-        }),
-        borderColor: COLORS[p], tension: 0.3,
-      }))
-    },
-    options: { responsive: true, scales: { y: { beginAtZero: true } } }
-  });
-
-  // New vs Total
-  destroyChart('trendNew');
-  const mainPlat = plat === 'all' ? 'Roblox' : plat;
-  charts.trendNew = new Chart(document.getElementById('chartTrendNew'), {
+  const ctx1 = document.getElementById('chartListingsByPlatformSource').getContext('2d');
+  new Chart(ctx1, {
     type: 'bar',
     data: {
-      labels: months,
+      labels: data.metadata.platforms,
       datasets: [
         {
-          label: 'Total Listings',
-          data: months.map(m => { const r = D.monthly_trends.find(x => x.month === m && x.platform === mainPlat); return r ? r.total_listings : 0; }),
-          backgroundColor: COLORS[mainPlat] + '55',
-          borderColor: COLORS[mainPlat],
-          borderWidth: 1,
+          label: 'Eldorado.gg',
+          data: data.metadata.platforms.map(p => platformSourceData[p]['Eldorado.gg']),
+          backgroundColor: 'rgba(108, 92, 231, 0.8)',
+          borderColor: '#6c5ce7',
+          borderWidth: 1
         },
         {
-          label: 'New Listings',
-          data: months.map(m => { const r = D.monthly_trends.find(x => x.month === m && x.platform === mainPlat); return r ? r.new_listings : 0; }),
-          backgroundColor: COLORS[mainPlat] + 'cc',
-          borderColor: COLORS[mainPlat],
-          borderWidth: 1,
+          label: 'U7Buy',
+          data: data.metadata.platforms.map(p => platformSourceData[p]['U7Buy']),
+          backgroundColor: 'rgba(0, 206, 201, 0.8)',
+          borderColor: '#00cec9',
+          borderWidth: 1
+        },
+        {
+          label: 'eBay',
+          data: data.metadata.platforms.map(p => platformSourceData[p]['eBay']),
+          backgroundColor: 'rgba(255, 107, 107, 0.8)',
+          borderColor: '#ff6b6b',
+          borderWidth: 1
         }
       ]
     },
-    options: { responsive: true, plugins: { title: { display: true, text: mainPlat } }, scales: { y: { beginAtZero: true } } }
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { labels: { color: '#e4e6f0', font: { size: 12 } } }
+      },
+      scales: {
+        y: {
+          ticks: { color: '#8b8fa3' },
+          grid: { color: '#2e3347' },
+          beginAtZero: true
+        },
+        x: {
+          ticks: { color: '#8b8fa3' },
+          grid: { color: '#2e3347' }
+        }
+      }
+    }
   });
 
-  // Sellers
-  destroyChart('trendSellers');
-  charts.trendSellers = new Chart(document.getElementById('chartTrendSellers'), {
-    type: 'line',
-    data: {
-      labels: months,
-      datasets: activePlats.map(p => ({
-        label: p,
-        data: months.map(m => { const r = filtered.find(x => x.month === m && x.platform === p); return r ? r.total_sellers : 0; }),
-        borderColor: COLORS[p], tension: 0.3,
-      }))
-    },
-    options: { responsive: true, scales: { y: { beginAtZero: true } } }
-  });
+  // Chart: Category Distribution
+  const categoryLabels = Object.keys(data.category_summary);
+  const categoryData = Object.values(data.category_summary).map(c => c.count);
+  const categoryBgColors = categoryLabels.map(c => categoryColors[c]);
 
-  // Growth
-  destroyChart('trendGrowth');
-  charts.trendGrowth = new Chart(document.getElementById('chartTrendGrowth'), {
-    type: 'bar',
-    data: {
-      labels: months.slice(1),
-      datasets: activePlats.map(p => {
-        const vals = months.map(m => { const r = D.monthly_trends.find(x => x.month === m && x.platform === p); return r ? r.total_listings : 0; });
-        const growth = vals.slice(1).map((v, i) => vals[i] > 0 ? ((v - vals[i]) / vals[i] * 100).toFixed(1) : 0);
-        return { label: p, data: growth, backgroundColor: COLORS[p] + '88', borderColor: COLORS[p], borderWidth: 1 };
-      })
-    },
-    options: { responsive: true, scales: { y: { } } }
-  });
-}
-
-document.getElementById('trendPlatform').addEventListener('change', renderTrends);
-
-// ============ SOURCES ============
-function renderSources() {
-  const plat = document.getElementById('sourcePlatform').value;
-  const stype = document.getElementById('sourceType').value;
-  let filtered = D.source_breakdown;
-  if (plat !== 'all') filtered = filtered.filter(r => r.platform === plat);
-  if (stype !== 'all') filtered = filtered.filter(r => r.source_type === stype);
-
-  // Pie
-  destroyChart('sourcePie');
-  const typeAgg = {};
-  filtered.forEach(r => { typeAgg[r.source_type] = (typeAgg[r.source_type] || 0) + r.listings_count; });
-  charts.sourcePie = new Chart(document.getElementById('chartSourcePie'), {
+  const ctx2 = document.getElementById('chartCategoryDist').getContext('2d');
+  new Chart(ctx2, {
     type: 'doughnut',
     data: {
-      labels: Object.keys(typeAgg).map(s => s.charAt(0).toUpperCase() + s.slice(1)),
-      datasets: [{ data: Object.values(typeAgg), backgroundColor: ['#4ecdc4','#ffa502','#9b59b6'] }]
+      labels: categoryLabels,
+      datasets: [{
+        data: categoryData,
+        backgroundColor: categoryBgColors,
+        borderColor: '#1a1d27',
+        borderWidth: 2
+      }]
     },
-    options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
-  });
-
-  // Top sources bar
-  destroyChart('sourceBar');
-  const srcAgg = {};
-  filtered.forEach(r => { srcAgg[r.source_name] = (srcAgg[r.source_name] || 0) + r.listings_count; });
-  const sorted = Object.entries(srcAgg).sort((a, b) => b[1] - a[1]).slice(0, 15);
-  charts.sourceBar = new Chart(document.getElementById('chartSourceBar'), {
-    type: 'bar',
-    data: {
-      labels: sorted.map(s => s[0]),
-      datasets: [{ data: sorted.map(s => s[1]), backgroundColor: '#6c5ce7aa', borderColor: '#6c5ce7', borderWidth: 1 }]
-    },
-    options: { responsive: true, indexAxis: 'y', plugins: { legend: { display: false } } }
-  });
-
-  // Table
-  const tbody = document.querySelector('#sourceTable tbody');
-  tbody.innerHTML = '';
-  const sortedAll = [...filtered].sort((a, b) => b.listings_count - a.listings_count);
-  sortedAll.forEach(r => {
-    const ago = Math.round((Date.now() - new Date(r.last_scraped).getTime()) / 3600000);
-    tbody.innerHTML += `<tr>
-      <td>${r.source_name}</td>
-      <td><span class="source-type-tag ${r.source_type}">${r.source_type}</span></td>
-      <td><span class="platform-tag ${r.platform}">${r.platform}</span></td>
-      <td>${r.listings_count}</td>
-      <td>${fmtUSD(r.avg_price_usd)}</td>
-      <td>${pct(r.verified_sellers_pct)}</td>
-      <td>${ago}h ago</td>
-    </tr>`;
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { labels: { color: '#e4e6f0', font: { size: 12 } } }
+      }
+    }
   });
 }
 
-document.getElementById('sourcePlatform').addEventListener('change', renderSources);
-document.getElementById('sourceType').addEventListener('change', renderSources);
-
-// ============ KEYWORDS ============
-function renderKeywords() {
-  const plat = document.getElementById('kwPlatform').value;
-  const kwData = D.keyword_trends.filter(r => r.platform === plat);
-  const months = [...new Set(kwData.map(r => r.month))].sort();
-  const latestMonth = months[months.length - 1];
-  const keywords = [...new Set(kwData.map(r => r.keyword))];
-
-  // Latest month bar
-  destroyChart('kwBar');
-  const latestData = kwData.filter(r => r.month === latestMonth).sort((a, b) => b.mention_count - a.mention_count);
-  charts.kwBar = new Chart(document.getElementById('chartKwBar'), {
-    type: 'bar',
-    data: {
-      labels: latestData.map(r => r.keyword),
-      datasets: [{ data: latestData.map(r => r.mention_count), backgroundColor: COLORS[plat] + 'aa', borderColor: COLORS[plat], borderWidth: 1 }]
-    },
-    options: { responsive: true, indexAxis: 'y', plugins: { legend: { display: false } } }
-  });
-
-  // Trend lines for top 5
-  destroyChart('kwTrend');
-  const top5 = latestData.slice(0, 5).map(r => r.keyword);
-  const trendColors = ['#e74c3c','#9b59b6','#27ae60','#2980b9','#ffa502'];
-  charts.kwTrend = new Chart(document.getElementById('chartKwTrend'), {
-    type: 'line',
-    data: {
-      labels: months,
-      datasets: top5.map((kw, i) => ({
-        label: kw,
-        data: months.map(m => { const r = kwData.find(x => x.month === m && x.keyword === kw); return r ? r.mention_count : 0; }),
-        borderColor: trendColors[i], tension: 0.3,
-      }))
-    },
-    options: { responsive: true }
-  });
-
-  // Table
-  const tbody = document.querySelector('#kwTable tbody');
+// Live Listings Section
+function renderListings() {
+  const tbody = document.getElementById('listingsTableBody');
   tbody.innerHTML = '';
-  const firstMonth = months[0];
-  latestData.forEach(r => {
-    const first = kwData.find(x => x.keyword === r.keyword && x.month === firstMonth);
-    const trend = first ? ((r.mention_count - first.mention_count) / first.mention_count * 100).toFixed(1) : '—';
-    const sentColor = r.sentiment_score > 0.3 ? 'var(--green)' : r.sentiment_score < -0.1 ? 'var(--red)' : 'var(--text-dim)';
-    tbody.innerHTML += `<tr>
-      <td>${r.keyword}</td>
-      <td>${r.mention_count}</td>
-      <td>${fmtUSD(r.avg_listing_price_usd)}</td>
-      <td style="color:${sentColor}">${r.sentiment_score.toFixed(2)}</td>
-      <td>${trend}%</td>
-    </tr>`;
+
+  dashboardData.listings.forEach(listing => {
+    const categories = listing.categories.map(cat => {
+      const key = cat === 'OG / Veteran Account' ? 'og-veteran' :
+                  cat === 'Items / Currency' ? 'items-currency' :
+                  cat === 'Age Verified' ? 'age-verified' : 'general';
+      return `<span class="category-tag ${key}">${cat}</span>`;
+    }).join(' ');
+
+    const row = document.createElement('tr');
+    row.dataset.platform = listing.platform;
+    row.dataset.source = listing.source;
+    row.dataset.category = listing.categories[0] || '';
+    row.dataset.searchText = `${listing.title} ${listing.seller} ${listing.platform}`.toLowerCase();
+
+    row.innerHTML = `
+      <td><span class="platform-tag ${listing.platform}">${listing.platform}</span></td>
+      <td>${listing.source}</td>
+      <td><strong>${listing.title}</strong></td>
+      <td>$${listing.price_usd.toFixed(2)}</td>
+      <td>${listing.seller}</td>
+      <td>${listing.rating}</td>
+      <td>${categories}</td>
+      <td><a href="${listing.url}" target="_blank" class="view-link">View Listing →</a></td>
+    `;
+
+    tbody.appendChild(row);
   });
 }
 
-document.getElementById('kwPlatform').addEventListener('change', renderKeywords);
+// Setup Filters
+function setupFilters() {
+  const searchInput = document.getElementById('searchInput');
+  const filterPlatform = document.getElementById('filterPlatform');
+  const filterSource = document.getElementById('filterSource');
+  const filterCategory = document.getElementById('filterCategory');
 
-// ============ REGIONS ============
-function renderRegions() {
-  const plat = document.getElementById('regionPlatform').value;
-  let filtered = D.regional_data;
-  if (plat !== 'all') filtered = filtered.filter(r => r.platform === plat);
+  function applyFilters() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const platformVal = filterPlatform.value;
+    const sourceVal = filterSource.value;
+    const categoryVal = filterCategory.value;
 
-  // Aggregate by region
-  const regAgg = {};
-  const regPrice = {};
-  filtered.forEach(r => {
-    regAgg[r.region] = (regAgg[r.region] || 0) + r.listings_count;
-    if (!regPrice[r.region]) regPrice[r.region] = [];
-    regPrice[r.region].push(r.avg_price_usd);
-  });
-  const regions = Object.keys(regAgg).sort((a, b) => regAgg[b] - regAgg[a]);
+    const rows = document.querySelectorAll('#listingsTableBody tr');
+    rows.forEach(row => {
+      let show = true;
 
-  destroyChart('regionBar');
-  charts.regionBar = new Chart(document.getElementById('chartRegionBar'), {
-    type: 'bar',
-    data: {
-      labels: regions,
-      datasets: [{ data: regions.map(r => regAgg[r]), backgroundColor: '#6c5ce7aa', borderColor: '#6c5ce7', borderWidth: 1 }]
-    },
-    options: { responsive: true, plugins: { legend: { display: false } } }
-  });
+      if (searchTerm && !row.dataset.searchText.includes(searchTerm)) show = false;
+      if (platformVal && row.dataset.platform !== platformVal) show = false;
+      if (sourceVal && row.dataset.source !== sourceVal) show = false;
+      if (categoryVal && row.dataset.category !== categoryVal) show = false;
 
-  destroyChart('regionPrice');
-  charts.regionPrice = new Chart(document.getElementById('chartRegionPrice'), {
-    type: 'bar',
-    data: {
-      labels: regions,
-      datasets: [{ data: regions.map(r => (regPrice[r].reduce((a,b) => a+b, 0) / regPrice[r].length).toFixed(2)), backgroundColor: '#00cec9aa', borderColor: '#00cec9', borderWidth: 1 }]
-    },
-    options: { responsive: true, plugins: { legend: { display: false } } }
-  });
+      row.style.display = show ? '' : 'none';
+    });
+  }
 
-  // Table
-  const tbody = document.querySelector('#regionTable tbody');
-  tbody.innerHTML = '';
-  [...filtered].sort((a, b) => b.listings_count - a.listings_count).forEach(r => {
-    tbody.innerHTML += `<tr>
-      <td>${r.region}</td>
-      <td><span class="platform-tag ${r.platform}">${r.platform}</span></td>
-      <td>${r.listings_count}</td>
-      <td>${fmtUSD(r.avg_price_usd)}</td>
-      <td>${r.dominant_language}</td>
-      <td>${r.seller_count}</td>
-    </tr>`;
-  });
+  searchInput.addEventListener('input', applyFilters);
+  filterPlatform.addEventListener('change', applyFilters);
+  filterSource.addEventListener('change', applyFilters);
+  filterCategory.addEventListener('change', applyFilters);
 }
 
-document.getElementById('regionPlatform').addEventListener('change', renderRegions);
+// By Platform Section
+function renderPlatforms() {
+  const container = document.getElementById('platformsContainer');
+  const data = dashboardData;
 
-// ============ LANGUAGES ============
-function renderLanguages() {
-  const plat = document.getElementById('langPlatform').value;
-  let filtered = D.language_data;
-  if (plat !== 'all') filtered = filtered.filter(r => r.platform === plat);
+  let html = '';
 
-  const langAgg = {};
-  const langPrice = {};
-  filtered.forEach(r => {
-    langAgg[r.language] = (langAgg[r.language] || 0) + r.listings_count;
-    if (!langPrice[r.language]) langPrice[r.language] = [];
-    langPrice[r.language].push(r.avg_price_usd);
-  });
-  const langs = Object.keys(langAgg).sort((a, b) => langAgg[b] - langAgg[a]);
+  data.metadata.platforms.forEach(platform => {
+    const summary = data.platform_summary[platform];
+    const categories = summary.categories;
 
-  destroyChart('langBar');
-  charts.langBar = new Chart(document.getElementById('chartLangBar'), {
-    type: 'bar',
-    data: {
-      labels: langs,
-      datasets: [{ data: langs.map(l => langAgg[l]), backgroundColor: '#e74c3caa', borderColor: '#e74c3c', borderWidth: 1 }]
-    },
-    options: { responsive: true, plugins: { legend: { display: false } } }
-  });
+    html += `
+      <div class="platform-detail">
+        <h3 style="color: ${platformColors[platform]}">${platform}</h3>
 
-  destroyChart('langPrice');
-  charts.langPrice = new Chart(document.getElementById('chartLangPrice'), {
-    type: 'bar',
-    data: {
-      labels: langs,
-      datasets: [{ data: langs.map(l => (langPrice[l].reduce((a,b) => a+b, 0) / langPrice[l].length).toFixed(2)), backgroundColor: '#9b59b6aa', borderColor: '#9b59b6', borderWidth: 1 }]
-    },
-    options: { responsive: true, plugins: { legend: { display: false } } }
-  });
+        <div class="metric-row">
+          <div class="metric-item">
+            <div class="metric-label">Total Listings</div>
+            <div class="metric-value">${summary.total_listings_across_sources.toLocaleString()}</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">Avg Price (USD)</div>
+            <div class="metric-value">$${summary.avg_price_usd.toFixed(2)}</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">Price Range</div>
+            <div class="metric-value">$${summary.price_min.toFixed(2)} - $${summary.price_max.toFixed(2)}</div>
+          </div>
+        </div>
 
-  // Table
-  const tbody = document.querySelector('#langTable tbody');
-  tbody.innerHTML = '';
-  [...filtered].sort((a, b) => b.listings_count - a.listings_count).forEach(r => {
-    tbody.innerHTML += `<tr>
-      <td>${r.language}</td>
-      <td><span class="platform-tag ${r.platform}">${r.platform}</span></td>
-      <td>${r.listings_count}</td>
-      <td>${fmtUSD(r.avg_price_usd)}</td>
-      <td>${pct(r.pct_with_images)}</td>
-    </tr>`;
-  });
-}
+        <h4>Categories</h4>
+        <div class="metric-row" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+          ${Object.entries(categories).map(([cat, count]) => {
+            const key = cat === 'OG / Veteran Account' ? 'og-veteran' :
+                        cat === 'Items / Currency' ? 'items-currency' :
+                        cat === 'Age Verified' ? 'age-verified' : 'general';
+            return `
+              <div class="metric-item">
+                <div class="metric-label">${cat}</div>
+                <div class="metric-value">${count}</div>
+              </div>
+            `;
+          }).join('')}
+        </div>
 
-document.getElementById('langPlatform').addEventListener('change', renderLanguages);
-
-// ============ QUALITY ============
-function renderQuality() {
-  const tiers = D.config.quality_tiers;
-  const tierColors = ['#6c5ce7','#00cec9','#ffa502','#ff6b6b'];
-
-  destroyChart('qualityStacked');
-  charts.qualityStacked = new Chart(document.getElementById('chartQualityStacked'), {
-    type: 'bar',
-    data: {
-      labels: platforms,
-      datasets: tiers.map((t, i) => ({
-        label: t,
-        data: platforms.map(p => {
-          const r = D.quality_distribution.find(x => x.platform === p && x.quality_tier === t);
-          return r ? r.listings_count : 0;
-        }),
-        backgroundColor: tierColors[i] + 'aa',
-        borderColor: tierColors[i],
-        borderWidth: 1,
-      }))
-    },
-    options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } } }
-  });
-
-  destroyChart('qualityPrice');
-  charts.qualityPrice = new Chart(document.getElementById('chartQualityPrice'), {
-    type: 'bar',
-    data: {
-      labels: tiers,
-      datasets: platforms.map((p, i) => ({
-        label: p,
-        data: tiers.map(t => {
-          const r = D.quality_distribution.find(x => x.platform === p && x.quality_tier === t);
-          return r ? r.avg_price_usd : 0;
-        }),
-        backgroundColor: COLORS_ARR[i] + 'aa',
-        borderColor: COLORS_ARR[i],
-        borderWidth: 1,
-      }))
-    },
-    options: { responsive: true, scales: { y: { beginAtZero: true } } }
-  });
-
-  // Table
-  const tbody = document.querySelector('#qualityTable tbody');
-  tbody.innerHTML = '';
-  D.quality_distribution.forEach(r => {
-    tbody.innerHTML += `<tr>
-      <td><span class="platform-tag ${r.platform}">${r.platform}</span></td>
-      <td>${r.quality_tier}</td>
-      <td>${r.listings_count}</td>
-      <td>${pct(r.pct_of_total)}</td>
-      <td>${fmtUSD(r.avg_price_usd)}</td>
-      <td>${fmtUSD(r.median_price_usd)}</td>
-    </tr>`;
-  });
-}
-
-// ============ ALERTS ============
-function renderAlerts() {
-  const sev = document.getElementById('alertSeverity').value;
-  const plat = document.getElementById('alertPlatform').value;
-  let filtered = D.alerts;
-  if (sev !== 'all') filtered = filtered.filter(r => r.severity === sev);
-  if (plat !== 'all') filtered = filtered.filter(r => r.platform === plat);
-
-  const list = document.getElementById('alertList');
-  list.innerHTML = '';
-  if (filtered.length === 0) { list.innerHTML = '<div style="color:var(--text-dim);padding:20px;">No alerts matching filters.</div>'; return; }
-
-  filtered.forEach(a => {
-    const ago = Math.round((Date.now() - new Date(a.timestamp).getTime()) / 3600000);
-    const agoStr = ago < 24 ? ago + 'h ago' : Math.round(ago / 24) + 'd ago';
-    list.innerHTML += `<div class="alert-item">
-      <span class="alert-badge ${a.severity}">${a.severity}</span>
-      <div>
-        <div class="alert-desc"><span class="platform-tag ${a.platform}">${a.platform}</span> ${a.description}</div>
-        <div class="alert-time">${agoStr} &middot; Source: ${a.details.source} &middot; Value: ${a.details.metric_value}x (baseline: ${a.details.baseline_value}x)</div>
+        <h4>Available on Marketplaces</h4>
+        <div class="links-list">
+          ${data.metadata.sources.map(source => {
+            const sourceData = summary.sources[source];
+            return `
+              <div class="link-item">
+                <strong>${source}</strong>
+                <span style="color: var(--text-dim); font-size: 12px;">${sourceData.total_on_site.toLocaleString()} total</span>
+                <a href="${sourceData.search_url}" target="_blank" style="margin-left: auto;">Visit →</a>
+              </div>
+            `;
+          }).join('')}
+        </div>
       </div>
-    </div>`;
+    `;
   });
+
+  container.innerHTML = html;
 }
 
-document.getElementById('alertSeverity').addEventListener('change', renderAlerts);
-document.getElementById('alertPlatform').addEventListener('change', renderAlerts);
+// Sources Section
+function renderSources() {
+  const container = document.getElementById('sourcesContainer');
+  const data = dashboardData;
 
-// ============ INIT ============
-renderOverview();
-renderTrends();
-renderSources();
-renderKeywords();
-renderRegions();
-renderLanguages();
-renderQuality();
-renderAlerts();
+  let html = '';
+
+  Object.entries(data.source_summary).forEach(([source, summary]) => {
+    html += `
+      <div class="source-detail">
+        <h3>${source}</h3>
+
+        <div class="metric-row">
+          <div class="metric-item">
+            <div class="metric-label">Total Listings</div>
+            <div class="metric-value">${summary.total_listings.toLocaleString()}</div>
+          </div>
+        </div>
+
+        <h4>Available Platforms</h4>
+        <div class="links-list">
+          ${summary.platforms.map(platform => {
+            const searchUrl = data.search_urls[platform][source];
+            return `
+              <div class="link-item">
+                <span class="platform-tag ${platform}">${platform}</span>
+                <a href="${searchUrl}" target="_blank" style="margin-left: auto;">Browse on ${source} →</a>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
 </script>
+
 </body>
 </html>
