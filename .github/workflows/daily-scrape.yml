@@ -43,37 +43,11 @@ jobs:
       - name: Run scraper
         run: python scrape_listings.py --verbose
 
-      - name: Embed fresh data into dashboard HTML
-        run: |
-          python3 -c "
-          import json, re
-          with open('dashboard_data.json') as f:
-              data = json.dumps(json.load(f))
-          with open('index.html') as f:
-              html = f.read()
-          replacement = 'const dashboardData = ' + data + ';'
-          old_html = html
-          html = re.sub(
-              r'const dashboardData = .*?;\s*\n+\s*// Platform colors',
-              lambda m: replacement + '\n\n// Platform colors',
-              html,
-              count=1,
-              flags=re.DOTALL
-          )
-          if html == old_html:
-              print('WARNING: Regex did not match! Data was NOT embedded.')
-          else:
-              print('Data successfully embedded.')
-          with open('index.html', 'w') as f:
-              f.write(html)
-          print('Dashboard HTML updated with fresh data')
-          "
-
-      - name: Commit updated data and HTML
+      - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add dashboard_data.json scrape_history/ index.html scraper.log
+          git add dashboard_data.json scrape_history/ scraper.log
           git diff --cached --quiet || git commit -m "chore: daily scrape $(date -u '+%Y-%m-%d')"
           git push
 
