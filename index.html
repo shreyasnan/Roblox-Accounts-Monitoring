@@ -334,7 +334,9 @@ function updateLastUpdated() {
   if (!el || !dashboardData || !dashboardData.metadata) return;
   const dateStr = dashboardData.metadata.scrape_date || dashboardData.metadata.generated_at;
   if (dateStr) {
-    const d = new Date(dateStr);
+    // Parse YYYY-MM-DD without timezone shift by splitting manually
+    const parts = dateStr.substring(0, 10).split('-');
+    const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
     const formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     el.textContent = 'Last Updated: ' + formatted;
   }
