@@ -202,15 +202,24 @@ class BrowserManager:
             log.info("Playwright not installed. Using requests + BeautifulSoup.")
 
     def get_page_html(self, url: str, wait_selector: str = None, scroll: bool = False) -> str:
-        """Fetch a page's HTML. Uses Playwright if available, else requests."""
+        """Fetch a page's HTML. Uses Playwright if available, else requests.
+        For eBay: tries requests first (server-rendered), falls back to Playwright."""
+        use_requests_first = "ebay.com" in url
         for attempt in range(MAX_RETRIES):
             try:
+                if use_requests_first:
+                    # eBay is server-rendered; requests is faster and avoids bot detection
+                    html = self._get_requests(url)
+                    if html and len(html) > 5000:  # got a real page, not an error
+                        return html
+                    log.debug(f"  requests got short response ({len(html)} bytes) for eBay, trying Playwright")
                 if self.using_playwright:
                     return self._get_pw(url, wait_selector, scroll)
                 else:
                     return self._get_requests(url)
             except Exception as e:
                 log.warning(f"  Attempt {attempt+1}/{MAX_RETRIES} failed for {url}: {e}")
+                use_requests_first = False  # don't retry requests for eBay, switch to Playwright
                 polite_delay()
         log.error(f"  All {MAX_RETRIES} attempts failed for {url}")
         return ""
@@ -218,17 +227,18 @@ class BrowserManager:
     def _get_pw(self, url, wait_selector, scroll):
         page = self._context.new_page()
         try:
-            # Use networkidle for sites that load content dynamically
-            wait_until = "networkidle" if "ebay.com" in url else "domcontentloaded"
-            page.goto(url, wait_until=wait_until, timeout=30_000)
+            page.goto(url, wait_until="domcontentloaded", timeout=30_000)
             if wait_selector:
                 try:
-                    page.wait_for_selector(wait_selector, timeout=20_000)
+                    page.wait_for_selector(wait_selector, timeout=25_000)
                 except PwTimeout:
-                    # Log what we actually got for debugging
-                    found_items = page.query_selector_all("li.s-card, .s-item, li")
-                    log.debug(f"  Selector '{wait_selector}' not found after 20s. "
-                              f"Page has {len(found_items)} <li> elements. URL: {url[:80]}")
+                    # Selector not found — log page state for debugging
+                    title = page.title()
+                    li_count = len(page.query_selector_all("li"))
+                    body_text = page.inner_text("body")[:300] if page.query_selector("body") else ""
+                    log.warning(f"  Selector '{wait_selector}' not found after 25s. "
+                                f"Title: '{title}', <li> count: {li_count}, URL: {url[:80]}")
+                    log.debug(f"  Page body preview: {body_text[:200]}")
             if scroll:
                 self._scroll_page(page)
             return page.content()
@@ -242,7 +252,19 @@ class BrowserManager:
             time.sleep(0.5)
 
     def _get_requests(self, url):
-        headers = {"User-Agent": random_ua(), "Accept-Language": "en-US,en;q=0.9"}
+        headers = {
+            "User-Agent": random_ua(),
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "none",
+            "Sec-Fetch-User": "?1",
+            "Upgrade-Insecure-Requests": "1",
+            "Connection": "keep-alive",
+            "Cache-Control": "max-age=0",
+        }
         resp = _http.get(url, headers=headers, timeout=20)
         resp.raise_for_status()
         return resp.text
@@ -881,9 +903,11 @@ class EbayScraper:
         listings = []
         for card in cards:
             try:
-                # Title
+                # Title — use .s-card__title (link's direct text is empty)
+                title_el = card.select_one(".s-card__title, a.s-card__link span")
+                title = safe_text(title_el)
+                # Keep link element for URL extraction
                 title_link = card.select_one("a.s-card__link")
-                title = safe_text(title_link)
                 if not title or title.lower() in ("shop on ebay", "results matching fewer words"):
                     continue
                 if not self._is_relevant_listing(title):

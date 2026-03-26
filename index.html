@@ -200,7 +200,7 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
 <div class="header">
   <h1><span>Roblox</span> Accounts Monitoring Dashboard</h1>
   <div class="header-meta">
-    <div>Last Updated: Mar 24, 2026</div>
+    <div id="last-updated">Last Updated: Loading...</div>
     <div>Sources: Eldorado.gg, U7Buy, eBay</div>
   </div>
 </div>
@@ -320,6 +320,7 @@ const categoryColors = {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
+  updateLastUpdated();
   initializeNavigation();
   renderOverview();
   renderListings();
@@ -327,6 +328,17 @@ document.addEventListener('DOMContentLoaded', function() {
   renderSources();
   setupFilters();
 });
+
+function updateLastUpdated() {
+  const el = document.getElementById('last-updated');
+  if (!el || !dashboardData || !dashboardData.metadata) return;
+  const dateStr = dashboardData.metadata.scrape_date || dashboardData.metadata.generated_at;
+  if (dateStr) {
+    const d = new Date(dateStr);
+    const formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    el.textContent = 'Last Updated: ' + formatted;
+  }
+}
 
 // Navigation
 function initializeNavigation() {
