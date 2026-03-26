@@ -47,7 +47,7 @@ _http = requests.Session()
 _adapter = HTTPAdapter(
     pool_connections=5,
     pool_maxsize=10,
-    max_retries=Retry(total=2, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504]),
+    max_retries=Retry(total=2, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504], redirect=5),
 )
 _http.mount("https://", _adapter)
 _http.mount("http://", _adapter)
@@ -123,9 +123,9 @@ log = logging.getLogger("scraper")
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
-def polite_delay():
+def polite_delay(extra: float = 0):
     """Random sleep between requests to avoid rate limiting."""
-    time.sleep(random.uniform(MIN_DELAY, MAX_DELAY))
+    time.sleep(random.uniform(MIN_DELAY, MAX_DELAY) + extra)
 
 
 def random_ua():
@@ -210,11 +210,20 @@ class BrowserManager:
                 if use_requests_first:
                     # eBay is server-rendered; requests is faster and avoids bot detection
                     html = self._get_requests(url)
-                    if html and len(html) > 5000:  # got a real page, not an error
+                    if html and len(html) > 5000:  # got a real page, not an error/CAPTCHA
                         return html
-                    log.debug(f"  requests got short response ({len(html)} bytes) for eBay, trying Playwright")
+                    if html == "":
+                        log.debug(f"  requests got CAPTCHA or empty for eBay, trying Playwright")
+                    else:
+                        log.debug(f"  requests got short response ({len(html) if html else 0} bytes) for eBay, trying Playwright")
                 if self.using_playwright:
-                    return self._get_pw(url, wait_selector, scroll)
+                    html = self._get_pw(url, wait_selector, scroll)
+                    # Check Playwright result for CAPTCHA too
+                    if html and ("splashui/challenge" in html or "captcha" in html.lower()[:2000]):
+                        log.warning(f"  eBay CAPTCHA detected in Playwright response for {url[:80]}")
+                        polite_delay(extra=3)  # longer delay before retry
+                        continue
+                    return html
                 else:
                     return self._get_requests(url)
             except Exception as e:
@@ -228,6 +237,11 @@ class BrowserManager:
         page = self._context.new_page()
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=30_000)
+            # Check for CAPTCHA/challenge redirect
+            current_url = page.url
+            if "challenge" in current_url or "splashui" in current_url:
+                log.warning(f"  Playwright: CAPTCHA redirect detected ({current_url[:80]})")
+                return ""
             if wait_selector:
                 try:
                     page.wait_for_selector(wait_selector, timeout=25_000)
@@ -237,7 +251,7 @@ class BrowserManager:
                     li_count = len(page.query_selector_all("li"))
                     body_text = page.inner_text("body")[:300] if page.query_selector("body") else ""
                     log.warning(f"  Selector '{wait_selector}' not found after 25s. "
-                                f"Title: '{title}', <li> count: {li_count}, URL: {url[:80]}")
+                                f"Title: '{title}', <li> count: {li_count}, URL: {page.url[:80]}")
                     log.debug(f"  Page body preview: {body_text[:200]}")
             if scroll:
                 self._scroll_page(page)
@@ -265,9 +279,22 @@ class BrowserManager:
             "Connection": "keep-alive",
             "Cache-Control": "max-age=0",
         }
-        resp = _http.get(url, headers=headers, timeout=20)
+        # Add Referer header for eBay to reduce CAPTCHA triggers
+        if "ebay.com" in url:
+            headers["Referer"] = "https://www.ebay.com/"
+            headers["Sec-Fetch-Site"] = "same-origin"
+        resp = _http.get(url, headers=headers, timeout=20, allow_redirects=True)
+        # Detect CAPTCHA / challenge page redirects
+        if resp.url and ("challenge" in resp.url or "splashui" in resp.url):
+            log.warning(f"  eBay CAPTCHA detected (redirected to {resp.url[:80]})")
+            return ""
         resp.raise_for_status()
-        return resp.text
+        text = resp.text
+        # Secondary check: detect CAPTCHA in page content
+        if "splashui/challenge" in text or "captcha" in text.lower()[:2000]:
+            log.warning(f"  eBay CAPTCHA detected in page content for {url[:80]}")
+            return ""
+        return text
 
     def stop(self):
         if self._context:
@@ -1220,13 +1247,13 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
             scraped[game]["U7Buy"] = {"total_on_site": 0, "search_url": U7BUY_URLS.get(game, ""), "listings": []}
         polite_delay()
 
-        # eBay
+        # eBay — use longer delay between game searches to reduce CAPTCHA triggers
         try:
             scraped[game]["eBay"] = ebay.scrape_game(game)
         except Exception as e:
             log.error(f"  eBay failed for {game}: {e}")
             scraped[game]["eBay"] = {"total_on_site": 0, "search_url": f"https://www.ebay.com/sch/i.html?_nkw={EBAY_SEARCH_TERMS.get(game, '')}", "listings": []}
-        polite_delay()
+        polite_delay(extra=2)  # extra delay for eBay to avoid CAPTCHA
 
     browser.stop()
 

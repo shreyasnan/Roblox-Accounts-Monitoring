@@ -74,12 +74,27 @@ def init_db(conn=None):
             FOREIGN KEY (run_id) REFERENCES scrape_runs(id)
         );
 
+        CREATE TABLE IF NOT EXISTS source_health (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            run_id INTEGER NOT NULL,
+            platform TEXT NOT NULL,
+            source TEXT NOT NULL,
+            status TEXT NOT NULL DEFAULT 'ok',
+            scraped_count INTEGER DEFAULT 0,
+            expected_count INTEGER DEFAULT 0,
+            is_suspect INTEGER DEFAULT 0,
+            note TEXT,
+            FOREIGN KEY (run_id) REFERENCES scrape_runs(id)
+        );
+
         CREATE INDEX IF NOT EXISTS idx_listings_run_id ON listings(run_id);
         CREATE INDEX IF NOT EXISTS idx_listings_platform ON listings(platform);
         CREATE INDEX IF NOT EXISTS idx_listings_categories ON listings(categories);
         CREATE INDEX IF NOT EXISTS idx_listings_price ON listings(price_usd);
         CREATE INDEX IF NOT EXISTS idx_platform_snapshots_run ON platform_snapshots(run_id);
         CREATE INDEX IF NOT EXISTS idx_scrape_runs_date ON scrape_runs(run_date);
+        CREATE INDEX IF NOT EXISTS idx_source_health_run ON source_health(run_id);
+        CREATE INDEX IF NOT EXISTS idx_source_health_lookup ON source_health(platform, source);
     """)
     conn.commit()
 
@@ -135,7 +150,10 @@ def insert_scrape_run(conn, dashboard_data):
             for l in listings
         ])
 
-    # Compute and insert platform snapshots
+    # Get recent history for anomaly detection
+    recent_health = _get_recent_source_avg(conn)
+
+    # Compute and insert platform snapshots + source health
     for platform in meta.get("platforms", []):
         plat_listings = [l for l in listings if l.get("platform") == platform]
         prices = [l["price_usd"] for l in plat_listings if l.get("price_usd", 0) > 0]
@@ -165,8 +183,74 @@ def insert_scrape_run(conn, dashboard_data):
             len(plat_listings), len(av_listings), round(av_avg, 2)
         ))
 
+        # Record per-source health
+        sources_data = plat_summary.get("sources", {})
+        for source_name, src_info in sources_data.items():
+            scraped_count = src_info.get("scraped_count", 0)
+            key = f"{platform}|{source_name}"
+            expected = recent_health.get(key, 0)
+            is_suspect = 0
+            status = "ok"
+            note = None
+
+            if scraped_count == 0 and expected > 3:
+                status = "failed"
+                is_suspect = 1
+                note = f"Got 0 listings, expected ~{expected}"
+            elif expected > 5 and scraped_count < expected * 0.5:
+                status = "degraded"
+                is_suspect = 1
+                note = f"Got {scraped_count}, expected ~{expected} (>{50}% drop)"
+
+            conn.execute("""
+                INSERT INTO source_health (run_id, platform, source, status,
+                                           scraped_count, expected_count, is_suspect, note)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """, (run_id, platform, source_name, status,
+                  scraped_count, expected, is_suspect, note))
+
     conn.commit()
     return run_id
+
+
+def _get_recent_source_avg(conn):
+    """Get 7-day rolling average of scraped counts per platform+source for anomaly detection."""
+    rows = conn.execute("""
+        SELECT sh.platform, sh.source, AVG(sh.scraped_count) as avg_count
+        FROM source_health sh
+        JOIN scrape_runs sr ON sh.run_id = sr.id
+        WHERE sr.run_date >= date('now', '-7 days')
+          AND sh.is_suspect = 0
+        GROUP BY sh.platform, sh.source
+    """).fetchall()
+    result = {}
+    for r in rows:
+        result[f"{r['platform']}|{r['source']}"] = round(r["avg_count"])
+    return result
+
+
+def get_scrape_health(conn, run_id=None):
+    """Get source health for the latest (or specified) run.
+    Returns dict: {platform: {source: {status, scraped_count, expected_count, is_suspect, note}}}"""
+    if run_id is None:
+        row = conn.execute("SELECT MAX(id) FROM scrape_runs").fetchone()
+        run_id = row[0] if row and row[0] else None
+    if run_id is None:
+        return {}
+    rows = conn.execute("""
+        SELECT platform, source, status, scraped_count, expected_count, is_suspect, note
+        FROM source_health WHERE run_id = ?
+    """, (run_id,)).fetchall()
+    health = {}
+    for r in rows:
+        health.setdefault(r["platform"], {})[r["source"]] = {
+            "status": r["status"],
+            "scraped_count": r["scraped_count"],
+            "expected_count": r["expected_count"],
+            "is_suspect": bool(r["is_suspect"]),
+            "note": r["note"]
+        }
+    return health
 
 
 def get_daily_trends(conn, limit=90):

@@ -214,6 +214,44 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
 .alert-text { font-size: 13px; color: var(--text); }
 .alert-count { font-size: 24px; font-weight: 700; color: var(--green); }
 
+/* Price alert badges for unusually low-priced listings */
+.price-alert-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px;
+  font-weight: 700; text-transform: uppercase; margin-left: 6px;
+}
+.price-alert-badge.critical { background: #ff6b6b33; color: var(--red); }
+.price-alert-badge.watch { background: #ffa50233; color: var(--orange); }
+
+/* Week-over-week change indicator */
+.kpi-wow {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 11px; font-weight: 600; margin-left: 6px; padding: 2px 6px;
+  border-radius: 4px;
+}
+.kpi-wow.up { color: var(--green); background: #26de8118; }
+.kpi-wow.down { color: var(--red); background: #ff6b6b18; }
+.kpi-wow.flat { color: var(--text-dim); background: var(--surface2); }
+
+/* Median price display */
+.price-detail { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+
+/* Data quality warning */
+.data-quality-banner {
+  background: linear-gradient(135deg, #ffa50218, #ff6b6b12);
+  border: 1px solid #ffa50244; border-radius: 12px;
+  padding: 14px 20px; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 12px;
+}
+.data-quality-banner .dq-icon { font-size: 18px; margin-top: 1px; }
+.data-quality-banner .dq-title { font-size: 13px; font-weight: 600; color: var(--orange); }
+.data-quality-banner .dq-detail { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+.source-status {
+  display: inline-flex; align-items: center; gap: 4px; font-size: 11px;
+  padding: 2px 8px; border-radius: 4px; margin: 2px;
+}
+.source-status.ok { background: #26de8118; color: var(--green); }
+.source-status.degraded { background: #ffa50222; color: var(--orange); }
+.source-status.failed { background: #ff6b6b22; color: var(--red); }
+
 @media (max-width: 900px) {
   .chart-row { grid-template-columns: 1fr; }
   .chart-row.triple { grid-template-columns: 1fr; }
@@ -231,13 +269,13 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
   <h1><span>Roblox</span> Account Sale Monitoring Dashboard</h1>
   <div class="header-meta">
     <div id="last-updated">Last Updated: Loading...</div>
-    <div>Sources: Eldorado.gg, U7Buy, eBay</div>
+    <div>Tracking account sales across Eldorado.gg, U7Buy, eBay</div>
   </div>
 </div>
 
 <div class="nav" id="nav">
   <button class="active" data-tab="overview">Overview</button>
-  <button data-tab="listings">Live Listings</button>
+  <button data-tab="listings">Active Listings</button>
   <button data-tab="age-verified">Age Verified</button>
   <button data-tab="platforms">By Platform</button>
   <button data-tab="sources">Sources</button>
@@ -247,19 +285,23 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
 
 <!-- ========== OVERVIEW ========== -->
 <div class="section active" id="sec-overview">
+  <div id="dataQualityBanner"></div>
   <div class="kpi-grid" id="kpiGrid"></div>
   <div class="chart-row">
-    <div class="chart-card"><h3>Listings by Platform & Source</h3><canvas id="chartListingsByPlatformSource"></canvas></div>
-    <div class="chart-card"><h3>Category Distribution</h3><canvas id="chartCategoryDist"></canvas></div>
+    <div class="chart-card"><h3>Account Sales Volume by Platform & Marketplace</h3><canvas id="chartListingsByPlatformSource"></canvas></div>
+    <div class="chart-card"><h3>Listing Category Breakdown</h3><canvas id="chartCategoryDist"></canvas></div>
   </div>
   <div class="chart-row full">
-    <div class="chart-card"><h3>Average Price Trend by Platform</h3><canvas id="chartPriceTrend"></canvas><div id="trendNote" style="font-size:11px;color:var(--text-dim);margin-top:8px;"></div></div>
+    <div class="chart-card"><h3>Avg Selling Price Trend — Is It Getting Worse?</h3><canvas id="chartPriceTrend"></canvas><div id="trendNote" style="font-size:11px;color:var(--text-dim);margin-top:8px;"></div></div>
+  </div>
+  <div class="chart-row full">
+    <div class="chart-card"><h3>Listing Volume Over Time — Supply Growth</h3><canvas id="chartVolumeTrend"></canvas><div id="volumeNote" style="font-size:11px;color:var(--text-dim);margin-top:8px;"></div></div>
   </div>
 </div>
 
 <!-- ========== LIVE LISTINGS ========== -->
 <div class="section" id="sec-listings">
-  <h2>Live Listings</h2>
+  <h2>Active Listings</h2>
 
   <div class="filters">
     <div>
@@ -269,8 +311,8 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
     <div>
       <label>Platform:</label>
       <select id="filterPlatform">
+        <option value="Roblox" selected>Roblox</option>
         <option value="">All Platforms</option>
-        <option value="Roblox">Roblox</option>
         <option value="Fortnite">Fortnite</option>
         <option value="Minecraft">Minecraft</option>
         <option value="Steam">Steam</option>
@@ -408,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Load trend data (non-blocking)
       fetch('price_trends.json')
         .then(r => r.ok ? r.json() : null)
-        .then(td => { if (td) { trendData = td; renderTrendChart(); } })
+        .then(td => { if (td) { trendData = td; renderTrendChart(); renderVolumeTrend(); renderDataQuality(); } })
         .catch(() => {});
     })
     .catch(error => {
@@ -450,51 +492,91 @@ function showSection(sectionId) {
   document.getElementById('sec-' + sectionId).classList.add('active');
 }
 
+// --- Utility: WoW change from trend data ---
+function getWowChange() {
+  if (!trendData || !trendData.trends || trendData.trends.length < 2) return null;
+  const trends = trendData.trends;
+  const latest = trends[trends.length - 1];
+  const prev = trends[trends.length - 2];
+  const changes = {};
+  ['Roblox','Fortnite','Minecraft','Steam'].forEach(p => {
+    const cur = latest.platforms[p] ? latest.platforms[p].avg_price : null;
+    const old = prev.platforms[p] ? prev.platforms[p].avg_price : null;
+    if (cur !== null && old !== null && old > 0) {
+      const pct = ((cur - old) / old) * 100;
+      changes[p] = pct;
+    } else {
+      changes[p] = null;
+    }
+  });
+  return changes;
+}
+
+function wowBadge(pct) {
+  if (pct === null || pct === undefined) return '';
+  const cls = pct > 1 ? 'up' : pct < -1 ? 'down' : 'flat';
+  const arrow = pct > 1 ? '▲' : pct < -1 ? '▼' : '→';
+  return `<span class="kpi-wow ${cls}">${arrow} ${Math.abs(pct).toFixed(1)}%</span>`;
+}
+
 // Overview Section
 function renderOverview() {
   const data = dashboardData;
+  const pStats = getPlatformPriceStats();
+  const wow = getWowChange();
 
-  // KPI Cards
+  // --- Roblox-focused KPI Cards ---
+  const rblx = pStats['Roblox'] || { avg: 0, median: 0, count: 0, lowerFence: 0 };
+  const rblxListings = data.listings.filter(l => l.platform === 'Roblox');
+  const rblxVerified = rblxListings.length;  // actual scraped + verified account listings
+  const rblxMin = rblx.count ? Math.min(...rblxListings.filter(l=>l.price_usd>0).map(l=>l.price_usd)) : 0;
+  const rblxWow = wow && wow['Roblox'] !== null ? wowBadge(wow['Roblox']) : '';
+  const rblxAvListings = rblxListings.filter(l => l.categories.includes('Age Verified'));
+  const rblxAvPrices = rblxAvListings.filter(l => l.price_usd > 0).map(l => l.price_usd);
+  const rblxAvAvg = rblxAvPrices.length ? rblxAvPrices.reduce((a,b)=>a+b,0)/rblxAvPrices.length : 0;
+  // Per-source verified counts for Roblox
+  const rblxBySrc = {};
+  data.metadata.sources.forEach(s => { rblxBySrc[s] = rblxListings.filter(l => l.source === s).length; });
+  const rblxSrcBreakdown = data.metadata.sources.map(s => rblxBySrc[s] + ' ' + s).join(' · ');
+
   const kpiHtml = `
-    <div class="kpi-card primary">
-      <div class="kpi-label">Total Listings Found</div>
-      <div class="kpi-value">${data.metadata.total_listings_found.toLocaleString()}</div>
-      <div class="kpi-sub">Across all marketplaces</div>
+    <div class="kpi-card roblox">
+      <div class="kpi-label">Verified Roblox Accounts for Sale</div>
+      <div class="kpi-value" style="color:var(--roblox)">${rblxVerified.toLocaleString()}</div>
+      <div class="price-detail">${rblxSrcBreakdown}</div>
     </div>
-    <div class="kpi-card primary">
-      <div class="kpi-label">Total Sources</div>
-      <div class="kpi-value">${data.metadata.sources.length}</div>
-      <div class="kpi-sub">${data.metadata.sources.join(', ')}</div>
+    <div class="kpi-card roblox">
+      <div class="kpi-label">Roblox Avg Price ${rblxWow}</div>
+      <div class="kpi-value" style="color:var(--roblox)">$${rblx.avg.toFixed(2)}</div>
+      <div class="price-detail">Median: $${rblx.median.toFixed(2)}</div>
     </div>
-    <div class="kpi-card primary">
-      <div class="kpi-label">Platforms Tracked</div>
-      <div class="kpi-value">${data.metadata.platforms.length}</div>
-      <div class="kpi-sub">Roblox, Fortnite, Minecraft, Steam</div>
+    <div class="kpi-card roblox">
+      <div class="kpi-label">Roblox Lowest Price</div>
+      <div class="kpi-value" style="color:var(--roblox)">$${rblxMin.toFixed(2)}</div>
+      <div class="price-detail">Floor price — lower = more accessible</div>
     </div>
-    <div class="kpi-card primary">
-      <div class="kpi-label">Scraped Listings</div>
-      <div class="kpi-value">${data.metadata.total_listings_scraped}</div>
-      <div class="kpi-sub">With full details</div>
+    <div class="kpi-card roblox">
+      <div class="kpi-label">Roblox Age Verified</div>
+      <div class="kpi-value" style="color:var(--roblox)">${rblxAvListings.length}</div>
+      <div class="price-detail">Avg: $${rblxAvAvg.toFixed(2)} · High risk</div>
     </div>
-    ${(() => {
-      const avListings = data.listings.filter(l => l.categories.includes('Age Verified'));
-      const avCount = avListings.length;
-      const avPrices = avListings.filter(l => l.price_usd > 0).map(l => l.price_usd);
-      const avAvg = avPrices.length ? (avPrices.reduce((a,b) => a+b, 0) / avPrices.length) : 0;
-      const avMin = avPrices.length ? Math.min(...avPrices) : 0;
+    ${['Fortnite','Minecraft','Steam'].map(p => {
+      const ps = pStats[p];
+      const wowHtml = wow && wow[p] !== null ? wowBadge(wow[p]) : '';
+      const verified = data.listings.filter(l => l.platform === p).length;
       return `
-        <div class="kpi-card age-verified-card">
-          <div class="kpi-label">Age Verified Accounts</div>
-          <div class="kpi-value" style="color: var(--green)">${avCount}</div>
-          <div class="kpi-sub">High priority monitoring</div>
-        </div>
-        <div class="kpi-card age-verified-card">
-          <div class="kpi-label">Avg Age Verified Price</div>
-          <div class="kpi-value" style="color: var(--green)">$${avAvg.toFixed(2)}</div>
-          <div class="kpi-sub">Cheapest: $${avMin.toFixed(2)}</div>
+        <div class="kpi-card ${p.toLowerCase()}">
+          <div class="kpi-label">${p} ${wowHtml}</div>
+          <div class="kpi-value" style="color:var(--${p.toLowerCase()})">${verified.toLocaleString()}</div>
+          <div class="price-detail">Avg: $${ps.avg.toFixed(2)} · Med: $${ps.median.toFixed(2)}</div>
         </div>
       `;
-    })()}
+    }).join('')}
+    <div class="kpi-card primary">
+      <div class="kpi-label">Total Verified Across All Platforms</div>
+      <div class="kpi-value">${data.metadata.total_listings_scraped.toLocaleString()}</div>
+      <div class="kpi-sub">${data.metadata.sources.join(', ')}</div>
+    </div>
   `;
 
   document.getElementById('kpiGrid').innerHTML = kpiHtml;
@@ -585,10 +667,54 @@ function renderOverview() {
   });
 }
 
+// --- Utility: compute median ---
+function computeMedian(arr) {
+  if (!arr.length) return 0;
+  const sorted = [...arr].sort((a,b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[mid] : (sorted[mid-1] + sorted[mid]) / 2;
+}
+
+// --- Utility: compute platform price stats for deal detection ---
+function getPlatformPriceStats() {
+  const stats = {};
+  const platforms = dashboardData.metadata.platforms;
+  platforms.forEach(p => {
+    const prices = dashboardData.listings
+      .filter(l => l.platform === p && l.price_usd > 0)
+      .map(l => l.price_usd);
+    const median = computeMedian(prices);
+    const avg = prices.length ? prices.reduce((a,b) => a+b,0) / prices.length : 0;
+    // IQR-based outlier bounds
+    const q1 = prices.length >= 4 ? computeMedian(prices.slice(0, Math.floor(prices.length/2))) : 0;
+    const q3 = prices.length >= 4 ? computeMedian(prices.slice(Math.ceil(prices.length/2))) : median * 2;
+    const iqr = q3 - q1;
+    stats[p] = { median, avg, q1, q3, iqr, count: prices.length,
+                 upperFence: q3 + 1.5 * iqr, lowerFence: Math.max(0, q1 - 1.5 * iqr) };
+  });
+  return stats;
+}
+
+// --- Utility: price alert badge HTML ---
+function priceAlertBadgeHtml(price, platformStats) {
+  if (!platformStats || price <= 0 || platformStats.median <= 0) return '';
+  const ratio = price / platformStats.median;
+  if (ratio <= 0.35) return '<span class="price-alert-badge critical">⚠ LOW PRICE</span>';
+  if (ratio <= 0.55) return '<span class="price-alert-badge watch">BELOW AVG</span>';
+  return '';
+}
+
+// --- Utility: outlier flag ---
+function isOutlier(price, platformStats) {
+  if (!platformStats || price <= 0 || platformStats.count < 5) return false;
+  return price > platformStats.upperFence;
+}
+
 // Live Listings Section
 function renderListings() {
   const tbody = document.getElementById('listingsTableBody');
   tbody.innerHTML = '';
+  const pStats = getPlatformPriceStats();
 
   dashboardData.listings.forEach(listing => {
     const categories = listing.categories.map(cat => {
@@ -597,6 +723,12 @@ function renderListings() {
                   cat === 'Age Verified' ? 'age-verified' : 'general';
       return `<span class="category-tag ${key}">${cat}</span>`;
     }).join(' ');
+
+    const ps = pStats[listing.platform];
+    const badge = priceAlertBadgeHtml(listing.price_usd, ps);
+    const outlier = isOutlier(listing.price_usd, ps);
+    const priceStyle = outlier ? 'color:var(--text-dim);text-decoration:line-through;font-style:italic' : '';
+    const outlierNote = outlier ? '<div class="price-detail" title="Price is a statistical outlier">⚠ outlier</div>' : '';
 
     const row = document.createElement('tr');
     row.dataset.platform = listing.platform;
@@ -608,7 +740,7 @@ function renderListings() {
       <td><span class="platform-tag ${listing.platform}">${listing.platform}</span></td>
       <td>${listing.source}</td>
       <td><strong>${listing.title}</strong></td>
-      <td>$${listing.price_usd.toFixed(2)}</td>
+      <td><span style="${priceStyle}">$${listing.price_usd.toFixed(2)}</span>${badge}${outlierNote}</td>
       <td>${listing.seller}</td>
       <td>${listing.rating}</td>
       <td>${categories}</td>
@@ -649,12 +781,16 @@ function setupFilters() {
   filterPlatform.addEventListener('change', applyFilters);
   filterSource.addEventListener('change', applyFilters);
   filterCategory.addEventListener('change', applyFilters);
+
+  // Apply default Roblox filter on load
+  applyFilters();
 }
 
 // By Platform Section
 function renderPlatforms() {
   const container = document.getElementById('platformsContainer');
   const data = dashboardData;
+  const pStats = getPlatformPriceStats();
 
   let html = '';
 
@@ -674,10 +810,21 @@ function renderPlatforms() {
           <div class="metric-item">
             <div class="metric-label">Avg Price (USD)</div>
             <div class="metric-value">$${summary.avg_price_usd.toFixed(2)}</div>
+            ${(() => {
+              const ps = pStats[platform];
+              return ps ? '<div class="price-detail">Median: $' + ps.median.toFixed(2) +
+                (ps.iqr > 0 ? ' · IQR: $' + ps.q1.toFixed(2) + '–$' + ps.q3.toFixed(2) : '') + '</div>' : '';
+            })()}
           </div>
           <div class="metric-item">
             <div class="metric-label">Price Range</div>
             <div class="metric-value">$${summary.price_min.toFixed(2)} - $${summary.price_max.toFixed(2)}</div>
+            ${(() => {
+              const ps = pStats[platform];
+              if (ps && summary.price_max > ps.upperFence && ps.count >= 5)
+                return '<div class="price-detail">⚠ Max is outlier (fence: $' + ps.upperFence.toFixed(2) + ')</div>';
+              return '';
+            })()}
           </div>
         </div>
 
@@ -716,6 +863,60 @@ function renderPlatforms() {
   container.innerHTML = html;
 }
 
+// Data Quality Banner — shows when scrape health has issues
+function renderDataQuality() {
+  const banner = document.getElementById('dataQualityBanner');
+  if (!banner || !trendData) return;
+
+  // Check scrape_health from trend data
+  const health = trendData.scrape_health;
+  if (!health) { banner.innerHTML = ''; return; }
+
+  const issues = [];
+  for (const [platform, sources] of Object.entries(health)) {
+    for (const [source, info] of Object.entries(sources)) {
+      if (info.is_suspect) {
+        issues.push({ platform, source, status: info.status, note: info.note });
+      }
+    }
+  }
+
+  if (issues.length === 0) {
+    // All green — show a subtle health indicator
+    const allSources = [];
+    for (const [platform, sources] of Object.entries(health)) {
+      for (const [source, info] of Object.entries(sources)) {
+        if (platform === 'Roblox') {
+          allSources.push(`<span class="source-status ok">✓ ${source}</span>`);
+        }
+      }
+    }
+    if (allSources.length) {
+      banner.innerHTML = `<div style="font-size:11px;color:var(--text-dim);margin-bottom:12px;">
+        Roblox data quality: ${allSources.join('')}
+      </div>`;
+    }
+    return;
+  }
+
+  // Show warning
+  const sourceStatuses = issues.map(i =>
+    `<span class="source-status ${i.status}">${i.status === 'failed' ? '✗' : '⚠'} ${i.platform} / ${i.source}</span>`
+  ).join('');
+  const noteLines = issues.filter(i => i.note).map(i => i.note).join('; ');
+
+  banner.innerHTML = `
+    <div class="data-quality-banner">
+      <div class="dq-icon">⚠️</div>
+      <div>
+        <div class="dq-title">Data quality notice — some sources may be incomplete</div>
+        <div class="dq-detail">${noteLines}</div>
+        <div style="margin-top:6px">${sourceStatuses}</div>
+      </div>
+    </div>
+  `;
+}
+
 // Trend Chart (loaded async from price_trends.json)
 function renderTrendChart() {
   if (!trendData || !trendData.trends || trendData.trends.length === 0) return;
@@ -726,17 +927,51 @@ function renderTrendChart() {
       .toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
   });
   const platforms = ['Roblox', 'Fortnite', 'Minecraft', 'Steam'];
+
+  // Daily data points — dim suspect points
   const datasets = platforms.map(plat => ({
     label: plat,
-    data: trends.map(t => t.platforms[plat] ? t.platforms[plat].avg_price : null),
+    data: trends.map(t => {
+      const pd = t.platforms[plat];
+      return pd ? pd.avg_price : null;
+    }),
     borderColor: platformColors[plat],
     backgroundColor: platformColors[plat] + '33',
-    borderWidth: 2,
+    borderWidth: plat === 'Roblox' ? 3 : 1.5,
     tension: 0.3,
-    pointRadius: trends.length < 15 ? 5 : 3,
+    pointRadius: trends.map(t => {
+      const pd = t.platforms[plat];
+      return pd && pd.is_suspect ? 2 : (trends.length < 15 ? 5 : 3);
+    }),
+    pointStyle: trends.map(t => {
+      const pd = t.platforms[plat];
+      return pd && pd.is_suspect ? 'crossRot' : 'circle';
+    }),
+    pointBackgroundColor: trends.map(t => {
+      const pd = t.platforms[plat];
+      return pd && pd.is_suspect ? '#ff6b6b88' : platformColors[plat];
+    }),
     pointHoverRadius: 7,
     fill: false
   }));
+
+  // 7-day rolling average lines (dashed, thinner, only for Roblox to keep chart clean)
+  if (trends.length >= 4) {
+    const rblxRolling = {
+      label: 'Roblox 7d avg',
+      data: trends.map(t => {
+        const pd = t.platforms['Roblox'];
+        return pd && pd.rolling_avg_price ? pd.rolling_avg_price : null;
+      }),
+      borderColor: platformColors['Roblox'],
+      borderWidth: 2,
+      borderDash: [6, 3],
+      tension: 0.4,
+      pointRadius: 0,
+      fill: false
+    };
+    datasets.push(rblxRolling);
+  }
 
   const ctx = document.getElementById('chartPriceTrend').getContext('2d');
   new Chart(ctx, {
@@ -748,7 +983,17 @@ function renderTrendChart() {
         legend: { labels: { color: '#e4e6f0', font: { size: 12 } } },
         tooltip: {
           callbacks: {
-            label: ctx => ctx.dataset.label + ': $' + (ctx.raw ? ctx.raw.toFixed(2) : 'N/A')
+            label: function(ctx) {
+              const idx = ctx.dataIndex;
+              const plat = ctx.dataset.label;
+              if (plat.includes('7d avg')) return plat + ': $' + (ctx.raw ? ctx.raw.toFixed(2) : 'N/A');
+              const t = trendData.trends[idx];
+              const pd = t && t.platforms[plat];
+              let lbl = plat + ': $' + (ctx.raw ? ctx.raw.toFixed(2) : 'N/A');
+              if (pd && pd.median_price) lbl += ' (median: $' + pd.median_price.toFixed(2) + ')';
+              if (pd && pd.is_suspect) lbl += ' ⚠ suspect data';
+              return lbl;
+            }
           }
         }
       },
@@ -762,6 +1007,96 @@ function renderTrendChart() {
   const note = document.getElementById('trendNote');
   if (trends.length < 3) {
     note.textContent = 'Trend data will become more meaningful as daily scrapes accumulate. Currently showing ' + trends.length + ' data point(s).';
+  }
+}
+
+// Volume Trend Chart — listing counts over time
+function renderVolumeTrend() {
+  if (!trendData || !trendData.trends || trendData.trends.length === 0) return;
+  const canvas = document.getElementById('chartVolumeTrend');
+  if (!canvas) return;
+  const trends = trendData.trends;
+  const dates = trends.map(t => {
+    const p = t.date.split('-');
+    return new Date(parseInt(p[0]), parseInt(p[1])-1, parseInt(p[2]))
+      .toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  });
+  const platforms = ['Roblox', 'Fortnite', 'Minecraft', 'Steam'];
+  const datasets = platforms.map(plat => ({
+    label: plat,
+    data: trends.map(t => {
+      const pd = t.platforms[plat];
+      return pd ? (pd.count || 0) : null;
+    }),
+    borderColor: platformColors[plat],
+    backgroundColor: platformColors[plat] + '33',
+    borderWidth: plat === 'Roblox' ? 3 : 1.5,
+    tension: 0.3,
+    pointRadius: trends.map(t => {
+      const pd = t.platforms[plat];
+      return pd && pd.is_suspect ? 2 : (trends.length < 15 ? 5 : 3);
+    }),
+    pointStyle: trends.map(t => {
+      const pd = t.platforms[plat];
+      return pd && pd.is_suspect ? 'crossRot' : 'circle';
+    }),
+    pointBackgroundColor: trends.map(t => {
+      const pd = t.platforms[plat];
+      return pd && pd.is_suspect ? '#ff6b6b88' : platformColors[plat];
+    }),
+    pointHoverRadius: 7,
+    fill: plat === 'Roblox'
+  }));
+
+  // Rolling avg line for Roblox volume
+  if (trends.length >= 4) {
+    datasets.push({
+      label: 'Roblox 7d avg',
+      data: trends.map(t => {
+        const pd = t.platforms['Roblox'];
+        return pd && pd.rolling_count ? pd.rolling_count : null;
+      }),
+      borderColor: platformColors['Roblox'],
+      borderWidth: 2,
+      borderDash: [6, 3],
+      tension: 0.4,
+      pointRadius: 0,
+      fill: false
+    });
+  }
+
+  new Chart(canvas.getContext('2d'), {
+    type: 'line',
+    data: { labels: dates, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: {
+        legend: { labels: { color: '#e4e6f0', font: { size: 12 } } },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) {
+              const lbl = ctx.dataset.label;
+              if (lbl.includes('7d avg')) return lbl + ': ' + (ctx.raw ? ctx.raw.toLocaleString() : 'N/A');
+              const idx = ctx.dataIndex;
+              const t = trendData.trends[idx];
+              const pd = t && t.platforms[lbl];
+              let text = lbl + ': ' + (ctx.raw ? ctx.raw.toLocaleString() + ' listings' : 'N/A');
+              if (pd && pd.is_suspect) text += ' ⚠ suspect';
+              return text;
+            }
+          }
+        }
+      },
+      scales: {
+        y: { ticks: { color: '#8b8fa3' }, grid: { color: '#2e3347' }, beginAtZero: true },
+        x: { ticks: { color: '#8b8fa3' }, grid: { color: '#2e3347' } }
+      }
+    }
+  });
+
+  const note = document.getElementById('volumeNote');
+  if (trends.length < 3) {
+    note.textContent = 'Volume tracking will show supply growth once more daily data points accumulate.';
   }
 }
 
