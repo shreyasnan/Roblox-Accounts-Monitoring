@@ -1840,3 +1840,234 @@ fatal: empty ident name (for <runner@runnervm46oaq.bbvfuim50bhurirfaguag3kcgf.bx
 2026-03-26 07:21:29,450 [INFO]   Items / Currency: 213 listings
 2026-03-26 07:21:29,450 [INFO]   Age Verified: 3 listings
 2026-03-26 07:21:29,450 [INFO]   General: 289 listings
+2026-03-26 07:34:03,518 [INFO] ============================================================
+2026-03-26 07:34:03,518 [INFO] Scraper started at 2026-03-26T07:34:03.518436
+2026-03-26 07:34:03,518 [INFO] Games: Roblox, Fortnite, Minecraft, Steam
+2026-03-26 07:34:03,518 [INFO] Max pages per source: unlimited
+2026-03-26 07:34:03,518 [INFO] ============================================================
+2026-03-26 07:34:03,518 [DEBUG] Using selector: EpollSelector
+2026-03-26 07:34:05,309 [INFO] Using Playwright (headless Chromium)
+2026-03-26 07:34:05,309 [INFO] 
+========================================
+2026-03-26 07:34:05,310 [INFO] Scraping: Roblox
+2026-03-26 07:34:05,310 [INFO] ========================================
+2026-03-26 07:34:05,310 [INFO]   [Eldorado.gg] Scraping Roblox — https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 07:34:05,310 [INFO]     Page 1: https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-26 07:34:13,202 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 07:34:13,270 [INFO]     No more pages available.
+2026-03-26 07:34:15,616 [INFO]   [U7Buy] Scraping Roblox — https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 07:34:15,619 [DEBUG] Starting new HTTPS connection (1): www.u7buy.com:443
+2026-03-26 07:34:16,031 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 07:34:16,032 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 07:34:16,032 [INFO]     Page 1: https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 07:34:43,226 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Roblox Accounts for Sale | Cheap, Safe & Fast | U7BUY', <li> count: 125, URL: https://www.u7buy.com/roblox/roblox-accounts
+2026-03-26 07:34:43,227 [DEBUG]   Page body preview: Categories
+Roblox Games
+Genshin Impact
+Search For Games
+EN | USD
+Sell
+Log In
+Roblox
+Robux
+Accounts
+Items
+Boosting
+Gift Cards
+Roblox Games
+Robux Tax Calculator
+Home
+Accounts
+Roblox Accounts
+Roblox Acco
+2026-03-26 07:34:48,550 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 07:34:51,824 [INFO]   [eBay] Scraping Roblox — https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 07:34:51,824 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-26 07:34:51,825 [DEBUG] Starting new HTTPS connection (1): www.ebay.com:443
+2026-03-26 07:34:52,091 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 HTTP/1.1" 200 None
+2026-03-26 07:34:52,825 [DEBUG]     Skipping irrelevant eBay listing: New Listingroblox account headless korblox voice c
+2026-03-26 07:34:52,858 [DEBUG]     Skipping irrelevant eBay listing: Rank 33(Max) - Rebirth9 - Equip 99 (Max) Pet - Max
+2026-03-26 07:34:52,874 [INFO]     Found 58 listings (total so far: 58)
+2026-03-26 07:34:54,797 [INFO]     Page 2: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=2&_skc=61
+2026-03-26 07:34:54,981 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=2&_skc=61 HTTP/1.1" 200 None
+2026-03-26 07:34:55,680 [DEBUG]     Skipping irrelevant eBay listing: MaxRank - Rebirth9 - Equip 99 (Max) Pet - Max Hatc
+2026-03-26 07:34:55,702 [DEBUG]     Skipping irrelevant eBay listing: New ListingRoblox Da Hood Account With Special Bon
+2026-03-26 07:34:55,713 [INFO]     Found 58 listings (total so far: 116)
+2026-03-26 07:34:58,989 [INFO]     Page 3: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=3&_skc=121
+2026-03-26 07:34:59,201 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=3&_skc=121 HTTP/1.1" 200 None
+2026-03-26 07:34:59,949 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Pink Wire Drop⚡Fast Service + Disc
+2026-03-26 07:34:59,952 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 80 Pink Wire⚡Fast Service + Discou
+2026-03-26 07:34:59,982 [INFO]     Found 58 listings (total so far: 174)
+2026-03-26 07:35:02,352 [INFO]     Page 4: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=4&_skc=181
+2026-03-26 07:35:02,641 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=4&_skc=181 HTTP/1.1" 200 None
+2026-03-26 07:35:03,349 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Red Book Drop⚡Fast Service + Disco
+2026-03-26 07:35:03,354 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Black Green Book Drop⚡Fast Service
+2026-03-26 07:35:03,365 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Candy Bag Truckload Base ⚡Fast Ser
+2026-03-26 07:35:03,368 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Blue Book Drop⚡Fast Service + Disc
+2026-03-26 07:35:03,374 [INFO]     Found 56 listings (total so far: 230)
+2026-03-26 07:35:05,438 [INFO]     Page 5: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=5&_skc=241
+2026-03-26 07:35:05,982 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=5&_skc=241 HTTP/1.1" 200 None
+2026-03-26 07:35:06,520 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Yellow Book Drop⚡Fast Service + Di
+2026-03-26 07:35:06,520 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Mixed Book Drop⚡Fast Service + Dis
+2026-03-26 07:35:06,529 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 White Book Drop⚡Fast Service + Dis
+2026-03-26 07:35:06,549 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2025 Candy bag/Pump Truckload Base
+2026-03-26 07:35:06,556 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Black Yellow Book Drop⚡Fast Servic
+2026-03-26 07:35:06,570 [DEBUG]     Skipping irrelevant eBay listing: Rolling Pin – Roblox Assassin! Exotic Knife | In-G
+2026-03-26 07:35:06,574 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Pineapple Painting Drop⚡Fast Servi
+2026-03-26 07:35:06,579 [INFO]     Found 53 listings (total so far: 283)
+2026-03-26 07:35:08,721 [INFO]     Page 6: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=6&_skc=301
+2026-03-26 07:35:08,773 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=6&_skc=301 HTTP/1.1" 307 0
+2026-03-26 07:35:08,854 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Droblox%2Baccount%26_sop%3D12%26LH_BIN%3D1%26_pgn%3D6%26_skc%3D301&iid=300e3588-9068-4af4-acda-69c68e93ff50&iim=dMTMuOT&iia=pSDMuMjch&iiz=jIJE2Ljk5NuE HTTP/1.1" 200 6104
+2026-03-26 07:35:08,858 [INFO]     No listings found on page 6, stopping.
+2026-03-26 07:35:08,858 [INFO]     eBay Roblox: 283 relevant listings scraped (raw site total: 353, estimated relevant: 283)
+2026-03-26 07:35:11,501 [INFO] 
+========================================
+2026-03-26 07:35:11,501 [INFO] Scraping: Fortnite
+2026-03-26 07:35:11,501 [INFO] ========================================
+2026-03-26 07:35:11,501 [INFO]   [Eldorado.gg] Scraping Fortnite — https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 07:35:11,501 [INFO]     Page 1: https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-26 07:35:18,710 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 07:35:18,778 [INFO]     No more pages available.
+2026-03-26 07:35:21,728 [INFO]   [U7Buy] Scraping Fortnite — https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 07:35:22,007 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 07:35:22,008 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 07:35:22,008 [INFO]     Page 1: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 07:35:49,415 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Fortnite Accounts for Sale | Cheap, Safe & Fast | U7BUY', <li> count: 162, URL: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-26 07:35:49,415 [DEBUG]   Page body preview: Categories
+Roblox Games
+Genshin Impact
+Search For Games
+EN | USD
+Sell
+Log In
+Fortnite
+V-Bucks
+Accounts
+Items
+Boosting
+Vbucks Card
+Skins
+Home
+Accounts
+Fortnite Accounts
+Fortnite Accounts for Sale
+4.9
+2
+2026-03-26 07:35:54,728 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 07:35:56,998 [INFO]   [eBay] Scraping Fortnite — https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 07:35:56,998 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-26 07:35:57,046 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-26 07:35:57,141 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dfortnite%2Baccount%26_sop%3D12%26LH_BIN%3D1&iid=394a3de6-4f88-4584-91de-1d20b75db24d&iim=KMTMuOG&iia=jUDMuMjxt&iiz=TrNE2Ljk5BGd HTTP/1.1" 200 None
+2026-03-26 07:35:57,145 [INFO]     No listings found on page 1, stopping.
+2026-03-26 07:35:57,145 [INFO]     eBay Fortnite: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-26 07:35:59,748 [INFO] 
+========================================
+2026-03-26 07:35:59,749 [INFO] Scraping: Minecraft
+2026-03-26 07:35:59,749 [INFO] ========================================
+2026-03-26 07:35:59,749 [INFO]   [Eldorado.gg] Scraping Minecraft — https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 07:35:59,749 [INFO]     Page 1: https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-26 07:36:06,895 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 07:36:06,991 [INFO]     No more pages available.
+2026-03-26 07:36:09,120 [INFO]   [U7Buy] Scraping Minecraft — https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 07:36:09,256 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 07:36:09,258 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 07:36:09,259 [INFO]     Page 1: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 07:36:36,559 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Minecraft Accounts for sale | Cheap MC Account | U7BUY', <li> count: 126, URL: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-26 07:36:36,559 [DEBUG]   Page body preview: Categories
+Roblox Games
+Genshin Impact
+Search For Games
+EN | USD
+Sell
+Log In
+Minecraft
+Hypixel Coins
+Accounts
+Home
+Accounts
+Minecraft Accounts
+Minecraft Accounts for Sale
+4.9
+5002 reviews
+Server
+Hypix
+2026-03-26 07:36:41,917 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 07:36:44,467 [INFO]   [eBay] Scraping Minecraft — https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 07:36:44,467 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-26 07:36:44,524 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-26 07:36:44,626 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dminecraft%2Baccount%2Bjava%26_sop%3D12%26LH_BIN%3D1&iid=6577981d-f3f6-4ab5-b5a9-57ba107b6076&iim=OMTMuOz&iia=aIDMuMjpK&iiz=syWE2Ljk5ZTt HTTP/1.1" 200 None
+2026-03-26 07:36:44,645 [INFO]     No listings found on page 1, stopping.
+2026-03-26 07:36:44,645 [INFO]     eBay Minecraft: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-26 07:36:47,788 [INFO] 
+========================================
+2026-03-26 07:36:47,789 [INFO] Scraping: Steam
+2026-03-26 07:36:47,789 [INFO] ========================================
+2026-03-26 07:36:47,789 [INFO]   [Eldorado.gg] Scraping Steam — https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 07:36:47,789 [INFO]     Page 1: https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-26 07:36:54,886 [INFO]     Found 48 listings (total so far: 48)
+2026-03-26 07:36:54,950 [INFO]     No more pages available.
+2026-03-26 07:36:57,400 [INFO]   [U7Buy] Scraping Steam — https://www.u7buy.com/steam/steam-accounts
+2026-03-26 07:36:57,684 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-26 07:36:57,694 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-26 07:36:57,694 [INFO]     Page 1: https://www.u7buy.com/steam/steam-accounts
+2026-03-26 07:37:24,810 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Steam Accounts with Games for Sale | U7BUY', <li> count: 129, URL: https://www.u7buy.com/steam/steam-accounts
+2026-03-26 07:37:24,811 [DEBUG]   Page body preview: Categories
+Roblox Games
+Genshin Impact
+Search For Games
+EN | USD
+Sell
+Log In
+Steam
+Accounts
+Items
+Gift Cards
+Home
+Accounts
+Steam Accounts
+Steam Accounts for Sale
+4.9
+1268 reviews
+Price
+Usa
+Brazil
+Cybe
+2026-03-26 07:37:30,148 [INFO]     Found 33 listings (total so far: 33)
+2026-03-26 07:37:32,741 [INFO]   [eBay] Scraping Steam — https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 07:37:32,741 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-26 07:37:32,820 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-26 07:37:32,927 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1&iid=ba7c3027-28ff-4022-b4bc-15844bb66b45&iim=eMTMuOa&iia=RLDMuMjbv&iiz=QsuE2Ljk5MNw HTTP/1.1" 200 6087
+2026-03-26 07:37:32,931 [INFO]     No listings found on page 1, stopping.
+2026-03-26 07:37:32,931 [INFO]     eBay Steam: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-26 07:37:35,258 [ERROR] Git push failed: Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <runner@runnervm46oaq.ji1a2uz2t1tupgawfdyie1rgtd.dx.internal.cloudapp.net>) not allowed
+
+2026-03-26 07:37:35,258 [INFO] 
+============================================================
+2026-03-26 07:37:35,258 [INFO] SCRAPE COMPLETE
+2026-03-26 07:37:35,258 [INFO] ============================================================
+2026-03-26 07:37:35,258 [INFO] Total listings found:   80,673
+2026-03-26 07:37:35,258 [INFO] Total listings scraped: 503
+2026-03-26 07:37:35,258 [INFO] Output: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/dashboard_data.json
+2026-03-26 07:37:35,258 [INFO] Backup: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/scrape_history/dashboard_data_20260326_073735.json
+2026-03-26 07:37:35,258 [INFO] 
+2026-03-26 07:37:35,258 [INFO]   Roblox: 17,502 total | avg $56.55
+2026-03-26 07:37:35,258 [INFO]   Fortnite: 53,643 total | avg $44.9
+2026-03-26 07:37:35,258 [INFO]   Minecraft: 2,854 total | avg $20.91
+2026-03-26 07:37:35,258 [INFO]   Steam: 6,674 total | avg $7.22
+2026-03-26 07:37:35,258 [INFO] 
+2026-03-26 07:37:35,258 [INFO]   OG / Veteran Account: 80 listings
+2026-03-26 07:37:35,259 [INFO]   Items / Currency: 198 listings
+2026-03-26 07:37:35,259 [INFO]   Age Verified: 2 listings
+2026-03-26 07:37:35,259 [INFO]   General: 255 listings
