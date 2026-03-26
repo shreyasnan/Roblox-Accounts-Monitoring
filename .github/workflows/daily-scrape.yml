@@ -48,9 +48,10 @@ jobs:
               data = json.dumps(json.load(f))
           with open('index.html') as f:
               html = f.read()
+          replacement = 'const dashboardData = ' + data + ';'
           html = re.sub(
               r'const dashboardData = \{.*?\n\};',
-              'const dashboardData = ' + data + ';',
+              lambda m: replacement,
               html,
               count=1,
               flags=re.DOTALL
