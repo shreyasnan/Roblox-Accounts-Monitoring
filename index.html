@@ -269,7 +269,7 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
   <h1><span>Roblox</span> Account Sale Monitoring Dashboard</h1>
   <div class="header-meta">
     <div id="last-updated">Last Updated: Loading...</div>
-    <div>Tracking account sales across Eldorado.gg, U7Buy, eBay</div>
+    <div>Tracking account sales across Eldorado.gg, U7Buy, PlayerAuctions, Z2U, eBay</div>
   </div>
 </div>
 
@@ -323,6 +323,8 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
         <option value="">All Sources</option>
         <option value="Eldorado.gg">Eldorado.gg</option>
         <option value="U7Buy">U7Buy</option>
+        <option value="PlayerAuctions">PlayerAuctions</option>
+        <option value="Z2U">Z2U</option>
         <option value="eBay">eBay</option>
       </select>
     </div>
@@ -570,8 +572,8 @@ function renderOverview() {
   const rblxSummary = data.platform_summary['Roblox'];
   const sources = data.metadata.sources;
   const rblxBySource = sources.map(s => rblxSummary.sources[s] ? rblxSummary.sources[s].scraped_count : 0);
-  const sourceColors = ['rgba(218, 54, 51, 0.7)', 'rgba(88, 166, 255, 0.7)', 'rgba(210, 153, 34, 0.7)'];
-  const sourceBorders = ['#da3633', '#58a6ff', '#d29922'];
+  const sourceColors = ['rgba(218, 54, 51, 0.7)', 'rgba(88, 166, 255, 0.7)', 'rgba(63, 185, 80, 0.7)', 'rgba(169, 142, 255, 0.7)', 'rgba(210, 153, 34, 0.7)'];
+  const sourceBorders = ['#da3633', '#58a6ff', '#3fb950', '#a98eff', '#d29922'];
 
   const ctx1 = document.getElementById('chartListingsByPlatformSource').getContext('2d');
   new Chart(ctx1, {
@@ -1190,7 +1192,7 @@ function renderAgeVerified() {
       labels: sources,
       datasets: [{
         data: sources.map(s => avBySource[s]),
-        backgroundColor: ['rgba(218,54,51,0.7)', 'rgba(88,166,255,0.7)', 'rgba(210,153,34,0.7)'],
+        backgroundColor: ['rgba(218,54,51,0.7)', 'rgba(88,166,255,0.7)', 'rgba(63,185,80,0.7)', 'rgba(169,142,255,0.7)', 'rgba(210,153,34,0.7)'],
         borderColor: '#0d1117', borderWidth: 2
       }]
     },

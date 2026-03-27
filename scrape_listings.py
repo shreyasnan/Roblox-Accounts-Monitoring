@@ -106,6 +106,20 @@ EBAY_SEARCH_TERMS = {
     "Steam":     "steam+account",
 }
 
+PLAYERAUCTIONS_URLS = {
+    "Roblox":    "https://www.playerauctions.com/roblox-account/",
+    "Fortnite":  "https://www.playerauctions.com/fortnite-account/",
+    "Minecraft": "https://www.playerauctions.com/minecraft-account/",
+    "Steam":     "https://www.playerauctions.com/steam-account/",
+}
+
+Z2U_URLS = {
+    "Roblox":    "https://www.z2u.com/rbl/accounts-5-2941",
+    "Fortnite":  "https://www.z2u.com/fortnite/accounts-5-20",
+    "Minecraft": "https://www.z2u.com/minecraft/accounts-5-44",
+    "Steam":     "https://www.z2u.com/steam/accounts-5-3271",
+}
+
 # ---------------------------------------------------------------------------
 # Logging
 # ---------------------------------------------------------------------------
@@ -370,7 +384,7 @@ class EldoradoScraper:
                 log.info(f"    Reached max pages ({self.max_pages}), stopping.")
                 break
 
-            if not self._has_next_page(soup):
+            if not self._has_next_page(soup, page_num, len(listings)):
                 log.info(f"    No more pages available.")
                 break
 
@@ -382,6 +396,9 @@ class EldoradoScraper:
             "search_url": base_url,
             "listings": all_listings,
         }
+
+    # Maximum pages to scrape from Eldorado to avoid excessive requests
+    MAX_ELDORADO_PAGES = 10
 
     def _page_url(self, base_url: str, page: int) -> str:
         """Build paginated URL. Eldorado uses ?page=N query param."""
@@ -477,17 +494,34 @@ class EldoradoScraper:
             "url": url,
         }
 
-    def _has_next_page(self, soup: BeautifulSoup) -> bool:
-        """Check if pagination has a next page."""
+    def _has_next_page(self, soup: BeautifulSoup, page_num: int, found_count: int) -> bool:
+        """Check if there's likely a next page.
+        Eldorado uses JS-rendered pagination that CSS selectors may not detect,
+        so we also use heuristics: if we got a full page of results, there's
+        probably more."""
+        # Hard cap to avoid runaway scraping
+        if page_num >= self.MAX_ELDORADO_PAGES:
+            log.info(f"    Reached Eldorado page cap ({self.MAX_ELDORADO_PAGES}), stopping.")
+            return False
+
+        # CSS selector check (may work if Eldorado renders server-side)
         next_btn = soup.select_one(self.NEXT_PAGE)
         if next_btn:
-            # Make sure it's not disabled
             if next_btn.get("disabled") or "disabled" in next_btn.get("class", []):
                 return False
             return True
-        # Also check for numbered pagination
+
+        # Check for numbered pagination links
         page_links = soup.select("a[href*='page='], button[class*='page']")
-        return len(page_links) > 1
+        if len(page_links) > 1:
+            return True
+
+        # Heuristic: if we got 20+ listings on this page, there are likely more pages.
+        # Eldorado typically shows 24-48 listings per page.
+        if found_count >= 20:
+            return True
+
+        return False
 
 
 # ============================================================================
@@ -758,14 +792,34 @@ class EbayScraper:
         "dvd", "blu-ray", "soundtrack", "cd",
     ]
 
-    # Keywords that indicate a listing IS likely an account or in-game item
+    # Keywords that indicate a listing IS likely an actual account sale
     ACCOUNT_KEYWORDS = [
         "account", "acc ", "acct", "login", "email access", "full access",
-        "stacked", "og ", "rare", "skins", "level ", "lvl ",
-        "inventory", "items", "robux", "v-bucks", "vbucks",
-        "rank", "limited", "limiteds", "cape", "hypixel",
+        "stacked", "og ", "join date", "creation date",
+        "age verified", "voice chat", "email verified",
         "prime", "game library", "steam level", "csgo", "cs2",
-        "age verified", "voice chat", "join date", "creation date",
+        "cape", "hypixel",
+    ]
+
+    # Keywords that indicate in-game items/currency (NOT accounts)
+    INGAME_ITEM_KEYWORDS = [
+        # Roblox in-game items & currency
+        "robux", "donation", "pls donate", "donate game",
+        "blox fruit", "blox fruits", "fruit ", "dough", "leopard", "kitsune",
+        "murder mystery", "mm2", "godly", "chroma",
+        "adopt me", "neon ", "mega neon", "fly ride",
+        "grow a garden", "seed", "seeds",
+        "tower defense", "units",
+        "blade ball", "bladeball", "tokens",
+        "pet simulator", "huge ", "titanic ",
+        "brookhaven", "royale high item", "halo ",
+        "da hood", "cash ", "jailbreak",
+        "in-game", "in game item", "game item",
+        "virtual item", "digital item",
+        # Generic in-game signals
+        "sword", "weapon", "armor", "pet ", "pets ",
+        "coins", "gold ", "gems ", "diamonds ",
+        "boost", "gamepass", "game pass",
     ]
 
     def __init__(self, browser: BrowserManager, max_pages: int = 0):
@@ -773,19 +827,28 @@ class EbayScraper:
         self.max_pages = max_pages
 
     def _is_relevant_listing(self, title: str) -> bool:
-        """Filter out non-account listings (merch, gift cards, toys, etc.)."""
+        """Filter out non-account listings (merch, gift cards, toys, in-game items, etc.)."""
         title_lower = title.lower()
 
-        # Reject if it matches junk keywords
+        # Reject if it matches junk keywords (merch, toys, etc.)
         if any(kw in title_lower for kw in self.JUNK_KEYWORDS):
             return False
 
-        # Accept if it matches account keywords
-        if any(kw in title_lower for kw in self.ACCOUNT_KEYWORDS):
+        # Reject if it's clearly an in-game item/currency sale, UNLESS
+        # the title also contains "account" (e.g. "blox fruits stacked account")
+        has_account_kw = any(kw in title_lower for kw in self.ACCOUNT_KEYWORDS)
+        has_ingame_kw = any(kw in title_lower for kw in self.INGAME_ITEM_KEYWORDS)
+
+        if has_ingame_kw and not has_account_kw:
+            return False
+
+        # Accept if it has account keywords
+        if has_account_kw:
             return True
 
-        # For ambiguous titles, accept by default (let categorize_listing sort them)
-        return True
+        # For ambiguous titles with neither signal, reject — conservative
+        # approach means we only count things we're confident are accounts
+        return False
 
     def scrape_game(self, game: str) -> dict:
         search_term = EBAY_SEARCH_TERMS.get(game)
@@ -997,6 +1060,332 @@ class EbayScraper:
             "a.pagination__next, a[aria-label='Go to next search page']"
         )
         return next_btn is not None and not next_btn.get("disabled")
+
+
+# ============================================================================
+# PLAYERAUCTIONS SCRAPER
+# ============================================================================
+class PlayerAuctionsScraper:
+    """
+    Scrapes PlayerAuctions.com listing pages.
+    PlayerAuctions is one of the largest game account marketplaces.
+    Uses Playwright for JS-heavy rendering, falls back to requests.
+    """
+
+    NAME = "PlayerAuctions"
+
+    LISTING_CARD = ".product-card, .offer-card, [class*='ListingCard'], [class*='listing-item'], .product-list-item, tr.product-row, .pa-product"
+    TITLE_SEL = ".product-name, [class*='title'], [class*='name'], h3, h4, a[class*='product']"
+    PRICE_SEL = "[class*='price'], [class*='Price'], .product-price, .offer-price"
+    SELLER_SEL = "[class*='seller'], [class*='Seller'], .seller-name, .shop-name"
+    NEXT_PAGE = "a[class*='next'], button[class*='next'], [aria-label='Next'], a[rel='next'], .pagination a:last-child"
+
+    MAX_PA_PAGES = 10
+
+    def __init__(self, browser: BrowserManager, max_pages: int = 0):
+        self.browser = browser
+        self.max_pages = max_pages
+
+    def scrape_game(self, game: str) -> dict:
+        base_url = PLAYERAUCTIONS_URLS.get(game)
+        if not base_url:
+            return {"total_on_site": 0, "search_url": "", "listings": []}
+
+        log.info(f"  [{self.NAME}] Scraping {game} — {base_url}")
+        all_listings = []
+        total_on_site = 0
+        page_num = 1
+
+        while True:
+            url = self._page_url(base_url, page_num)
+            log.info(f"    Page {page_num}: {url}")
+
+            html = self.browser.get_page_html(
+                url,
+                wait_selector=self.LISTING_CARD,
+                scroll=True,
+            )
+            if not html:
+                break
+
+            soup = BeautifulSoup(html, "lxml")
+
+            if page_num == 1:
+                total_on_site = self._extract_total(soup)
+
+            listings = self._parse_listings(soup, game)
+            if not listings:
+                log.info(f"    No listings found on page {page_num}, stopping.")
+                break
+
+            all_listings.extend(listings)
+            log.info(f"    Found {len(listings)} listings (total so far: {len(all_listings)})")
+
+            effective_max = self.max_pages if self.max_pages else self.MAX_PA_PAGES
+            if page_num >= effective_max:
+                log.info(f"    Reached max pages ({effective_max}), stopping.")
+                break
+
+            if not self._has_next_page(soup, page_num, len(listings)):
+                log.info(f"    No more pages available.")
+                break
+
+            page_num += 1
+            polite_delay()
+
+        return {
+            "total_on_site": total_on_site or len(all_listings),
+            "search_url": base_url,
+            "listings": all_listings,
+        }
+
+    def _page_url(self, base_url: str, page: int) -> str:
+        if page == 1:
+            return base_url
+        sep = "&" if "?" in base_url else "?"
+        return f"{base_url}{sep}page={page}"
+
+    def _extract_total(self, soup: BeautifulSoup) -> int:
+        for pattern in [
+            r"([\d,]+)\s*(?:offers?|listings?|results?|items?|accounts?)",
+            r"of\s+([\d,]+)",
+            r"showing.*?of\s+([\d,]+)",
+        ]:
+            match = re.search(pattern, soup.get_text(), re.IGNORECASE)
+            if match:
+                return int(match.group(1).replace(",", ""))
+        return 0
+
+    def _parse_listings(self, soup: BeautifulSoup, game: str) -> list:
+        listings = []
+        cards = soup.select(self.LISTING_CARD)
+        if not cards:
+            # Fallback: look for any links to offer/product pages
+            cards = soup.select("a[href*='/offer/'], a[href*='roblox-account'], div[data-offer], tr[data-id]")
+
+        for card in cards:
+            try:
+                listing = self._parse_card(card, game)
+                if listing and listing.get("title"):
+                    listings.append(listing)
+            except Exception as e:
+                log.debug(f"    Error parsing PlayerAuctions card: {e}")
+                continue
+        return listings
+
+    def _parse_card(self, card, game: str) -> dict:
+        title_el = card.select_one(self.TITLE_SEL)
+        title = safe_text(title_el) or safe_text(card)
+        if not title or len(title) < 3:
+            return None
+
+        price_el = card.select_one(self.PRICE_SEL)
+        price = parse_price(safe_text(price_el))
+
+        seller_el = card.select_one(self.SELLER_SEL)
+        seller = safe_text(seller_el)
+
+        url = ""
+        if card.name == "a" and card.get("href"):
+            href = card["href"]
+            url = href if href.startswith("http") else f"https://www.playerauctions.com{href}"
+        else:
+            link = card.select_one("a[href]")
+            if link:
+                href = link["href"]
+                url = href if href.startswith("http") else f"https://www.playerauctions.com{href}"
+
+        delivery = ""
+        delivery_el = card.select_one("[class*='delivery'], [class*='Delivery'], [class*='time']")
+        if delivery_el:
+            delivery = safe_text(delivery_el)
+
+        return {
+            "title": title,
+            "seller": seller,
+            "rating": "",
+            "reviews": "",
+            "price": price,
+            "delivery": delivery or "Varies",
+            "url": url,
+        }
+
+    def _has_next_page(self, soup: BeautifulSoup, page_num: int, found_count: int) -> bool:
+        if page_num >= self.MAX_PA_PAGES:
+            return False
+        next_btn = soup.select_one(self.NEXT_PAGE)
+        if next_btn:
+            if next_btn.get("disabled") or "disabled" in next_btn.get("class", []):
+                return False
+            return True
+        page_links = soup.select("a[href*='page='], .pagination a")
+        if len(page_links) > 1:
+            return True
+        # Heuristic: if we got many listings, there are likely more
+        if found_count >= 15:
+            return True
+        return False
+
+
+# ============================================================================
+# Z2U SCRAPER
+# ============================================================================
+class Z2UScraper:
+    """
+    Scrapes Z2U.com listing pages.
+    Z2U is a global gaming marketplace with significant Roblox account inventory.
+    """
+
+    NAME = "Z2U"
+
+    LISTING_CARD = ".goods-item, .offer-item, [class*='product-card'], [class*='ProductCard'], [class*='listing-card']"
+    TITLE_SEL = "[class*='title'], [class*='name'], .goods-name, h3, h4, a[class*='name']"
+    PRICE_SEL = "[class*='price'], [class*='Price'], .goods-price"
+    SELLER_SEL = "[class*='seller'], [class*='shop'], .shop-name, [class*='store']"
+    NEXT_PAGE = "a[class*='next'], button[class*='next'], [aria-label='Next'], a.page-next, .pagination-next"
+
+    MAX_Z2U_PAGES = 10
+
+    def __init__(self, browser: BrowserManager, max_pages: int = 0):
+        self.browser = browser
+        self.max_pages = max_pages
+
+    def scrape_game(self, game: str) -> dict:
+        base_url = Z2U_URLS.get(game)
+        if not base_url:
+            return {"total_on_site": 0, "search_url": "", "listings": []}
+
+        log.info(f"  [{self.NAME}] Scraping {game} — {base_url}")
+        all_listings = []
+        total_on_site = 0
+        page_num = 1
+
+        while True:
+            url = self._page_url(base_url, page_num)
+            log.info(f"    Page {page_num}: {url}")
+
+            html = self.browser.get_page_html(
+                url,
+                wait_selector=self.LISTING_CARD,
+                scroll=True,
+            )
+            if not html:
+                break
+
+            soup = BeautifulSoup(html, "lxml")
+
+            if page_num == 1:
+                total_on_site = self._extract_total(soup)
+
+            listings = self._parse_listings(soup, game)
+            if not listings:
+                log.info(f"    No listings found on page {page_num}, stopping.")
+                break
+
+            all_listings.extend(listings)
+            log.info(f"    Found {len(listings)} listings (total so far: {len(all_listings)})")
+
+            effective_max = self.max_pages if self.max_pages else self.MAX_Z2U_PAGES
+            if page_num >= effective_max:
+                log.info(f"    Reached max pages ({effective_max}), stopping.")
+                break
+
+            if not self._has_next_page(soup, page_num, len(listings)):
+                log.info(f"    No more pages available.")
+                break
+
+            page_num += 1
+            polite_delay()
+
+        return {
+            "total_on_site": total_on_site or len(all_listings),
+            "search_url": base_url,
+            "listings": all_listings,
+        }
+
+    def _page_url(self, base_url: str, page: int) -> str:
+        if page == 1:
+            return base_url
+        sep = "&" if "?" in base_url else "?"
+        return f"{base_url}{sep}page={page}"
+
+    def _extract_total(self, soup: BeautifulSoup) -> int:
+        for pattern in [
+            r"([\d,]+)\s*(?:offers?|listings?|results?|items?|products?)",
+            r"of\s+([\d,]+)",
+        ]:
+            match = re.search(pattern, soup.get_text(), re.IGNORECASE)
+            if match:
+                return int(match.group(1).replace(",", ""))
+        return 0
+
+    def _parse_listings(self, soup: BeautifulSoup, game: str) -> list:
+        listings = []
+        cards = soup.select(self.LISTING_CARD)
+        if not cards:
+            cards = soup.select("a[href*='/offer/'], div[data-id], .product-list-item")
+
+        for card in cards:
+            try:
+                listing = self._parse_card(card, game)
+                if listing and listing.get("title"):
+                    listings.append(listing)
+            except Exception as e:
+                log.debug(f"    Error parsing Z2U card: {e}")
+                continue
+        return listings
+
+    def _parse_card(self, card, game: str) -> dict:
+        title_el = card.select_one(self.TITLE_SEL)
+        title = safe_text(title_el) or safe_text(card)
+        if not title or len(title) < 3:
+            return None
+
+        price_el = card.select_one(self.PRICE_SEL)
+        price = parse_price(safe_text(price_el))
+
+        seller_el = card.select_one(self.SELLER_SEL)
+        seller = safe_text(seller_el)
+
+        url = ""
+        if card.name == "a" and card.get("href"):
+            href = card["href"]
+            url = href if href.startswith("http") else f"https://www.z2u.com{href}"
+        else:
+            link = card.select_one("a[href]")
+            if link:
+                href = link["href"]
+                url = href if href.startswith("http") else f"https://www.z2u.com{href}"
+
+        delivery = ""
+        delivery_el = card.select_one("[class*='delivery'], [class*='Delivery']")
+        if delivery_el:
+            delivery = safe_text(delivery_el)
+
+        return {
+            "title": title,
+            "seller": seller,
+            "rating": "",
+            "reviews": "",
+            "price": price,
+            "delivery": delivery or "Varies",
+            "url": url,
+        }
+
+    def _has_next_page(self, soup: BeautifulSoup, page_num: int, found_count: int) -> bool:
+        if page_num >= self.MAX_Z2U_PAGES:
+            return False
+        next_btn = soup.select_one(self.NEXT_PAGE)
+        if next_btn:
+            if next_btn.get("disabled") or "disabled" in next_btn.get("class", []):
+                return False
+            return True
+        page_links = soup.select("a[href*='page='], .pagination a")
+        if len(page_links) > 1:
+            return True
+        if found_count >= 15:
+            return True
+        return False
 
 
 # ============================================================================
@@ -1221,6 +1610,8 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
     eldorado = EldoradoScraper(browser, max_pages)
     u7buy = U7BuyScraper(browser, max_pages)
     ebay = EbayScraper(browser, max_pages)
+    playerauctions = PlayerAuctionsScraper(browser, max_pages)
+    z2u = Z2UScraper(browser, max_pages)
 
     scraped = {}
 
@@ -1245,6 +1636,22 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
         except Exception as e:
             log.error(f"  U7Buy failed for {game}: {e}")
             scraped[game]["U7Buy"] = {"total_on_site": 0, "search_url": U7BUY_URLS.get(game, ""), "listings": []}
+        polite_delay()
+
+        # PlayerAuctions
+        try:
+            scraped[game]["PlayerAuctions"] = playerauctions.scrape_game(game)
+        except Exception as e:
+            log.error(f"  PlayerAuctions failed for {game}: {e}")
+            scraped[game]["PlayerAuctions"] = {"total_on_site": 0, "search_url": PLAYERAUCTIONS_URLS.get(game, ""), "listings": []}
+        polite_delay()
+
+        # Z2U
+        try:
+            scraped[game]["Z2U"] = z2u.scrape_game(game)
+        except Exception as e:
+            log.error(f"  Z2U failed for {game}: {e}")
+            scraped[game]["Z2U"] = {"total_on_site": 0, "search_url": Z2U_URLS.get(game, ""), "listings": []}
         polite_delay()
 
         # eBay — use longer delay between game searches to reduce CAPTCHA triggers
