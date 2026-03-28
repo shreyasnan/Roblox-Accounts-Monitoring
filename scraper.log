@@ -4527,3 +4527,521 @@ fatal: empty ident name (for <runner@runnervm46oaq.sbo4f4120sjejcpudlippbucbf.ex
 2026-03-27 08:35:30,239 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-account/
 2026-03-27 08:35:30,242 [DEBUG] Starting new HTTPS connection (36): www.playerauctions.com:443
 2026-03-27 08:35:30,248 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/steam-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /steam-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-28 03:51:41,723 [INFO] ============================================================
+2026-03-28 03:51:41,723 [INFO] Scraper started at 2026-03-28T03:51:41.723931
+2026-03-28 03:51:41,724 [INFO] Games: Roblox, Fortnite, Minecraft, Steam
+2026-03-28 03:51:41,724 [INFO] Max pages per source: 3
+2026-03-28 03:51:41,724 [INFO] Fast mode: ON
+2026-03-28 03:51:41,724 [INFO] ============================================================
+2026-03-28 03:51:41,724 [INFO] Fast mode: using requests + BeautifulSoup (Playwright skipped).
+2026-03-28 03:51:41,724 [INFO] 
+========================================
+2026-03-28 03:51:41,724 [INFO] Scraping: Roblox
+2026-03-28 03:51:41,724 [INFO] ========================================
+2026-03-28 03:51:41,724 [INFO]   [Eldorado.gg] Scraping Roblox — https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:41,724 [INFO]     Page 1: https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:41,726 [DEBUG] Starting new HTTPS connection (1): www.eldorado.gg:443
+2026-03-28 03:51:41,823 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:51:41,824 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:41,824 [DEBUG] Starting new HTTPS connection (2): www.eldorado.gg:443
+2026-03-28 03:51:41,911 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:51:43,912 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:43,912 [DEBUG] Starting new HTTPS connection (3): www.eldorado.gg:443
+2026-03-28 03:51:44,007 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:51:44,890 [DEBUG] Starting new HTTPS connection (4): www.eldorado.gg:443
+2026-03-28 03:51:44,964 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:51:44,964 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:44,964 [DEBUG] Starting new HTTPS connection (5): www.eldorado.gg:443
+2026-03-28 03:51:45,048 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:51:47,049 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:47,049 [DEBUG] Starting new HTTPS connection (6): www.eldorado.gg:443
+2026-03-28 03:51:47,113 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:51:48,583 [DEBUG] Starting new HTTPS connection (7): www.eldorado.gg:443
+2026-03-28 03:51:48,653 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:51:48,654 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:48,654 [DEBUG] Starting new HTTPS connection (8): www.eldorado.gg:443
+2026-03-28 03:51:48,738 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:51:50,738 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:50,739 [DEBUG] Starting new HTTPS connection (9): www.eldorado.gg:443
+2026-03-28 03:51:50,813 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:51:51,433 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-28 03:51:52,016 [INFO]   [U7Buy] Scraping Roblox — https://www.u7buy.com/roblox/roblox-accounts
+2026-03-28 03:51:52,017 [DEBUG] Starting new HTTPS connection (1): www.u7buy.com:443
+2026-03-28 03:51:52,592 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-28 03:51:52,660 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-28 03:51:52,660 [INFO]     Page 1: https://www.u7buy.com/roblox/roblox-accounts
+2026-03-28 03:51:54,178 [DEBUG] https://www.u7buy.com:443 "GET /roblox/roblox-accounts HTTP/1.1" 200 None
+2026-03-28 03:51:54,542 [INFO]     No listings found on page 1, stopping.
+2026-03-28 03:51:55,211 [INFO]   [PlayerAuctions] Scraping Roblox — https://www.playerauctions.com/roblox-account/
+2026-03-28 03:51:55,212 [INFO]     Page 1: https://www.playerauctions.com/roblox-account/
+2026-03-28 03:51:55,217 [DEBUG] Starting new HTTPS connection (1): www.playerauctions.com:443
+2026-03-28 03:51:55,283 [DEBUG] https://www.playerauctions.com:443 "GET /roblox-account/ HTTP/1.1" 403 None
+2026-03-28 03:51:55,284 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/roblox-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/roblox-account/
+2026-03-28 03:51:55,875 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:51:55,927 [DEBUG] https://www.playerauctions.com:443 "GET /roblox-account/ HTTP/1.1" 403 None
+2026-03-28 03:51:55,927 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/roblox-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/roblox-account/
+2026-03-28 03:51:57,132 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:51:57,186 [DEBUG] https://www.playerauctions.com:443 "GET /roblox-account/ HTTP/1.1" 403 None
+2026-03-28 03:51:57,186 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/roblox-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/roblox-account/
+2026-03-28 03:51:57,793 [ERROR]   All 3 attempts failed for https://www.playerauctions.com/roblox-account/
+2026-03-28 03:51:59,140 [INFO]   [Z2U] Scraping Roblox — https://www.z2u.com/rbl/accounts-5-2941
+2026-03-28 03:51:59,141 [INFO]     Page 1: https://www.z2u.com/rbl/accounts-5-2941
+2026-03-28 03:51:59,142 [DEBUG] Starting new HTTPS connection (1): www.z2u.com:443
+2026-03-28 03:51:59,691 [DEBUG] https://www.z2u.com:443 "GET /rbl/accounts-5-2941 HTTP/1.1" 200 None
+2026-03-28 03:51:59,714 [INFO]     No listings found on page 1, stopping.
+2026-03-28 03:52:00,537 [INFO]   [eBay] Scraping Roblox — https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-28 03:52:00,537 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-28 03:52:00,539 [DEBUG] Starting new HTTPS connection (1): www.ebay.com:443
+2026-03-28 03:52:01,011 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 HTTP/1.1" 200 None
+2026-03-28 03:52:01,771 [DEBUG]     Skipping irrelevant eBay listing: R0blox Limiteds | Restock📦| High Demand 📈 | Cheap&
+2026-03-28 03:52:01,772 [DEBUG]     Skipping irrelevant eBay listing: R0blox Limiteds | Cheap Prices 💸 | Fast Restocks 📦
+2026-03-28 03:52:01,772 [DEBUG]     Skipping irrelevant eBay listing: SpongeBob Tower Defense | Units, Pets, Cards, & Mo
+2026-03-28 03:52:01,772 [DEBUG]     Skipping irrelevant eBay listing: 💵1M BLOXBURG CASH 💰| ⚠️READ DESCRIPTION+IMAGES | F
+2026-03-28 03:52:01,773 [DEBUG]     Skipping irrelevant eBay listing: HUGE RESTOCK|Grand Piece Online | Roblox | All Ite
+2026-03-28 03:52:01,773 [DEBUG]     Skipping irrelevant eBay listing: 🏴‍☠️⚓Roblox Sailor Piece REROLLS + AURA + SPECS + 
+2026-03-28 03:52:01,773 [DEBUG]     Skipping irrelevant eBay listing: Roblox: Pixel Quest All Legendary ItemsOpens in a 
+2026-03-28 03:52:01,774 [DEBUG]     Skipping irrelevant eBay listing: 🎣 ROBLOX - FISCH – Streaming Setup Boat CODE🚤Opens
+2026-03-28 03:52:01,774 [DEBUG]     Skipping irrelevant eBay listing: RobloxOpens in a new window or tab
+2026-03-28 03:52:01,775 [DEBUG]     Skipping irrelevant eBay listing: MONEY MONEY REINDEER🎄Steal a Brainrot SAB🎄$275M/s 
+2026-03-28 03:52:01,775 [DEBUG]     Skipping irrelevant eBay listing: Love Love Love Sahur 4.5M+/s 🔥Steal a Brainrot🔥ROB
+2026-03-28 03:52:01,777 [DEBUG]     Skipping irrelevant eBay listing: 20,000 Robux donation in PLS Donate (2 BLIMPS) *LO
+2026-03-28 03:52:01,778 [DEBUG]     Skipping irrelevant eBay listing: Autumn Saber – Roblox Assassin! Exotic Knife | In-
+2026-03-28 03:52:01,778 [DEBUG]     Skipping irrelevant eBay listing: WEBS 2017 UNCOMMON KNIFE🖤MURDER MYSTERY 2 MM2 ROBL
+2026-03-28 03:52:01,778 [DEBUG]     Skipping irrelevant eBay listing: GALAXY BACURU and EGGURU🧠Steal a Brainrot SAB🧠$288
+2026-03-28 03:52:01,779 [DEBUG]     Skipping irrelevant eBay listing: RAINBOW BRUNITO MARSITO🧠Steal a Brainrot SAB🧠$35M/
+2026-03-28 03:52:01,779 [DEBUG]     Skipping irrelevant eBay listing: Icebreaker and Icepiercer Set | Roblox Murder Myst
+2026-03-28 03:52:01,780 [DEBUG]     Skipping irrelevant eBay listing: ⭐🦊Mega Corrupted Kitsune 🎮ROBLOX 🪴Grow a Garden | 
+2026-03-28 03:52:01,780 [DEBUG]     Skipping irrelevant eBay listing: New Secret  🎄La Jolly Grande!! 30M/s 🎁| Steal a Br
+2026-03-28 03:52:01,780 [DEBUG]     Skipping irrelevant eBay listing: Roblox Bladeball tokens 5k Cheapest!Opens in a new
+2026-03-28 03:52:01,782 [DEBUG]     Skipping irrelevant eBay listing: GAG Roblox Sheckles🌱Grow A Garden Sheckles💰Fast  D
+2026-03-28 03:52:01,782 [DEBUG]     Skipping irrelevant eBay listing: 🏷️SALE 🦝RACCOON 🎮ROBLOX 🪴🎮ROBLOX 🪴Grow a Garden | 
+2026-03-28 03:52:01,782 [DEBUG]     Skipping irrelevant eBay listing: 💰744 TRILLION💰 SHECKLES 🎮ROBLOX 🪴Grow a Garden | C
+2026-03-28 03:52:01,783 [DEBUG]     Skipping irrelevant eBay listing: 🍄Grow A Garden Items | Roblox GAG Items - Pets & P
+2026-03-28 03:52:01,783 [DEBUG]     Skipping irrelevant eBay listing: Titan glacier man + 10k gems fast delivery🔥🔥Opens 
+2026-03-28 03:52:01,783 [DEBUG]     Skipping irrelevant eBay listing: Bladeball tokens 5k Cheapest!Opens in a new window
+2026-03-28 03:52:01,784 [DEBUG]     Skipping irrelevant eBay listing: ROBLOX [ FISCH ] | SC ITEM / SECRET CREATURE | FAS
+2026-03-28 03:52:01,785 [DEBUG]     Skipping irrelevant eBay listing: GAG Items | Roblox - Grow A Garden Pets & Packs & 
+2026-03-28 03:52:01,785 [DEBUG]     Skipping irrelevant eBay listing: Roblox Limited: Dominus Praefectus | READ DESCRIPT
+2026-03-28 03:52:01,786 [DEBUG]     Skipping irrelevant eBay listing: Roblox Limited RARE Purple Ice Crown | Held For 6+
+2026-03-28 03:52:01,786 [DEBUG]     Skipping irrelevant eBay listing: 👨‍🌾Grow A Garden Items | Roblox GAG Items - Pets &
+2026-03-28 03:52:01,786 [DEBUG]     Skipping irrelevant eBay listing: Blox Fruits PREMIUM DLC Code **FAST MESSAGE DELIVE
+2026-03-28 03:52:01,787 [DEBUG]     Skipping irrelevant eBay listing: 🐶 Roblox GROW A GARDEN🍄| GAG Items - Pets & Bundle
+2026-03-28 03:52:01,787 [DEBUG]     Skipping irrelevant eBay listing: Inferno – Roblox Assassin! Mythic Knife | In-Game 
+2026-03-28 03:52:01,788 [DEBUG]     Skipping irrelevant eBay listing: 10,000 Robux donation in PLS Donate (1 BLIMPS) *LO
+2026-03-28 03:52:01,788 [DEBUG]     Skipping irrelevant eBay listing: cuenta de robloxOpens in a new window or tab
+2026-03-28 03:52:01,789 [DEBUG]     Skipping irrelevant eBay listing: 🌱 Grow A Garden 🌱 - GAG - Roblox - Sheckles HotOpe
+2026-03-28 03:52:01,790 [DEBUG]     Skipping irrelevant eBay listing: SKONT ROBLOX LIMITED (@PNW IF INTERESTED ON BLUE)O
+2026-03-28 03:52:01,790 [DEBUG]     Skipping irrelevant eBay listing: Pet Show Partners 🔥 RUSH 12-24 Hours Full Carry 80
+2026-03-28 03:52:01,790 [DEBUG]     Skipping irrelevant eBay listing: Roblox Bladeball tokens 10k Cheapest!Opens in a ne
+2026-03-28 03:52:01,791 [DEBUG]     Skipping irrelevant eBay listing: 👨‍🌾 Roblox GAG Items🌺Grow A Garden Items - Pets & 
+2026-03-28 03:52:01,791 [DEBUG]     Skipping irrelevant eBay listing: Roblox Fisch | Enchant Relics - Coins C$ - Rare Fi
+2026-03-28 03:52:01,792 [DEBUG]     Skipping irrelevant eBay listing: [🟢 Online | Draco Race V4 FULL GEAR ⭐ BLOX FRUIT |
+2026-03-28 03:52:01,792 [DEBUG]     Skipping irrelevant eBay listing: Base FULL OF LOS LUCKY BLOCKS (21 Total) |Safe|Fas
+2026-03-28 03:52:01,792 [DEBUG]     Skipping irrelevant eBay listing: Buy my Los HotspotsitosOpens in a new window or ta
+2026-03-28 03:52:01,793 [DEBUG]     Skipping irrelevant eBay listing: 🌼 GROW A GARDEN ROBLOX 🌼 FULL INVENTORY SALE – EVE
+2026-03-28 03:52:01,793 [DEBUG]     Skipping irrelevant eBay listing: Grow A Garden - Currency (Sheckles)💰 Roblox GAG Sh
+2026-03-28 03:52:01,793 [DEBUG]     Skipping irrelevant eBay listing: [Re-RELEASE!] Anime Adventures UNITS Fast Huge SAL
+2026-03-28 03:52:01,794 [DEBUG]     Skipping irrelevant eBay listing: 🔥 Roblox Steal a Brainrot FULL INVENTORY 🔥| Rare C
+2026-03-28 03:52:01,794 [DEBUG]     Skipping irrelevant eBay listing: Bladeball tokens 10k Cheapest!Opens in a new windo
+2026-03-28 03:52:01,794 [DEBUG]     Skipping irrelevant eBay listing: 🎯 Attack on Titan: Revolution – Item Bundle for Sa
+2026-03-28 03:52:01,795 [DEBUG]     Skipping irrelevant eBay listing: Steam SpaceEngineOpens in a new window or tab
+2026-03-28 03:52:01,795 [DEBUG]     Skipping irrelevant eBay listing: Anguish – Roblox Assassin! Exotic Knife | In-Game 
+2026-03-28 03:52:01,796 [DEBUG]     Skipping irrelevant eBay listing: Lucky Blade – Roblox Assassin! Exotic Knife | In-G
+2026-03-28 03:52:01,796 [INFO]     Found 6 listings (total so far: 6)
+2026-03-28 03:52:02,723 [INFO]     Page 2: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=2&_skc=61
+2026-03-28 03:52:02,985 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=2&_skc=61 HTTP/1.1" 200 None
+2026-03-28 03:52:03,535 [DEBUG]     Skipping irrelevant eBay listing: Superfreeze – Roblox Assassin! Exotic Knife | In-G
+2026-03-28 03:52:03,535 [DEBUG]     Skipping irrelevant eBay listing: Soul – Roblox Assassin! Exotic Knife | In-Game Tra
+2026-03-28 03:52:03,536 [DEBUG]     Skipping irrelevant eBay listing: Anguish – Roblox Assassin! Exotic Knife | In-Game 
+2026-03-28 03:52:03,536 [DEBUG]     Skipping irrelevant eBay listing: 40,000 Robux donation in PLS Donate (4 BLIMPS) *LO
+2026-03-28 03:52:03,537 [DEBUG]     Skipping irrelevant eBay listing: All clean items for jailbreak | Roblox | Jailbreak
+2026-03-28 03:52:03,537 [DEBUG]     Skipping irrelevant eBay listing: 🎯 Attack on Titan: Revolution – Item Bundle for Sa
+2026-03-28 03:52:03,537 [DEBUG]     Skipping irrelevant eBay listing: Fabulous Rod Service - Chepeast - FischOpens in a 
+2026-03-28 03:52:03,538 [DEBUG]     Skipping irrelevant eBay listing: 10x Exclusive Patchwork Egg | Roblox Pet Simulator
+2026-03-28 03:52:03,538 [DEBUG]     Skipping irrelevant eBay listing: Steal a Brainrot Common Whole Base Noobini Pizzani
+2026-03-28 03:52:03,539 [DEBUG]     Skipping irrelevant eBay listing: RAINBOW DRAGON FLY GAG 45$ VIRTUAL ITEM COLLECTIBL
+2026-03-28 03:52:03,539 [DEBUG]     Skipping irrelevant eBay listing: Dominus Formidulosus & Evil Skeptic | Roblox Limit
+2026-03-28 03:52:03,539 [DEBUG]     Skipping irrelevant eBay listing: robloxOpens in a new window or tab
+2026-03-28 03:52:03,540 [DEBUG]     Skipping irrelevant eBay listing: Los Mobil’s Taco Mutation  66M/SOpens in a new win
+2026-03-28 03:52:03,540 [DEBUG]     Skipping irrelevant eBay listing: Autumn Saber – Roblox Assassin! Exotic Knife | In-
+2026-03-28 03:52:03,540 [DEBUG]     Skipping irrelevant eBay listing: Inferno – Roblox Assassin! Mythic Knife | In-Game 
+2026-03-28 03:52:03,541 [DEBUG]     Skipping irrelevant eBay listing: 2018 Set – Roblox Assassin! Exotic Knife | In-Game
+2026-03-28 03:52:03,541 [DEBUG]     Skipping irrelevant eBay listing: 🍄 Roblox Grow A Garden Pets | GAG Pets & Bundle & 
+2026-03-28 03:52:03,542 [DEBUG]     Skipping irrelevant eBay listing: Max rank- Rebirth9 - Equip 99 Pet - Max egg - (6) 
+2026-03-28 03:52:03,542 [DEBUG]     Skipping irrelevant eBay listing: Max rank- Rebirth9 - Equip 99 Pet - Max egg - (6) 
+2026-03-28 03:52:03,542 [DEBUG]     Skipping irrelevant eBay listing: 🍄 Roblox Grow A Garden Pets | GAG Pets & Bundle & 
+2026-03-28 03:52:03,542 [DEBUG]     Skipping irrelevant eBay listing: Rank 33(Max) - Rebirth9 - Equip 99 (Max) Pet - Max
+2026-03-28 03:52:03,543 [DEBUG]     Skipping irrelevant eBay listing: V1 PB VALENTINES DAY FRIESIAN 2022   ALL CONTACT I
+2026-03-28 03:52:03,543 [DEBUG]     Skipping irrelevant eBay listing: Roblox - Gpo All Seeing Baal - Baal Ase - Grand Pi
+2026-03-28 03:52:03,544 [DEBUG]     Skipping irrelevant eBay listing: Rank 33(Max) - Rebirth9 - Equip 99 Pet - Max egg -
+2026-03-28 03:52:03,544 [DEBUG]     Skipping irrelevant eBay listing: Kitsune  - Grow A Garden | GAG | CHEAPEST, FASTEST
+2026-03-28 03:52:03,544 [DEBUG]     Skipping irrelevant eBay listing: Rank 33(Max) - Rebirth9 - Equip 99 (Max) Pet - Max
+2026-03-28 03:52:03,545 [DEBUG]     Skipping irrelevant eBay listing: Kitsune | CHEAPEST |🪴Grow a Garden ‼️FAST & EASY D
+2026-03-28 03:52:03,545 [DEBUG]     Skipping irrelevant eBay listing: MaxRank - Rebirth9 - Equip 99 (Max) Pet - Max Hatc
+2026-03-28 03:52:03,545 [DEBUG]     Skipping irrelevant eBay listing: SELLING PET SIMULATOR 99 TITANIC NUTCRACKER CAT ( 
+2026-03-28 03:52:03,546 [DEBUG]     Skipping irrelevant eBay listing: 💎ROBLOX VIRTUAL ITEM HYPER DIAMOND 5 CLEAN💎🔥 (FAST
+2026-03-28 03:52:03,546 [DEBUG]     Skipping irrelevant eBay listing: Solo En Mi Servidor Hay Devolución Mi User Cricri1
+2026-03-28 03:52:03,547 [DEBUG]     Skipping irrelevant eBay listing: Dream Trio – Roblox Assassin! Exotic Knife | In-Ga
+2026-03-28 03:52:03,547 [DEBUG]     Skipping irrelevant eBay listing: PETS  - Grow A Garden | GAG | CHEAPEST, FASTEST, S
+2026-03-28 03:52:03,547 [DEBUG]     Skipping irrelevant eBay listing: Queen Bee - Grow A Garden | GAG | CHEAPEST, FASTES
+2026-03-28 03:52:03,548 [DEBUG]     Skipping irrelevant eBay listing: robloxOpens in a new window or tab
+2026-03-28 03:52:03,548 [DEBUG]     Skipping irrelevant eBay listing: MEGA Kitsune  - Grow A Garden | GAG | CHEAPEST, FA
+2026-03-28 03:52:03,548 [DEBUG]     Skipping irrelevant eBay listing: CHEAP! 5 BILLION PET SIMULATOR 99 GEMSOpens in a n
+2026-03-28 03:52:03,549 [DEBUG]     Skipping irrelevant eBay listing: SpongeBoy Roblox Unit | SpongeBob Tower Defense It
+2026-03-28 03:52:03,549 [DEBUG]     Skipping irrelevant eBay listing: ✨ Roblox Type Soul- Shikai Stasis-Cheapest and Fas
+2026-03-28 03:52:03,549 [DEBUG]     Skipping irrelevant eBay listing: 💸 3000 Robux Gamepass Purchasing - Cheap and Fast 
+2026-03-28 03:52:03,550 [DEBUG]     Skipping irrelevant eBay listing: Sudbob STD - ROBLOX | INSANE STATS | Spongebob Tow
+2026-03-28 03:52:03,550 [DEBUG]     Skipping irrelevant eBay listing: Shiny Wumbo SpongeBoy Roblox Unit | SpongeBob Towe
+2026-03-28 03:52:03,551 [DEBUG]     Skipping irrelevant eBay listing: OLD ROBLOX POSSIBLE OFFSALES or LIMITEDS! | GUARAN
+2026-03-28 03:52:03,553 [DEBUG]     Skipping irrelevant eBay listing: New Listing🤑 CHEAPEST Helsworn Valkyrie (R0blox Li
+2026-03-28 03:52:03,553 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Everything Truckload Base ⚡Fast Se
+2026-03-28 03:52:03,554 [DEBUG]     Skipping irrelevant eBay listing: Steal A Brainrot Items New, Secret, Rare, Fast, Hi
+2026-03-28 03:52:03,554 [DEBUG]     Skipping irrelevant eBay listing: robloxOpens in a new window or tab
+2026-03-28 03:52:03,554 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Every Axe Drop ⚡Fast Service + Dis
+2026-03-28 03:52:03,555 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Many Axe Drop ⚡Fast Service + Disc
+2026-03-28 03:52:03,555 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Star Base ⚡Fast Service + Discount
+2026-03-28 03:52:03,555 [DEBUG]     Skipping irrelevant eBay listing: Roblox Da Hood Account With Special Bonuses! Read 
+2026-03-28 03:52:03,556 [DEBUG]     Skipping irrelevant eBay listing: Roblox Limiteds | Budget | Cheap💰 & Clean🧼| Truste
+2026-03-28 03:52:03,556 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Axes R Us Base⚡Fast Service + Disc
+2026-03-28 03:52:03,556 [DEBUG]     Skipping irrelevant eBay listing: Random 5L rblx Users & Rare 1numb Users As WellOpe
+2026-03-28 03:52:03,557 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2017 Gift Truckload Base ⚡Fast Ser
+2026-03-28 03:52:03,557 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 1x1 Sawmill Base ⚡Fast Service + D
+2026-03-28 03:52:03,557 [DEBUG]     Skipping irrelevant eBay listing: Roblox AccouuntOpens in a new window or tab
+2026-03-28 03:52:03,559 [INFO]     Found 3 listings (total so far: 9)
+2026-03-28 03:52:04,627 [INFO]     Page 3: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=3&_skc=121
+2026-03-28 03:52:04,856 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1&_pgn=3&_skc=121 HTTP/1.1" 200 None
+2026-03-28 03:52:05,440 [DEBUG]     Skipping irrelevant eBay listing: Adopt From Me -Age-up Potions 1000+ potions and +6
+2026-03-28 03:52:05,441 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 1x1 Sawmill Base ⚡Fast Service + D
+2026-03-28 03:52:05,442 [DEBUG]     Skipping irrelevant eBay listing: Helsworn Valkyrie 23k Value CLEAN | Quick Delivery
+2026-03-28 03:52:05,442 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Base With Road Rare Base⚡Fast Serv
+2026-03-28 03:52:05,443 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2017 Gift Truckload Base ⚡Fast Ser
+2026-03-28 03:52:05,443 [DEBUG]     Skipping irrelevant eBay listing: Roblox Limited - Fall Fairy - EMMITS PARTICLES EFF
+2026-03-28 03:52:05,444 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 60 Famous Portraits⚡Fast Service +
+2026-03-28 03:52:05,444 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Smazt 1x1 Wood Cutter Base ⚡Fast S
+2026-03-28 03:52:05,444 [DEBUG]     Skipping irrelevant eBay listing: DRAGON GINGERINI GOLDEN DRAGON RADIOACTIVE GARAMA 
+2026-03-28 03:52:05,445 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Pool House Base ⚡Fast Service + Di
+2026-03-28 03:52:05,446 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Beacon Base⚡Fast Service + Discoun
+2026-03-28 03:52:05,447 [DEBUG]     Skipping irrelevant eBay listing: 🤑 CHEAPEST Viridian Domino Crown (R0blox Limited) 
+2026-03-28 03:52:05,447 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Dice Truckload Base ⚡Fast Service 
+2026-03-28 03:52:05,448 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Big Modern House Base ⚡Fast Servic
+2026-03-28 03:52:05,448 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2018 Gift Truckload Base ⚡Fast Ser
+2026-03-28 03:52:05,448 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Wood Sorter Base ⚡Fast Service + D
+2026-03-28 03:52:05,449 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Mixed Wood Drop⚡Fast Service + Dis
+2026-03-28 03:52:05,449 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Pink Wire Drop⚡Fast Service + Disc
+2026-03-28 03:52:05,449 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Daryl Walking Dead Pixel Art ⚡Fast
+2026-03-28 03:52:05,450 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2023 Gift Drop⚡Fast Service + Disc
+2026-03-28 03:52:05,450 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Treehouse Base ⚡Fast Service + Dis
+2026-03-28 03:52:05,451 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Eye Drop⚡Fast Service + Discounts⚡
+2026-03-28 03:52:05,451 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Boxed Axe Truckload Base ⚡Fast Ser
+2026-03-28 03:52:05,451 [DEBUG]     Skipping irrelevant eBay listing: 🔥 Roblox Anomic Cash | 250,000 Money 💰 | Fast & Sa
+2026-03-28 03:52:05,452 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Gloomy Painting Drop⚡Fast Service 
+2026-03-28 03:52:05,452 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2025 Gift Drop⚡Fast Service + Disc
+2026-03-28 03:52:05,453 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Bread Croissant Drop ⚡Fast Service
+2026-03-28 03:52:05,453 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 80 Pink Wire⚡Fast Service + Discou
+2026-03-28 03:52:05,453 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 CLOWN|  PENNYWISE Pixel Art ⚡FAST 
+2026-03-28 03:52:05,454 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Mixed Neon Wire Drop⚡Fast Service 
+2026-03-28 03:52:05,454 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Axe Shop Base⚡Fast Service + Disco
+2026-03-28 03:52:05,455 [DEBUG]     Skipping irrelevant eBay listing: Snowflake Eyes (SE) - ROBLOX Limited (CHEAPEST)Ope
+2026-03-28 03:52:05,455 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2020 Gift Truckload Base ⚡Fast Ser
+2026-03-28 03:52:05,455 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 White Wire Drop⚡Fast Service + Dis
+2026-03-28 03:52:05,456 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 End Castle Base⚡Fast Service + Dis
+2026-03-28 03:52:05,456 [DEBUG]     Skipping irrelevant eBay listing: roblox user | "robloxserviceisass" | 2022 |Opens i
+2026-03-28 03:52:05,457 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Lava Wood Drop⚡Fast Service + Disc
+2026-03-28 03:52:05,458 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Modern Mansion Base ⚡Fast Service 
+2026-03-28 03:52:05,458 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Beta Axe Drop ⚡Fast Service + Disc
+2026-03-28 03:52:05,459 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Lollipop Rare Base ⚡Fast Service +
+2026-03-28 03:52:05,459 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Small Shop Rare Base⚡Fast Service 
+2026-03-28 03:52:05,459 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Ph Flag Mansion Rare Base⚡Fast Ser
+2026-03-28 03:52:05,460 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2024 Gift Truckload Base ⚡Fast Ser
+2026-03-28 03:52:05,460 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Mario Pixel Art ⚡Fast Service + Di
+2026-03-28 03:52:05,461 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Office Rare Base ⚡Fast Service + D
+2026-03-28 03:52:05,461 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Cave Wood Drop⚡Fast Service + Disc
+2026-03-28 03:52:05,461 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Lit Up Base Rare Base ⚡Fast Servic
+2026-03-28 03:52:05,462 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Wobble Truckload Base ⚡Fast Servic
+2026-03-28 03:52:05,462 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2019 Gift Truckload Base ⚡Fast Ser
+2026-03-28 03:52:05,463 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Frost Axe Drop ⚡Fast Service + Dis
+2026-03-28 03:52:05,463 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Pig Axe Drop ⚡Fast Service + Disco
+2026-03-28 03:52:05,463 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 Pie Axe Drop ⚡Fast Service + Disco
+2026-03-28 03:52:05,464 [DEBUG]     Skipping irrelevant eBay listing: The Banisher – Roblox Assassin! Dream Knife | In-G
+2026-03-28 03:52:05,464 [DEBUG]     Skipping irrelevant eBay listing: Neptune – Roblox Assassin! Exotic Knife | In-Game 
+2026-03-28 03:52:05,465 [DEBUG]     Skipping irrelevant eBay listing: Lumber Tycoon 2 2021 Gift Drop⚡Fast Service + Disc
+2026-03-28 03:52:05,466 [DEBUG]     Skipping irrelevant eBay listing: Rare Usernames - $5-$20 - Rare word combinations a
+2026-03-28 03:52:05,466 [INFO]     Found 4 listings (total so far: 13)
+2026-03-28 03:52:05,466 [INFO]     eBay Roblox: 13 relevant listings scraped (raw site total: 353, estimated relevant: 25)
+2026-03-28 03:52:07,344 [INFO] 
+========================================
+2026-03-28 03:52:07,344 [INFO] Scraping: Fortnite
+2026-03-28 03:52:07,344 [INFO] ========================================
+2026-03-28 03:52:07,344 [INFO]   [Eldorado.gg] Scraping Fortnite — https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:07,344 [INFO]     Page 1: https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:07,345 [DEBUG] Starting new HTTPS connection (10): www.eldorado.gg:443
+2026-03-28 03:52:07,418 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:07,418 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:07,418 [DEBUG] Starting new HTTPS connection (11): www.eldorado.gg:443
+2026-03-28 03:52:07,485 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:09,486 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:09,486 [DEBUG] Starting new HTTPS connection (12): www.eldorado.gg:443
+2026-03-28 03:52:09,548 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /fortnite-accounts-for-sale/a/16-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:10,361 [DEBUG] Starting new HTTPS connection (13): www.eldorado.gg:443
+2026-03-28 03:52:10,461 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:10,462 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:10,462 [DEBUG] Starting new HTTPS connection (14): www.eldorado.gg:443
+2026-03-28 03:52:10,536 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:12,537 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:12,537 [DEBUG] Starting new HTTPS connection (15): www.eldorado.gg:443
+2026-03-28 03:52:12,604 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /fortnite-accounts-for-sale/a/16-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:13,387 [DEBUG] Starting new HTTPS connection (16): www.eldorado.gg:443
+2026-03-28 03:52:13,455 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:13,455 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:13,455 [DEBUG] Starting new HTTPS connection (17): www.eldorado.gg:443
+2026-03-28 03:52:13,519 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:15,519 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:15,519 [DEBUG] Starting new HTTPS connection (18): www.eldorado.gg:443
+2026-03-28 03:52:15,621 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /fortnite-accounts-for-sale/a/16-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:16,854 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-28 03:52:17,960 [INFO]   [U7Buy] Scraping Fortnite — https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-28 03:52:18,170 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-28 03:52:18,238 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-28 03:52:18,238 [INFO]     Page 1: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-28 03:52:19,194 [DEBUG] https://www.u7buy.com:443 "GET /fortnite/fortnite-accounts HTTP/1.1" 200 None
+2026-03-28 03:52:19,559 [INFO]     No listings found on page 1, stopping.
+2026-03-28 03:52:20,521 [INFO]   [PlayerAuctions] Scraping Fortnite — https://www.playerauctions.com/fortnite-account/
+2026-03-28 03:52:20,521 [INFO]     Page 1: https://www.playerauctions.com/fortnite-account/
+2026-03-28 03:52:20,523 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:52:20,571 [DEBUG] https://www.playerauctions.com:443 "GET /fortnite-account/ HTTP/1.1" 403 None
+2026-03-28 03:52:20,576 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/fortnite-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/fortnite-account/
+2026-03-28 03:52:22,030 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:52:22,069 [DEBUG] https://www.playerauctions.com:443 "GET /fortnite-account/ HTTP/1.1" 403 None
+2026-03-28 03:52:22,070 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/fortnite-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/fortnite-account/
+2026-03-28 03:52:23,296 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:52:23,354 [DEBUG] https://www.playerauctions.com:443 "GET /fortnite-account/ HTTP/1.1" 403 None
+2026-03-28 03:52:23,354 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/fortnite-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/fortnite-account/
+2026-03-28 03:52:24,087 [ERROR]   All 3 attempts failed for https://www.playerauctions.com/fortnite-account/
+2026-03-28 03:52:25,126 [INFO]   [Z2U] Scraping Fortnite — https://www.z2u.com/fortnite/accounts-5-20
+2026-03-28 03:52:25,126 [INFO]     Page 1: https://www.z2u.com/fortnite/accounts-5-20
+2026-03-28 03:52:25,308 [DEBUG] https://www.z2u.com:443 "GET /fortnite/accounts-5-20 HTTP/1.1" 200 None
+2026-03-28 03:52:25,316 [INFO]     No listings found on page 1, stopping.
+2026-03-28 03:52:26,059 [INFO]   [eBay] Scraping Fortnite — https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-28 03:52:26,059 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-28 03:52:26,257 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1 HTTP/1.1" 200 None
+2026-03-28 03:52:27,139 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos Bundle PlayStation 5 PS5 
+2026-03-28 03:52:27,140 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos BundleOpens in a new wind
+2026-03-28 03:52:27,141 [DEBUG]     Skipping irrelevant eBay listing: Need gone use PayPal user is Rylan Curran on PayPa
+2026-03-28 03:52:27,141 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos Bundle Code - PlayStation
+2026-03-28 03:52:27,142 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Cobalt Star Bundle, Includes 1000 V-Bucks
+2026-03-28 03:52:27,142 [DEBUG]     Skipping irrelevant eBay listing: Fortnite 100% Achievement Service (Xbox)🏆Opens in 
+2026-03-28 03:52:27,142 [DEBUG]     Skipping irrelevant eBay listing: New Listingoutfit Travis Scott 250+ outfits full @
+2026-03-28 03:52:27,144 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Founder's Pack Save the World READ SLIDES
+2026-03-28 03:52:27,146 [DEBUG]     Skipping irrelevant eBay listing: Dark Vertex Outfit + 500 V Bucks  READ SLIDESOpens
+2026-03-28 03:52:27,147 [DEBUG]     Skipping irrelevant eBay listing: Alan Wake 2 Deluxe Edition - PlayStation 5Opens in
+2026-03-28 03:52:27,147 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Reactive Payback Outfit & Levi
+2026-03-28 03:52:27,148 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Emotes Cosmetic Outfits & Pickaxes PC Epi
+2026-03-28 03:52:27,148 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Flowering Chaos Bundle PS5 Pla
+2026-03-28 03:52:27,148 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE / SAVE THE WORLD / FORTNITE STW / MATERIA
+2026-03-28 03:52:27,149 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE GIFTOpens in a new window or tab
+2026-03-28 03:52:27,149 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite—Sony PlayStation 4– Complete C
+2026-03-28 03:52:27,149 [DEBUG]     Skipping irrelevant eBay listing: New ListingEpic Multiplayer PC 81 Skins 77 Dances 
+2026-03-28 03:52:27,150 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Steal The Brainrot FULL ketupa
+2026-03-28 03:52:27,151 [DEBUG]     Skipping irrelevant eBay listing: Fortnite The Reaper And Omega Gift CardOpens in a 
+2026-03-28 03:52:27,152 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE: Darkfire & Ice Bundle - Nintendo SwitchO
+2026-03-28 03:52:27,152 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE MINTY LEGENDS PACK GAME ADD-ON PLAYSTATIO
+2026-03-28 03:52:27,153 [DEBUG]     Skipping irrelevant eBay listing: OWCS Preseason Bootcamp 2 Bundle 🔥 Reinhardt Skins
+2026-03-28 03:52:27,153 [DEBUG]     Skipping irrelevant eBay listing: FortniteOpens in a new window or tab
+2026-03-28 03:52:27,153 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos and Cobalt Star DLC Pack 
+2026-03-28 03:52:27,154 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Minty Legends Pack PS5 Brand New Sealed!O
+2026-03-28 03:52:27,154 [DEBUG]     Skipping irrelevant eBay listing: CODE IS UNUSED - Fortnite: Anime Legends Pack PS4 
+2026-03-28 03:52:27,155 [DEBUG]     Skipping irrelevant eBay listing: New Listing[1602] Renegade Raider, Purple Skull,Ae
+2026-03-28 03:52:27,156 [DEBUG]     Skipping irrelevant eBay listing: Division 2 10th Anniversary Twitch Drops 🎉 Cache, 
+2026-03-28 03:52:27,156 [DEBUG]     Skipping irrelevant eBay listing: fortniteOpens in a new window or tab
+2026-03-28 03:52:27,157 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Exc etc Get Now!Opens in a new window or 
+2026-03-28 03:52:27,157 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Steal The Brainrot Cheap Bundl
+2026-03-28 03:52:27,158 [DEBUG]     Skipping irrelevant eBay listing: Chapter 1 season 7 FortniteOpens in a new window o
+2026-03-28 03:52:27,159 [DEBUG]     Skipping irrelevant eBay listing: CODE IS UNUSED - Fortnite: Minty Legends Pack PS4 
+2026-03-28 03:52:27,159 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Blue Squires Gift CardOpens in
+2026-03-28 03:52:27,160 [DEBUG]     Skipping irrelevant eBay listing: Nintendo Switch Fortnite Minty Legends Pack (PAL R
+2026-03-28 03:52:27,160 [DEBUG]     Skipping irrelevant eBay listing: Fortnite (Sony PlayStation 4, 2017)Opens in a new 
+2026-03-28 03:52:27,161 [DEBUG]     Skipping irrelevant eBay listing: Fortnite The Reaper Gift CardOpens in a new window
+2026-03-28 03:52:27,161 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE: Darkfire & Ice Bundle - Nintendo Switch 
+2026-03-28 03:52:27,161 [DEBUG]     Skipping irrelevant eBay listing: Travis Scott full @cess 150+OutfitsOpens in a new 
+2026-03-28 03:52:27,162 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Steal The Brainrot Cheap BundleOpens in a
+2026-03-28 03:52:27,162 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE Minty Legends Pack (PlayStation 4/PS4, 20
+2026-03-28 03:52:27,163 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Flowering Chaos Bundle PS5 Pla
+2026-03-28 03:52:27,163 [DEBUG]     Skipping irrelevant eBay listing: PS4 Sony PlayStation 4 Disc Video Game Acrylic Dis
+2026-03-28 03:52:27,164 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Flowering Chaos Bundle - PS5 C
+2026-03-28 03:52:27,164 [DEBUG]     Skipping irrelevant eBay listing: Astro Bot and Fortnite Cobalt Star Pack + 1000 V-B
+2026-03-28 03:52:27,165 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE / SAVE THE WORLD / FORTNITE STW / 140 DUN
+2026-03-28 03:52:27,165 [DEBUG]     Skipping irrelevant eBay listing: Nintendo Switch Fortnite Transformers Pack: GAME A
+2026-03-28 03:52:27,166 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Merry Mint Axe Pickaxe & Krisabelle Outfi
+2026-03-28 03:52:27,166 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Cobalt Star Bundle Code + 1000 V Bucks (U
+2026-03-28 03:52:27,167 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos Bundle PS5 Playstation  C
+2026-03-28 03:52:27,167 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite: Deep Freeze Bundle (Xbox One,
+2026-03-28 03:52:27,167 [DEBUG]     Skipping irrelevant eBay listing: fortnite acnt leviathan axeOpens in a new window o
+2026-03-28 03:52:27,168 [DEBUG]     Skipping irrelevant eBay listing: Rocket League 28 Items Bundle TW Nemesis Apex Blac
+2026-03-28 03:52:27,168 [DEBUG]     Skipping irrelevant eBay listing: Nintendo Switch Fortnite Darkfire & Ice BundleOpen
+2026-03-28 03:52:27,169 [DEBUG]     Skipping irrelevant eBay listing: Fortnite (Sony PlayStation 4, 2017) Complete CIBOp
+2026-03-28 03:52:27,169 [DEBUG]     Skipping irrelevant eBay listing: Official FORTNITE Outfits(collectors Edition)Opens
+2026-03-28 03:52:27,170 [DEBUG]     Skipping irrelevant eBay listing: Fortnite - Sony PlayStation 4 PS4 gameOpens in a n
+2026-03-28 03:52:27,170 [DEBUG]     Skipping irrelevant eBay listing: Fortnite: The Last Laugh Xbox NO CODEOpens in a ne
+2026-03-28 03:52:27,171 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Selectable Styles Reactive Cosmetic Items
+2026-03-28 03:52:27,171 [DEBUG]     Skipping irrelevant eBay listing: Fortnite - Sparkplug Outfit - Key GLOBALOpens in a
+2026-03-28 03:52:27,171 [INFO]     Found 7 listings (total so far: 7)
+2026-03-28 03:52:27,212 [INFO]     eBay Fortnite: 7 relevant listings scraped (raw site total: 7, estimated relevant: 7)
+2026-03-28 03:52:28,744 [INFO] 
+========================================
+2026-03-28 03:52:28,744 [INFO] Scraping: Minecraft
+2026-03-28 03:52:28,744 [INFO] ========================================
+2026-03-28 03:52:28,744 [INFO]   [Eldorado.gg] Scraping Minecraft — https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-28 03:52:28,744 [INFO]     Page 1: https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-28 03:52:28,746 [DEBUG] Starting new HTTPS connection (19): www.eldorado.gg:443
+2026-03-28 03:52:28,817 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:28,817 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /minecraft-accounts/a/61-1-0
+2026-03-28 03:52:28,817 [DEBUG] Starting new HTTPS connection (20): www.eldorado.gg:443
+2026-03-28 03:52:28,886 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:30,886 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /minecraft-accounts/a/61-1-0
+2026-03-28 03:52:30,887 [DEBUG] Starting new HTTPS connection (21): www.eldorado.gg:443
+2026-03-28 03:52:30,954 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /minecraft-accounts/a/61-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:32,217 [DEBUG] Starting new HTTPS connection (22): www.eldorado.gg:443
+2026-03-28 03:52:32,293 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:32,293 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /minecraft-accounts/a/61-1-0
+2026-03-28 03:52:32,294 [DEBUG] Starting new HTTPS connection (23): www.eldorado.gg:443
+2026-03-28 03:52:32,379 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:34,380 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /minecraft-accounts/a/61-1-0
+2026-03-28 03:52:34,380 [DEBUG] Starting new HTTPS connection (24): www.eldorado.gg:443
+2026-03-28 03:52:34,450 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /minecraft-accounts/a/61-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:35,481 [DEBUG] Starting new HTTPS connection (25): www.eldorado.gg:443
+2026-03-28 03:52:35,577 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:35,577 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /minecraft-accounts/a/61-1-0
+2026-03-28 03:52:35,577 [DEBUG] Starting new HTTPS connection (26): www.eldorado.gg:443
+2026-03-28 03:52:35,642 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:37,642 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /minecraft-accounts/a/61-1-0
+2026-03-28 03:52:37,642 [DEBUG] Starting new HTTPS connection (27): www.eldorado.gg:443
+2026-03-28 03:52:37,715 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /minecraft-accounts/a/61-1-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:38,711 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-28 03:52:39,409 [INFO]   [U7Buy] Scraping Minecraft — https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-28 03:52:39,610 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-28 03:52:39,679 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-28 03:52:39,679 [INFO]     Page 1: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-28 03:52:40,608 [DEBUG] https://www.u7buy.com:443 "GET /minecraft/minecraft-accounts HTTP/1.1" 200 None
+2026-03-28 03:52:40,970 [INFO]     No listings found on page 1, stopping.
+2026-03-28 03:52:41,748 [INFO]   [PlayerAuctions] Scraping Minecraft — https://www.playerauctions.com/minecraft-account/
+2026-03-28 03:52:41,748 [INFO]     Page 1: https://www.playerauctions.com/minecraft-account/
+2026-03-28 03:52:41,750 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:52:41,795 [DEBUG] https://www.playerauctions.com:443 "GET /minecraft-account/ HTTP/1.1" 403 None
+2026-03-28 03:52:41,795 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/minecraft-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/minecraft-account/
+2026-03-28 03:52:42,941 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:52:42,989 [DEBUG] https://www.playerauctions.com:443 "GET /minecraft-account/ HTTP/1.1" 403 None
+2026-03-28 03:52:42,989 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/minecraft-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/minecraft-account/
+2026-03-28 03:52:44,257 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:52:44,307 [DEBUG] https://www.playerauctions.com:443 "GET /minecraft-account/ HTTP/1.1" 403 None
+2026-03-28 03:52:44,307 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/minecraft-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/minecraft-account/
+2026-03-28 03:52:45,031 [ERROR]   All 3 attempts failed for https://www.playerauctions.com/minecraft-account/
+2026-03-28 03:52:46,427 [INFO]   [Z2U] Scraping Minecraft — https://www.z2u.com/minecraft/accounts-5-44
+2026-03-28 03:52:46,427 [INFO]     Page 1: https://www.z2u.com/minecraft/accounts-5-44
+2026-03-28 03:52:46,601 [DEBUG] https://www.z2u.com:443 "GET /minecraft/accounts-5-44 HTTP/1.1" 200 None
+2026-03-28 03:52:46,605 [INFO]     No listings found on page 1, stopping.
+2026-03-28 03:52:47,861 [INFO]   [eBay] Scraping Minecraft — https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-28 03:52:47,861 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-28 03:52:47,949 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-28 03:52:48,128 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dminecraft%2Baccount%2Bjava%26_sop%3D12%26LH_BIN%3D1&iid=481f2741-22b0-49bc-9f18-b134a599b2a8&iim=bMTcyLb&iia=yMjIxNCej&iiz=JUX40NC4xjUF HTTP/1.1" 200 6091
+2026-03-28 03:52:48,130 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-28 03:52:48,130 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-28 03:52:48,253 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-28 03:52:48,393 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dminecraft%2Baccount%2Bjava%26_sop%3D12%26LH_BIN%3D1&iid=3524dc99-c7c1-4743-a083-3913309d2b4d&iim=SMTcyLi&iia=ucjIxNCXN&iiz=uUf40NC4xbcA HTTP/1.1" 200 6094
+2026-03-28 03:52:48,395 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-28 03:52:48,395 [INFO]     eBay Minecraft: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-28 03:52:50,702 [INFO] 
+========================================
+2026-03-28 03:52:50,702 [INFO] Scraping: Steam
+2026-03-28 03:52:50,702 [INFO] ========================================
+2026-03-28 03:52:50,702 [INFO]   [Eldorado.gg] Scraping Steam — https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-28 03:52:50,702 [INFO]     Page 1: https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-28 03:52:50,703 [DEBUG] Starting new HTTPS connection (28): www.eldorado.gg:443
+2026-03-28 03:52:50,781 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:50,781 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /steam-accounts/a/42-0-0
+2026-03-28 03:52:50,781 [DEBUG] Starting new HTTPS connection (29): www.eldorado.gg:443
+2026-03-28 03:52:50,857 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:52,858 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /steam-accounts/a/42-0-0
+2026-03-28 03:52:52,858 [DEBUG] Starting new HTTPS connection (30): www.eldorado.gg:443
+2026-03-28 03:52:52,953 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /steam-accounts/a/42-0-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:53,616 [DEBUG] Starting new HTTPS connection (31): www.eldorado.gg:443
+2026-03-28 03:52:53,695 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:53,696 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /steam-accounts/a/42-0-0
+2026-03-28 03:52:53,696 [DEBUG] Starting new HTTPS connection (32): www.eldorado.gg:443
+2026-03-28 03:52:53,773 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:55,774 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /steam-accounts/a/42-0-0
+2026-03-28 03:52:55,774 [DEBUG] Starting new HTTPS connection (33): www.eldorado.gg:443
+2026-03-28 03:52:55,858 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /steam-accounts/a/42-0-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:56,944 [DEBUG] Starting new HTTPS connection (34): www.eldorado.gg:443
+2026-03-28 03:52:57,011 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:57,012 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /steam-accounts/a/42-0-0
+2026-03-28 03:52:57,012 [DEBUG] Starting new HTTPS connection (35): www.eldorado.gg:443
+2026-03-28 03:52:57,075 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-28 03:52:59,076 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'HTTPException('got more than 100 headers')': /steam-accounts/a/42-0-0
+2026-03-28 03:52:59,076 [DEBUG] Starting new HTTPS connection (36): www.eldorado.gg:443
+2026-03-28 03:52:59,152 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /steam-accounts/a/42-0-0 (Caused by ProtocolError('Connection aborted.', HTTPException('got more than 100 headers')))
+2026-03-28 03:52:59,672 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-28 03:53:00,736 [INFO]   [U7Buy] Scraping Steam — https://www.u7buy.com/steam/steam-accounts
+2026-03-28 03:53:01,076 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-03-28 03:53:01,143 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-03-28 03:53:01,144 [INFO]     Page 1: https://www.u7buy.com/steam/steam-accounts
+2026-03-28 03:53:02,918 [DEBUG] https://www.u7buy.com:443 "GET /steam/steam-accounts HTTP/1.1" 200 None
+2026-03-28 03:53:03,280 [INFO]     No listings found on page 1, stopping.
+2026-03-28 03:53:04,669 [INFO]   [PlayerAuctions] Scraping Steam — https://www.playerauctions.com/steam-account/
+2026-03-28 03:53:04,670 [INFO]     Page 1: https://www.playerauctions.com/steam-account/
+2026-03-28 03:53:04,671 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:53:04,718 [DEBUG] https://www.playerauctions.com:443 "GET /steam-account/ HTTP/1.1" 403 None
+2026-03-28 03:53:04,719 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/steam-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/steam-account/
+2026-03-28 03:53:06,033 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:53:06,083 [DEBUG] https://www.playerauctions.com:443 "GET /steam-account/ HTTP/1.1" 403 None
+2026-03-28 03:53:06,083 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/steam-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/steam-account/
+2026-03-28 03:53:07,006 [DEBUG] Resetting dropped connection: www.playerauctions.com
+2026-03-28 03:53:07,050 [DEBUG] https://www.playerauctions.com:443 "GET /steam-account/ HTTP/1.1" 403 None
+2026-03-28 03:53:07,050 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/steam-account/: 403 Client Error: Forbidden for url: https://www.playerauctions.com/steam-account/
+2026-03-28 03:53:08,361 [ERROR]   All 3 attempts failed for https://www.playerauctions.com/steam-account/
+2026-03-28 03:53:09,705 [INFO]   [Z2U] Scraping Steam — https://www.z2u.com/steam/accounts-5-3271
+2026-03-28 03:53:09,706 [INFO]     Page 1: https://www.z2u.com/steam/accounts-5-3271
+2026-03-28 03:53:10,163 [DEBUG] https://www.z2u.com:443 "GET /steam/accounts-5-3271 HTTP/1.1" 200 None
+2026-03-28 03:53:10,246 [INFO]     No listings found on page 1, stopping.
+2026-03-28 03:53:11,171 [INFO]   [eBay] Scraping Steam — https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-28 03:53:11,171 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-03-28 03:53:11,256 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-28 03:53:11,378 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1&iid=02a80c8e-d9a9-463e-89e0-2190cd4bc9db&iim=sMTcyLg&iia=hwjIxNChm&iiz=Hvt40NC4xamd HTTP/1.1" 200 6078
+2026-03-28 03:53:11,379 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-28 03:53:11,379 [DEBUG]   requests got CAPTCHA or empty for eBay, trying Playwright
+2026-03-28 03:53:11,451 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1 HTTP/1.1" 307 0
+2026-03-28 03:53:11,589 [DEBUG] https://www.ebay.com:443 "GET /splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.ebay.com%2Fsch%2Fi.html%3F_nkw%3Dsteam%2Baccount%26_sop%3D12%26LH_BIN%3D1&iid=f0d7c4d0-e8da-4697-8af1-92bedfffeb61&iim=AMTcyLZ&iia=lujIxNCAZ&iiz=Myg40NC4xQpO HTTP/1.1" 200 6084
+2026-03-28 03:53:11,591 [WARNING]   eBay CAPTCHA detected (redirected to https://www.ebay.com/splashui/challenge?ap=1&appName=orch&ru=https%3A%2F%2Fwww.e)
+2026-03-28 03:53:11,591 [INFO]     eBay Steam: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-28 03:53:13,958 [INFO] Saved to SQLite database (run_id=6)
+2026-03-28 03:53:13,977 [ERROR] Git push failed: Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <runner@runnervmrg6be.pkiwiyq2oyfulktwfhbrosnyua.bx.internal.cloudapp.net>) not allowed
+
+2026-03-28 03:53:13,977 [INFO] 
+============================================================
+2026-03-28 03:53:13,977 [INFO] SCRAPE COMPLETE
+2026-03-28 03:53:13,977 [INFO] ============================================================
+2026-03-28 03:53:13,977 [INFO] Total listings found:   32
+2026-03-28 03:53:13,977 [INFO] Total listings scraped: 19
+2026-03-28 03:53:13,978 [INFO] Output: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/dashboard_data.json
+2026-03-28 03:53:13,978 [INFO] Backup: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/scrape_history/dashboard_data_20260328_035313.json
+2026-03-28 03:53:13,978 [INFO] 
+2026-03-28 03:53:13,978 [INFO]   Roblox: 25 total | avg $94.67
+2026-03-28 03:53:13,978 [INFO]   Fortnite: 7 total | avg $110.71
+2026-03-28 03:53:13,978 [INFO]   Minecraft: 0 total | avg $0
+2026-03-28 03:53:13,978 [INFO]   Steam: 0 total | avg $0
+2026-03-28 03:53:13,978 [INFO] 
+2026-03-28 03:53:13,978 [INFO]   General: 8 listings
+2026-03-28 03:53:13,978 [INFO]   Items / Currency: 8 listings
+2026-03-28 03:53:13,978 [INFO]   OG / Veteran Account: 4 listings
+2026-03-28 03:53:13,978 [INFO]   Age Verified: 1 listings
