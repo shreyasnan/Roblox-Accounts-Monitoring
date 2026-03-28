@@ -62,8 +62,8 @@ LOG_FILE = SCRIPT_DIR / "scraper.log"
 ALL_GAMES = ["Roblox", "Fortnite", "Minecraft", "Steam"]
 
 # Delays between requests (seconds) — be polite to servers
-MIN_DELAY = 0.5
-MAX_DELAY = 1.5
+MIN_DELAY = 1.5
+MAX_DELAY = 3.5
 
 # Maximum retries per page
 MAX_RETRIES = 3
@@ -169,17 +169,13 @@ def safe_text(el, default=""):
 class BrowserManager:
     """Manages a headless Playwright browser, or falls back to requests."""
 
-    def __init__(self, force_requests: bool = False):
+    def __init__(self):
         self._pw = None
         self._browser = None
         self._context = None
         self.using_playwright = False
-        self._force_requests = force_requests
 
     def start(self):
-        if self._force_requests:
-            log.info("Fast mode: using requests + BeautifulSoup (Playwright skipped).")
-            return
         if HAS_PLAYWRIGHT:
             try:
                 self._pw = sync_playwright().start()
@@ -1599,17 +1595,16 @@ def git_push(output_file: Path):
         log.error(f"Git push error: {e}")
 
 
-def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fast: bool = False):
+def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool):
     """Main scrape orchestrator."""
     setup_logging(verbose)
     log.info("=" * 60)
     log.info(f"Scraper started at {datetime.now().isoformat()}")
     log.info(f"Games: {', '.join(games)}")
     log.info(f"Max pages per source: {'unlimited' if max_pages == 0 else max_pages}")
-    log.info(f"Fast mode: {'ON' if fast else 'OFF'}")
     log.info("=" * 60)
 
-    browser = BrowserManager(force_requests=fast)
+    browser = BrowserManager()
     browser.start()
 
     eldorado = EldoradoScraper(browser, max_pages)
@@ -1665,7 +1660,7 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fas
         except Exception as e:
             log.error(f"  eBay failed for {game}: {e}")
             scraped[game]["eBay"] = {"total_on_site": 0, "search_url": f"https://www.ebay.com/sch/i.html?_nkw={EBAY_SEARCH_TERMS.get(game, '')}", "listings": []}
-        polite_delay(extra=1)  # extra delay for eBay to avoid CAPTCHA
+        polite_delay(extra=2)  # extra delay for eBay to avoid CAPTCHA
 
     browser.stop()
 
@@ -1728,8 +1723,8 @@ def main():
         choices=ALL_GAMES, help="Games to scrape (default: all)"
     )
     parser.add_argument(
-        "--max-pages", type=int, default=3,
-        help="Max pages per source (0 = unlimited, default: 3)"
+        "--max-pages", type=int, default=0,
+        help="Max pages per source (0 = unlimited, default: 0)"
     )
     parser.add_argument(
         "--output", "-o", type=str, default=str(DEFAULT_OUTPUT),
@@ -1739,13 +1734,9 @@ def main():
         "--verbose", "-v", action="store_true",
         help="Enable debug logging"
     )
-    parser.add_argument(
-        "--fast", action="store_true",
-        help="Fast mode: skip Playwright, use requests only (much faster)"
-    )
 
     args = parser.parse_args()
-    run_scrape(args.games, args.max_pages, args.output, args.verbose, args.fast)
+    run_scrape(args.games, args.max_pages, args.output, args.verbose)
 
 
 if __name__ == "__main__":
