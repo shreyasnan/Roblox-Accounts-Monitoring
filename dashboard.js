@@ -51,12 +51,23 @@ function updateLastUpdated() {
   const el = document.getElementById('last-updated');
   if (!el || !dashboardData || !dashboardData.metadata) return;
   const dateStr = dashboardData.metadata.scrape_date || dashboardData.metadata.generated_at;
+  const fullTimestamp = dashboardData.metadata.generated_at || '';
   if (dateStr) {
     // Parse YYYY-MM-DD without timezone shift by splitting manually
     const parts = dateStr.substring(0, 10).split('-');
     const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
     const formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    el.textContent = 'Last Updated: ' + formatted;
+    // Extract time from generated_at (e.g. "2026-03-27T02:03:58.559330")
+    let timeStr = '';
+    if (fullTimestamp && fullTimestamp.includes('T')) {
+      const timeParts = fullTimestamp.split('T')[1].substring(0, 5); // "HH:MM"
+      const hours = parseInt(timeParts.split(':')[0]);
+      const mins = timeParts.split(':')[1];
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      const h12 = hours % 12 || 12;
+      timeStr = ' at ' + h12 + ':' + mins + ' ' + ampm + ' UTC';
+    }
+    el.textContent = 'Last Updated: ' + formatted + timeStr;
   }
 }
 

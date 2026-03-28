@@ -3985,3 +3985,545 @@ fatal: empty ident name (for <runner@runnervm46oaq.sbo4f4120sjejcpudlippbucbf.ex
 2026-03-27 02:03:58,661 [INFO]   Items / Currency: 616 listings
 2026-03-27 02:03:58,661 [INFO]   General: 267 listings
 2026-03-27 02:03:58,662 [INFO]   Age Verified: 3 listings
+2026-03-27 08:09:49,583 [INFO] ============================================================
+2026-03-27 08:09:49,583 [INFO] Scraper started at 2026-03-27T08:09:49.583704
+2026-03-27 08:09:49,583 [INFO] Games: Roblox, Fortnite, Minecraft, Steam
+2026-03-27 08:09:49,584 [INFO] Max pages per source: unlimited
+2026-03-27 08:09:49,584 [INFO] ============================================================
+2026-03-27 08:09:49,584 [INFO] Playwright not installed. Using requests + BeautifulSoup.
+2026-03-27 08:09:49,584 [INFO] 
+========================================
+2026-03-27 08:09:49,585 [INFO] Scraping: Roblox
+2026-03-27 08:09:49,585 [INFO] ========================================
+2026-03-27 08:09:49,585 [INFO]   [Eldorado.gg] Scraping Roblox — https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:09:49,585 [INFO]     Page 1: https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:09:49,586 [DEBUG] Starting new HTTPS connection (1): www.eldorado.gg:443
+2026-03-27 08:09:49,588 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:09:49,588 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:09:49,589 [DEBUG] Starting new HTTPS connection (2): www.eldorado.gg:443
+2026-03-27 08:09:49,590 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:09:51,593 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:09:51,594 [DEBUG] Starting new HTTPS connection (3): www.eldorado.gg:443
+2026-03-27 08:09:51,598 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:09:53,640 [DEBUG] Starting new HTTPS connection (4): www.eldorado.gg:443
+2026-03-27 08:09:53,645 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:09:53,646 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:09:53,647 [DEBUG] Starting new HTTPS connection (5): www.eldorado.gg:443
+2026-03-27 08:09:53,650 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:09:55,661 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:09:55,662 [DEBUG] Starting new HTTPS connection (6): www.eldorado.gg:443
+2026-03-27 08:09:55,667 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:09:57,506 [DEBUG] Starting new HTTPS connection (7): www.eldorado.gg:443
+2026-03-27 08:09:57,511 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:09:57,511 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:09:57,512 [DEBUG] Starting new HTTPS connection (8): www.eldorado.gg:443
+2026-03-27 08:09:57,515 [DEBUG] Incremented Retry for (url='/roblox-accounts-for-sale/a/70-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:09:59,520 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:09:59,523 [DEBUG] Starting new HTTPS connection (9): www.eldorado.gg:443
+2026-03-27 08:09:59,528 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:01,868 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-03-27 08:10:04,257 [INFO]   [U7Buy] Scraping Roblox — https://www.u7buy.com/roblox/roblox-accounts
+2026-03-27 08:10:04,260 [DEBUG] Starting new HTTPS connection (1): www.u7buy.com:443
+2026-03-27 08:10:04,263 [DEBUG] Incremented Retry for (url='/api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:04,264 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50
+2026-03-27 08:10:04,265 [DEBUG] Starting new HTTPS connection (2): www.u7buy.com:443
+2026-03-27 08:10:04,268 [DEBUG] Incremented Retry for (url='/api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:06,274 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50
+2026-03-27 08:10:06,276 [DEBUG] Starting new HTTPS connection (3): www.u7buy.com:443
+2026-03-27 08:10:06,280 [DEBUG]     API scrape error: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:06,281 [INFO]     Page 1: https://www.u7buy.com/roblox/roblox-accounts
+2026-03-27 08:10:06,284 [DEBUG] Starting new HTTPS connection (4): www.u7buy.com:443
+2026-03-27 08:10:06,287 [DEBUG] Incremented Retry for (url='/roblox/roblox-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:06,288 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-03-27 08:10:06,288 [DEBUG] Starting new HTTPS connection (5): www.u7buy.com:443
+2026-03-27 08:10:06,292 [DEBUG] Incremented Retry for (url='/roblox/roblox-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:08,296 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-03-27 08:10:08,297 [DEBUG] Starting new HTTPS connection (6): www.u7buy.com:443
+2026-03-27 08:10:08,303 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/roblox/roblox-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /roblox/roblox-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:11,113 [DEBUG] Starting new HTTPS connection (7): www.u7buy.com:443
+2026-03-27 08:10:11,120 [DEBUG] Incremented Retry for (url='/roblox/roblox-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:11,121 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-03-27 08:10:11,122 [DEBUG] Starting new HTTPS connection (8): www.u7buy.com:443
+2026-03-27 08:10:11,126 [DEBUG] Incremented Retry for (url='/roblox/roblox-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:13,134 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-03-27 08:10:13,136 [DEBUG] Starting new HTTPS connection (9): www.u7buy.com:443
+2026-03-27 08:10:13,139 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/roblox/roblox-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /roblox/roblox-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:15,451 [DEBUG] Starting new HTTPS connection (10): www.u7buy.com:443
+2026-03-27 08:10:15,457 [DEBUG] Incremented Retry for (url='/roblox/roblox-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:15,460 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-03-27 08:10:15,460 [DEBUG] Starting new HTTPS connection (11): www.u7buy.com:443
+2026-03-27 08:10:15,463 [DEBUG] Incremented Retry for (url='/roblox/roblox-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:17,473 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-03-27 08:10:17,475 [DEBUG] Starting new HTTPS connection (12): www.u7buy.com:443
+2026-03-27 08:10:17,479 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/roblox/roblox-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /roblox/roblox-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:20,606 [ERROR]   All 3 attempts failed for https://www.u7buy.com/roblox/roblox-accounts
+2026-03-27 08:10:23,324 [INFO]   [PlayerAuctions] Scraping Roblox — https://www.playerauctions.com/roblox-account/
+2026-03-27 08:10:23,326 [INFO]     Page 1: https://www.playerauctions.com/roblox-account/
+2026-03-27 08:10:23,327 [DEBUG] Starting new HTTPS connection (1): www.playerauctions.com:443
+2026-03-27 08:10:23,330 [DEBUG] Incremented Retry for (url='/roblox-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:23,331 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-03-27 08:10:23,332 [DEBUG] Starting new HTTPS connection (2): www.playerauctions.com:443
+2026-03-27 08:10:23,334 [DEBUG] Incremented Retry for (url='/roblox-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:25,344 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-03-27 08:10:25,347 [DEBUG] Starting new HTTPS connection (3): www.playerauctions.com:443
+2026-03-27 08:10:25,353 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/roblox-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /roblox-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:27,268 [DEBUG] Starting new HTTPS connection (4): www.playerauctions.com:443
+2026-03-27 08:10:27,272 [DEBUG] Incremented Retry for (url='/roblox-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:27,273 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-03-27 08:10:27,274 [DEBUG] Starting new HTTPS connection (5): www.playerauctions.com:443
+2026-03-27 08:10:27,277 [DEBUG] Incremented Retry for (url='/roblox-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:29,281 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-03-27 08:10:29,285 [DEBUG] Starting new HTTPS connection (6): www.playerauctions.com:443
+2026-03-27 08:10:29,289 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/roblox-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /roblox-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:32,263 [DEBUG] Starting new HTTPS connection (7): www.playerauctions.com:443
+2026-03-27 08:10:32,270 [DEBUG] Incremented Retry for (url='/roblox-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:32,271 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-03-27 08:10:32,272 [DEBUG] Starting new HTTPS connection (8): www.playerauctions.com:443
+2026-03-27 08:10:32,275 [DEBUG] Incremented Retry for (url='/roblox-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:34,279 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-03-27 08:10:34,281 [DEBUG] Starting new HTTPS connection (9): www.playerauctions.com:443
+2026-03-27 08:10:34,285 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/roblox-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /roblox-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:37,707 [ERROR]   All 3 attempts failed for https://www.playerauctions.com/roblox-account/
+2026-03-27 08:10:40,214 [INFO]   [Z2U] Scraping Roblox — https://www.z2u.com/rbl/accounts-5-2941
+2026-03-27 08:10:40,217 [INFO]     Page 1: https://www.z2u.com/rbl/accounts-5-2941
+2026-03-27 08:10:40,221 [DEBUG] Starting new HTTPS connection (1): www.z2u.com:443
+2026-03-27 08:10:40,226 [DEBUG] Incremented Retry for (url='/rbl/accounts-5-2941'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:40,228 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-03-27 08:10:40,229 [DEBUG] Starting new HTTPS connection (2): www.z2u.com:443
+2026-03-27 08:10:40,231 [DEBUG] Incremented Retry for (url='/rbl/accounts-5-2941'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:42,240 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-03-27 08:10:42,250 [DEBUG] Starting new HTTPS connection (3): www.z2u.com:443
+2026-03-27 08:10:42,256 [WARNING]   Attempt 1/3 failed for https://www.z2u.com/rbl/accounts-5-2941: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /rbl/accounts-5-2941 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:44,778 [DEBUG] Starting new HTTPS connection (4): www.z2u.com:443
+2026-03-27 08:10:44,784 [DEBUG] Incremented Retry for (url='/rbl/accounts-5-2941'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:44,785 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-03-27 08:10:44,786 [DEBUG] Starting new HTTPS connection (5): www.z2u.com:443
+2026-03-27 08:10:44,788 [DEBUG] Incremented Retry for (url='/rbl/accounts-5-2941'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:46,794 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-03-27 08:10:46,797 [DEBUG] Starting new HTTPS connection (6): www.z2u.com:443
+2026-03-27 08:10:46,803 [WARNING]   Attempt 2/3 failed for https://www.z2u.com/rbl/accounts-5-2941: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /rbl/accounts-5-2941 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:49,156 [DEBUG] Starting new HTTPS connection (7): www.z2u.com:443
+2026-03-27 08:10:49,162 [DEBUG] Incremented Retry for (url='/rbl/accounts-5-2941'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:49,163 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-03-27 08:10:49,164 [DEBUG] Starting new HTTPS connection (8): www.z2u.com:443
+2026-03-27 08:10:49,167 [DEBUG] Incremented Retry for (url='/rbl/accounts-5-2941'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:10:51,175 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-03-27 08:10:51,178 [DEBUG] Starting new HTTPS connection (9): www.z2u.com:443
+2026-03-27 08:10:51,183 [WARNING]   Attempt 3/3 failed for https://www.z2u.com/rbl/accounts-5-2941: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /rbl/accounts-5-2941 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:10:52,887 [ERROR]   All 3 attempts failed for https://www.z2u.com/rbl/accounts-5-2941
+2026-03-27 08:27:07,983 [INFO]   [eBay] Scraping Roblox — https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:07,985 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:07,987 [DEBUG] Starting new HTTPS connection (1): www.ebay.com:443
+2026-03-27 08:27:07,992 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:07,993 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:07,994 [DEBUG] Starting new HTTPS connection (2): www.ebay.com:443
+2026-03-27 08:27:07,997 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:10,008 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:10,010 [DEBUG] Starting new HTTPS connection (3): www.ebay.com:443
+2026-03-27 08:27:10,015 [WARNING]   Attempt 1/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:13,376 [DEBUG] Starting new HTTPS connection (4): www.ebay.com:443
+2026-03-27 08:27:13,382 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:13,383 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:13,384 [DEBUG] Starting new HTTPS connection (5): www.ebay.com:443
+2026-03-27 08:27:13,388 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:15,396 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:15,404 [DEBUG] Starting new HTTPS connection (6): www.ebay.com:443
+2026-03-27 08:27:15,409 [WARNING]   Attempt 2/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:18,363 [DEBUG] Starting new HTTPS connection (7): www.ebay.com:443
+2026-03-27 08:27:18,369 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:18,370 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:18,371 [DEBUG] Starting new HTTPS connection (8): www.ebay.com:443
+2026-03-27 08:27:18,374 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:20,377 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:20,379 [DEBUG] Starting new HTTPS connection (9): www.ebay.com:443
+2026-03-27 08:27:20,384 [WARNING]   Attempt 3/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:22,318 [ERROR]   All 3 attempts failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-03-27 08:27:22,321 [INFO]     eBay Roblox: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-27 08:27:26,879 [INFO] 
+========================================
+2026-03-27 08:27:26,881 [INFO] Scraping: Fortnite
+2026-03-27 08:27:26,882 [INFO] ========================================
+2026-03-27 08:27:26,882 [INFO]   [Eldorado.gg] Scraping Fortnite — https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:26,883 [INFO]     Page 1: https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:26,885 [DEBUG] Starting new HTTPS connection (10): www.eldorado.gg:443
+2026-03-27 08:27:26,890 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:26,891 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:26,892 [DEBUG] Starting new HTTPS connection (11): www.eldorado.gg:443
+2026-03-27 08:27:26,894 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:28,902 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:28,904 [DEBUG] Starting new HTTPS connection (12): www.eldorado.gg:443
+2026-03-27 08:27:28,909 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /fortnite-accounts-for-sale/a/16-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:32,112 [DEBUG] Starting new HTTPS connection (13): www.eldorado.gg:443
+2026-03-27 08:27:32,118 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:32,120 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:32,120 [DEBUG] Starting new HTTPS connection (14): www.eldorado.gg:443
+2026-03-27 08:27:32,124 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:34,133 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:34,135 [DEBUG] Starting new HTTPS connection (15): www.eldorado.gg:443
+2026-03-27 08:27:34,140 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /fortnite-accounts-for-sale/a/16-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:37,613 [DEBUG] Starting new HTTPS connection (16): www.eldorado.gg:443
+2026-03-27 08:27:37,619 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:37,620 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:37,621 [DEBUG] Starting new HTTPS connection (17): www.eldorado.gg:443
+2026-03-27 08:27:37,624 [DEBUG] Incremented Retry for (url='/fortnite-accounts-for-sale/a/16-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:39,634 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:39,638 [DEBUG] Starting new HTTPS connection (18): www.eldorado.gg:443
+2026-03-27 08:27:39,644 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /fortnite-accounts-for-sale/a/16-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:43,117 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-03-27 08:27:45,062 [INFO]   [U7Buy] Scraping Fortnite — https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-27 08:27:45,065 [DEBUG] Starting new HTTPS connection (13): www.u7buy.com:443
+2026-03-27 08:27:45,070 [DEBUG] Incremented Retry for (url='/api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:45,071 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50
+2026-03-27 08:27:45,072 [DEBUG] Starting new HTTPS connection (14): www.u7buy.com:443
+2026-03-27 08:27:45,075 [DEBUG] Incremented Retry for (url='/api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:47,078 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50
+2026-03-27 08:27:47,079 [DEBUG] Starting new HTTPS connection (15): www.u7buy.com:443
+2026-03-27 08:27:47,084 [DEBUG]     API scrape error: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:47,085 [INFO]     Page 1: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-27 08:27:47,087 [DEBUG] Starting new HTTPS connection (16): www.u7buy.com:443
+2026-03-27 08:27:47,090 [DEBUG] Incremented Retry for (url='/fortnite/fortnite-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:47,091 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/fortnite-accounts
+2026-03-27 08:27:47,091 [DEBUG] Starting new HTTPS connection (17): www.u7buy.com:443
+2026-03-27 08:27:47,094 [DEBUG] Incremented Retry for (url='/fortnite/fortnite-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:49,101 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/fortnite-accounts
+2026-03-27 08:27:49,102 [DEBUG] Starting new HTTPS connection (18): www.u7buy.com:443
+2026-03-27 08:27:49,106 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/fortnite/fortnite-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /fortnite/fortnite-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:52,342 [DEBUG] Starting new HTTPS connection (19): www.u7buy.com:443
+2026-03-27 08:27:52,347 [DEBUG] Incremented Retry for (url='/fortnite/fortnite-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:52,349 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/fortnite-accounts
+2026-03-27 08:27:52,350 [DEBUG] Starting new HTTPS connection (20): www.u7buy.com:443
+2026-03-27 08:27:52,353 [DEBUG] Incremented Retry for (url='/fortnite/fortnite-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:54,360 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/fortnite-accounts
+2026-03-27 08:27:54,362 [DEBUG] Starting new HTTPS connection (21): www.u7buy.com:443
+2026-03-27 08:27:54,367 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/fortnite/fortnite-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /fortnite/fortnite-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:55,996 [DEBUG] Starting new HTTPS connection (22): www.u7buy.com:443
+2026-03-27 08:27:56,003 [DEBUG] Incremented Retry for (url='/fortnite/fortnite-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:56,004 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/fortnite-accounts
+2026-03-27 08:27:56,005 [DEBUG] Starting new HTTPS connection (23): www.u7buy.com:443
+2026-03-27 08:27:56,008 [DEBUG] Incremented Retry for (url='/fortnite/fortnite-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:27:58,016 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/fortnite-accounts
+2026-03-27 08:27:58,018 [DEBUG] Starting new HTTPS connection (24): www.u7buy.com:443
+2026-03-27 08:27:58,022 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/fortnite/fortnite-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /fortnite/fortnite-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:27:59,917 [ERROR]   All 3 attempts failed for https://www.u7buy.com/fortnite/fortnite-accounts
+2026-03-27 08:28:03,072 [INFO]   [PlayerAuctions] Scraping Fortnite — https://www.playerauctions.com/fortnite-account/
+2026-03-27 08:28:03,078 [INFO]     Page 1: https://www.playerauctions.com/fortnite-account/
+2026-03-27 08:28:03,081 [DEBUG] Starting new HTTPS connection (10): www.playerauctions.com:443
+2026-03-27 08:28:03,086 [DEBUG] Incremented Retry for (url='/fortnite-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:03,087 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-account/
+2026-03-27 08:28:03,088 [DEBUG] Starting new HTTPS connection (11): www.playerauctions.com:443
+2026-03-27 08:28:03,092 [DEBUG] Incremented Retry for (url='/fortnite-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:05,096 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-account/
+2026-03-27 08:28:05,101 [DEBUG] Starting new HTTPS connection (12): www.playerauctions.com:443
+2026-03-27 08:28:05,107 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/fortnite-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /fortnite-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:07,039 [DEBUG] Starting new HTTPS connection (13): www.playerauctions.com:443
+2026-03-27 08:28:07,045 [DEBUG] Incremented Retry for (url='/fortnite-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:07,047 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-account/
+2026-03-27 08:28:07,048 [DEBUG] Starting new HTTPS connection (14): www.playerauctions.com:443
+2026-03-27 08:28:07,051 [DEBUG] Incremented Retry for (url='/fortnite-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:09,059 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-account/
+2026-03-27 08:28:09,062 [DEBUG] Starting new HTTPS connection (15): www.playerauctions.com:443
+2026-03-27 08:28:09,068 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/fortnite-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /fortnite-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:10,865 [DEBUG] Starting new HTTPS connection (16): www.playerauctions.com:443
+2026-03-27 08:28:10,871 [DEBUG] Incremented Retry for (url='/fortnite-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:10,872 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-account/
+2026-03-27 08:28:10,873 [DEBUG] Starting new HTTPS connection (17): www.playerauctions.com:443
+2026-03-27 08:28:10,876 [DEBUG] Incremented Retry for (url='/fortnite-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:12,879 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite-account/
+2026-03-27 08:28:12,882 [DEBUG] Starting new HTTPS connection (18): www.playerauctions.com:443
+2026-03-27 08:28:12,886 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/fortnite-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /fortnite-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:15,721 [ERROR]   All 3 attempts failed for https://www.playerauctions.com/fortnite-account/
+2026-03-27 08:28:17,300 [INFO]   [Z2U] Scraping Fortnite — https://www.z2u.com/fortnite/accounts-5-20
+2026-03-27 08:28:17,303 [INFO]     Page 1: https://www.z2u.com/fortnite/accounts-5-20
+2026-03-27 08:28:17,304 [DEBUG] Starting new HTTPS connection (10): www.z2u.com:443
+2026-03-27 08:28:17,309 [DEBUG] Incremented Retry for (url='/fortnite/accounts-5-20'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:17,310 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/accounts-5-20
+2026-03-27 08:28:17,311 [DEBUG] Starting new HTTPS connection (11): www.z2u.com:443
+2026-03-27 08:28:17,314 [DEBUG] Incremented Retry for (url='/fortnite/accounts-5-20'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:19,324 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/accounts-5-20
+2026-03-27 08:28:19,326 [DEBUG] Starting new HTTPS connection (12): www.z2u.com:443
+2026-03-27 08:28:19,330 [WARNING]   Attempt 1/3 failed for https://www.z2u.com/fortnite/accounts-5-20: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /fortnite/accounts-5-20 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:22,692 [DEBUG] Starting new HTTPS connection (13): www.z2u.com:443
+2026-03-27 08:28:22,700 [DEBUG] Incremented Retry for (url='/fortnite/accounts-5-20'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:22,701 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/accounts-5-20
+2026-03-27 08:28:22,702 [DEBUG] Starting new HTTPS connection (14): www.z2u.com:443
+2026-03-27 08:28:22,706 [DEBUG] Incremented Retry for (url='/fortnite/accounts-5-20'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:24,714 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/accounts-5-20
+2026-03-27 08:28:24,717 [DEBUG] Starting new HTTPS connection (15): www.z2u.com:443
+2026-03-27 08:28:24,722 [WARNING]   Attempt 2/3 failed for https://www.z2u.com/fortnite/accounts-5-20: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /fortnite/accounts-5-20 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:28,194 [DEBUG] Starting new HTTPS connection (16): www.z2u.com:443
+2026-03-27 08:28:28,200 [DEBUG] Incremented Retry for (url='/fortnite/accounts-5-20'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:28,201 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/accounts-5-20
+2026-03-27 08:28:28,202 [DEBUG] Starting new HTTPS connection (17): www.z2u.com:443
+2026-03-27 08:28:28,205 [DEBUG] Incremented Retry for (url='/fortnite/accounts-5-20'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:30,215 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /fortnite/accounts-5-20
+2026-03-27 08:28:30,218 [DEBUG] Starting new HTTPS connection (18): www.z2u.com:443
+2026-03-27 08:28:30,223 [WARNING]   Attempt 3/3 failed for https://www.z2u.com/fortnite/accounts-5-20: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /fortnite/accounts-5-20 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:32,301 [ERROR]   All 3 attempts failed for https://www.z2u.com/fortnite/accounts-5-20
+2026-03-27 08:28:34,842 [INFO]   [eBay] Scraping Fortnite — https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:34,845 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:34,848 [DEBUG] Starting new HTTPS connection (10): www.ebay.com:443
+2026-03-27 08:28:34,852 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:34,854 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:34,855 [DEBUG] Starting new HTTPS connection (11): www.ebay.com:443
+2026-03-27 08:28:34,858 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:36,867 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:36,870 [DEBUG] Starting new HTTPS connection (12): www.ebay.com:443
+2026-03-27 08:28:36,876 [WARNING]   Attempt 1/3 failed for https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:38,815 [DEBUG] Starting new HTTPS connection (13): www.ebay.com:443
+2026-03-27 08:28:38,821 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:38,822 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:38,823 [DEBUG] Starting new HTTPS connection (14): www.ebay.com:443
+2026-03-27 08:28:38,826 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:40,835 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:40,840 [DEBUG] Starting new HTTPS connection (15): www.ebay.com:443
+2026-03-27 08:28:40,845 [WARNING]   Attempt 2/3 failed for https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:42,521 [DEBUG] Starting new HTTPS connection (16): www.ebay.com:443
+2026-03-27 08:28:42,527 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:42,529 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:42,530 [DEBUG] Starting new HTTPS connection (17): www.ebay.com:443
+2026-03-27 08:28:42,533 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:44,536 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:44,538 [DEBUG] Starting new HTTPS connection (18): www.ebay.com:443
+2026-03-27 08:28:44,543 [WARNING]   Attempt 3/3 failed for https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:47,891 [ERROR]   All 3 attempts failed for https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-03-27 08:28:47,892 [INFO]     eBay Fortnite: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-27 08:28:51,403 [INFO] 
+========================================
+2026-03-27 08:28:51,406 [INFO] Scraping: Minecraft
+2026-03-27 08:28:51,407 [INFO] ========================================
+2026-03-27 08:28:51,408 [INFO]   [Eldorado.gg] Scraping Minecraft — https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-27 08:28:51,408 [INFO]     Page 1: https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-27 08:28:51,411 [DEBUG] Starting new HTTPS connection (19): www.eldorado.gg:443
+2026-03-27 08:28:51,415 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:51,416 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-accounts/a/61-1-0
+2026-03-27 08:28:51,417 [DEBUG] Starting new HTTPS connection (20): www.eldorado.gg:443
+2026-03-27 08:28:51,420 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:53,425 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-accounts/a/61-1-0
+2026-03-27 08:28:53,430 [DEBUG] Starting new HTTPS connection (21): www.eldorado.gg:443
+2026-03-27 08:28:53,435 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /minecraft-accounts/a/61-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:28:56,747 [DEBUG] Starting new HTTPS connection (22): www.eldorado.gg:443
+2026-03-27 08:28:56,753 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:56,754 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-accounts/a/61-1-0
+2026-03-27 08:28:56,755 [DEBUG] Starting new HTTPS connection (23): www.eldorado.gg:443
+2026-03-27 08:28:56,757 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:28:58,764 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-accounts/a/61-1-0
+2026-03-27 08:28:58,767 [DEBUG] Starting new HTTPS connection (24): www.eldorado.gg:443
+2026-03-27 08:28:58,773 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /minecraft-accounts/a/61-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:01,289 [DEBUG] Starting new HTTPS connection (25): www.eldorado.gg:443
+2026-03-27 08:29:01,295 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:01,296 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-accounts/a/61-1-0
+2026-03-27 08:29:01,297 [DEBUG] Starting new HTTPS connection (26): www.eldorado.gg:443
+2026-03-27 08:29:01,301 [DEBUG] Incremented Retry for (url='/minecraft-accounts/a/61-1-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:03,310 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-accounts/a/61-1-0
+2026-03-27 08:29:03,313 [DEBUG] Starting new HTTPS connection (27): www.eldorado.gg:443
+2026-03-27 08:29:03,319 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /minecraft-accounts/a/61-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:05,248 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-03-27 08:29:08,481 [INFO]   [U7Buy] Scraping Minecraft — https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-27 08:29:08,487 [DEBUG] Starting new HTTPS connection (25): www.u7buy.com:443
+2026-03-27 08:29:08,492 [DEBUG] Incremented Retry for (url='/api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:08,494 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50
+2026-03-27 08:29:08,495 [DEBUG] Starting new HTTPS connection (26): www.u7buy.com:443
+2026-03-27 08:29:08,498 [DEBUG] Incremented Retry for (url='/api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:10,503 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50
+2026-03-27 08:29:10,506 [DEBUG] Starting new HTTPS connection (27): www.u7buy.com:443
+2026-03-27 08:29:10,511 [DEBUG]     API scrape error: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:10,512 [INFO]     Page 1: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-27 08:29:10,514 [DEBUG] Starting new HTTPS connection (28): www.u7buy.com:443
+2026-03-27 08:29:10,517 [DEBUG] Incremented Retry for (url='/minecraft/minecraft-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:10,518 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/minecraft-accounts
+2026-03-27 08:29:10,519 [DEBUG] Starting new HTTPS connection (29): www.u7buy.com:443
+2026-03-27 08:29:10,521 [DEBUG] Incremented Retry for (url='/minecraft/minecraft-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:12,529 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/minecraft-accounts
+2026-03-27 08:29:12,532 [DEBUG] Starting new HTTPS connection (30): www.u7buy.com:443
+2026-03-27 08:29:12,537 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/minecraft/minecraft-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /minecraft/minecraft-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:14,538 [DEBUG] Starting new HTTPS connection (31): www.u7buy.com:443
+2026-03-27 08:29:14,545 [DEBUG] Incremented Retry for (url='/minecraft/minecraft-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:14,546 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/minecraft-accounts
+2026-03-27 08:29:14,547 [DEBUG] Starting new HTTPS connection (32): www.u7buy.com:443
+2026-03-27 08:29:14,550 [DEBUG] Incremented Retry for (url='/minecraft/minecraft-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:16,556 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/minecraft-accounts
+2026-03-27 08:29:16,559 [DEBUG] Starting new HTTPS connection (33): www.u7buy.com:443
+2026-03-27 08:29:16,565 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/minecraft/minecraft-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /minecraft/minecraft-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:18,189 [DEBUG] Starting new HTTPS connection (34): www.u7buy.com:443
+2026-03-27 08:29:18,194 [DEBUG] Incremented Retry for (url='/minecraft/minecraft-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:18,194 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/minecraft-accounts
+2026-03-27 08:29:18,195 [DEBUG] Starting new HTTPS connection (35): www.u7buy.com:443
+2026-03-27 08:29:18,197 [DEBUG] Incremented Retry for (url='/minecraft/minecraft-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:20,199 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/minecraft-accounts
+2026-03-27 08:29:20,202 [DEBUG] Starting new HTTPS connection (36): www.u7buy.com:443
+2026-03-27 08:29:20,207 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/minecraft/minecraft-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /minecraft/minecraft-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:23,691 [ERROR]   All 3 attempts failed for https://www.u7buy.com/minecraft/minecraft-accounts
+2026-03-27 08:29:25,549 [INFO]   [PlayerAuctions] Scraping Minecraft — https://www.playerauctions.com/minecraft-account/
+2026-03-27 08:29:25,552 [INFO]     Page 1: https://www.playerauctions.com/minecraft-account/
+2026-03-27 08:29:25,555 [DEBUG] Starting new HTTPS connection (19): www.playerauctions.com:443
+2026-03-27 08:29:25,559 [DEBUG] Incremented Retry for (url='/minecraft-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:25,561 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-account/
+2026-03-27 08:29:25,562 [DEBUG] Starting new HTTPS connection (20): www.playerauctions.com:443
+2026-03-27 08:29:25,565 [DEBUG] Incremented Retry for (url='/minecraft-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:27,580 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-account/
+2026-03-27 08:29:27,583 [DEBUG] Starting new HTTPS connection (21): www.playerauctions.com:443
+2026-03-27 08:29:27,588 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/minecraft-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /minecraft-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:29,544 [DEBUG] Starting new HTTPS connection (22): www.playerauctions.com:443
+2026-03-27 08:29:29,550 [DEBUG] Incremented Retry for (url='/minecraft-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:29,551 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-account/
+2026-03-27 08:29:29,552 [DEBUG] Starting new HTTPS connection (23): www.playerauctions.com:443
+2026-03-27 08:29:29,555 [DEBUG] Incremented Retry for (url='/minecraft-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:31,571 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-account/
+2026-03-27 08:29:31,573 [DEBUG] Starting new HTTPS connection (24): www.playerauctions.com:443
+2026-03-27 08:29:31,578 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/minecraft-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /minecraft-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:33,674 [DEBUG] Starting new HTTPS connection (25): www.playerauctions.com:443
+2026-03-27 08:29:33,676 [DEBUG] Incremented Retry for (url='/minecraft-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:33,677 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-account/
+2026-03-27 08:29:33,678 [DEBUG] Starting new HTTPS connection (26): www.playerauctions.com:443
+2026-03-27 08:29:33,681 [DEBUG] Incremented Retry for (url='/minecraft-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:35,690 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft-account/
+2026-03-27 08:29:35,692 [DEBUG] Starting new HTTPS connection (27): www.playerauctions.com:443
+2026-03-27 08:29:35,696 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/minecraft-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /minecraft-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:38,518 [ERROR]   All 3 attempts failed for https://www.playerauctions.com/minecraft-account/
+2026-03-27 08:29:41,678 [INFO]   [Z2U] Scraping Minecraft — https://www.z2u.com/minecraft/accounts-5-44
+2026-03-27 08:29:41,681 [INFO]     Page 1: https://www.z2u.com/minecraft/accounts-5-44
+2026-03-27 08:29:41,683 [DEBUG] Starting new HTTPS connection (19): www.z2u.com:443
+2026-03-27 08:29:41,688 [DEBUG] Incremented Retry for (url='/minecraft/accounts-5-44'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:41,689 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/accounts-5-44
+2026-03-27 08:29:41,690 [DEBUG] Starting new HTTPS connection (20): www.z2u.com:443
+2026-03-27 08:29:41,693 [DEBUG] Incremented Retry for (url='/minecraft/accounts-5-44'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:43,707 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/accounts-5-44
+2026-03-27 08:29:43,712 [DEBUG] Starting new HTTPS connection (21): www.z2u.com:443
+2026-03-27 08:29:43,718 [WARNING]   Attempt 1/3 failed for https://www.z2u.com/minecraft/accounts-5-44: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /minecraft/accounts-5-44 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:29:45,636 [DEBUG] Starting new HTTPS connection (22): www.z2u.com:443
+2026-03-27 08:29:45,643 [DEBUG] Incremented Retry for (url='/minecraft/accounts-5-44'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:29:45,644 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/accounts-5-44
+2026-03-27 08:29:45,645 [DEBUG] Starting new HTTPS connection (23): www.z2u.com:443
+2026-03-27 08:29:45,648 [DEBUG] Incremented Retry for (url='/minecraft/accounts-5-44'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:15,025 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/accounts-5-44
+2026-03-27 08:31:15,028 [DEBUG] Starting new HTTPS connection (24): www.z2u.com:443
+2026-03-27 08:31:15,034 [WARNING]   Attempt 2/3 failed for https://www.z2u.com/minecraft/accounts-5-44: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /minecraft/accounts-5-44 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:31:17,765 [DEBUG] Starting new HTTPS connection (25): www.z2u.com:443
+2026-03-27 08:31:17,772 [DEBUG] Incremented Retry for (url='/minecraft/accounts-5-44'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:17,773 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/accounts-5-44
+2026-03-27 08:31:17,774 [DEBUG] Starting new HTTPS connection (26): www.z2u.com:443
+2026-03-27 08:31:17,777 [DEBUG] Incremented Retry for (url='/minecraft/accounts-5-44'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:19,791 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /minecraft/accounts-5-44
+2026-03-27 08:31:19,797 [DEBUG] Starting new HTTPS connection (27): www.z2u.com:443
+2026-03-27 08:31:19,803 [WARNING]   Attempt 3/3 failed for https://www.z2u.com/minecraft/accounts-5-44: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /minecraft/accounts-5-44 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:31:21,359 [ERROR]   All 3 attempts failed for https://www.z2u.com/minecraft/accounts-5-44
+2026-03-27 08:31:24,759 [INFO]   [eBay] Scraping Minecraft — https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:24,762 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:24,765 [DEBUG] Starting new HTTPS connection (19): www.ebay.com:443
+2026-03-27 08:31:24,770 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:24,771 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:24,772 [DEBUG] Starting new HTTPS connection (20): www.ebay.com:443
+2026-03-27 08:31:24,775 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:26,786 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:26,790 [DEBUG] Starting new HTTPS connection (21): www.ebay.com:443
+2026-03-27 08:31:26,796 [WARNING]   Attempt 1/3 failed for https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:31:29,343 [DEBUG] Starting new HTTPS connection (22): www.ebay.com:443
+2026-03-27 08:31:29,349 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:29,351 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:29,352 [DEBUG] Starting new HTTPS connection (23): www.ebay.com:443
+2026-03-27 08:31:29,355 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:31,359 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:31,361 [DEBUG] Starting new HTTPS connection (24): www.ebay.com:443
+2026-03-27 08:31:31,369 [WARNING]   Attempt 2/3 failed for https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:31:34,536 [DEBUG] Starting new HTTPS connection (25): www.ebay.com:443
+2026-03-27 08:31:34,542 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:34,544 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:34,545 [DEBUG] Starting new HTTPS connection (26): www.ebay.com:443
+2026-03-27 08:31:34,548 [DEBUG] Incremented Retry for (url='/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:36,562 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:36,564 [DEBUG] Starting new HTTPS connection (27): www.ebay.com:443
+2026-03-27 08:31:36,569 [WARNING]   Attempt 3/3 failed for https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:31:38,951 [ERROR]   All 3 attempts failed for https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-03-27 08:31:38,954 [INFO]     eBay Minecraft: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-03-27 08:31:43,623 [INFO] 
+========================================
+2026-03-27 08:31:43,624 [INFO] Scraping: Steam
+2026-03-27 08:31:43,625 [INFO] ========================================
+2026-03-27 08:31:43,625 [INFO]   [Eldorado.gg] Scraping Steam — https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-27 08:31:43,625 [INFO]     Page 1: https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-27 08:31:43,627 [DEBUG] Starting new HTTPS connection (28): www.eldorado.gg:443
+2026-03-27 08:31:43,631 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:43,632 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-accounts/a/42-0-0
+2026-03-27 08:31:43,633 [DEBUG] Starting new HTTPS connection (29): www.eldorado.gg:443
+2026-03-27 08:31:43,635 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:31:45,642 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-accounts/a/42-0-0
+2026-03-27 08:31:45,645 [DEBUG] Starting new HTTPS connection (30): www.eldorado.gg:443
+2026-03-27 08:31:45,651 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /steam-accounts/a/42-0-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:32:14,333 [DEBUG] Starting new HTTPS connection (31): www.eldorado.gg:443
+2026-03-27 08:32:14,339 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:14,341 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-accounts/a/42-0-0
+2026-03-27 08:32:14,342 [DEBUG] Starting new HTTPS connection (32): www.eldorado.gg:443
+2026-03-27 08:32:14,346 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:16,350 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-accounts/a/42-0-0
+2026-03-27 08:32:16,353 [DEBUG] Starting new HTTPS connection (33): www.eldorado.gg:443
+2026-03-27 08:32:16,359 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /steam-accounts/a/42-0-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:32:18,864 [DEBUG] Starting new HTTPS connection (34): www.eldorado.gg:443
+2026-03-27 08:32:18,870 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:18,872 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-accounts/a/42-0-0
+2026-03-27 08:32:18,873 [DEBUG] Starting new HTTPS connection (35): www.eldorado.gg:443
+2026-03-27 08:32:18,877 [DEBUG] Incremented Retry for (url='/steam-accounts/a/42-0-0'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:20,888 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-accounts/a/42-0-0
+2026-03-27 08:32:20,891 [DEBUG] Starting new HTTPS connection (36): www.eldorado.gg:443
+2026-03-27 08:32:20,898 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/steam-accounts/a/42-0-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /steam-accounts/a/42-0-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:32:23,571 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-03-27 08:32:26,000 [INFO]   [U7Buy] Scraping Steam — https://www.u7buy.com/steam/steam-accounts
+2026-03-27 08:32:26,002 [DEBUG] Starting new HTTPS connection (37): www.u7buy.com:443
+2026-03-27 08:32:26,006 [DEBUG] Incremented Retry for (url='/api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:26,007 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50
+2026-03-27 08:32:26,008 [DEBUG] Starting new HTTPS connection (38): www.u7buy.com:443
+2026-03-27 08:32:26,012 [DEBUG] Incremented Retry for (url='/api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:28,019 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50
+2026-03-27 08:32:28,022 [DEBUG] Starting new HTTPS connection (39): www.u7buy.com:443
+2026-03-27 08:32:28,027 [DEBUG]     API scrape error: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:32:28,028 [INFO]     Page 1: https://www.u7buy.com/steam/steam-accounts
+2026-03-27 08:32:28,030 [DEBUG] Starting new HTTPS connection (40): www.u7buy.com:443
+2026-03-27 08:32:28,033 [DEBUG] Incremented Retry for (url='/steam/steam-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:28,034 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam/steam-accounts
+2026-03-27 08:32:28,035 [DEBUG] Starting new HTTPS connection (41): www.u7buy.com:443
+2026-03-27 08:32:28,038 [DEBUG] Incremented Retry for (url='/steam/steam-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:30,051 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam/steam-accounts
+2026-03-27 08:32:30,056 [DEBUG] Starting new HTTPS connection (42): www.u7buy.com:443
+2026-03-27 08:32:30,062 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/steam/steam-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /steam/steam-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:32:31,887 [DEBUG] Starting new HTTPS connection (43): www.u7buy.com:443
+2026-03-27 08:32:31,893 [DEBUG] Incremented Retry for (url='/steam/steam-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:31,894 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam/steam-accounts
+2026-03-27 08:32:31,895 [DEBUG] Starting new HTTPS connection (44): www.u7buy.com:443
+2026-03-27 08:32:31,898 [DEBUG] Incremented Retry for (url='/steam/steam-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:33,911 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam/steam-accounts
+2026-03-27 08:32:33,913 [DEBUG] Starting new HTTPS connection (45): www.u7buy.com:443
+2026-03-27 08:32:33,919 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/steam/steam-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /steam/steam-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:32:36,909 [DEBUG] Starting new HTTPS connection (46): www.u7buy.com:443
+2026-03-27 08:32:36,915 [DEBUG] Incremented Retry for (url='/steam/steam-accounts'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:36,916 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam/steam-accounts
+2026-03-27 08:32:36,917 [DEBUG] Starting new HTTPS connection (47): www.u7buy.com:443
+2026-03-27 08:32:36,920 [DEBUG] Incremented Retry for (url='/steam/steam-accounts'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:38,931 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam/steam-accounts
+2026-03-27 08:32:38,934 [DEBUG] Starting new HTTPS connection (48): www.u7buy.com:443
+2026-03-27 08:32:38,939 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/steam/steam-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /steam/steam-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:32:40,572 [ERROR]   All 3 attempts failed for https://www.u7buy.com/steam/steam-accounts
+2026-03-27 08:32:42,240 [INFO]   [PlayerAuctions] Scraping Steam — https://www.playerauctions.com/steam-account/
+2026-03-27 08:32:42,241 [INFO]     Page 1: https://www.playerauctions.com/steam-account/
+2026-03-27 08:32:42,244 [DEBUG] Starting new HTTPS connection (28): www.playerauctions.com:443
+2026-03-27 08:32:42,249 [DEBUG] Incremented Retry for (url='/steam-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:42,250 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-account/
+2026-03-27 08:32:42,251 [DEBUG] Starting new HTTPS connection (29): www.playerauctions.com:443
+2026-03-27 08:32:42,255 [DEBUG] Incremented Retry for (url='/steam-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:32:44,263 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-account/
+2026-03-27 08:32:44,264 [DEBUG] Starting new HTTPS connection (30): www.playerauctions.com:443
+2026-03-27 08:32:44,268 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/steam-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /steam-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:35:24,391 [DEBUG] Starting new HTTPS connection (31): www.playerauctions.com:443
+2026-03-27 08:35:24,398 [DEBUG] Incremented Retry for (url='/steam-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:35:24,400 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-account/
+2026-03-27 08:35:24,401 [DEBUG] Starting new HTTPS connection (32): www.playerauctions.com:443
+2026-03-27 08:35:24,404 [DEBUG] Incremented Retry for (url='/steam-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:35:26,418 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-account/
+2026-03-27 08:35:26,421 [DEBUG] Starting new HTTPS connection (33): www.playerauctions.com:443
+2026-03-27 08:35:26,427 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/steam-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /steam-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-03-27 08:35:28,219 [DEBUG] Starting new HTTPS connection (34): www.playerauctions.com:443
+2026-03-27 08:35:28,226 [DEBUG] Incremented Retry for (url='/steam-account/'): Retry(total=1, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:35:28,227 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-account/
+2026-03-27 08:35:28,228 [DEBUG] Starting new HTTPS connection (35): www.playerauctions.com:443
+2026-03-27 08:35:28,231 [DEBUG] Incremented Retry for (url='/steam-account/'): Retry(total=0, connect=None, read=None, redirect=5, status=None)
+2026-03-27 08:35:30,239 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /steam-account/
+2026-03-27 08:35:30,242 [DEBUG] Starting new HTTPS connection (36): www.playerauctions.com:443
+2026-03-27 08:35:30,248 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/steam-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /steam-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
