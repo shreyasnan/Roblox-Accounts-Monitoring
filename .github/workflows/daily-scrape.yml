@@ -33,13 +33,15 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install beautifulsoup4 lxml requests
+        run: |
+          pip install playwright beautifulsoup4 lxml requests
+          playwright install chromium --with-deps
 
       - name: Migrate history to SQLite (first run only)
         run: python migrate_to_sqlite.py
 
       - name: Run scraper
-        run: python scrape_listings.py --verbose --fast
+        run: python scrape_listings.py --verbose
 
       - name: Generate price trends
         run: python generate_trends.py
