@@ -1,0 +1,34 @@
+{
+  "bot_token": "",
+  "servers": [
+    {
+      "name": "Example Server",
+      "guild_id": "000000000000000000",
+      "channels": [
+        {
+          "channel_id": "000000000000000000",
+          "name": "#selling",
+          "type": "selling"
+        }
+      ],
+      "enabled": false
+    }
+  ],
+  "scrape_settings": {
+    "max_messages_per_channel": 200,
+    "max_age_hours": 72,
+    "platforms_to_match": ["Roblox"],
+    "search_keywords": [
+      "selling", "wts", "for sale", "account", "acc",
+      "stacked", "og", "age verified", "full access",
+      "robux", "limiteds", "headless", "korblox",
+      "voice chat", "blox fruit"
+    ],
+    "price_patterns": [
+      "\\$\\d+",
+      "\\d+\\s*(?:usd|USD)",
+      "(?:price|asking)\\s*:?\\s*\\$?\\d+"
+    ]
+  },
+  "_instructions": "HOW TO SET UP: 1) Create a Discord bot at https://discord.com/developers/applications  2) Enable MESSAGE_CONTENT intent under Bot settings  3) Invite bot to target servers with 'Read Message History' permission  4) Paste your bot token above  5) Add server/channel IDs (right-click > Copy ID with Developer Mode on)  6) Set 'enabled' to true for each server you want to scrape"
+}
