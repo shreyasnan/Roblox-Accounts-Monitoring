@@ -53,19 +53,18 @@ function updateLastUpdated() {
   const dateStr = dashboardData.metadata.scrape_date || dashboardData.metadata.generated_at;
   const fullTimestamp = dashboardData.metadata.generated_at || '';
   if (dateStr) {
-    // Parse YYYY-MM-DD without timezone shift by splitting manually
-    const parts = dateStr.substring(0, 10).split('-');
-    const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
-    const formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    // Extract time from generated_at (e.g. "2026-03-27T02:03:58.559330")
+    // Parse the UTC timestamp and display in the viewer's local timezone
+    let formatted = '';
     let timeStr = '';
     if (fullTimestamp && fullTimestamp.includes('T')) {
-      const timeParts = fullTimestamp.split('T')[1].substring(0, 5); // "HH:MM"
-      const hours = parseInt(timeParts.split(':')[0]);
-      const mins = timeParts.split(':')[1];
-      const ampm = hours >= 12 ? 'PM' : 'AM';
-      const h12 = hours % 12 || 12;
-      timeStr = ' at ' + h12 + ':' + mins + ' ' + ampm + ' UTC';
+      // Treat generated_at as UTC
+      const d = new Date(fullTimestamp.endsWith('Z') ? fullTimestamp : fullTimestamp + 'Z');
+      formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      timeStr = ' at ' + d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    } else {
+      const parts = dateStr.substring(0, 10).split('-');
+      const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+      formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }
     el.textContent = 'Last Updated: ' + formatted + timeStr;
   }
