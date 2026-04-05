@@ -6943,3 +6943,133 @@ fatal: empty ident name (for <runner@runnervm727z3.t44aakfgbf0ebggs33ekaeudia.bx
 2026-04-03 08:50:58,663 [INFO]   OG / Veteran Account: 109 listings
 2026-04-03 08:50:58,663 [INFO]   Items / Currency: 296 listings
 2026-04-03 08:50:58,663 [INFO]   Age Verified: 3 listings
+2026-04-05 01:25:42,651 [INFO] ============================================================
+2026-04-05 01:25:42,652 [INFO] Scraper started at 2026-04-05T01:25:42.652290
+2026-04-05 01:25:42,652 [INFO] Games: Roblox
+2026-04-05 01:25:42,653 [INFO] Max pages per source: 2
+2026-04-05 01:25:42,653 [INFO] Fast mode: ON
+2026-04-05 01:25:42,653 [INFO] ============================================================
+2026-04-05 01:25:42,654 [INFO] Fast mode: using requests + BeautifulSoup (Playwright skipped).
+2026-04-05 01:25:42,654 [INFO] 
+========================================
+2026-04-05 01:25:42,654 [INFO] Scraping: Roblox
+2026-04-05 01:25:42,654 [INFO] ========================================
+2026-04-05 01:25:42,654 [INFO]   [Eldorado.gg] Scraping Roblox — https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:42,655 [INFO]     Page 1: https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:42,658 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:44,666 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:44,673 [WARNING]   Attempt 1/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:25:45,951 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:47,962 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:47,967 [WARNING]   Attempt 2/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:25:48,843 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:50,850 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:50,857 [WARNING]   Attempt 3/3 failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0: HTTPSConnectionPool(host='www.eldorado.gg', port=443): Max retries exceeded with url: /roblox-accounts-for-sale/a/70-1-0 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:25:51,534 [ERROR]   All 3 attempts failed for https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-04-05 01:25:52,633 [INFO]   [U7Buy] Scraping Roblox — https://www.u7buy.com/roblox/roblox-accounts
+2026-04-05 01:25:52,640 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50
+2026-04-05 01:25:54,647 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50
+2026-04-05 01:25:54,653 [INFO]     Page 1: https://www.u7buy.com/roblox/roblox-accounts
+2026-04-05 01:25:54,657 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-04-05 01:25:56,664 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-04-05 01:25:56,670 [WARNING]   Attempt 1/3 failed for https://www.u7buy.com/roblox/roblox-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /roblox/roblox-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:25:57,593 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-04-05 01:25:59,603 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-04-05 01:25:59,608 [WARNING]   Attempt 2/3 failed for https://www.u7buy.com/roblox/roblox-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /roblox/roblox-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:00,562 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-04-05 01:26:02,570 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/roblox-accounts
+2026-04-05 01:26:02,577 [WARNING]   Attempt 3/3 failed for https://www.u7buy.com/roblox/roblox-accounts: HTTPSConnectionPool(host='www.u7buy.com', port=443): Max retries exceeded with url: /roblox/roblox-accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:03,662 [ERROR]   All 3 attempts failed for https://www.u7buy.com/roblox/roblox-accounts
+2026-04-05 01:26:05,091 [INFO]   [PlayerAuctions] Scraping Roblox — https://www.playerauctions.com/roblox-account/
+2026-04-05 01:26:05,093 [INFO]     Page 1: https://www.playerauctions.com/roblox-account/
+2026-04-05 01:26:05,100 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-04-05 01:26:07,110 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-04-05 01:26:07,116 [WARNING]   Attempt 1/3 failed for https://www.playerauctions.com/roblox-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /roblox-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:07,666 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-04-05 01:26:09,675 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-04-05 01:26:09,683 [WARNING]   Attempt 2/3 failed for https://www.playerauctions.com/roblox-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /roblox-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:10,674 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-04-05 01:26:12,681 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox-account/
+2026-04-05 01:26:12,686 [WARNING]   Attempt 3/3 failed for https://www.playerauctions.com/roblox-account/: HTTPSConnectionPool(host='www.playerauctions.com', port=443): Max retries exceeded with url: /roblox-account/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:13,321 [ERROR]   All 3 attempts failed for https://www.playerauctions.com/roblox-account/
+2026-04-05 01:26:14,448 [INFO]   [Z2U] Scraping Roblox — https://www.z2u.com/rbl/accounts-5-2941
+2026-04-05 01:26:14,451 [INFO]     Page 1: https://www.z2u.com/rbl/accounts-5-2941
+2026-04-05 01:26:14,457 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-04-05 01:26:16,467 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-04-05 01:26:16,476 [WARNING]   Attempt 1/3 failed for https://www.z2u.com/rbl/accounts-5-2941: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /rbl/accounts-5-2941 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:17,315 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-04-05 01:26:19,325 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-04-05 01:26:19,331 [WARNING]   Attempt 2/3 failed for https://www.z2u.com/rbl/accounts-5-2941: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /rbl/accounts-5-2941 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:20,746 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-04-05 01:26:22,758 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /rbl/accounts-5-2941
+2026-04-05 01:26:22,762 [WARNING]   Attempt 3/3 failed for https://www.z2u.com/rbl/accounts-5-2941: HTTPSConnectionPool(host='www.z2u.com', port=443): Max retries exceeded with url: /rbl/accounts-5-2941 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:23,891 [ERROR]   All 3 attempts failed for https://www.z2u.com/rbl/accounts-5-2941
+2026-04-05 01:26:25,353 [INFO]   [eBay] Scraping Roblox — https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:25,356 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:25,364 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:27,375 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:27,384 [WARNING]   Attempt 1/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:28,742 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:30,753 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:30,758 [WARNING]   Attempt 2/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:32,219 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:34,229 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:34,233 [WARNING]   Attempt 3/3 failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:35,096 [ERROR]   All 3 attempts failed for https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-05 01:26:35,098 [INFO]     eBay Roblox: 0 relevant listings scraped (raw site total: 0, estimated relevant: 0)
+2026-04-05 01:26:36,755 [INFO]   [G2G] Scraping Roblox — https://www.g2g.com/categories/rbl-account
+2026-04-05 01:26:36,757 [INFO]     Page 1: https://www.g2g.com/categories/rbl-account
+2026-04-05 01:26:36,764 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /categories/rbl-account
+2026-04-05 01:26:38,777 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /categories/rbl-account
+2026-04-05 01:26:38,785 [WARNING]   Attempt 1/3 failed for https://www.g2g.com/categories/rbl-account: HTTPSConnectionPool(host='www.g2g.com', port=443): Max retries exceeded with url: /categories/rbl-account (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:39,983 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /categories/rbl-account
+2026-04-05 01:26:41,994 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /categories/rbl-account
+2026-04-05 01:26:41,999 [WARNING]   Attempt 2/3 failed for https://www.g2g.com/categories/rbl-account: HTTPSConnectionPool(host='www.g2g.com', port=443): Max retries exceeded with url: /categories/rbl-account (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:42,892 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /categories/rbl-account
+2026-04-05 01:26:44,904 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /categories/rbl-account
+2026-04-05 01:26:44,910 [WARNING]   Attempt 3/3 failed for https://www.g2g.com/categories/rbl-account: HTTPSConnectionPool(host='www.g2g.com', port=443): Max retries exceeded with url: /categories/rbl-account (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:45,497 [ERROR]   All 3 attempts failed for https://www.g2g.com/categories/rbl-account
+2026-04-05 01:26:46,643 [INFO]   [PlayHub] Scraping Roblox — https://playhub.com/roblox/accounts
+2026-04-05 01:26:46,644 [INFO]     Page 1: https://playhub.com/roblox/accounts
+2026-04-05 01:26:46,650 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/accounts
+2026-04-05 01:26:48,656 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/accounts
+2026-04-05 01:26:48,662 [WARNING]   Attempt 1/3 failed for https://playhub.com/roblox/accounts: HTTPSConnectionPool(host='playhub.com', port=443): Max retries exceeded with url: /roblox/accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:49,564 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/accounts
+2026-04-05 01:26:51,575 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/accounts
+2026-04-05 01:26:51,584 [WARNING]   Attempt 2/3 failed for https://playhub.com/roblox/accounts: HTTPSConnectionPool(host='playhub.com', port=443): Max retries exceeded with url: /roblox/accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:52,147 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/accounts
+2026-04-05 01:26:54,159 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /roblox/accounts
+2026-04-05 01:26:54,166 [WARNING]   Attempt 3/3 failed for https://playhub.com/roblox/accounts: HTTPSConnectionPool(host='playhub.com', port=443): Max retries exceeded with url: /roblox/accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:55,485 [ERROR]   All 3 attempts failed for https://playhub.com/roblox/accounts
+2026-04-05 01:26:56,678 [INFO]   [ZeusX] Scraping Roblox — https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:26:56,679 [INFO]     Page 1: https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:26:56,688 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:26:58,701 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:26:58,713 [WARNING]   Attempt 1/3 failed for https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts: HTTPSConnectionPool(host='zeusx.com', port=443): Max retries exceeded with url: /game/roblox-in-game-items-for-sale/23/accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:26:59,324 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:27:01,337 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:27:01,345 [WARNING]   Attempt 2/3 failed for https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts: HTTPSConnectionPool(host='zeusx.com', port=443): Max retries exceeded with url: /game/roblox-in-game-items-for-sale/23/accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:27:02,332 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:27:04,340 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=5, status=None)) after connection broken by 'OSError('Tunnel connection failed: 403 Forbidden')': /game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:27:04,343 [WARNING]   Attempt 3/3 failed for https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts: HTTPSConnectionPool(host='zeusx.com', port=443): Max retries exceeded with url: /game/roblox-in-game-items-for-sale/23/accounts (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))
+2026-04-05 01:27:04,848 [ERROR]   All 3 attempts failed for https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts
+2026-04-05 01:27:05,434 [INFO] Saved to SQLite database (run_id=10)
+2026-04-05 01:27:05,440 [ERROR] Git push failed: fatal: Unable to create '/sessions/exciting-magical-davinci/mnt/Roblox Accounts Monitoring/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+2026-04-05 01:27:05,440 [INFO] 
+============================================================
+2026-04-05 01:27:05,440 [INFO] SCRAPE COMPLETE
+2026-04-05 01:27:05,440 [INFO] ============================================================
+2026-04-05 01:27:05,441 [INFO] Total listings found:   0
+2026-04-05 01:27:05,441 [INFO] Total listings scraped: 0
+2026-04-05 01:27:05,441 [INFO] Output: /sessions/exciting-magical-davinci/mnt/Roblox Accounts Monitoring/dashboard_data.json
+2026-04-05 01:27:05,441 [INFO] Backup: /sessions/exciting-magical-davinci/mnt/Roblox Accounts Monitoring/scrape_history/dashboard_data_20260405_012705.json
+2026-04-05 01:27:05,441 [INFO] 
+2026-04-05 01:27:05,441 [INFO]   Roblox: 0 total | avg $0
+2026-04-05 01:27:05,442 [INFO] 

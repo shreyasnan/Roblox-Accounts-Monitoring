@@ -120,6 +120,18 @@ Z2U_URLS = {
     "Steam":     "https://www.z2u.com/steam/accounts-5-3271",
 }
 
+G2G_URLS = {
+    "Roblox": "https://www.g2g.com/categories/rbl-account",
+}
+
+PLAYHUB_URLS = {
+    "Roblox": "https://playhub.com/roblox/accounts",
+}
+
+ZEUSX_URLS = {
+    "Roblox": "https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts",
+}
+
 # ---------------------------------------------------------------------------
 # Logging
 # ---------------------------------------------------------------------------
@@ -1393,6 +1405,406 @@ class Z2UScraper:
 
 
 # ============================================================================
+# G2G SCRAPER
+# ============================================================================
+class G2GScraper:
+    """
+    Scrapes G2G.com listing pages.
+    G2G renders offer cards with seller info and pricing.
+    """
+
+    NAME = "G2G"
+
+    LISTING_CARD = "div.full-height.column.g-card-no-deco, [class*='OfferCard'], [class*='offer-card'], div[class*='product-card']"
+    TITLE_SEL = "a[href*='/offer/'], [class*='title'], h3, h4"
+    PRICE_SEL = "span.price, [class*='price'], [class*='Price']"
+    SELLER_SEL = "[class*='seller'], [class*='Seller'], .seller-name"
+    NEXT_PAGE = "a[class*='next'], button[class*='next'], [aria-label='Next']"
+
+    MAX_G2G_PAGES = 5
+
+    def __init__(self, browser: BrowserManager, max_pages: int = 0):
+        self.browser = browser
+        self.max_pages = max_pages
+
+    def scrape_game(self, game: str) -> dict:
+        base_url = G2G_URLS.get(game)
+        if not base_url:
+            return {"total_on_site": 0, "search_url": "", "listings": []}
+
+        log.info(f"  [{self.NAME}] Scraping {game} — {base_url}")
+        all_listings = []
+        total_on_site = 0
+        page_num = 1
+
+        while True:
+            url = f"{base_url}?page={page_num}" if page_num > 1 else base_url
+            log.info(f"    Page {page_num}: {url}")
+
+            html = self.browser.get_page_html(url, wait_selector=self.LISTING_CARD, scroll=True)
+            if not html:
+                break
+
+            soup = BeautifulSoup(html, "lxml")
+
+            if page_num == 1:
+                total_on_site = self._extract_total(soup)
+
+            listings = self._parse_listings(soup, game, url)
+            if not listings:
+                log.info(f"    No listings found on page {page_num}, stopping.")
+                break
+
+            all_listings.extend(listings)
+            log.info(f"    Found {len(listings)} listings (total so far: {len(all_listings)})")
+
+            if self.max_pages and page_num >= self.max_pages:
+                break
+            if page_num >= self.MAX_G2G_PAGES:
+                break
+
+            page_num += 1
+            polite_delay()
+
+        return {
+            "total_on_site": total_on_site or len(all_listings),
+            "search_url": base_url,
+            "listings": all_listings,
+        }
+
+    def _extract_total(self, soup):
+        """Try to find total listing count on G2G."""
+        for el in soup.select("[class*='total'], [class*='count'], [class*='result']"):
+            text = safe_text(el)
+            m = re.search(r"([\d,]+)\s*(?:offer|listing|result|item)", text, re.I)
+            if m:
+                return int(m.group(1).replace(",", ""))
+        return 0
+
+    def _parse_listings(self, soup, game, page_url):
+        listings = []
+        cards = soup.select(self.LISTING_CARD)
+        if not cards:
+            # Fallback: look for offer links
+            cards = soup.find_all("a", href=re.compile(r"/offer/"))
+            cards = [c.parent for c in cards if c.parent]
+
+        for card in cards:
+            try:
+                title_el = card.select_one(self.TITLE_SEL) or card.find("a", href=re.compile(r"/offer/"))
+                title = safe_text(title_el, "").strip()
+                if not title or len(title) < 3:
+                    continue
+
+                price_el = card.select_one(self.PRICE_SEL)
+                price = parse_price(safe_text(price_el))
+
+                url = ""
+                link = card.find("a", href=re.compile(r"/offer/"))
+                if link and link.get("href"):
+                    href = link["href"]
+                    url = href if href.startswith("http") else f"https://www.g2g.com{href}"
+
+                # Extract seller from card text
+                card_text = safe_text(card)
+                seller = self._extract_seller(card_text)
+
+                listings.append({
+                    "title": title,
+                    "price": price,
+                    "seller": seller,
+                    "rating": "",
+                    "delivery": "Instant",
+                    "url": url,
+                })
+            except Exception as e:
+                log.debug(f"    G2G card parse error: {e}")
+                continue
+
+        return listings
+
+    def _extract_seller(self, text):
+        """Extract seller from G2G card text (pattern: 'SellerName\\nLevel NNN')."""
+        lines = [l.strip() for l in text.split("\n") if l.strip()]
+        for i, line in enumerate(lines):
+            if "Level" in line and i > 0:
+                return lines[i - 1] if lines[i - 1] else line
+            if re.match(r"Level\s+\d+", line) and i > 0:
+                return lines[i - 1]
+        return ""
+
+
+# ============================================================================
+# PLAYHUB SCRAPER
+# ============================================================================
+class PlayHubScraper:
+    """
+    Scrapes PlayHub.com listing pages.
+    PlayHub uses product/listing cards with seller info.
+    """
+
+    NAME = "PlayHub"
+
+    LISTING_CARD = "div[class*='product'], div[class*='listing'], div[class*='card'], div[class*='offer']"
+    NEXT_PAGE = "a[class*='next'], button[class*='next']"
+
+    MAX_PLAYHUB_PAGES = 5
+
+    def __init__(self, browser: BrowserManager, max_pages: int = 0):
+        self.browser = browser
+        self.max_pages = max_pages
+
+    def scrape_game(self, game: str) -> dict:
+        base_url = PLAYHUB_URLS.get(game)
+        if not base_url:
+            return {"total_on_site": 0, "search_url": "", "listings": []}
+
+        log.info(f"  [{self.NAME}] Scraping {game} — {base_url}")
+        all_listings = []
+        total_on_site = 0
+        page_num = 1
+
+        while True:
+            url = f"{base_url}?page={page_num}" if page_num > 1 else base_url
+            log.info(f"    Page {page_num}: {url}")
+
+            html = self.browser.get_page_html(url, wait_selector=self.LISTING_CARD, scroll=True)
+            if not html:
+                break
+
+            soup = BeautifulSoup(html, "lxml")
+
+            if page_num == 1:
+                total_on_site = self._extract_total(soup)
+
+            listings = self._parse_listings(soup, game, url)
+            if not listings:
+                log.info(f"    No listings found on page {page_num}, stopping.")
+                break
+
+            all_listings.extend(listings)
+            log.info(f"    Found {len(listings)} listings (total so far: {len(all_listings)})")
+
+            if self.max_pages and page_num >= self.max_pages:
+                break
+            if page_num >= self.MAX_PLAYHUB_PAGES:
+                break
+
+            page_num += 1
+            polite_delay()
+
+        return {
+            "total_on_site": total_on_site or len(all_listings),
+            "search_url": base_url,
+            "listings": all_listings,
+        }
+
+    def _extract_total(self, soup):
+        for el in soup.select("[class*='total'], [class*='count'], [class*='result']"):
+            text = safe_text(el)
+            m = re.search(r"([\d,]+)\s*(?:offer|listing|result|item)", text, re.I)
+            if m:
+                return int(m.group(1).replace(",", ""))
+        return 0
+
+    def _parse_listings(self, soup, game, page_url):
+        listings = []
+        cards = soup.select(self.LISTING_CARD)
+
+        for card in cards:
+            try:
+                card_text = safe_text(card)
+                lines = [l.strip() for l in card_text.split("\n") if l.strip()]
+                if len(lines) < 3:
+                    continue
+
+                title = self._extract_title(lines)
+                if not title or len(title) < 3:
+                    continue
+
+                price = self._extract_price(card_text)
+                seller = self._extract_seller(lines)
+                rating = self._extract_rating(lines)
+
+                url = ""
+                link = card.find("a", href=True)
+                if link:
+                    href = link["href"]
+                    url = href if href.startswith("http") else f"https://playhub.com{href}"
+
+                listings.append({
+                    "title": title,
+                    "price": price,
+                    "seller": seller,
+                    "rating": rating,
+                    "delivery": "Auto",
+                    "url": url,
+                })
+            except Exception as e:
+                log.debug(f"    PlayHub card parse error: {e}")
+                continue
+
+        return listings
+
+    def _extract_title(self, lines):
+        for line in lines:
+            if len(line) > 20 and "$" not in line and "(" not in line:
+                return line
+        return " | ".join(lines[:2]) if len(lines) > 1 else (lines[0] if lines else "")
+
+    def _extract_price(self, text):
+        match = re.search(r"\$[\d.,]+", text)
+        return parse_price(match.group()) if match else 0.0
+
+    def _extract_seller(self, lines):
+        for line in lines[:3]:
+            if line and not line.startswith("$") and "(" not in line and len(line) < 30:
+                return line
+        return ""
+
+    def _extract_rating(self, lines):
+        for line in lines:
+            if "(" in line and ")" in line:
+                return line
+        return ""
+
+
+# ============================================================================
+# ZEUSX SCRAPER
+# ============================================================================
+class ZeusXScraper:
+    """
+    Scrapes ZeusX.com listing pages.
+    ZeusX uses product cards with title, price, seller, and rating.
+    """
+
+    NAME = "ZeusX"
+
+    LISTING_CARD = "div[class*='product'], div[class*='listing'], div[class*='card'], div[class*='offer']"
+    NEXT_PAGE = "a[class*='next'], button[class*='next']"
+
+    MAX_ZEUSX_PAGES = 5
+
+    def __init__(self, browser: BrowserManager, max_pages: int = 0):
+        self.browser = browser
+        self.max_pages = max_pages
+
+    def scrape_game(self, game: str) -> dict:
+        base_url = ZEUSX_URLS.get(game)
+        if not base_url:
+            return {"total_on_site": 0, "search_url": "", "listings": []}
+
+        log.info(f"  [{self.NAME}] Scraping {game} — {base_url}")
+        all_listings = []
+        total_on_site = 0
+        page_num = 1
+
+        while True:
+            url = f"{base_url}?page={page_num}" if page_num > 1 else base_url
+            log.info(f"    Page {page_num}: {url}")
+
+            html = self.browser.get_page_html(url, wait_selector=self.LISTING_CARD, scroll=True)
+            if not html:
+                break
+
+            soup = BeautifulSoup(html, "lxml")
+
+            if page_num == 1:
+                total_on_site = self._extract_total(soup)
+
+            listings = self._parse_listings(soup, game, url)
+            if not listings:
+                log.info(f"    No listings found on page {page_num}, stopping.")
+                break
+
+            all_listings.extend(listings)
+            log.info(f"    Found {len(listings)} listings (total so far: {len(all_listings)})")
+
+            if self.max_pages and page_num >= self.max_pages:
+                break
+            if page_num >= self.MAX_ZEUSX_PAGES:
+                break
+
+            page_num += 1
+            polite_delay()
+
+        return {
+            "total_on_site": total_on_site or len(all_listings),
+            "search_url": base_url,
+            "listings": all_listings,
+        }
+
+    def _extract_total(self, soup):
+        for el in soup.select("[class*='total'], [class*='count'], [class*='result']"):
+            text = safe_text(el)
+            m = re.search(r"([\d,]+)\s*(?:offer|listing|result|item)", text, re.I)
+            if m:
+                return int(m.group(1).replace(",", ""))
+        return 0
+
+    def _parse_listings(self, soup, game, page_url):
+        listings = []
+        cards = soup.select(self.LISTING_CARD)
+
+        for card in cards:
+            try:
+                card_text = safe_text(card)
+                lines = [l.strip() for l in card_text.split("\n") if l.strip()]
+                if len(lines) < 3:
+                    continue
+
+                title = self._extract_title(lines)
+                if not title or len(title) < 3:
+                    continue
+
+                price = self._extract_price(card_text)
+                seller = self._extract_seller(lines)
+                rating = self._extract_rating(lines)
+
+                url = ""
+                link = card.find("a", href=True)
+                if link:
+                    href = link["href"]
+                    url = href if href.startswith("http") else f"https://zeusx.com{href}"
+
+                listings.append({
+                    "title": title,
+                    "price": price,
+                    "seller": seller,
+                    "rating": rating,
+                    "delivery": "Auto",
+                    "url": url,
+                })
+            except Exception as e:
+                log.debug(f"    ZeusX card parse error: {e}")
+                continue
+
+        return listings
+
+    def _extract_title(self, lines):
+        for line in lines:
+            if len(line) > 15 and "$" not in line and "(" not in line:
+                return line
+        return " | ".join(lines[:2]) if len(lines) > 1 else (lines[0] if lines else "")
+
+    def _extract_price(self, text):
+        match = re.search(r"\$[\d.,]+", text)
+        return parse_price(match.group()) if match else 0.0
+
+    def _extract_seller(self, lines):
+        for i, line in enumerate(lines):
+            if "(" in line and ")" in line and i > 0:
+                return lines[i - 1]
+        return ""
+
+    def _extract_rating(self, lines):
+        for line in lines:
+            if "(" in line and ")" in line and re.search(r"\d+\.?\d*", line):
+                return line
+        return ""
+
+
+# ============================================================================
 # CATEGORIZATION ENGINE (same as build_real_data.py)
 # ============================================================================
 def categorize_listing(title: str, platform: str) -> list:
@@ -1535,7 +1947,7 @@ def build_dashboard_data(scraped: dict) -> dict:
     return {
         "metadata": {
             "generated_at": now.isoformat(),
-            "data_source": "Live scraping from Eldorado.gg, U7Buy, and eBay",
+            "data_source": "Live scraping from Eldorado.gg, U7Buy, PlayerAuctions, Z2U, eBay, G2G, PlayHub, ZeusX",
             "scrape_date": now.strftime("%Y-%m-%d"),
             "platforms": list(scraped.keys()),
             "sources": list(source_stats.keys()),
@@ -1617,6 +2029,9 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fas
     ebay = EbayScraper(browser, max_pages)
     playerauctions = PlayerAuctionsScraper(browser, max_pages)
     z2u = Z2UScraper(browser, max_pages)
+    g2g = G2GScraper(browser, max_pages)
+    playhub = PlayHubScraper(browser, max_pages)
+    zeusx = ZeusXScraper(browser, max_pages)
 
     scraped = {}
 
@@ -1666,6 +2081,33 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fas
             log.error(f"  eBay failed for {game}: {e}")
             scraped[game]["eBay"] = {"total_on_site": 0, "search_url": f"https://www.ebay.com/sch/i.html?_nkw={EBAY_SEARCH_TERMS.get(game, '')}", "listings": []}
         polite_delay(extra=1)  # extra delay for eBay to avoid CAPTCHA
+
+        # G2G (Roblox only for now)
+        if game in G2G_URLS:
+            try:
+                scraped[game]["G2G"] = g2g.scrape_game(game)
+            except Exception as e:
+                log.error(f"  G2G failed for {game}: {e}")
+                scraped[game]["G2G"] = {"total_on_site": 0, "search_url": G2G_URLS.get(game, ""), "listings": []}
+            polite_delay()
+
+        # PlayHub (Roblox only for now)
+        if game in PLAYHUB_URLS:
+            try:
+                scraped[game]["PlayHub"] = playhub.scrape_game(game)
+            except Exception as e:
+                log.error(f"  PlayHub failed for {game}: {e}")
+                scraped[game]["PlayHub"] = {"total_on_site": 0, "search_url": PLAYHUB_URLS.get(game, ""), "listings": []}
+            polite_delay()
+
+        # ZeusX (Roblox only for now)
+        if game in ZEUSX_URLS:
+            try:
+                scraped[game]["ZeusX"] = zeusx.scrape_game(game)
+            except Exception as e:
+                log.error(f"  ZeusX failed for {game}: {e}")
+                scraped[game]["ZeusX"] = {"total_on_site": 0, "search_url": ZEUSX_URLS.get(game, ""), "listings": []}
+            polite_delay()
 
     browser.stop()
 
