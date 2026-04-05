@@ -220,7 +220,17 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
   <div class="kpi-grid" id="kpiGrid"></div>
   <div class="chart-row">
     <div class="chart-card"><h3>Listings by Platform & Source</h3><canvas id="chartListingsByPlatformSource"></canvas></div>
-    <div class="chart-card"><h3>Category Distribution</h3><canvas id="chartCategoryDist"></canvas></div>
+    <div class="chart-card"><h3>Category Breakdown</h3><canvas id="chartCategoryBar"></canvas></div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-card" style="overflow-y:auto; max-height:380px;">
+      <h3>Top Sellers</h3>
+      <table class="data-table" id="topSellersTable" style="font-size:13px;">
+        <thead><tr><th>Seller</th><th>Listings</th><th>Avg Price</th><th>Sources</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="chart-card"><h3>Price Distribution</h3><canvas id="chartPriceDist"></canvas></div>
   </div>
 </div>
 
@@ -2240,8 +2250,6 @@ const dashboardData = {
   }
 }
 
-}
-
 // Platform colors
 const platformColors = {
   'Roblox': '#e74c3c',
@@ -2372,28 +2380,106 @@ function renderOverview() {
     }
   });
 
-  // Chart: Category Distribution
+  // Chart: Category Breakdown (horizontal bar)
   const categoryLabels = Object.keys(data.category_summary);
   const categoryData = Object.values(data.category_summary).map(c => c.count);
-  const categoryBgColors = categoryLabels.map(c => categoryColors[c]);
+  const categoryBgColors = categoryLabels.map(c => categoryColors[c] || '#8b8fa3');
 
-  const ctx2 = document.getElementById('chartCategoryDist').getContext('2d');
+  const ctx2 = document.getElementById('chartCategoryBar').getContext('2d');
   new Chart(ctx2, {
-    type: 'doughnut',
+    type: 'bar',
     data: {
       labels: categoryLabels,
       datasets: [{
         data: categoryData,
         backgroundColor: categoryBgColors,
-        borderColor: '#1a1d27',
-        borderWidth: 2
+        borderColor: categoryBgColors,
+        borderWidth: 1,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) { return ctx.raw + ' listings'; }
+          }
+        }
+      },
+      scales: {
+        x: { ticks: { color: '#8b8fa3' }, grid: { color: '#2e3347' }, beginAtZero: true },
+        y: { ticks: { color: '#e4e6f0', font: { size: 12 } }, grid: { display: false } }
+      }
+    }
+  });
+
+  // Top Sellers table
+  const sellerMap = {};
+  data.listings.forEach(l => {
+    const name = l.seller || 'Unknown';
+    if (!sellerMap[name]) sellerMap[name] = { count: 0, totalPrice: 0, sources: new Set() };
+    sellerMap[name].count++;
+    sellerMap[name].totalPrice += l.price_usd || 0;
+    sellerMap[name].sources.add(l.source);
+  });
+  const topSellers = Object.entries(sellerMap)
+    .map(([name, s]) => ({ name, count: s.count, avg: s.count > 0 ? s.totalPrice / s.count : 0, sources: [...s.sources] }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 15);
+
+  const sellerTbody = document.querySelector('#topSellersTable tbody');
+  sellerTbody.innerHTML = topSellers.map(s => `
+    <tr>
+      <td style="font-weight:500;">${s.name}</td>
+      <td>${s.count}</td>
+      <td>$${s.avg.toFixed(2)}</td>
+      <td style="color:var(--text-dim);font-size:11px;">${s.sources.join(', ')}</td>
+    </tr>
+  `).join('');
+
+  // Price Distribution histogram
+  const prices = data.listings.map(l => l.price_usd).filter(p => p > 0);
+  const buckets = [
+    { label: '$0–5', min: 0, max: 5 },
+    { label: '$5–15', min: 5, max: 15 },
+    { label: '$15–50', min: 15, max: 50 },
+    { label: '$50–100', min: 50, max: 100 },
+    { label: '$100–500', min: 100, max: 500 },
+    { label: '$500+', min: 500, max: Infinity }
+  ];
+  const bucketCounts = buckets.map(b => prices.filter(p => p >= b.min && p < b.max).length);
+
+  const ctx3 = document.getElementById('chartPriceDist').getContext('2d');
+  new Chart(ctx3, {
+    type: 'bar',
+    data: {
+      labels: buckets.map(b => b.label),
+      datasets: [{
+        data: bucketCounts,
+        backgroundColor: 'rgba(108, 92, 231, 0.7)',
+        borderColor: '#6c5ce7',
+        borderWidth: 1,
+        borderRadius: 4
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: true,
       plugins: {
-        legend: { labels: { color: '#e4e6f0', font: { size: 12 } } }
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) { return ctx.raw + ' listings'; }
+          }
+        }
+      },
+      scales: {
+        y: { ticks: { color: '#8b8fa3' }, grid: { color: '#2e3347' }, beginAtZero: true },
+        x: { ticks: { color: '#8b8fa3' }, grid: { color: '#2e3347' } }
       }
     }
   });
