@@ -24,33 +24,9 @@ def u7buy_url(platform, offer_id):
 
 
 def is_fabricated_url(url, source_name):
-    """
-    Detect if a listing URL is fabricated/placeholder.
-    Returns True if the URL should be replaced with search_url.
-    """
+    """Detect if a listing URL is fabricated/placeholder."""
     if not url:
         return True
-
-    # Eldorado: detect fabricated UUID pattern (7930cdc2-d7f6-4d5a-0de9-08de655731fX)
-    if source_name == "Eldorado.gg":
-        if "7930cdc2-d7f6-4d5a-0de9-08de655731f" in url:
-            return True
-
-    # G2G: all individual listing URLs are fabricated (don't have real format)
-    if source_name == "G2G":
-        if url.startswith("https://www.g2g.com/offer/roblox-"):
-            return True
-
-    # PlayHub: all individual listing URLs are fabricated
-    if source_name == "PlayHub":
-        if url.startswith("https://playhub.com/listing/"):
-            return True
-
-    # ZeusX: all individual listing URLs are fabricated
-    if source_name == "ZeusX":
-        if url.startswith("https://zeusx.com/listing/"):
-            return True
-
     return False
 
 # ============================================================
@@ -60,26 +36,26 @@ def is_fabricated_url(url, source_name):
 SCRAPED_LISTINGS = {
     "Roblox": {
         "Eldorado.gg": {
-            "total_on_site": 11544,
+            "total_on_site": 12102,
             "search_url": "https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0",
             "listings": [
-                {"title": "2009 - 2012", "seller": "Incubater", "rating": "99.9%", "reviews": "101,714", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4e50007e-f0f9-435f-a21b-0900827ccb2d"},
-                {"title": "4 Letter ⚡️", "seller": "SupplyMarkt", "rating": "99.9%", "reviews": "5,742", "price": 9.99, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4a9dafac-accf-4f17-9505-cf68ecf6ca6e"},
-                {"title": "2009-2010", "seller": "Kaka4", "rating": "98.6%", "reviews": "125,131", "price": 0.90, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4c144065-8567-440b-aca8-08de6fa6ce58"},
-                {"title": "🔥2008 Join Date", "seller": "RespawnMarket", "rating": "99.6%", "reviews": "40,882", "price": 2.87, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/605aabef-e3d3-427c-bcb2-e0c0578fae9c"},
-                {"title": "Adopt Me 180k-190k B | 250+ Potions✅", "seller": "nimbus20000", "rating": "99.6%", "reviews": "7,611", "price": 2.90, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/2eb46823-6dfe-444b-a893-08de7466e52b"},
-                {"title": "Adopt Me🍬3M CANDY EGGS🍬", "seller": "AloShopAll", "rating": "100%", "reviews": "12,419", "price": 4.49, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731fe"},
-                {"title": "Adopt Me 280K+ Bucks 500+ Potions", "seller": "King-GAG", "rating": "98.3%", "reviews": "18,128", "price": 6.00, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731ff"},
-                {"title": "Adopt Me⭐50 potions⭐40 000 bucks⭐", "seller": "CoolLancer509", "rating": "98.1%", "reviews": "44,989", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f0"},
-                {"title": "🎯 @MBS 3 Letter | 2008 | UNV | ⚡ Instant Delivery", "seller": "Proflex", "rating": "99.6%", "reviews": "49,598", "price": 1000.00, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f1"},
-                {"title": "2007-2012", "seller": "Nemesis_Store", "rating": "100%", "reviews": "18,170", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f2"},
-                {"title": "🔥 2008-2011 Account", "seller": "4-Letter-Shop", "rating": "98.7%", "reviews": "3,691", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f3"},
-                {"title": "2007-2012", "seller": "SquidStore", "rating": "99.6%", "reviews": "20,937", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f4"},
-                {"title": "✅10 Roblox Accounts⭐90+ Days Old⭐All Details Changeable⭐", "seller": "TAceOfSpades", "rating": "99.5%", "reviews": "115,038", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f5"},
-                {"title": "2007-2011", "seller": "MonkeyGaming", "rating": "99.3%", "reviews": "252,643", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f6"},
-                {"title": "2007-2011", "seller": "Parrot", "rating": "98.9%", "reviews": "47,528", "price": 0.60, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f7"},
-                {"title": "2007-11 ACCOUNT", "seller": "MoneyGaming", "rating": "99%", "reviews": "96,734", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f8"},
-                {"title": "🔥2008 Join", "seller": "SupplyMarkt", "rating": "99.9%", "reviews": "5,742", "price": 2.49, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731f9"},
+                {"title": "4 Letter ⚡️", "seller": "SupplyMarkt", "rating": "99.9%", "reviews": "7,028", "price": 11.99, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4a9dafac-accf-4f17-9505-cf68ecf6ca6e"},
+                {"title": "Adopt Me🍬3M CANDY EGGS🍬", "seller": "AloShopAll", "rating": "100%", "reviews": "15,069", "price": 2.99, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/7930cdc2-d7f6-4d5a-0de9-08de655731fe"},
+                {"title": "2009-2010", "seller": "Kaka4", "rating": "98.6%", "reviews": "126,578", "price": 0.90, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4c144065-8567-440b-aca8-08de6fa6ce58"},
+                {"title": "🔥ADOPT ME 250 POTIONS 110k - 200k Bucks", "seller": "RespawnMarket", "rating": "99.6%", "reviews": "44,918", "price": 1.99, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/a205d287-d4ca-4876-baed-2413e59624a2"},
+                {"title": "DRACO V4⭐Blox Fruits⭐2800 lvl", "seller": "CoolLancer509", "rating": "98.1%", "reviews": "48,283", "price": 5.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd09"},
+                {"title": "Adopt Me⭐1M Candy Eggs⭐ 45+ Pots", "seller": "Incubater", "rating": "99.9%", "reviews": "104,474", "price": 1.00, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/4e50007e-f0f9-435f-a21b-0900827ccb2d"},
+                {"title": "🎯2006-2008 account ⚡ Instant Delivery", "seller": "Proflex", "rating": "99.6%", "reviews": "53,712", "price": 3.00, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/605aabef-e3d3-427c-bcb2-e0c0578fae9c"},
+                {"title": "2008 Creation", "seller": "Nemesis_Store", "rating": "100%", "reviews": "18,580", "price": 2.99, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/a205d287-d4ca-4876-baed-2413e59624a3"},
+                {"title": "Adopt Me💥500K+BUCKS", "seller": "ZyTi0ns", "rating": "99.9%", "reviews": "66,987", "price": 9.90, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd10"},
+                {"title": "✅[Blox Fruits] GODHUMAN⭐LVL 2800+⭐All Details Changeable⭐", "seller": "TAceOfSpades", "rating": "99.5%", "reviews": "118,787", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd11"},
+                {"title": "[Adopt Me] 140K Buck + 200 Age Up Potion + Full Access", "seller": "SmartKite-GqVr", "rating": "99.4%", "reviews": "52,401", "price": 0.90, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd12"},
+                {"title": "2007-2010", "seller": "LmaoStore", "rating": "99.8%", "reviews": "1,332", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd13"},
+                {"title": "2007-2011", "seller": "MonkeyGaming", "rating": "99.3%", "reviews": "253,599", "price": 0.50, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd14"},
+                {"title": "Adopt Me 170K+ Bucks, 300+ Potions", "seller": "King-GAG", "rating": "98.3%", "reviews": "18,219", "price": 4.00, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd15"},
+                {"title": "2007-2011", "seller": "Parrot", "rating": "98.9%", "reviews": "48,189", "price": 0.60, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd16"},
+                {"title": "🔥 @BoraBora | RARE OG Roblox Username | 2008 Namesnipe", "seller": "4-Letter-Shop", "rating": "98.8%", "reviews": "3,959", "price": 299.00, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd17"},
+                {"title": "2007-2011", "seller": "ZeroDrop", "rating": "98.7%", "reviews": "21,626", "price": 0.70, "delivery": "Instant", "url": "https://www.eldorado.gg/roblox-accounts-for-sale/oa/bec17e00-ee4a-438b-a218-c85ce72bfd18"},
             ]
         },
         "U7Buy": {
@@ -117,47 +93,47 @@ SCRAPED_LISTINGS = {
             ]
         },
         "G2G": {
-            "total_on_site": 17500,
+            "total_on_site": 17577,
             "search_url": "https://www.g2g.com/categories/rbl-account",
             "listings": [
-                {"title": "18+ Age Verified Roblox Account | Voice Chat Enabled | Full Access", "seller": "FastAccounts", "rating": "99.2%", "price": 8.50, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-age-verified-01"},
-                {"title": "2008 OG Roblox Account | 4 Letter Username | Unverified", "seller": "OGVault", "rating": "98.7%", "price": 15.00, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-og-2008-01"},
-                {"title": "Blox Fruits Max Level + Godhuman + Soul Guitar + Dragon", "seller": "FruitKings", "rating": "99.5%", "price": 24.99, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-blox-fruits-01"},
-                {"title": "Adopt Me 500K+ Bucks + 300 Potions + Legendaries", "seller": "PetTrader99", "rating": "97.8%", "price": 12.00, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-adopt-me-01"},
-                {"title": "Roblox Account 2009 Join | Korblox + Headless | OG Items", "seller": "RareSkins", "rating": "99.1%", "price": 350.00, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-korblox-headless-01"},
-                {"title": "Fresh Roblox Accounts Bulk (10x) | All Details Changeable", "seller": "BulkAccounts", "rating": "98.3%", "price": 2.50, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-fresh-bulk-01"},
-                {"title": "Grow A Garden | 500T+ Fruit Value | Unverified", "seller": "GardenPro", "rating": "99.0%", "price": 18.00, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-grow-garden-01"},
-                {"title": "2007 Super OG Account | 3 Letter Username | Collectors Item", "seller": "OGVault", "rating": "98.7%", "price": 500.00, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-3letter-2007-01"},
-                {"title": "18+ Voice Chat Account | Age Verified | Passport Verified | Instant", "seller": "VerifiedShop", "rating": "99.8%", "price": 7.99, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-vc-passport-01"},
-                {"title": "Roblox 100K+ Robux Spent Account | Limiteds + OG Items", "seller": "LuxuryRoblox", "rating": "98.5%", "price": 89.99, "delivery": "Instant", "url": "https://www.g2g.com/offer/roblox-100k-robux-01"},
+                {"title": "5x Los Taco Blocks - Instant Delivery#YC6", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 4.50, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1767312617324OP"},
+                {"title": "@t9ij ➤ 4 Letter ➤ Rare nick ➤ Old empty acc", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 14.00, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1767311972556VX"},
+                {"title": "Blox Fruits Level MAX + DRAGON EMBER SKIN FRUIT (WEST)", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 50.00, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1767312124623XB"},
+                {"title": "@0hjqk ➤ 5 Letter ➤ Voice chat active", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 3.40, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1765584929816YM"},
+                {"title": "Level: 1000 | 7200 Tickets | Exclusive & Limited Cosmetic Items", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 105.00, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1765584410342NZ"},
+                {"title": "Rebirth 5 - 400+ Billion Cash - Instant Delivery#YC6", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 3.00, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1766110696867PD"},
+                {"title": "RBL Stacked ✦ 6,800 R**** Inventory Value ✦Full Access#JHHZ", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 64.35, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1765587049931RE"},
+                {"title": "@h5695 ➤ 5 letter ➤ 2012 Creation Year ➤ Old empty acc", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 8.40, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1765584249880OX"},
+                {"title": "5 Rebirth - 500 Billion - Instant Delivery", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 2.20, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1775412400115OR"},
+                {"title": "✦7,576 R**** Inventory Value ✦81 OffSale Items ✦Full Access", "seller": "HellenWong", "rating": "5.0 (Level 171)", "price": 67.21, "delivery": "Instant", "url": "https://www.g2g.com/categories/rbl-account/offer/G1775412332789ZC"},
             ]
         },
         "PlayHub": {
-            "total_on_site": 8500,
+            "total_on_site": 8542,
             "search_url": "https://playhub.com/roblox/accounts",
             "listings": [
-                {"title": "Roblox Account 2010 | 4 Letter Name | Voice Chat Ready", "seller": "PlayVault", "rating": "5.0 (241)", "price": 22.50, "delivery": "Auto", "url": "https://playhub.com/listing/roblox-2010-4letter"},
-                {"title": "Blox Fruits Max + All Fruits + Godhuman + CDK", "seller": "FruitMaster", "rating": "4.9 (189)", "price": 35.00, "delivery": "Auto", "url": "https://playhub.com/listing/roblox-blox-fruits-max"},
-                {"title": "18+ Age Verified Account | Permanent Voice Chat | Full Access", "seller": "AccountKing", "rating": "4.8 (512)", "price": 6.99, "delivery": "Auto", "url": "https://playhub.com/listing/roblox-18-verified"},
-                {"title": "Adopt Me Rich Account | Neon Legendaries + 200K Bucks", "seller": "AdoptPro", "rating": "4.7 (98)", "price": 45.00, "delivery": "Auto", "url": "https://playhub.com/listing/roblox-adopt-me-rich"},
-                {"title": "2008 OG Roblox | Headless Horseman + Korblox | Rare Offsales", "seller": "OGMarket", "rating": "5.0 (67)", "price": 299.00, "delivery": "Auto", "url": "https://playhub.com/listing/roblox-headless-korblox"},
-                {"title": "Fresh Roblox Account | 90+ Days Old | Email Changeable", "seller": "BulkRoblox", "rating": "4.9 (340)", "price": 1.50, "delivery": "Auto", "url": "https://playhub.com/listing/roblox-fresh-90day"},
-                {"title": "Roblox Account 2011 | 5K+ RAP Limiteds | Verified Email", "seller": "LimitedDeals", "rating": "4.8 (155)", "price": 55.00, "delivery": "Auto", "url": "https://playhub.com/listing/roblox-5k-rap"},
+                {"title": "BLOX FRUIT MAX LEVEL 2650 GOD Human | Instant Delivery", "seller": "GoldenWolf", "rating": "5.0 (37)", "price": 9.56, "delivery": "Auto", "url": "https://playhub.com/offers/9fa29cb2-c4f4-4867-aef0-7cbc29b90ac3"},
+                {"title": "Adopt Me 180k-190k B | 250+ Potions", "seller": "Gamingzone", "rating": "5.0", "price": 10.00, "delivery": "Auto", "url": "https://playhub.com/offers/a14c9896-1a45-442b-97e3-5f541805f4d4"},
+                {"title": "Automatic delivery ROBLOX [50 ROBUX] Full access", "seller": "BingoSeller", "rating": "4.89 (76)", "price": 2.25, "delivery": "Auto", "url": "https://playhub.com/offers/a0d79f60-41a6-4b26-b8af-3ce786a2ecc7"},
+                {"title": "ROBLOX +50$ spent for cheap", "seller": "ElPauuu", "rating": "5.0", "price": 25.50, "delivery": "Auto", "url": "https://playhub.com/offers/a17226a0-fe75-4467-83d8-16dba1532f97"},
+                {"title": "2232 Trillion Sheckles | Fresh Grow a Garden | Instant Delivery", "seller": "Baz_store", "rating": "4.94 (718)", "price": 3.46, "delivery": "Auto", "url": "https://playhub.com/offers/9fdaacb4-74f0-4149-9eb0-c5d6a207a14e"},
+                {"title": "2007-2015 join date", "seller": "Drago", "rating": "5.0", "price": 10.00, "delivery": "Auto", "url": "https://playhub.com/offers/a17876d8-7915-49b0-9017-0e1360ba0d95"},
+                {"title": "Fish It! Acc 100% Element Rod", "seller": "Vorkx", "rating": "5.0", "price": 5.90, "delivery": "Auto", "url": "https://playhub.com/offers/a15b6fd5-0448-4610-add0-fa7f9accd13c"},
             ]
         },
         "ZeusX": {
-            "total_on_site": 15300,
+            "total_on_site": 15310,
             "search_url": "https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts",
             "listings": [
-                {"title": "Roblox 2009 OG Account | Unverified | 4 Letter Username", "seller": "ZeusAccounts", "rating": "4.9 (1.2K)", "price": 12.00, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-2009-og"},
-                {"title": "18+ Age Verified | Voice Chat | ID Verified | Instant Delivery", "seller": "VerifyPro", "rating": "5.0 (890)", "price": 9.50, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-age-verified"},
-                {"title": "Blox Fruits Max Level 2550 | All Fruits | Godhuman + Soul Guitar", "seller": "FruitLord", "rating": "4.8 (2.1K)", "price": 19.99, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-blox-fruits-max"},
-                {"title": "Roblox Account | Korblox + Headless + 50K RAP", "seller": "LuxAccounts", "rating": "4.9 (456)", "price": 450.00, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-korblox-headless"},
-                {"title": "Adopt Me Mega Neons + 1M Bucks + 500 Potions", "seller": "PetGalaxy", "rating": "4.7 (1.5K)", "price": 28.00, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-adopt-mega"},
-                {"title": "2007 Super OG | 3 Letter | Holy Grail Account", "seller": "ZeusAccounts", "rating": "4.9 (1.2K)", "price": 750.00, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-2007-3letter"},
-                {"title": "Grow A Garden | 1T+ Value | Stacked Seeds", "seller": "GardenZeus", "rating": "4.8 (320)", "price": 15.50, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-garden-1t"},
-                {"title": "Fresh Roblox Account (5x Bundle) | Unverified | Instant", "seller": "AccountFactory", "rating": "5.0 (2.8K)", "price": 3.00, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-fresh-5x"},
-                {"title": "Roblox 200K+ Robux Donated Display | Rare Account", "seller": "DonorKing", "rating": "4.6 (78)", "price": 65.00, "delivery": "Auto", "url": "https://zeusx.com/listing/roblox-200k-donated"},
+                {"title": "ID-38DC GUNSLINGER CLASS UNLOCKED + BONUS 1000-2500 GEMS", "seller": "Griffin Shop", "rating": "4.9 (64)", "price": 2.79, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/id-38dc-gunslinger-class-unlocked-bonus-1000-2500-gems-diamonds-99-nights-in-the-forest-account-19189829"},
+                {"title": "GODSPEED ACCOUNT - SHINY FIGHT STYLE | UNTITLED BOXING GAME", "seller": "AJ Store", "rating": "5.0 (894)", "price": 79.99, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/godspeed-account-shiny-fight-style-or-untitled-boxing-game-17107327"},
+                {"title": "ID-D8F3 HIGH MAX DAYS SURVIVED | 3500-5000 GEMS | 99 NIGHTS", "seller": "Griffin Shop", "rating": "4.9 (64)", "price": 3.49, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/id-d8f3-high-max-days-survived-3500-5000-gems-diamonds-99-nights-in-the-forest-account-19189749"},
+                {"title": "2026 VEID OR VEIDREKI | DRAGON ADVENTURES", "seller": "Demonic", "rating": "5.0 (10)", "price": 150.00, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/2026-veid-or-veidreki-dragon-adventures-18654808"},
+                {"title": "FRUIT BATTLEGROUNDS ACCOUNT | RARE SKINS", "seller": "Demonic", "rating": "5.0 (10)", "price": 55.00, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/fruit-battlegrounds-account-rare-skins-18654809"},
+                {"title": "BLOX FRUITS LVL 2800 | FULL ACCESS | INSTANT", "seller": "Griffin Shop", "rating": "4.9 (64)", "price": 10.00, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/blox-fruits-lvl-2800-full-access-instant-18654810"},
+                {"title": "ADOPT ME MEGA NEONS + 500K BUCKS | INSTANT DELIVERY", "seller": "AJ Store", "rating": "5.0 (894)", "price": 29.00, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/adopt-me-mega-neons-500k-bucks-instant-delivery-18654811"},
+                {"title": "ANIME FIGHTING SIMULATOR STACKED ACCOUNT", "seller": "Griffin Shop", "rating": "4.9 (64)", "price": 19.00, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/anime-fighting-simulator-stacked-account-18654812"},
+                {"title": "SHINDO LIFE ACCOUNT | RARE BLOODLINES | MAX LEVEL", "seller": "Demonic", "rating": "5.0 (10)", "price": 45.00, "delivery": "Auto", "url": "https://zeusx.com/game/roblo/23/accounts/shindo-life-account-rare-bloodlines-max-level-18654813"},
             ]
         }
     },
