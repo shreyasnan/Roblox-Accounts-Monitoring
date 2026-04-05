@@ -22,6 +22,37 @@ def u7buy_url(platform, offer_id):
     p = U7BUY_PARAMS[platform]
     return f"https://www.u7buy.com/offer/other-detail?spuId={p['spuId']}&offerId={offer_id}&businessId={p['businessId']}&isEntrance=0"
 
+
+def is_fabricated_url(url, source_name):
+    """
+    Detect if a listing URL is fabricated/placeholder.
+    Returns True if the URL should be replaced with search_url.
+    """
+    if not url:
+        return True
+
+    # Eldorado: detect fabricated UUID pattern (7930cdc2-d7f6-4d5a-0de9-08de655731fX)
+    if source_name == "Eldorado.gg":
+        if "7930cdc2-d7f6-4d5a-0de9-08de655731f" in url:
+            return True
+
+    # G2G: all individual listing URLs are fabricated (don't have real format)
+    if source_name == "G2G":
+        if url.startswith("https://www.g2g.com/offer/roblox-"):
+            return True
+
+    # PlayHub: all individual listing URLs are fabricated
+    if source_name == "PlayHub":
+        if url.startswith("https://playhub.com/listing/"):
+            return True
+
+    # ZeusX: all individual listing URLs are fabricated
+    if source_name == "ZeusX":
+        if url.startswith("https://zeusx.com/listing/"):
+            return True
+
+    return False
+
 # ============================================================
 # REAL SCRAPED LISTINGS DATA (collected via Chrome scraping)
 # ============================================================
@@ -338,6 +369,10 @@ def build_dashboard_data():
                     offer_match = re.search(r'offerId=(\d+)', url)
                     if offer_match:
                         url = u7buy_url(platform, offer_match.group(1))
+
+                # Replace fabricated/placeholder URLs with search URLs
+                if is_fabricated_url(url, source_name):
+                    url = source_data["search_url"]
 
                 enriched = {
                     "platform": platform,
