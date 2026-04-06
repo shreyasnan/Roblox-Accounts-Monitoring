@@ -1878,17 +1878,19 @@ def build_dashboard_data(scraped: dict) -> dict:
         }
 
         for source_name, source_data in sources.items():
-            total = source_data.get("total_on_site", len(source_data["listings"]))
-            platform_stats[platform]["total_listings_across_sources"] += total
+            total_on_site = source_data.get("total_on_site", len(source_data["listings"]))
+            scraped_count = len(source_data["listings"])
+            platform_stats[platform]["total_listings_across_sources"] += scraped_count
             platform_stats[platform]["sources"][source_name] = {
-                "total_on_site": total,
+                "total_on_site": total_on_site,
+                "scraped_count": scraped_count,
                 "search_url": source_data["search_url"],
-                "scraped_count": len(source_data["listings"]),
             }
 
             if source_name not in source_stats:
-                source_stats[source_name] = {"total_listings": 0, "platforms": []}
-            source_stats[source_name]["total_listings"] += total
+                source_stats[source_name] = {"total_listings": 0, "total_on_site": 0, "platforms": []}
+            source_stats[source_name]["total_listings"] += scraped_count
+            source_stats[source_name]["total_on_site"] += total_on_site
             if platform not in source_stats[source_name]["platforms"]:
                 source_stats[source_name]["platforms"].append(platform)
 
@@ -1944,6 +1946,12 @@ def build_dashboard_data(scraped: dict) -> dict:
         del s["price_sum"]
         del s["price_count"]
 
+    total_on_site_all = sum(
+        src.get("total_on_site", 0)
+        for plat in scraped.values()
+        for src in plat.values()
+    )
+
     return {
         "metadata": {
             "generated_at": now.isoformat(),
@@ -1951,13 +1959,9 @@ def build_dashboard_data(scraped: dict) -> dict:
             "scrape_date": now.strftime("%Y-%m-%d"),
             "platforms": list(scraped.keys()),
             "sources": list(source_stats.keys()),
-            "total_listings_found": sum(
-                src.get("total_on_site", 0)
-                for plat in scraped.values()
-                for src in plat.values()
-            ),
             "total_listings_scraped": len(all_listings),
-            "version": "3.0.0-live",
+            "total_on_site": total_on_site_all,
+            "version": "3.1.0-live",
         },
         "platform_summary": platform_stats,
         "source_summary": source_stats,
@@ -2011,27 +2015,83 @@ def git_push(output_file: Path):
         log.error(f"Git push error: {e}")
 
 
+def _compute_proportional_pages(total_budget: int, output_path: str) -> dict:
+    """Compute per-source page budgets proportional to marketplace size.
+
+    Uses total_on_site counts from the *previous* scrape run stored in
+    ``output_path`` (dashboard_data.json).  If no prior data exists, returns
+    an empty dict so the caller can fall back to a flat default.
+
+    Returns a dict like ``{"Eldorado.gg": 12, "eBay": 1, ...}`` where values
+    are the number of pages to scrape for that source (summed across all
+    platforms).  Every source gets at least 1 page.
+    """
+    prior = Path(output_path)
+    if not prior.exists():
+        return {}
+
+    try:
+        with open(prior, "r", encoding="utf-8") as f:
+            prev_data = json.load(f)
+    except Exception:
+        return {}
+
+    # Aggregate total_on_site per source across all platforms
+    source_totals: dict[str, int] = {}
+    for _platform, pinfo in prev_data.get("platform_summary", {}).items():
+        for src_name, sinfo in pinfo.get("sources", {}).items():
+            source_totals[src_name] = source_totals.get(src_name, 0) + sinfo.get("total_on_site", 0)
+
+    if not source_totals:
+        return {}
+
+    grand_total = sum(source_totals.values()) or 1
+    allocations: dict[str, int] = {}
+    for src, total in source_totals.items():
+        # Proportional share, minimum 1 page
+        share = max(1, round(total / grand_total * total_budget))
+        allocations[src] = share
+
+    return allocations
+
+
 def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fast: bool = False):
     """Main scrape orchestrator."""
     setup_logging(verbose)
     log.info("=" * 60)
     log.info(f"Scraper started at {datetime.now().isoformat()}")
     log.info(f"Games: {', '.join(games)}")
-    log.info(f"Max pages per source: {'unlimited' if max_pages == 0 else max_pages}")
     log.info(f"Fast mode: {'ON' if fast else 'OFF'}")
     log.info("=" * 60)
+
+    # --- Proportional page allocation ---
+    # total_budget = max_pages * number_of_sources (legacy flat behaviour)
+    # We redistribute that total so larger marketplaces get more pages.
+    ALL_SOURCES = ["Eldorado.gg", "U7Buy", "eBay", "PlayerAuctions", "Z2U", "G2G", "PlayHub", "ZeusX"]
+    total_budget = max_pages * len(ALL_SOURCES)  # e.g. 3 * 8 = 24 pages total
+    proportional = _compute_proportional_pages(total_budget, output_path)
+
+    if proportional:
+        log.info("Using proportional page allocation (based on prior marketplace sizes):")
+        for src, pages in sorted(proportional.items(), key=lambda x: -x[1]):
+            log.info(f"  {src}: {pages} pages")
+    else:
+        log.info(f"No prior data found — using flat {max_pages} pages per source")
+
+    def pages_for(source_name: str) -> int:
+        return proportional.get(source_name, max_pages)
 
     browser = BrowserManager(force_requests=fast)
     browser.start()
 
-    eldorado = EldoradoScraper(browser, max_pages)
-    u7buy = U7BuyScraper(browser, max_pages)
-    ebay = EbayScraper(browser, max_pages)
-    playerauctions = PlayerAuctionsScraper(browser, max_pages)
-    z2u = Z2UScraper(browser, max_pages)
-    g2g = G2GScraper(browser, max_pages)
-    playhub = PlayHubScraper(browser, max_pages)
-    zeusx = ZeusXScraper(browser, max_pages)
+    eldorado = EldoradoScraper(browser, pages_for("Eldorado.gg"))
+    u7buy = U7BuyScraper(browser, pages_for("U7Buy"))
+    ebay = EbayScraper(browser, pages_for("eBay"))
+    playerauctions = PlayerAuctionsScraper(browser, pages_for("PlayerAuctions"))
+    z2u = Z2UScraper(browser, pages_for("Z2U"))
+    g2g = G2GScraper(browser, pages_for("G2G"))
+    playhub = PlayHubScraper(browser, pages_for("PlayHub"))
+    zeusx = ZeusXScraper(browser, pages_for("ZeusX"))
 
     scraped = {}
 
@@ -2144,8 +2204,8 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fas
     log.info(f"\n{'='*60}")
     log.info("SCRAPE COMPLETE")
     log.info(f"{'='*60}")
-    log.info(f"Total listings found:   {dashboard['metadata']['total_listings_found']:,}")
     log.info(f"Total listings scraped: {dashboard['metadata']['total_listings_scraped']}")
+    log.info(f"Total on-site (reported by marketplaces): {dashboard['metadata']['total_on_site']:,}")
     log.info(f"Output: {output_file}")
     log.info(f"Backup: {backup_file}")
     log.info("")

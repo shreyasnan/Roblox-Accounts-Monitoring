@@ -369,13 +369,13 @@ const dashboardData = {
       "PlayHub",
       "ZeusX"
     ],
-    "total_listings_found": 123234,
     "total_listings_scraped": 108,
-    "version": "2.0.0-live"
+    "total_on_site": 123234,
+    "version": "3.1.0-live"
   },
   "platform_summary": {
     "Roblox": {
-      "total_listings_across_sources": 59518,
+      "total_listings_across_sources": 65,
       "sources": {
         "Eldorado.gg": {
           "total_on_site": 12102,
@@ -419,7 +419,7 @@ const dashboardData = {
       "avg_price_usd": 26.68
     },
     "Fortnite": {
-      "total_listings_across_sources": 53800,
+      "total_listings_across_sources": 14,
       "sources": {
         "Eldorado.gg": {
           "total_on_site": 44953,
@@ -447,7 +447,7 @@ const dashboardData = {
       "avg_price_usd": 74.06
     },
     "Minecraft": {
-      "total_listings_across_sources": 2830,
+      "total_listings_across_sources": 14,
       "sources": {
         "Eldorado.gg": {
           "total_on_site": 1237,
@@ -474,7 +474,7 @@ const dashboardData = {
       "avg_price_usd": 14.85
     },
     "Steam": {
-      "total_listings_across_sources": 7086,
+      "total_listings_across_sources": 15,
       "sources": {
         "Eldorado.gg": {
           "total_on_site": 3671,
@@ -503,7 +503,8 @@ const dashboardData = {
   },
   "source_summary": {
     "Eldorado.gg": {
-      "total_listings": 61963,
+      "total_listings": 33,
+      "total_on_site": 61963,
       "platforms": [
         "Roblox",
         "Fortnite",
@@ -512,7 +513,8 @@ const dashboardData = {
       ]
     },
     "U7Buy": {
-      "total_listings": 19028,
+      "total_listings": 28,
+      "total_on_site": 19028,
       "platforms": [
         "Roblox",
         "Fortnite",
@@ -521,7 +523,8 @@ const dashboardData = {
       ]
     },
     "eBay": {
-      "total_listings": 814,
+      "total_listings": 21,
+      "total_on_site": 814,
       "platforms": [
         "Roblox",
         "Fortnite",
@@ -530,19 +533,22 @@ const dashboardData = {
       ]
     },
     "G2G": {
-      "total_listings": 17577,
+      "total_listings": 10,
+      "total_on_site": 17577,
       "platforms": [
         "Roblox"
       ]
     },
     "PlayHub": {
-      "total_listings": 8542,
+      "total_listings": 7,
+      "total_on_site": 8542,
       "platforms": [
         "Roblox"
       ]
     },
     "ZeusX": {
-      "total_listings": 15310,
+      "total_listings": 9,
+      "total_on_site": 15310,
       "platforms": [
         "Roblox"
       ]
@@ -2293,12 +2299,14 @@ function showSection(sectionId) {
 function renderOverview() {
   const data = dashboardData;
 
-  // KPI Cards
+  // KPI Cards — show scraped (verified) counts, not marketplace-reported totals
+  const totalOnSite = data.metadata.total_on_site || data.metadata.total_listings_found || 0;
+  const coveragePct = totalOnSite > 0 ? ((data.metadata.total_listings_scraped / totalOnSite) * 100).toFixed(1) : '—';
   const kpiHtml = `
     <div class="kpi-card primary">
-      <div class="kpi-label">Total Listings Found</div>
-      <div class="kpi-value">${data.metadata.total_listings_found.toLocaleString()}</div>
-      <div class="kpi-sub">Across all marketplaces</div>
+      <div class="kpi-label">Scraped Listings</div>
+      <div class="kpi-value">${data.metadata.total_listings_scraped.toLocaleString()}</div>
+      <div class="kpi-sub">Verified with full details</div>
     </div>
     <div class="kpi-card primary">
       <div class="kpi-label">Total Sources</div>
@@ -2311,9 +2319,9 @@ function renderOverview() {
       <div class="kpi-sub">Roblox, Fortnite, Minecraft, Steam</div>
     </div>
     <div class="kpi-card primary">
-      <div class="kpi-label">Scraped Listings</div>
-      <div class="kpi-value">${data.metadata.total_listings_scraped}</div>
-      <div class="kpi-sub">With full details</div>
+      <div class="kpi-label">Sample Coverage</div>
+      <div class="kpi-value">${coveragePct}%</div>
+      <div class="kpi-sub">${data.metadata.total_listings_scraped} of ~${totalOnSite.toLocaleString()} reported</div>
     </div>
   `;
 
@@ -2562,7 +2570,7 @@ function renderPlatforms() {
 
         <div class="metric-row">
           <div class="metric-item">
-            <div class="metric-label">Total Listings</div>
+            <div class="metric-label">Scraped Listings</div>
             <div class="metric-value">${summary.total_listings_across_sources.toLocaleString()}</div>
           </div>
           <div class="metric-item">
@@ -2594,10 +2602,11 @@ function renderPlatforms() {
         <div class="links-list">
           ${data.metadata.sources.map(source => {
             const sourceData = summary.sources[source];
+            if (!sourceData) return '';
             return `
               <div class="link-item">
                 <strong>${source}</strong>
-                <span style="color: var(--text-dim); font-size: 12px;">${sourceData.total_on_site.toLocaleString()} total</span>
+                <span style="color: var(--text-dim); font-size: 12px;">${sourceData.scraped_count} scraped</span>
                 <a href="${sourceData.search_url}" target="_blank" style="margin-left: auto;">Visit →</a>
               </div>
             `;
@@ -2756,35 +2765,70 @@ function renderAgeVerified() {
   }
 }
 
-// Sources Section
+// Sources Section — with marketplace relevance ranking
 function renderSources() {
   const container = document.getElementById('sourcesContainer');
   const data = dashboardData;
 
+  // Compute total reported listings across all sources for market-share calc
+  const totalOnSiteAll = Object.values(data.source_summary)
+    .reduce((sum, s) => sum + (s.total_on_site || s.total_listings || 0), 0) || 1;
+
+  // Sort sources by reported size (descending) so the biggest appear first
+  const sortedSources = Object.entries(data.source_summary)
+    .sort((a, b) => (b[1].total_on_site || b[1].total_listings || 0) - (a[1].total_on_site || a[1].total_listings || 0));
+
   let html = '';
 
-  Object.entries(data.source_summary).forEach(([source, summary]) => {
+  sortedSources.forEach(([source, summary]) => {
+    const reportedTotal = summary.total_on_site || summary.total_listings || 0;
+    const scrapedCount = summary.total_listings || 0;
+    const marketShare = ((reportedTotal / totalOnSiteAll) * 100).toFixed(1);
+    const platformCount = summary.platforms.length;
+
+    // Relevance tier based on market share
+    let relevanceLabel, relevanceColor;
+    if (parseFloat(marketShare) >= 25) {
+      relevanceLabel = 'HIGH'; relevanceColor = 'var(--red)';
+    } else if (parseFloat(marketShare) >= 10) {
+      relevanceLabel = 'MEDIUM'; relevanceColor = 'var(--orange)';
+    } else {
+      relevanceLabel = 'LOW'; relevanceColor = 'var(--text-dim)';
+    }
+
     html += `
       <div class="source-detail">
-        <h3>${source}</h3>
+        <h3>${source} <span style="font-size: 12px; padding: 2px 8px; border-radius: 4px; background: ${relevanceColor}22; color: ${relevanceColor}; margin-left: 8px; font-weight: 600;">${relevanceLabel} RELEVANCE</span></h3>
 
         <div class="metric-row">
           <div class="metric-item">
-            <div class="metric-label">Total Listings</div>
-            <div class="metric-value">${summary.total_listings.toLocaleString()}</div>
+            <div class="metric-label">Scraped Listings</div>
+            <div class="metric-value">${scrapedCount.toLocaleString()}</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">Market Share</div>
+            <div class="metric-value">${marketShare}%</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">Reported on Site</div>
+            <div class="metric-value" style="color: var(--text-dim); font-size: 20px;">${reportedTotal.toLocaleString()}</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-label">Platforms</div>
+            <div class="metric-value">${platformCount}</div>
           </div>
         </div>
 
         <h4>Available Platforms</h4>
         <div class="links-list">
           ${summary.platforms.map(platform => {
-            const searchUrl = data.search_urls[platform][source];
-            return `
+            const searchUrl = data.search_urls[platform] ? data.search_urls[platform][source] : '';
+            return searchUrl ? `
               <div class="link-item">
                 <span class="platform-tag ${platform}">${platform}</span>
                 <a href="${searchUrl}" target="_blank" style="margin-left: auto;">Browse on ${source} →</a>
               </div>
-            `;
+            ` : '';
           }).join('')}
         </div>
       </div>
