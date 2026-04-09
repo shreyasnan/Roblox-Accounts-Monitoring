@@ -1,11 +1,26 @@
+# Python
 __pycache__/
 *.pyc
-.DS_Store
-dashboard.html
+*.pyo
+*.egg-info/
+.venv/
+venv/
 
-# Runtime artifacts
+# OS / editor cruft
+.DS_Store
+.fuse_hidden*
+*.swp
+.vscode/
+.idea/
+
+# Local build artifacts (not committed; workflow force-adds the ones it needs)
+dashboard.html
+exec_dashboard.html
 history.db
 history.db-wal
 history.db-shm
 scraper.log
-.fuse_hidden*
+
+# Local scratch
+*.bak
+tmp/
