@@ -12403,3 +12403,527 @@ fatal: empty ident name (for <runner@runnervm35a4x.x5d1n0cxpzaenaqbjvsq3ltcmf.bx
 2026-04-14 09:21:41,151 [INFO]   OG / Veteran Account: 349 listings
 2026-04-14 09:21:41,151 [INFO]   Items / Currency: 595 listings
 2026-04-14 09:21:41,151 [INFO]   General: 277 listings
+2026-04-15 09:18:00,669 [INFO] ============================================================
+2026-04-15 09:18:00,669 [INFO] Scraper started at 2026-04-15T09:18:00.669978
+2026-04-15 09:18:00,670 [INFO] Games: Roblox, Fortnite, Minecraft, Steam
+2026-04-15 09:18:00,670 [INFO] Fast mode: OFF
+2026-04-15 09:18:00,670 [INFO] ============================================================
+2026-04-15 09:18:00,679 [INFO] Using proportional page allocation (based on prior marketplace sizes):
+2026-04-15 09:18:00,679 [INFO]   U7Buy: 15 pages
+2026-04-15 09:18:00,679 [INFO]   PlayerAuctions: 8 pages
+2026-04-15 09:18:00,679 [INFO]   Eldorado.gg: 1 pages
+2026-04-15 09:18:00,679 [INFO]   Z2U: 1 pages
+2026-04-15 09:18:00,679 [INFO]   eBay: 1 pages
+2026-04-15 09:18:00,679 [INFO]   G2G: 1 pages
+2026-04-15 09:18:00,679 [INFO]   PlayHub: 1 pages
+2026-04-15 09:18:00,679 [INFO]   ZeusX: 1 pages
+2026-04-15 09:18:00,679 [DEBUG] Using selector: EpollSelector
+2026-04-15 09:18:01,761 [INFO] Using Playwright (headless Chromium)
+2026-04-15 09:18:01,761 [INFO] 
+========================================
+2026-04-15 09:18:01,761 [INFO] Scraping: Roblox
+2026-04-15 09:18:01,761 [INFO] ========================================
+2026-04-15 09:18:01,761 [INFO]   [Eldorado.gg] Scraping Roblox — https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-04-15 09:18:01,761 [INFO]     Page 1: https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0
+2026-04-15 09:18:08,391 [INFO]     Found 48 listings (total so far: 48)
+2026-04-15 09:18:08,391 [INFO]     Reached max pages (1), stopping.
+2026-04-15 09:18:09,878 [INFO]   [U7Buy] Scraping Roblox — https://www.u7buy.com/roblox/roblox-accounts
+2026-04-15 09:18:09,880 [DEBUG] Starting new HTTPS connection (1): www.u7buy.com:443
+2026-04-15 09:18:10,336 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422889880&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-04-15 09:18:10,336 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-04-15 09:18:10,337 [INFO]     Page 1: https://www.u7buy.com/roblox/roblox-accounts
+2026-04-15 09:18:36,387 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Roblox Accounts for Sale | Cheap, Safe & Fast | U7BUY', <li> count: 125, URL: https://www.u7buy.com/roblox/roblox-accounts
+2026-04-15 09:18:36,387 [DEBUG]   Page body preview: Categories
+Roblox Games
+Blog
+Search For Games
+EN | USD
+Sell
+Log In
+Roblox
+Robux
+Accounts
+Items
+Boosting
+Gift Cards
+Roblox Games
+Robux Tax Calculator
+Home
+Accounts
+Roblox Accounts
+Roblox Accounts for S
+2026-04-15 09:18:41,599 [INFO]     Found 13 listings (total so far: 13)
+2026-04-15 09:18:42,503 [INFO]   [PlayerAuctions] Scraping Roblox — https://www.playerauctions.com/roblox-account/
+2026-04-15 09:18:42,503 [INFO]     Page 1: https://www.playerauctions.com/roblox-account/
+2026-04-15 09:19:08,103 [WARNING]   Selector '.product-card, .offer-card, [class*='ListingCard'], [class*='listing-item'], .product-list-item, tr.product-row, .pa-product' not found after 25s. Title: 'Roblox Accounts for Sale | PlayerAuctions', <li> count: 558, URL: https://www.playerauctions.com/roblox-account/
+2026-04-15 09:19:08,103 [DEBUG]   Page body preview: Skip to main content
+PlayerAuctions
+English
+LOG IN
+SIGN UP
+Home >
+ROBLOX >
+Accounts
+INDEPENDENT MARKETPLACE
+Buy Roblox Accounts with Games - Roblox Game Shop
+
+Buying a Roblox account gives players acc
+2026-04-15 09:19:13,480 [INFO]     Found 102 listings (total so far: 102)
+2026-04-15 09:19:14,315 [INFO]     Page 2: https://www.playerauctions.com/roblox-account/?page=2
+2026-04-15 09:19:39,507 [WARNING]   Selector '.product-card, .offer-card, [class*='ListingCard'], [class*='listing-item'], .product-list-item, tr.product-row, .pa-product' not found after 25s. Title: '404 Error', <li> count: 35, URL: https://www.playerauctions.com/roblox-account/?page=2
+2026-04-15 09:19:39,507 [DEBUG]   Page body preview: PlayerAuctions
+404 - Page Not Found
+
+Oops! That page couldn’t be found.
+
+Don’t just leave yet! Here are some helpful links for you to find what you are looking for:
+
+Home
+Game Index Page
+Become a Sell
+2026-04-15 09:19:44,555 [INFO]     No listings found on page 2, stopping.
+2026-04-15 09:19:45,998 [INFO]   [Z2U] Scraping Roblox — https://www.z2u.com/rbl/accounts-5-2941
+2026-04-15 09:19:45,998 [INFO]     Page 1: https://www.z2u.com/rbl/accounts-5-2941
+2026-04-15 09:19:52,782 [INFO]     Found 1 listings (total so far: 1)
+2026-04-15 09:19:52,782 [INFO]     Reached max pages (1), stopping.
+2026-04-15 09:19:53,483 [INFO]   [eBay] Scraping Roblox — https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-15 09:19:53,484 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1
+2026-04-15 09:19:53,485 [DEBUG] Starting new HTTPS connection (1): www.ebay.com:443
+2026-04-15 09:19:53,778 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=roblox+account&_sop=12&LH_BIN=1 HTTP/1.1" 200 None
+2026-04-15 09:19:54,737 [DEBUG]     Skipping irrelevant eBay listing: ROBLOX T-Rex Skeleton Bundle | Roblox Virtual Code
+2026-04-15 09:19:54,737 [DEBUG]     Skipping irrelevant eBay listing: R0blox Limiteds | Cheap Prices 💸 | Fast Restocks 📦
+2026-04-15 09:19:54,738 [DEBUG]     Skipping irrelevant eBay listing: New Listing5 Million (5M) Mushrooms - Creatures Of
+2026-04-15 09:19:54,738 [DEBUG]     Skipping irrelevant eBay listing: New Listing50k Mushrooms - Creatures Of Sonaria (C
+2026-04-15 09:19:54,738 [DEBUG]     Skipping irrelevant eBay listing: SpongeBob Tower Defense | Units, Pets, Cards, & Mo
+2026-04-15 09:19:54,739 [DEBUG]     Skipping irrelevant eBay listing: 100k Mushrooms - Creatures Of Sonaria (COS) 🔥⚡️Fas
+2026-04-15 09:19:54,739 [DEBUG]     Skipping irrelevant eBay listing: New Listing2.5 Million (2.5M) Mushrooms - Creature
+2026-04-15 09:19:54,740 [DEBUG]     Skipping irrelevant eBay listing: New Listing750k Mushrooms - Creatures Of Sonaria (
+2026-04-15 09:19:54,740 [DEBUG]     Skipping irrelevant eBay listing: New Listing1 Million (1M) Mushrooms - Creatures Of
+2026-04-15 09:19:54,740 [DEBUG]     Skipping irrelevant eBay listing: New Listing500k Mushrooms - Creatures Of Sonaria (
+2026-04-15 09:19:54,740 [DEBUG]     Skipping irrelevant eBay listing: Blox Fruits Items 🔥 | Cheap 💸 | Fast Delivery ⚡Ope
+2026-04-15 09:19:54,742 [DEBUG]     Skipping irrelevant eBay listing: ROBLOX 3X ANUBUBU ESCAPE TSUNAMI FOR BRAINROTSOpen
+2026-04-15 09:19:54,744 [DEBUG]     Skipping irrelevant eBay listing: Corrupted Axe – Roblox Assassin! Exotic Knife | In
+2026-04-15 09:19:54,745 [DEBUG]     Skipping irrelevant eBay listing: escape tsunami for brainrots 10k tokensOpens in a 
+2026-04-15 09:19:54,745 [DEBUG]     Skipping irrelevant eBay listing: 250k Mushrooms - Creatures Of Sonaria (COS) 🔥⚡️Fas
+2026-04-15 09:19:54,746 [DEBUG]     Skipping irrelevant eBay listing: 🍄Grow A Garden Items | Roblox GAG Items - Pets & P
+2026-04-15 09:19:54,746 [DEBUG]     Skipping irrelevant eBay listing: Purple Ice Crown | Roblox Limited Tradable Item | 
+2026-04-15 09:19:54,747 [DEBUG]     Skipping irrelevant eBay listing: GAG Items | Roblox - Grow A Garden Pets & Packs & 
+2026-04-15 09:19:54,748 [DEBUG]     Skipping irrelevant eBay listing: Roblox Bladeball tokens 10k Cheapest!Opens in a ne
+2026-04-15 09:19:54,748 [DEBUG]     Skipping irrelevant eBay listing: 🔥 Roblox Jailbreak Javelin (LIMITED & RETIRED) | F
+2026-04-15 09:19:54,748 [DEBUG]     Skipping irrelevant eBay listing: Pet Simulator 99 Titanic Gingerbread CatOpens in a
+2026-04-15 09:19:54,749 [DEBUG]     Skipping irrelevant eBay listing: Base FULL OF LOS LUCKY BLOCKS (21 Total) |Safe|Fas
+2026-04-15 09:19:54,749 [DEBUG]     Skipping irrelevant eBay listing: Azure Dragon’s Magic Slayer | Roblox Limited | Tra
+2026-04-15 09:19:54,749 [DEBUG]     Skipping irrelevant eBay listing: ⭐🦊Mega Corrupted Kitsune 🎮ROBLOX 🪴Grow a Garden | 
+2026-04-15 09:19:54,750 [DEBUG]     Skipping irrelevant eBay listing: Sinister Saber – Roblox Assassin! Exotic Knife | I
+2026-04-15 09:19:54,750 [DEBUG]     Skipping irrelevant eBay listing: Anguish – Roblox Assassin! Exotic Knife | In-Game 
+2026-04-15 09:19:54,750 [DEBUG]     Skipping irrelevant eBay listing: Lord Sinister – Roblox Assassin! Exotic Knife | In
+2026-04-15 09:19:54,751 [DEBUG]     Skipping irrelevant eBay listing: Holiday Blade – Roblox Assassin! Exotic Knife | In
+2026-04-15 09:19:54,751 [DEBUG]     Skipping irrelevant eBay listing: ROBLOX [ FISCH ] | SC ITEM / SECRET CREATURE | FAS
+2026-04-15 09:19:54,751 [DEBUG]     Skipping irrelevant eBay listing: 🏷️SALE 🦝RACCOON 🎮ROBLOX 🪴🎮ROBLOX 🪴Grow a Garden | 
+2026-04-15 09:19:54,752 [DEBUG]     Skipping irrelevant eBay listing: Steal a Brainrot Common Whole Base Noobini Pizzani
+2026-04-15 09:19:54,752 [DEBUG]     Skipping irrelevant eBay listing: 🔥 Roblox Steal a Brainrot FULL INVENTORY 🔥| Rare C
+2026-04-15 09:19:54,752 [DEBUG]     Skipping irrelevant eBay listing: 🎯 Attack on Titan: Revolution – Item Bundle for Sa
+2026-04-15 09:19:54,753 [DEBUG]     Skipping irrelevant eBay listing: Pet Simulator 99 Huge | 100x Huges | PS99 | Instan
+2026-04-15 09:19:54,753 [DEBUG]     Skipping irrelevant eBay listing: Flame Mace – Roblox Assassin! Exotic Knife | In-Ga
+2026-04-15 09:19:54,753 [DEBUG]     Skipping irrelevant eBay listing: FRUIT BATTLEGROUNDS - 💎 LeopardV2💎 -FAST DELIVERYO
+2026-04-15 09:19:54,754 [DEBUG]     Skipping irrelevant eBay listing: 👨‍🌾 Roblox GAG Items🌺Grow A Garden Items - Pets & 
+2026-04-15 09:19:54,754 [DEBUG]     Skipping irrelevant eBay listing: Buy my Los HotspotsitosOpens in a new window or ta
+2026-04-15 09:19:54,754 [DEBUG]     Skipping irrelevant eBay listing: 🐶 Roblox GROW A GARDEN🍄| GAG Items - Pets & Bundle
+2026-04-15 09:19:54,754 [DEBUG]     Skipping irrelevant eBay listing: All clean items for jailbreak | Roblox | Jailbreak
+2026-04-15 09:19:54,755 [DEBUG]     Skipping irrelevant eBay listing: 👨‍🌾Grow A Garden Items | Roblox GAG Items - Pets &
+2026-04-15 09:19:54,755 [DEBUG]     Skipping irrelevant eBay listing: 🍄 Roblox Grow A Garden Pets | GAG Pets & Bundle & 
+2026-04-15 09:19:54,755 [DEBUG]     Skipping irrelevant eBay listing: Titan glacier man + 10k gems fast delivery🔥🔥Opens 
+2026-04-15 09:19:54,755 [DEBUG]     Skipping irrelevant eBay listing: Grow A Garden - Currency (Sheckles)💰 Roblox GAG Sh
+2026-04-15 09:19:54,756 [DEBUG]     Skipping irrelevant eBay listing: 🌱 Grow A Garden 🌱 - GAG - Roblox - Sheckles HotOpe
+2026-04-15 09:19:54,756 [DEBUG]     Skipping irrelevant eBay listing: New Secret  🎄La Jolly Grande!! 30M/s 🎁| Steal a Br
+2026-04-15 09:19:54,756 [DEBUG]     Skipping irrelevant eBay listing: RAINBOW DRAGON FLY GAG 45$ VIRTUAL ITEM COLLECTIBL
+2026-04-15 09:19:54,757 [DEBUG]     Skipping irrelevant eBay listing: 🌼 GROW A GARDEN ROBLOX 🌼 FULL INVENTORY SALE – EVE
+2026-04-15 09:19:54,757 [DEBUG]     Skipping irrelevant eBay listing: Roblox - Gpo All Seeing Baal - Baal Ase - Grand Pi
+2026-04-15 09:19:54,757 [DEBUG]     Skipping irrelevant eBay listing: V1 PB VALENTINES DAY FRIESIAN 2022   ALL CONTACT I
+2026-04-15 09:19:54,757 [DEBUG]     Skipping irrelevant eBay listing: [Re-RELEASE!] Anime Adventures UNITS Fast Huge SAL
+2026-04-15 09:19:54,758 [DEBUG]     Skipping irrelevant eBay listing: Grow a Garden Lot |🪰 X60 Dragon Fly 🪰|Cheapest  Fa
+2026-04-15 09:19:54,758 [DEBUG]     Skipping irrelevant eBay listing: Blox Fruits PREMIUM DLC Code **FAST MESSAGE DELIVE
+2026-04-15 09:19:54,758 [DEBUG]     Skipping irrelevant eBay listing: Fabulous Rod Service - Chepeast - FischOpens in a 
+2026-04-15 09:19:54,759 [DEBUG]     Skipping irrelevant eBay listing: Bat Scythe – Roblox Assassin! Exotic Knife | In-Ga
+2026-04-15 09:19:54,759 [DEBUG]     Skipping irrelevant eBay listing: Lumber tycoon 2 cash (100 million cash) 100M (1000
+2026-04-15 09:19:54,759 [INFO]     Found 4 listings (total so far: 4)
+2026-04-15 09:19:54,759 [INFO]     eBay Roblox: 4 relevant listings scraped (raw site total: 338, estimated relevant: 22)
+2026-04-15 09:19:56,508 [INFO]   [G2G] Scraping Roblox — https://www.g2g.com/categories/rbl-account
+2026-04-15 09:19:56,508 [INFO]     Page 1: https://www.g2g.com/categories/rbl-account
+2026-04-15 09:20:21,631 [WARNING]   Selector 'div.full-height.column.g-card-no-deco, [class*='OfferCard'], [class*='offer-card'], div[class*='product-card']' not found after 25s. Title: 'Access Denied', <li> count: 0, URL: https://www.g2g.com/categories/rbl-account
+2026-04-15 09:20:21,631 [DEBUG]   Page body preview: Access Denied
+You don't have permission to access "http://www.g2g.com/categories/rbl-account" on this server.
+
+Reference #18.58deda17.1776244796.72bc7800
+
+https://errors.edgesuite.net/18.58deda17.1776
+2026-04-15 09:20:26,660 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:20:27,512 [INFO]   [PlayHub] Scraping Roblox — https://playhub.com/roblox/accounts
+2026-04-15 09:20:27,512 [INFO]     Page 1: https://playhub.com/roblox/accounts
+2026-04-15 09:20:34,432 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:20:35,158 [INFO]   [ZeusX] Scraping Roblox — https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts
+2026-04-15 09:20:35,158 [INFO]     Page 1: https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts
+2026-04-15 09:20:41,793 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:20:42,830 [INFO] 
+========================================
+2026-04-15 09:20:42,830 [INFO] Scraping: Fortnite
+2026-04-15 09:20:42,830 [INFO] ========================================
+2026-04-15 09:20:42,830 [INFO]   [Eldorado.gg] Scraping Fortnite — https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-04-15 09:20:42,830 [INFO]     Page 1: https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0
+2026-04-15 09:20:49,774 [INFO]     Found 48 listings (total so far: 48)
+2026-04-15 09:20:49,774 [INFO]     Reached max pages (1), stopping.
+2026-04-15 09:20:50,537 [INFO]   [U7Buy] Scraping Fortnite — https://www.u7buy.com/fortnite/fortnite-accounts
+2026-04-15 09:20:50,872 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890586&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-04-15 09:20:50,873 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-04-15 09:20:50,873 [INFO]     Page 1: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-04-15 09:21:17,078 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Fortnite Accounts for Sale | Cheap, Safe & Fast | U7BUY', <li> count: 162, URL: https://www.u7buy.com/fortnite/fortnite-accounts
+2026-04-15 09:21:17,078 [DEBUG]   Page body preview: Categories
+Roblox Games
+Blog
+Search For Games
+EN | USD
+Sell
+Log In
+Fortnite
+V-Bucks
+Accounts
+Items
+Boosting
+Vbucks Card
+Skins
+Home
+Accounts
+Fortnite Accounts
+Fortnite Accounts for Sale
+4.9
+22058 revie
+2026-04-15 09:21:22,307 [INFO]     Found 13 listings (total so far: 13)
+2026-04-15 09:21:23,332 [INFO]   [PlayerAuctions] Scraping Fortnite — https://www.playerauctions.com/fortnite-account/
+2026-04-15 09:21:23,332 [INFO]     Page 1: https://www.playerauctions.com/fortnite-account/
+2026-04-15 09:21:48,912 [WARNING]   Selector '.product-card, .offer-card, [class*='ListingCard'], [class*='listing-item'], .product-list-item, tr.product-row, .pa-product' not found after 25s. Title: 'Fortnite Accounts for Sale: Buy FN Acc Here', <li> count: 618, URL: https://www.playerauctions.com/fortnite-account/
+2026-04-15 09:21:48,912 [DEBUG]   Page body preview: Skip to main content
+PlayerAuctions
+English
+LOG IN
+SIGN UP
+Home >
+Fortnite >
+Accounts
+INDEPENDENT MARKETPLACE
+Fortnite Account Shop: Buy Rare Fortnite Accounts 
+
+A Fortnite account offers valuable per
+2026-04-15 09:21:54,328 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:21:55,792 [INFO]   [Z2U] Scraping Fortnite — https://www.z2u.com/fortnite/accounts-5-20
+2026-04-15 09:21:55,792 [INFO]     Page 1: https://www.z2u.com/fortnite/accounts-5-20
+2026-04-15 09:22:21,277 [WARNING]   Selector '.goods-item, .offer-item, [class*='product-card'], [class*='ProductCard'], [class*='listing-card']' not found after 25s. Title: '', <li> count: 205, URL: https://www.z2u.com/fortnite/accounts-5-20
+2026-04-15 09:22:21,277 [DEBUG]   Page body preview: We use cookies
+
+We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, an
+2026-04-15 09:22:26,471 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:22:27,153 [INFO]   [eBay] Scraping Fortnite — https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-04-15 09:22:27,153 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1
+2026-04-15 09:22:27,425 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=fortnite+account&_sop=12&LH_BIN=1 HTTP/1.1" 200 None
+2026-04-15 09:22:28,436 [DEBUG]     Skipping irrelevant eBay listing: New Listing230+ skins dm before buyingOpens in a n
+2026-04-15 09:22:28,438 [DEBUG]     Skipping irrelevant eBay listing: New ListingEpic Games Fortnite Locker: Reaper, Eli
+2026-04-15 09:22:28,438 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos Bundle PlayStation 5 PS5 
+2026-04-15 09:22:28,438 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Flowering Chaos Bundle PlaySta
+2026-04-15 09:22:28,439 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos BundleOpens in a new wind
+2026-04-15 09:22:28,439 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos Bundle Code - PlayStation
+2026-04-15 09:22:28,440 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Cobalt Star Bundle, Includes 1000 V-Bucks
+2026-04-15 09:22:28,440 [DEBUG]     Skipping irrelevant eBay listing: Fortnite 100% Achievement Service (Xbox)🏆Opens in 
+2026-04-15 09:22:28,443 [DEBUG]     Skipping irrelevant eBay listing: New Listingblack knight galaxy travis scott 200+ o
+2026-04-15 09:22:28,444 [DEBUG]     Skipping irrelevant eBay listing: Nintendo Switch GamesOpens in a new window or tab
+2026-04-15 09:22:28,444 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite  Character Outfits Eon, Black 
+2026-04-15 09:22:28,447 [DEBUG]     Skipping irrelevant eBay listing: Fortnite PS4 Gearbox Publishing Storm Master Weapo
+2026-04-15 09:22:28,447 [DEBUG]     Skipping irrelevant eBay listing: Nintendo Switch Fortnite WildCat Bundle USA CODE  
+2026-04-15 09:22:28,449 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Founder's Pack Save the World READ SLIDES
+2026-04-15 09:22:28,452 [DEBUG]     Skipping irrelevant eBay listing: New ListingAlan Wake 2 Deluxe Edition - PlayStatio
+2026-04-15 09:22:28,453 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Minty Legends Pack Nintendo Switch - NEW 
+2026-04-15 09:22:28,453 [DEBUG]     Skipping irrelevant eBay listing: Alan Wake 2 Deluxe Edition - PlayStation 5Opens in
+2026-04-15 09:22:28,456 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE (PS4) Epic Games, Gearbox Publishing, OOP
+2026-04-15 09:22:28,456 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite: The Last Laugh Bundle (PlaySt
+2026-04-15 09:22:28,457 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite - Sony PlayStation 4 PS4 game 
+2026-04-15 09:22:28,457 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE MINTY LEGENDS PACK GAME ADD-ON PLAYSTATIO
+2026-04-15 09:22:28,459 [DEBUG]     Skipping irrelevant eBay listing: ✨ • The Reaper, Omega, Blue Squire, Stw, Warpaint,
+2026-04-15 09:22:28,460 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Xbox One RARE 2017 Disc in caseOpens in a
+2026-04-15 09:22:28,460 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Transformers Pack - Nintendo Switch - New
+2026-04-15 09:22:28,461 [DEBUG]     Skipping irrelevant eBay listing: Fortnite - OG Omega Gift Card EditionOpens in a ne
+2026-04-15 09:22:28,461 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE GIFTOpens in a new window or tab
+2026-04-15 09:22:28,461 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Minty Legends Pack Nintendo Sw
+2026-04-15 09:22:28,462 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Sony PlayStation 4 2017 Physical Disc Cop
+2026-04-15 09:22:28,462 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Game  Wrap Codes (12Total)Opens in a new 
+2026-04-15 09:22:28,463 [DEBUG]     Skipping irrelevant eBay listing: NEW SEALED UNUSED GOW2 Gears Of War 2 Gold Hammerb
+2026-04-15 09:22:28,463 [DEBUG]     Skipping irrelevant eBay listing: Epic Games Fortnite Stcked BUY NOW!Opens in a new 
+2026-04-15 09:22:28,463 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Flowering Chaos and Cobalt Star DLC Pack 
+2026-04-15 09:22:28,465 [DEBUG]     Skipping irrelevant eBay listing: Astro Bot and Fortnite Cobalt Star Pack + 1000 V-B
+2026-04-15 09:22:28,465 [DEBUG]     Skipping irrelevant eBay listing: Fortnite: The Last Laugh Bundle - Sony PlayStation
+2026-04-15 09:22:28,466 [DEBUG]     Skipping irrelevant eBay listing: New ListingFortnite Microsoft Xbox One 2018 Game N
+2026-04-15 09:22:28,466 [DEBUG]     Skipping irrelevant eBay listing: Arc Raiders Familiar Ducks 1 Million Coins (143 du
+2026-04-15 09:22:28,466 [DEBUG]     Skipping irrelevant eBay listing: FORTNITE: Darkfire & Ice Bundle - Nintendo SwitchO
+2026-04-15 09:22:28,468 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Transformers Pack PlayStation 5 PS5 Brand
+2026-04-15 09:22:28,468 [DEBUG]     Skipping irrelevant eBay listing: Alan Wake Remastered  (Xbox Series X/Xbox One)Open
+2026-04-15 09:22:28,469 [DEBUG]     Skipping irrelevant eBay listing: PS5 Fortnite: Flowering Chaos Bundle (1000V Bucks 
+2026-04-15 09:22:28,469 [DEBUG]     Skipping irrelevant eBay listing: Fortnite prickly axe Pickaxe  Emote Global Code Wo
+2026-04-15 09:22:28,471 [DEBUG]     Skipping irrelevant eBay listing: Fortnite (Xbox One, 2017) Video Game + Inserts (No
+2026-04-15 09:22:28,471 [DEBUG]     Skipping irrelevant eBay listing: Fortnite Founders Edition (Used Codes)Opens in a n
+2026-04-15 09:22:28,471 [DEBUG]     Skipping irrelevant eBay listing: Fortnite ~ Sony PlayStation 4 PS4, 2017Opens in a 
+2026-04-15 09:22:28,472 [DEBUG]     Skipping irrelevant eBay listing: Fortnite: Transformers Pack (Playstation 5) Sealed
+2026-04-15 09:22:28,472 [DEBUG]     Skipping irrelevant eBay listing: Epic Games Fortnite Transformers Pack Nintendo Swi
+2026-04-15 09:22:28,473 [DEBUG]     Skipping irrelevant eBay listing: Fortnite - Ghoul Punk Pack + 1,500 V-Bucks Challen
+2026-04-15 09:22:28,474 [INFO]     Found 19 listings (total so far: 19)
+2026-04-15 09:22:28,474 [INFO]     eBay Fortnite: 19 relevant listings scraped (raw site total: 10, estimated relevant: 19)
+2026-04-15 09:22:30,147 [INFO] 
+========================================
+2026-04-15 09:22:30,147 [INFO] Scraping: Minecraft
+2026-04-15 09:22:30,147 [INFO] ========================================
+2026-04-15 09:22:30,147 [INFO]   [Eldorado.gg] Scraping Minecraft — https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-04-15 09:22:30,147 [INFO]     Page 1: https://www.eldorado.gg/minecraft-accounts/a/61-1-0
+2026-04-15 09:22:36,598 [INFO]     Found 48 listings (total so far: 48)
+2026-04-15 09:22:36,599 [INFO]     Reached max pages (1), stopping.
+2026-04-15 09:22:37,166 [INFO]   [U7Buy] Scraping Minecraft — https://www.u7buy.com/minecraft/minecraft-accounts
+2026-04-15 09:22:37,664 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890584&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-04-15 09:22:37,665 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-04-15 09:22:37,665 [INFO]     Page 1: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-04-15 09:23:03,849 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Minecraft Accounts for sale | Cheap MC Account | U7BUY', <li> count: 122, URL: https://www.u7buy.com/minecraft/minecraft-accounts
+2026-04-15 09:23:03,849 [DEBUG]   Page body preview: Categories
+Roblox Games
+Blog
+Search For Games
+EN | USD
+Sell
+Log In
+Minecraft
+Hypixel Coins
+Accounts
+Home
+Accounts
+Minecraft Accounts
+Minecraft Accounts for Sale
+4.9
+5111 reviews
+Server
+Hypixel Rank
+Ac
+2026-04-15 09:23:09,069 [INFO]     Found 13 listings (total so far: 13)
+2026-04-15 09:23:09,806 [INFO]   [PlayerAuctions] Scraping Minecraft — https://www.playerauctions.com/minecraft-account/
+2026-04-15 09:23:09,806 [INFO]     Page 1: https://www.playerauctions.com/minecraft-account/
+2026-04-15 09:23:35,318 [WARNING]   Selector '.product-card, .offer-card, [class*='ListingCard'], [class*='listing-item'], .product-list-item, tr.product-row, .pa-product' not found after 25s. Title: 'Minecraft Accounts for Sale | Full Access, Low Price', <li> count: 529, URL: https://www.playerauctions.com/minecraft-account/
+2026-04-15 09:23:35,318 [DEBUG]   Page body preview: Skip to main content
+PlayerAuctions
+English
+LOG IN
+SIGN UP
+Home >
+Minecraft >
+Accounts
+INDEPENDENT MARKETPLACE
+Minecraft Accounts for Sale: Premium, Java Edition, Full Access Alts
+
+A Minecraft account
+2026-04-15 09:23:40,686 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:23:41,795 [INFO]   [Z2U] Scraping Minecraft — https://www.z2u.com/minecraft/accounts-5-44
+2026-04-15 09:23:41,795 [INFO]     Page 1: https://www.z2u.com/minecraft/accounts-5-44
+2026-04-15 09:24:07,295 [WARNING]   Selector '.goods-item, .offer-item, [class*='product-card'], [class*='ProductCard'], [class*='listing-card']' not found after 25s. Title: '', <li> count: 205, URL: https://www.z2u.com/minecraft/accounts-5-44
+2026-04-15 09:24:07,295 [DEBUG]   Page body preview: We use cookies
+
+We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, an
+2026-04-15 09:24:12,471 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:24:13,103 [INFO]   [eBay] Scraping Minecraft — https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-04-15 09:24:13,103 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1
+2026-04-15 09:24:13,374 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=minecraft+account+java&_sop=12&LH_BIN=1 HTTP/1.1" 200 None
+2026-04-15 09:24:14,523 [DEBUG]     Skipping irrelevant eBay listing: Minecon 2011 Cape Account - No ban Hypixel - Java 
+2026-04-15 09:24:14,523 [DEBUG]     Skipping irrelevant eBay listing: Minecraft : Purple Heart Cape - Java & Bedrock Edi
+2026-04-15 09:24:14,523 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Home Cape | Menace Cape - Java & Bedro
+2026-04-15 09:24:14,525 [DEBUG]     Skipping irrelevant eBay listing: Migrator cape + Minecraft Java Edition (Microsoft 
+2026-04-15 09:24:14,525 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Experience: Villager Rescue Cape (Java A
+2026-04-15 09:24:14,526 [DEBUG]     Skipping irrelevant eBay listing: Rare 8 Cape Minecraft Account - Founder's, Vanilla
+2026-04-15 09:24:14,527 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Rare 12 Cape Account Including Zombie Ho
+2026-04-15 09:24:14,528 [DEBUG]     Skipping irrelevant eBay listing: Rare 7 Cape Minecraft Account Including Minecraft 
+2026-04-15 09:24:14,530 [DEBUG]     Skipping irrelevant eBay listing: Rare 12 Cape Minecraft Account - Zombie Horse and 
+2026-04-15 09:24:14,531 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Vanilla Cape Accounts (Feel free to reac
+2026-04-15 09:24:14,531 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Rare 8 Cape Account + Zombie Horse Cape 
+2026-04-15 09:24:14,531 [DEBUG]     Skipping irrelevant eBay listing: (Original account holder) selling Minecraft Java a
+2026-04-15 09:24:14,536 [DEBUG]     Skipping irrelevant eBay listing: Rare Minecraft Experience Cape Account - Including
+2026-04-15 09:24:14,536 [DEBUG]     Skipping irrelevant eBay listing: Rare 6 Cape Minecraft Account Combo - Founder's, M
+2026-04-15 09:24:14,537 [DEBUG]     Skipping irrelevant eBay listing: ⛏Minecraft - Menace Cape & Home Cape | Java & Bedr
+2026-04-15 09:24:14,538 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java Edition PC GameOpens in a new windo
+2026-04-15 09:24:14,538 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java Edition & Bedrock Edition | 3 Capes
+2026-04-15 09:24:14,540 [DEBUG]     Skipping irrelevant eBay listing: Minecraft 16 Cape Account RAREOpens in a new windo
+2026-04-15 09:24:14,543 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Home Cape + Java & Bedrock (PC XBOX PSN)
+2026-04-15 09:24:14,544 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java Edition account with founders capeO
+2026-04-15 09:24:14,544 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Menace Cape + Java & Bedrock (PC XBOX PS
+2026-04-15 09:24:14,546 [DEBUG]     Skipping irrelevant eBay listing: Minecraft:  Code - Time Well Played Reward - JAVA 
+2026-04-15 09:24:14,546 [DEBUG]     Skipping irrelevant eBay listing: [FAST SENT!] Minecraft PC Java & Bedrock Combo for
+2026-04-15 09:24:14,546 [DEBUG]     Skipping irrelevant eBay listing: Minecraft: Java & Bedrock Edition PC GlobalOpens i
+2026-04-15 09:24:14,547 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Copper Cape - Bedrock & Java EditionOp
+2026-04-15 09:24:14,547 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java & Bedrock Edition for PC (Windows) 
+2026-04-15 09:24:14,547 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Purple Heart Cape Twitch Cape - Java &
+2026-04-15 09:24:14,548 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java&Bedrock Full access | Random capeOp
+2026-04-15 09:24:14,548 [DEBUG]     Skipping irrelevant eBay listing: Minecraft:  Code - Hatchling Hat - JAVA & BEDROCKO
+2026-04-15 09:24:14,548 [DEBUG]     Skipping irrelevant eBay listing: Minecraft:  Code - Turtle Tunes - JAVA & BEDROCKOp
+2026-04-15 09:24:14,549 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Home Cape | Menace Cape  - Java & Bedr
+2026-04-15 09:24:14,549 [DEBUG]     Skipping irrelevant eBay listing: Minecraft: Java & Bedrock Edition Deluxe Collectio
+2026-04-15 09:24:14,549 [DEBUG]     Skipping irrelevant eBay listing: Try To Get Minecraft: Java & Bedrock Edition 1 Key
+2026-04-15 09:24:14,550 [DEBUG]     Skipping irrelevant eBay listing: MINECRAFT Purple Heart Cape Java & Bedrock Edition
+2026-04-15 09:24:14,550 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Copper Core - Bedrock & Java EditionOp
+2026-04-15 09:24:14,550 [DEBUG]     Skipping irrelevant eBay listing: Minecraft:  Code - Baby Chick Slippers - JAVA & BE
+2026-04-15 09:24:14,551 [DEBUG]     Skipping irrelevant eBay listing: Minecraft : Focus Retention Helmet Java & Bedrock 
+2026-04-15 09:24:14,552 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Menace Cape Twitch Cape - Java & Bedro
+2026-04-15 09:24:14,553 [DEBUG]     Skipping irrelevant eBay listing: Minecraft:  Code - Bunny Beanie - JAVA & BEDROCKOp
+2026-04-15 09:24:14,553 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Home Cape Twitch Cape -  Java & Bedroc
+2026-04-15 09:24:14,553 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Menace&Home Cape Twitch Cape -  Java &
+2026-04-15 09:24:14,554 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - COPPER CORE TOP - JAVA & BEDROCK - TWI
+2026-04-15 09:24:14,554 [DEBUG]     Skipping irrelevant eBay listing: Minecraft PC Java & Bedrock Combo Edition Key Wind
+2026-04-15 09:24:14,555 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Bedrock Edition Three (3) Character Crea
+2026-04-15 09:24:14,555 [DEBUG]     Skipping irrelevant eBay listing: Minecraft: Copper + Menace + Home Cape Codes Java 
+2026-04-15 09:24:14,555 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - McDonald’s Add-On ❗️ | Java & Bedrock 
+2026-04-15 09:24:14,557 [DEBUG]     Skipping irrelevant eBay listing: ⚡️Minecraft Purple Heart Cape Code Java & Bedrock⚡
+2026-04-15 09:24:14,557 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Baby Chick Slippers Key JAVA & BEDROCK I
+2026-04-15 09:24:14,558 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java & Bedrock Edition Purple Heart Cape
+2026-04-15 09:24:14,558 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Baby Chick Slippers Key JAVA & BEDROCK I
+2026-04-15 09:24:14,558 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Home Cape Twitch Cape - Java & Bedrock
+2026-04-15 09:24:14,559 [DEBUG]     Skipping irrelevant eBay listing: [Digital Code] Minecraft – Java and Bedrock Editio
+2026-04-15 09:24:14,559 [DEBUG]     Skipping irrelevant eBay listing: [Digital Code] Minecraft – Java and Bedrock Editio
+2026-04-15 09:24:14,560 [DEBUG]     Skipping irrelevant eBay listing: Minecraft x Movie : McDonald’s Add-On FULL SET add
+2026-04-15 09:24:14,560 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Focus Retention Helmet Key Java/BedrockO
+2026-04-15 09:24:14,561 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Java & Bedrock - Allay Hoodie 🔥 XBOX Dig
+2026-04-15 09:24:14,561 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Copper Cape and Core  - Java & Bedrock [
+2026-04-15 09:24:14,561 [DEBUG]     Skipping irrelevant eBay listing: Minecraft PC Java & Bedrock Combo Edition Key Wind
+2026-04-15 09:24:14,562 [DEBUG]     Skipping irrelevant eBay listing: Cherry Blossom Minecraft Cape Account - Dm for Pri
+2026-04-15 09:24:14,562 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Bedrock & Java - TIME WELL PLAYED OUTFIT
+2026-04-15 09:24:14,563 [DEBUG]     Skipping irrelevant eBay listing: Minecraft - Copper Core - Bedrock & Java EditionOp
+2026-04-15 09:24:14,563 [DEBUG]     Skipping irrelevant eBay listing: Realms Cape Minecraft Account – Extremely Exclusiv
+2026-04-15 09:24:14,565 [DEBUG]     Skipping irrelevant eBay listing: ⚡️Minecraft Menace Cape Code Java & Bedrock⚡️Fast 
+2026-04-15 09:24:14,566 [DEBUG]     Skipping irrelevant eBay listing: Minecraft Purple Focus Retention Helmet - WORKING 
+2026-04-15 09:24:14,566 [DEBUG]     Skipping irrelevant eBay listing: Double Minecon Cape Account – Extremely Rare | DM 
+2026-04-15 09:24:14,566 [INFO]     Found 21 listings (total so far: 21)
+2026-04-15 09:24:14,567 [INFO]     eBay Minecraft: 21 relevant listings scraped (raw site total: 38, estimated relevant: 21)
+2026-04-15 09:24:16,464 [INFO] 
+========================================
+2026-04-15 09:24:16,464 [INFO] Scraping: Steam
+2026-04-15 09:24:16,464 [INFO] ========================================
+2026-04-15 09:24:16,464 [INFO]   [Eldorado.gg] Scraping Steam — https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-04-15 09:24:16,464 [INFO]     Page 1: https://www.eldorado.gg/steam-accounts/a/42-0-0
+2026-04-15 09:24:22,757 [INFO]     Found 48 listings (total so far: 48)
+2026-04-15 09:24:22,757 [INFO]     Reached max pages (1), stopping.
+2026-04-15 09:24:23,607 [INFO]   [U7Buy] Scraping Steam — https://www.u7buy.com/steam/steam-accounts
+2026-04-15 09:24:23,925 [DEBUG] https://www.u7buy.com:443 "GET /api/offer/list?spuId=1888155406422890226&businessId=1820693954263351302&page=1&pageSize=50 HTTP/1.1" 200 None
+2026-04-15 09:24:23,926 [DEBUG]     API scrape error: Expecting value: line 1 column 1 (char 0)
+2026-04-15 09:24:23,926 [INFO]     Page 1: https://www.u7buy.com/steam/steam-accounts
+2026-04-15 09:24:50,208 [WARNING]   Selector '[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item' not found after 25s. Title: 'Steam Accounts with Games for Sale | U7BUY', <li> count: 129, URL: https://www.u7buy.com/steam/steam-accounts
+2026-04-15 09:24:50,208 [DEBUG]   Page body preview: Categories
+Roblox Games
+Blog
+Search For Games
+EN | USD
+Sell
+Log In
+Steam
+Accounts
+Gift Cards
+Items
+Home
+Accounts
+Steam Accounts
+Steam Accounts for Sale
+4.9
+1375 reviews
+Price
+Usa
+Brazil
+Cyberpunk
+Gta 
+2026-04-15 09:24:55,424 [INFO]     Found 13 listings (total so far: 13)
+2026-04-15 09:24:56,778 [INFO]   [PlayerAuctions] Scraping Steam — https://www.playerauctions.com/steam-account/
+2026-04-15 09:24:56,778 [INFO]     Page 1: https://www.playerauctions.com/steam-account/
+2026-04-15 09:25:22,326 [WARNING]   Selector '.product-card, .offer-card, [class*='ListingCard'], [class*='listing-item'], .product-list-item, tr.product-row, .pa-product' not found after 25s. Title: 'Steam Accounts with Games for Sale | PlayerAuctions', <li> count: 533, URL: https://www.playerauctions.com/steam-account/
+2026-04-15 09:25:22,326 [DEBUG]   Page body preview: Skip to main content
+PlayerAuctions
+English
+LOG IN
+SIGN UP
+Home >
+Steam >
+Accounts
+INDEPENDENT MARKETPLACE
+Steam Accounts for Sale - Steam Market
+
+Thousands of games are available on Steam and, as the
+2026-04-15 09:25:27,747 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:25:28,488 [INFO]   [Z2U] Scraping Steam — https://www.z2u.com/steam/accounts-5-3271
+2026-04-15 09:25:28,488 [INFO]     Page 1: https://www.z2u.com/steam/accounts-5-3271
+2026-04-15 09:25:54,069 [WARNING]   Selector '.goods-item, .offer-item, [class*='product-card'], [class*='ProductCard'], [class*='listing-card']' not found after 25s. Title: '', <li> count: 205, URL: https://www.z2u.com/steam/accounts-5-3271
+2026-04-15 09:25:54,069 [DEBUG]   Page body preview: We use cookies
+
+We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, an
+2026-04-15 09:25:59,249 [INFO]     No listings found on page 1, stopping.
+2026-04-15 09:26:00,074 [INFO]   [eBay] Scraping Steam — https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-04-15 09:26:00,074 [INFO]     Page 1: https://www.ebay.com/sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1
+2026-04-15 09:26:00,292 [DEBUG] https://www.ebay.com:443 "GET /sch/i.html?_nkw=steam+account&_sop=12&LH_BIN=1 HTTP/1.1" 200 None
+2026-04-15 09:26:01,016 [DEBUG]     Skipping irrelevant eBay listing: Borderlands 4 • INSTANT Level 60 • MAX LVL • BL4 •
+2026-04-15 09:26:01,017 [DEBUG]     Skipping irrelevant eBay listing: Borderlands 4 • INSTANT Level 60 • MAX LVL • BL4 •
+2026-04-15 09:26:01,019 [DEBUG]     Skipping irrelevant eBay listing: The Finals - SKILL ISSUE 3.0 SET - ALL PLATFORMS C
+2026-04-15 09:26:01,019 [DEBUG]     Skipping irrelevant eBay listing: [3 CODES] The Finals - ALL 3 Steelseries ITEMS - A
+2026-04-15 09:26:01,023 [DEBUG]     Skipping irrelevant eBay listing: Call of Duty Warzone | apocalypse Iridescent | Pre
+2026-04-15 09:26:01,023 [DEBUG]     Skipping irrelevant eBay listing: Cities Skylines II SteamOpens in a new window or t
+2026-04-15 09:26:01,025 [DEBUG]     Skipping irrelevant eBay listing: New ListingResident Evil 9 Requiem PC Game on Stea
+2026-04-15 09:26:01,030 [DEBUG]     Skipping irrelevant eBay listing: Prey (PC / DVD-ROM) NEWOpens in a new window or ta
+2026-04-15 09:26:01,031 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil Requiem RTX 5000+ Required **E-Code*
+2026-04-15 09:26:01,031 [DEBUG]     Skipping irrelevant eBay listing: Forza Horizon 5 Prenium Edition | Offline Gameplay
+2026-04-15 09:26:01,032 [DEBUG]     Skipping irrelevant eBay listing: Selling steam account that’s worth 300+ with DLCsO
+2026-04-15 09:26:01,032 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil Requiem for PC Steam NVIDIA 5000 GPU
+2026-04-15 09:26:01,032 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil Requiem for PC Steam NVIDIA 5000 GPU
+2026-04-15 09:26:01,034 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil Requiem RE9 PC Code NVIDIA RTX 50-Se
+2026-04-15 09:26:01,034 [DEBUG]     Skipping irrelevant eBay listing: Resident Evil Requiem for PC Steam NVIDIA 5000 GPU
+2026-04-15 09:26:01,035 [DEBUG]     Skipping irrelevant eBay listing: Songs of Conquest PC Steam key REGION FREE ships v
+2026-04-15 09:26:01,039 [DEBUG]     Skipping irrelevant eBay listing: Poker Night 2 Digital Steam Key (Delisted Game) PC
+2026-04-15 09:26:01,040 [DEBUG]     Skipping irrelevant eBay listing: Borderlands 4 • Max Spec Points • Specialization L
+2026-04-15 09:26:01,041 [DEBUG]     Skipping irrelevant eBay listing: PC Steam Resident Evil Requiem for NVIDIA 5000 GPU
+2026-04-15 09:26:01,042 [DEBUG]     Skipping irrelevant eBay listing: Talisman: Digital Edition +3 Expansions GLOBAL STE
+2026-04-15 09:26:01,044 [DEBUG]     Skipping irrelevant eBay listing: (x1) Random Steam Key - Deluxe - $10+ Value Guaren
+2026-04-15 09:26:01,044 [DEBUG]     Skipping irrelevant eBay listing: Control Ultimate Edition (PC, 2020) - Steam KeyOpe
+2026-04-15 09:26:01,045 [DEBUG]     Skipping irrelevant eBay listing: Escape From Tarkov Edge of Darkness + Arenas - USA
+2026-04-15 09:26:01,050 [DEBUG]     Skipping irrelevant eBay listing: No Place Like Home | Steam Key | PC | WorldwideOpe
+2026-04-15 09:26:01,051 [DEBUG]     Skipping irrelevant eBay listing: Townsmen: A Kingdom Rebuilt PC Steam game REGION F
+2026-04-15 09:26:01,051 [DEBUG]     Skipping irrelevant eBay listing: Nekopara Complete Collection  | Steam Key | PC | W
+2026-04-15 09:26:01,053 [DEBUG]     Skipping irrelevant eBay listing: Hard West 2 Steam key PC REGION FREE ships via Eba
+2026-04-15 09:26:01,053 [DEBUG]     Skipping irrelevant eBay listing: Virgo Versus The Zodiac | Steam Key | PC | Worldwi
+2026-04-15 09:26:01,053 [DEBUG]     Skipping irrelevant eBay listing: Syberia: The World Before PC Steam game Ship FAST 
+2026-04-15 09:26:01,054 [DEBUG]     Skipping irrelevant eBay listing: Helldivers 2 250x Medals Fast Farm PS/PC Direct ca
+2026-04-15 09:26:01,054 [DEBUG]     Skipping irrelevant eBay listing: Jazzpunk Director's Cut [Steam PC Key]Opens in a n
+2026-04-15 09:26:01,056 [DEBUG]     Skipping irrelevant eBay listing: 5x Random ELITE Steam Keys | Region Free | Global 
+2026-04-15 09:26:01,058 [INFO]     Found 28 listings (total so far: 28)
+2026-04-15 09:26:01,058 [INFO]     eBay Steam: 28 relevant listings scraped (raw site total: 413, estimated relevant: 192)
+2026-04-15 09:26:03,374 [INFO] Saved to SQLite database (run_id=20)
+2026-04-15 09:26:03,416 [ERROR] Git push failed: Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <runner@runnervm35a4x.zlxcakwy2jjudj4ucvtnllunvd.bx.internal.cloudapp.net>) not allowed
+
+2026-04-15 09:26:03,416 [INFO] 
+============================================================
+2026-04-15 09:26:03,416 [INFO] SCRAPE COMPLETE
+2026-04-15 09:26:03,416 [INFO] ============================================================
+2026-04-15 09:26:03,416 [INFO] Total listings scraped: 288
+2026-04-15 09:26:03,416 [INFO] Total on-site (reported by marketplaces): 95,238
+2026-04-15 09:26:03,416 [INFO] Output: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/dashboard_data.json
+2026-04-15 09:26:03,416 [INFO] Backup: /home/runner/work/Roblox-Accounts-Monitoring/Roblox-Accounts-Monitoring/scrape_history/dashboard_data_20260415_092603.json
+2026-04-15 09:26:03,416 [INFO] 
+2026-04-15 09:26:03,416 [INFO]   Roblox: 168 total | avg $29.09
+2026-04-15 09:26:03,416 [INFO]   Fortnite: 80 total | avg $187.77
+2026-04-15 09:26:03,416 [INFO]   Minecraft: 82 total | avg $40.46
+2026-04-15 09:26:03,416 [INFO]   Steam: 89 total | avg $238.46
+2026-04-15 09:26:03,416 [INFO] 
+2026-04-15 09:26:03,416 [INFO]   OG / Veteran Account: 52 listings
+2026-04-15 09:26:03,416 [INFO]   Items / Currency: 120 listings
+2026-04-15 09:26:03,416 [INFO]   General: 134 listings
