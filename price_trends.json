@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-16T09:22:08.455010",
-  "data_points": 17,
+  "generated_at": "2026-04-17T09:16:08.600768",
+  "data_points": 18,
   "trends": [
     {
       "date": "2026-03-26",
@@ -959,16 +959,81 @@
           "rolling_count": 290
         }
       }
+    },
+    {
+      "date": "2026-04-17",
+      "platforms": {
+        "Roblox": {
+          "avg_price": 22.56,
+          "median_price": 2.99,
+          "min_price": 0.5,
+          "max_price": 249.0,
+          "count": 113,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 169,
+          "is_suspect": true,
+          "suspect_reason": "Count dropped to 113 from 7-day avg of 333",
+          "rolling_avg_price": 41.76,
+          "rolling_median_price": 21.32,
+          "rolling_count": 328
+        },
+        "Fortnite": {
+          "avg_price": 203.3,
+          "median_price": 71.52,
+          "min_price": 11.05,
+          "max_price": 3200.0,
+          "count": 40,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 65,
+          "is_suspect": true,
+          "suspect_reason": "Count dropped to 40 from 7-day avg of 274",
+          "rolling_avg_price": 98.63,
+          "rolling_median_price": 69.53,
+          "rolling_count": 270
+        },
+        "Minecraft": {
+          "avg_price": 52.65,
+          "median_price": 17.5,
+          "min_price": 0.5,
+          "max_price": 500.0,
+          "count": 57,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 82,
+          "is_suspect": true,
+          "suspect_reason": "Count dropped to 57 from 7-day avg of 276",
+          "rolling_avg_price": 81.03,
+          "rolling_median_price": 13.6,
+          "rolling_count": 273
+        },
+        "Steam": {
+          "avg_price": 260.28,
+          "median_price": 25.0,
+          "min_price": 0.5,
+          "max_price": 2999.99,
+          "count": 72,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 97,
+          "is_suspect": true,
+          "suspect_reason": "Count dropped to 72 from 7-day avg of 290",
+          "rolling_avg_price": 44.14,
+          "rolling_median_price": 2.77,
+          "rolling_count": 285
+        }
+      }
     }
   ],
   "scrape_health": {
     "Roblox": {
       "Eldorado.gg": {
-        "status": "ok",
-        "scraped_count": 480,
+        "status": "degraded",
+        "scraped_count": 48,
         "expected_count": 480,
-        "is_suspect": false,
-        "note": null
+        "is_suspect": true,
+        "note": "Got 48, expected ~480 (>50% drop)"
       },
       "U7Buy": {
         "status": "degraded",
@@ -993,7 +1058,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 6,
+        "scraped_count": 5,
         "expected_count": 4,
         "is_suspect": false,
         "note": null
@@ -1022,11 +1087,11 @@
     },
     "Fortnite": {
       "Eldorado.gg": {
-        "status": "ok",
-        "scraped_count": 480,
-        "expected_count": 474,
-        "is_suspect": false,
-        "note": null
+        "status": "degraded",
+        "scraped_count": 48,
+        "expected_count": 480,
+        "is_suspect": true,
+        "note": "Got 48, expected ~480 (>50% drop)"
       },
       "U7Buy": {
         "status": "degraded",
@@ -1050,20 +1115,20 @@
         "note": null
       },
       "eBay": {
-        "status": "ok",
-        "scraped_count": 17,
-        "expected_count": 16,
-        "is_suspect": false,
-        "note": null
+        "status": "degraded",
+        "scraped_count": 4,
+        "expected_count": 17,
+        "is_suspect": true,
+        "note": "Got 4, expected ~17 (>50% drop)"
       }
     },
     "Minecraft": {
       "Eldorado.gg": {
-        "status": "ok",
-        "scraped_count": 480,
+        "status": "degraded",
+        "scraped_count": 48,
         "expected_count": 480,
-        "is_suspect": false,
-        "note": null
+        "is_suspect": true,
+        "note": "Got 48, expected ~480 (>50% drop)"
       },
       "U7Buy": {
         "status": "degraded",
@@ -1089,18 +1154,18 @@
       "eBay": {
         "status": "ok",
         "scraped_count": 21,
-        "expected_count": 19,
+        "expected_count": 20,
         "is_suspect": false,
         "note": null
       }
     },
     "Steam": {
       "Eldorado.gg": {
-        "status": "ok",
-        "scraped_count": 480,
+        "status": "degraded",
+        "scraped_count": 48,
         "expected_count": 480,
-        "is_suspect": false,
-        "note": null
+        "is_suspect": true,
+        "note": "Got 48, expected ~480 (>50% drop)"
       },
       "U7Buy": {
         "status": "degraded",
@@ -1125,8 +1190,8 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 30,
-        "expected_count": 33,
+        "scraped_count": 36,
+        "expected_count": 32,
         "is_suspect": false,
         "note": null
       }
