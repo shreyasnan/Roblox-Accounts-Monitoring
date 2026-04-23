@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-22T09:24:23.674876",
-  "data_points": 23,
+  "generated_at": "2026-04-23T09:29:13.547219",
+  "data_points": 24,
   "trends": [
     {
       "date": "2026-03-26",
@@ -1327,6 +1327,63 @@
           "rolling_count": 292
         }
       }
+    },
+    {
+      "date": "2026-04-23",
+      "platforms": {
+        "Roblox": {
+          "avg_price": 33.52,
+          "median_price": 22.99,
+          "min_price": 0.5,
+          "max_price": 299.0,
+          "count": 326,
+          "age_verified_count": 3,
+          "age_verified_avg_price": 0.5,
+          "total_listings": 598,
+          "rolling_avg_price": 34.62,
+          "rolling_median_price": 22.99,
+          "rolling_count": 326
+        },
+        "Fortnite": {
+          "avg_price": 93.14,
+          "median_price": 58.02,
+          "min_price": 0.5,
+          "max_price": 3000.0,
+          "count": 260,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 648,
+          "rolling_avg_price": 98.14,
+          "rolling_median_price": 57.67,
+          "rolling_count": 261
+        },
+        "Minecraft": {
+          "avg_price": 74.99,
+          "median_price": 11.0,
+          "min_price": 0.5,
+          "max_price": 6500.0,
+          "count": 271,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 657,
+          "rolling_avg_price": 78.51,
+          "rolling_median_price": 11.49,
+          "rolling_count": 276
+        },
+        "Steam": {
+          "avg_price": 50.36,
+          "median_price": 2.59,
+          "min_price": 0.5,
+          "max_price": 2999.99,
+          "count": 285,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 671,
+          "rolling_avg_price": 50.16,
+          "rolling_median_price": 2.56,
+          "rolling_count": 292
+        }
+      }
     }
   ],
   "scrape_health": {
@@ -1361,7 +1418,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 1,
+        "scraped_count": 2,
         "expected_count": 4,
         "is_suspect": false,
         "note": null
@@ -1412,15 +1469,15 @@
       },
       "Z2U": {
         "status": "ok",
-        "scraped_count": 70,
-        "expected_count": 42,
+        "scraped_count": 148,
+        "expected_count": 52,
         "is_suspect": false,
         "note": null
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 12,
-        "expected_count": 18,
+        "scraped_count": 7,
+        "expected_count": 14,
         "is_suspect": false,
         "note": null
       }
@@ -1449,8 +1506,8 @@
       },
       "Z2U": {
         "status": "ok",
-        "scraped_count": 70,
-        "expected_count": 66,
+        "scraped_count": 145,
+        "expected_count": 76,
         "is_suspect": false,
         "note": null
       },
@@ -1465,8 +1522,8 @@
     "Steam": {
       "Eldorado.gg": {
         "status": "ok",
-        "scraped_count": 456,
-        "expected_count": 480,
+        "scraped_count": 480,
+        "expected_count": 474,
         "is_suspect": false,
         "note": null
       },
@@ -1486,15 +1543,15 @@
       },
       "Z2U": {
         "status": "ok",
-        "scraped_count": 70,
-        "expected_count": 66,
+        "scraped_count": 145,
+        "expected_count": 76,
         "is_suspect": false,
         "note": null
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 35,
-        "expected_count": 35,
+        "scraped_count": 33,
+        "expected_count": 36,
         "is_suspect": false,
         "note": null
       }
