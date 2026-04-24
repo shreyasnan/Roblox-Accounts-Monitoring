@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-23T09:29:13.547219",
-  "data_points": 24,
+  "generated_at": "2026-04-24T09:34:09.987080",
+  "data_points": 25,
   "trends": [
     {
       "date": "2026-03-26",
@@ -1384,6 +1384,63 @@
           "rolling_count": 292
         }
       }
+    },
+    {
+      "date": "2026-04-24",
+      "platforms": {
+        "Roblox": {
+          "avg_price": 42.06,
+          "median_price": 22.66,
+          "min_price": 0.5,
+          "max_price": 1589.99,
+          "count": 325,
+          "age_verified_count": 3,
+          "age_verified_avg_price": 0.5,
+          "total_listings": 597,
+          "rolling_avg_price": 36.11,
+          "rolling_median_price": 22.92,
+          "rolling_count": 326
+        },
+        "Fortnite": {
+          "avg_price": 116.61,
+          "median_price": 69.99,
+          "min_price": 2.9,
+          "max_price": 3000.0,
+          "count": 257,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 475,
+          "rolling_avg_price": 102.75,
+          "rolling_median_price": 60.75,
+          "rolling_count": 260
+        },
+        "Minecraft": {
+          "avg_price": 64.42,
+          "median_price": 10.49,
+          "min_price": 0.5,
+          "max_price": 3000.0,
+          "count": 271,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 572,
+          "rolling_avg_price": 75.69,
+          "rolling_median_price": 11.29,
+          "rolling_count": 275
+        },
+        "Steam": {
+          "avg_price": 44.65,
+          "median_price": 2.0,
+          "min_price": 0.5,
+          "max_price": 2999.99,
+          "count": 275,
+          "age_verified_count": 0,
+          "age_verified_avg_price": 0.0,
+          "total_listings": 736,
+          "rolling_avg_price": 49.06,
+          "rolling_median_price": 2.44,
+          "rolling_count": 289
+        }
+      }
     }
   ],
   "scrape_health": {
@@ -1411,7 +1468,7 @@
       },
       "Z2U": {
         "status": "ok",
-        "scraped_count": 1,
+        "scraped_count": 0,
         "expected_count": 1,
         "is_suspect": false,
         "note": null
@@ -1419,7 +1476,7 @@
       "eBay": {
         "status": "ok",
         "scraped_count": 2,
-        "expected_count": 4,
+        "expected_count": 3,
         "is_suspect": false,
         "note": null
       },
@@ -1448,7 +1505,7 @@
     "Fortnite": {
       "Eldorado.gg": {
         "status": "ok",
-        "scraped_count": 480,
+        "scraped_count": 408,
         "expected_count": 480,
         "is_suspect": false,
         "note": null
@@ -1469,23 +1526,23 @@
       },
       "Z2U": {
         "status": "ok",
-        "scraped_count": 148,
-        "expected_count": 52,
+        "scraped_count": 50,
+        "expected_count": 73,
         "is_suspect": false,
         "note": null
       },
       "eBay": {
-        "status": "ok",
-        "scraped_count": 7,
-        "expected_count": 14,
-        "is_suspect": false,
-        "note": null
+        "status": "degraded",
+        "scraped_count": 4,
+        "expected_count": 10,
+        "is_suspect": true,
+        "note": "Got 4, expected ~10 (>50% drop)"
       }
     },
     "Minecraft": {
       "Eldorado.gg": {
         "status": "ok",
-        "scraped_count": 480,
+        "scraped_count": 456,
         "expected_count": 480,
         "is_suspect": false,
         "note": null
@@ -1506,8 +1563,8 @@
       },
       "Z2U": {
         "status": "ok",
-        "scraped_count": 145,
-        "expected_count": 76,
+        "scraped_count": 84,
+        "expected_count": 97,
         "is_suspect": false,
         "note": null
       },
@@ -1543,15 +1600,15 @@
       },
       "Z2U": {
         "status": "ok",
-        "scraped_count": 145,
-        "expected_count": 76,
+        "scraped_count": 220,
+        "expected_count": 97,
         "is_suspect": false,
         "note": null
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 33,
-        "expected_count": 36,
+        "scraped_count": 23,
+        "expected_count": 37,
         "is_suspect": false,
         "note": null
       }
