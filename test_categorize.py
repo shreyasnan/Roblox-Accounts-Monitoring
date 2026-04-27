@@ -162,3 +162,31 @@ class TestOtherCategoriesUnaffected:
 
     def test_general_fallback(self):
         assert only(categorize_listing("Roblox account full access instant delivery", "Roblox"), "General")
+
+
+# ---------------------------------------------------------------------------
+# PlayerAuctions URL validation
+# ---------------------------------------------------------------------------
+
+class TestPlayerAuctionsUrlValidation:
+    """Ensure the '!' check correctly distinguishes listing URLs from nav links."""
+
+    def _is_valid_pa_url(self, url):
+        return "!" in url or "/offer/" in url
+
+    def test_real_listing_accepted(self):
+        url = "https://www.playerauctions.com/roblox-account/287526647a!rivals-22-lvl--energy-rifle/`"
+        assert self._is_valid_pa_url(url)
+
+    def test_language_link_rejected(self):
+        for url in [
+            "https://www.playerauctions.com/de/roblox-account/",
+            "https://www.playerauctions.com/es/roblox-account/",
+            "https://www.playerauctions.com/fr/roblox-account/",
+            "https://www.playerauctions.com/jp/roblox-account/",
+            "https://www.playerauctions.com/roblox-account/",
+        ]:
+            assert not self._is_valid_pa_url(url), f"Should have rejected: {url}"
+
+    def test_offer_url_accepted(self):
+        assert self._is_valid_pa_url("https://www.playerauctions.com/offer/12345")

@@ -1221,8 +1221,9 @@ class PlayerAuctionsScraper:
         listings = []
         cards = soup.select(self.LISTING_CARD)
         if not cards:
-            # Fallback: look for any links to offer/product pages
-            cards = soup.select("a[href*='/offer/'], a[href*='roblox-account'], div[data-offer], tr[data-id]")
+            # Fallback: only match actual listing URLs (contain '!' slug separator)
+            game_slug = game.lower().replace(" ", "-")
+            cards = soup.select(f"a[href*='{game_slug}-account/'][href*='!'], a[href*='/offer/'], div[data-offer], tr[data-id]")
 
         for card in cards:
             try:
@@ -1255,6 +1256,10 @@ class PlayerAuctionsScraper:
             if link:
                 href = link["href"]
                 url = href if href.startswith("http") else f"https://www.playerauctions.com{href}"
+
+        # Reject nav/language links — real listing URLs contain the '!' slug separator
+        if url and "!" not in url and "/offer/" not in url:
+            return None
 
         delivery = ""
         delivery_el = card.select_one("[class*='delivery'], [class*='Delivery'], [class*='time']")
