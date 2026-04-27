@@ -2,7 +2,7 @@ name: Daily Marketplace Scrape & Deploy
 
 on:
   schedule:
-    # Runs every day at 8:00 AM UTC
+    # Runs every day at 1:00 AM PT (8am UTC / PDT, shifts to 9am UTC in PST)
     - cron: '0 8 * * *'
   workflow_dispatch:
     # Also allows manual runs from the GitHub Actions tab
