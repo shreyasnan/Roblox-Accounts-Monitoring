@@ -132,6 +132,14 @@ ZEUSX_URLS = {
     "Roblox": "https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts",
 }
 
+EBAY_AGE_VERIFIED_SEARCH_TERMS = {
+    "Roblox": "roblox+account+age+verified",
+}
+
+ELDORADO_AGE_VERIFIED_URLS = {
+    "Roblox": "https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0?search=age+verified",
+}
+
 # ---------------------------------------------------------------------------
 # Logging
 # ---------------------------------------------------------------------------
@@ -359,8 +367,9 @@ class EldoradoScraper:
         self.browser = browser
         self.max_pages = max_pages  # 0 = unlimited
 
-    def scrape_game(self, game: str) -> dict:
-        base_url = ELDORADO_URLS.get(game)
+    def scrape_game(self, game: str, base_url: str = None) -> dict:
+        if base_url is None:
+            base_url = ELDORADO_URLS.get(game)
         if not base_url:
             return {"total_on_site": 0, "search_url": "", "listings": []}
 
@@ -812,7 +821,8 @@ class EbayScraper:
     ACCOUNT_KEYWORDS = [
         "account", "acc ", "acct", "login", "email access", "full access",
         "stacked", "og ", "join date", "creation date",
-        "age verified", "voice chat", "email verified",
+        "age verified", "age verification", "voice chat", "voice enabled", "voice verified",
+        "vc enabled", "vc account", "13+", "18+", "email verified",
         "prime", "game library", "steam level", "csgo", "cs2",
         "cape", "hypixel",
     ]
@@ -866,8 +876,9 @@ class EbayScraper:
         # approach means we only count things we're confident are accounts
         return False
 
-    def scrape_game(self, game: str) -> dict:
-        search_term = EBAY_SEARCH_TERMS.get(game)
+    def scrape_game(self, game: str, search_term: str = None) -> dict:
+        if search_term is None:
+            search_term = EBAY_SEARCH_TERMS.get(game)
         if not search_term:
             return {"total_on_site": 0, "search_url": "", "listings": []}
 
@@ -1830,10 +1841,23 @@ def categorize_listing(title: str, platform: str) -> list:
         categories.append("Items / Currency")
 
     age_verified_keywords = [
-        "age verified", "18+", "voice chat", "verified age",
-        "passport", "id verified", "verification", "vc enabled",
+        # explicit age/id verification
+        "age verified", "age verification", "verified age", "age gate", "age check",
+        "id verified", "id verification", "gov id", "government id", "passport verified",
+        # voice chat (requires age verification on Roblox)
+        "voice chat", "voice enabled", "voice verified", "vc enabled", "vc account",
+        "with vc", "has vc",
+        # age signals common in listing titles
+        "18+", "18 years", "over 18", "13+", "over 13",
+        # other account-specific verification signals
+        "phone verified", "adult verified",
     ]
-    if any(kw in title_lower for kw in age_verified_keywords):
+    age_verified_disqualifiers = [
+        "email verification", "payment verification", "verification service",
+        "passport to",  # in-game item/quest reference, not an age-verified account
+    ]
+    if (any(kw in title_lower for kw in age_verified_keywords)
+            and not any(dq in title_lower for dq in age_verified_disqualifiers)):
         categories.append("Age Verified")
 
     og_keywords = [
@@ -2110,6 +2134,19 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fas
             scraped[game]["Eldorado.gg"] = {"total_on_site": 0, "search_url": ELDORADO_URLS.get(game, ""), "listings": []}
         polite_delay()
 
+        # Eldorado.gg supplementary age-verified search (Roblox only, 2 targeted pages)
+        if game in ELDORADO_AGE_VERIFIED_URLS:
+            try:
+                eldorado_av = EldoradoScraper(browser, max_pages=2)
+                av_result = eldorado_av.scrape_game(game, base_url=ELDORADO_AGE_VERIFIED_URLS[game])
+                seen_urls = {l["url"] for l in scraped[game]["Eldorado.gg"]["listings"]}
+                new_listings = [l for l in av_result["listings"] if l["url"] not in seen_urls]
+                scraped[game]["Eldorado.gg"]["listings"].extend(new_listings)
+                log.info(f"  [Eldorado age-verified] Added {len(new_listings)} new listings for {game}")
+            except Exception as e:
+                log.warning(f"  Eldorado age-verified supplementary search failed for {game}: {e}")
+            polite_delay()
+
         # U7Buy
         try:
             scraped[game]["U7Buy"] = u7buy.scrape_game(game)
@@ -2141,6 +2178,19 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fas
             log.error(f"  eBay failed for {game}: {e}")
             scraped[game]["eBay"] = {"total_on_site": 0, "search_url": f"https://www.ebay.com/sch/i.html?_nkw={EBAY_SEARCH_TERMS.get(game, '')}", "listings": []}
         polite_delay(extra=1)  # extra delay for eBay to avoid CAPTCHA
+
+        # eBay supplementary age-verified search (Roblox only, 1 targeted page)
+        if game in EBAY_AGE_VERIFIED_SEARCH_TERMS:
+            try:
+                ebay_av = EbayScraper(browser, max_pages=1)
+                av_result = ebay_av.scrape_game(game, search_term=EBAY_AGE_VERIFIED_SEARCH_TERMS[game])
+                seen_urls = {l["url"] for l in scraped[game]["eBay"]["listings"]}
+                new_listings = [l for l in av_result["listings"] if l["url"] not in seen_urls]
+                scraped[game]["eBay"]["listings"].extend(new_listings)
+                log.info(f"  [eBay age-verified] Added {len(new_listings)} new listings for {game}")
+            except Exception as e:
+                log.warning(f"  eBay age-verified supplementary search failed for {game}: {e}")
+            polite_delay(extra=1)
 
         # G2G (Roblox only for now)
         if game in G2G_URLS:
