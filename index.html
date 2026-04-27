@@ -275,6 +275,14 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
         <option value="General">General</option>
       </select>
     </div>
+    <div>
+      <label>Delivery:</label>
+      <select id="filterDelivery">
+        <option value="">All</option>
+        <option value="Instant">Instant</option>
+        <option value="Varies">Varies</option>
+      </select>
+    </div>
   </div>
 
   <div class="table-card">
@@ -282,14 +290,16 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
       <table id="listingsTable">
         <thead>
           <tr>
-            <th style="width: 12%;">Platform</th>
-            <th style="width: 12%;">Source</th>
-            <th style="width: 25%;">Title</th>
-            <th style="width: 10%;">Price (USD)</th>
-            <th style="width: 12%;">Seller</th>
-            <th style="width: 10%;">Rating</th>
-            <th style="width: 15%;">Categories</th>
-            <th style="width: 14%;">Action</th>
+            <th style="width: 10%;">Platform</th>
+            <th style="width: 10%;">Source</th>
+            <th style="width: 22%;">Title</th>
+            <th style="width: 8%;">Price (USD)</th>
+            <th style="width: 10%;">Seller</th>
+            <th style="width: 8%;">Rating</th>
+            <th style="width: 7%;">Delivery</th>
+            <th style="width: 7%;">Sold</th>
+            <th style="width: 12%;">Categories</th>
+            <th style="width: 6%;">Action</th>
           </tr>
         </thead>
         <tbody id="listingsTableBody">
@@ -307,7 +317,8 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
 
 <!-- ========== AGE VERIFIED ========== -->
 <div class="section" id="sec-ageverified">
-  <h2>Age Verified Accounts</h2>
+  <h2>Age Verified Accounts <span style="font-size:0.6em;font-weight:400;color:var(--text-dim);vertical-align:middle;" title="Accounts where the seller has confirmed the owner's age — typically required to unlock Roblox Voice Chat (13+) or meet platform ID verification requirements (18+).">ⓘ</span></h2>
+  <p style="color:var(--text-dim);margin:-8px 0 20px;font-size:0.9em;">Accounts verified for age — required for Roblox Voice Chat (13+) or full ID verification (18+).</p>
 
   <div class="kpi-grid" id="ageKpiGrid"></div>
 
@@ -331,6 +342,8 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
             <th>Price (USD)</th>
             <th>Seller</th>
             <th>Rating</th>
+            <th>Delivery</th>
+            <th>Sold</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -2529,6 +2542,7 @@ function renderListings() {
     row.dataset.platform = listing.platform;
     row.dataset.source = listing.source;
     row.dataset.category = listing.categories[0] || '';
+    row.dataset.delivery = listing.delivery || '';
     row.dataset.searchText = `${listing.title} ${listing.seller} ${listing.platform}`.toLowerCase();
 
     row.innerHTML = `
@@ -2538,8 +2552,10 @@ function renderListings() {
       <td>$${listing.price_usd.toFixed(2)}</td>
       <td>${listing.seller}</td>
       <td>${listing.rating}</td>
+      <td>${listing.delivery || '—'}</td>
+      <td>${listing.sold || '—'}</td>
       <td>${categories}</td>
-      <td><a href="${listing.url}" target="_blank" class="view-link">View Listing →</a></td>
+      <td><a href="${listing.url}" target="_blank" class="view-link">View →</a></td>
     `;
 
     tbody.appendChild(row);
@@ -2552,12 +2568,14 @@ function setupFilters() {
   const filterPlatform = document.getElementById('filterPlatform');
   const filterSource = document.getElementById('filterSource');
   const filterCategory = document.getElementById('filterCategory');
+  const filterDelivery = document.getElementById('filterDelivery');
 
   function applyFilters() {
     const searchTerm = searchInput.value.toLowerCase();
     const platformVal = filterPlatform.value;
     const sourceVal = filterSource.value;
     const categoryVal = filterCategory.value;
+    const deliveryVal = filterDelivery.value;
 
     const rows = document.querySelectorAll('#listingsTableBody tr');
     rows.forEach(row => {
@@ -2567,6 +2585,7 @@ function setupFilters() {
       if (platformVal && row.dataset.platform !== platformVal) show = false;
       if (sourceVal && row.dataset.source !== sourceVal) show = false;
       if (categoryVal && row.dataset.category !== categoryVal) show = false;
+      if (deliveryVal && row.dataset.delivery !== deliveryVal) show = false;
 
       row.style.display = show ? '' : 'none';
     });
@@ -2576,6 +2595,7 @@ function setupFilters() {
   filterPlatform.addEventListener('change', applyFilters);
   filterSource.addEventListener('change', applyFilters);
   filterCategory.addEventListener('change', applyFilters);
+  filterDelivery.addEventListener('change', applyFilters);
 }
 
 // By Platform Section
@@ -2688,9 +2708,9 @@ function renderAgeVerified() {
     </div>
   `;
 
-  // Chart: by platform
-  const platLabels = Object.keys(siteWidePlatforms).length ? Object.keys(siteWidePlatforms) : Object.keys(byPlatform);
-  const platData = platLabels.map(p => siteWidePlatforms[p] || byPlatform[p] || 0);
+  // Chart: by platform — use scraped sample counts (byPlatform), not site-wide summary
+  const platLabels = Object.keys(byPlatform).length ? Object.keys(byPlatform) : ['No data'];
+  const platData = platLabels.map(p => byPlatform[p] || 0);
   const platColors = platLabels.map(p => platformColors[p] || '#6c5ce7');
 
   const ctx1 = document.getElementById('chartAgePlatform').getContext('2d');
@@ -2780,13 +2800,15 @@ function renderAgeVerified() {
       <td>$${l.price_usd.toFixed(2)}</td>
       <td>${l.seller}</td>
       <td>${l.rating}</td>
-      <td><a href="${l.url}" target="_blank" class="view-link">View Listing →</a></td>
+      <td>${l.delivery || '—'}</td>
+      <td>${l.sold || '—'}</td>
+      <td><a href="${l.url}" target="_blank" class="view-link">View →</a></td>
     `;
     tbody.appendChild(row);
   });
 
   if (ageListings.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--text-dim);padding:24px;">No age-verified listings found in current scrape</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--text-dim);padding:24px;">No age-verified listings found in current scrape</td></tr>';
   }
 }
 
