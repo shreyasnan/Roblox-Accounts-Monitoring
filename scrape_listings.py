@@ -604,12 +604,12 @@ class U7BuyScraper:
 
     NAME = "U7Buy"
 
-    LISTING_CARD = "[class*='offer-item'], [class*='product-card'], [class*='OfferItem'], .offer-list-item, .goods-item"
-    TITLE_SEL = "[class*='title'], [class*='name'], .goods-name, h3, h4"
-    PRICE_SEL = "[class*='price'], [class*='Price'], .goods-price"
+    LISTING_CARD = "[class*='game-service-card-item']"
+    TITLE_SEL = "[class*='game-service-card-item-title'], [class*='card-item-title']"
+    PRICE_SEL = "[class*='price'], [class*='Price']"
     SELLER_SEL = "[class*='seller'], [class*='shop'], .shop-name"
-    RATING_SEL = "[class*='rating'], [class*='rate'], .shop-rate"
-    SOLD_SEL = "[class*='sold'], [class*='sales'], .sold-num"
+    RATING_SEL = ".el-rate__item, [class*='rating'], [class*='rate']"
+    SOLD_SEL = "[class*='sold'], [class*='sales']"
 
     # U7Buy internal API (may change — used as fallback)
     API_BASE = "https://www.u7buy.com/api/offer/list"
@@ -1486,11 +1486,12 @@ class G2GScraper:
 
     NAME = "G2G"
 
-    LISTING_CARD = "div.full-height.column.g-card-no-deco, [class*='OfferCard'], [class*='offer-card'], div[class*='product-card']"
-    TITLE_SEL = "a[href*='/offer/'], [class*='title'], h3, h4"
-    PRICE_SEL = "span.price, [class*='price'], [class*='Price']"
-    SELLER_SEL = "[class*='seller'], [class*='Seller'], .seller-name"
-    NEXT_PAGE = "a[class*='next'], button[class*='next'], [aria-label='Next']"
+    LISTING_CARD = "[class*='offer-card']"
+    TITLE_SEL = "[class*='product-title']"
+    PRICE_SEL = "[class*='offer-price']"
+    SELLER_SEL = "[class*='seller-name']"
+    RATING_SEL = "[class*='rating']"
+    NEXT_PAGE = "[class*='pagination'] a[class*='next'], [class*='arrow-item']:last-child, button[class*='next']"
 
     MAX_G2G_PAGES = 5
 
@@ -1556,13 +1557,13 @@ class G2GScraper:
         listings = []
         cards = soup.select(self.LISTING_CARD)
         if not cards:
-            # Fallback: look for offer links
-            cards = soup.find_all("a", href=re.compile(r"/offer/"))
-            cards = [c.parent for c in cards if c.parent]
+            # Fallback: any anchor wrapping an offer card
+            cards = soup.find_all("a", href=re.compile(r"/offers/"))
+            cards = [c for c in cards if c]
 
         for card in cards:
             try:
-                title_el = card.select_one(self.TITLE_SEL) or card.find("a", href=re.compile(r"/offer/"))
+                title_el = card.select_one(self.TITLE_SEL)
                 title = safe_text(title_el, "").strip()
                 if not title or len(title) < 3:
                     continue
@@ -1570,21 +1571,27 @@ class G2GScraper:
                 price_el = card.select_one(self.PRICE_SEL)
                 price = parse_price(safe_text(price_el))
 
+                seller_el = card.select_one(self.SELLER_SEL)
+                seller = safe_text(seller_el)
+
+                rating_el = card.select_one(self.RATING_SEL)
+                rating = safe_text(rating_el)
+
+                # G2G listing URLs: /offers/[UUID]
                 url = ""
-                link = card.find("a", href=re.compile(r"/offer/"))
+                link = card if card.name == "a" else card.find("a", href=re.compile(r"/offers/"))
                 if link and link.get("href"):
                     href = link["href"]
                     url = href if href.startswith("http") else f"https://www.g2g.com{href}"
 
-                # Extract seller from card text
-                card_text = safe_text(card)
-                seller = self._extract_seller(card_text)
+                if not url:
+                    continue
 
                 listings.append({
                     "title": title,
                     "price": price,
                     "seller": seller,
-                    "rating": "",
+                    "rating": rating,
                     "delivery": "Instant",
                     "url": url,
                 })
@@ -1593,16 +1600,6 @@ class G2GScraper:
                 continue
 
         return listings
-
-    def _extract_seller(self, text):
-        """Extract seller from G2G card text (pattern: 'SellerName\\nLevel NNN')."""
-        lines = [l.strip() for l in text.split("\n") if l.strip()]
-        for i, line in enumerate(lines):
-            if "Level" in line and i > 0:
-                return lines[i - 1] if lines[i - 1] else line
-            if re.match(r"Level\s+\d+", line) and i > 0:
-                return lines[i - 1]
-        return ""
 
 
 # ============================================================================
@@ -1616,7 +1613,9 @@ class PlayHubScraper:
 
     NAME = "PlayHub"
 
-    LISTING_CARD = "div[class*='product'], div[class*='listing'], div[class*='card'], div[class*='offer']"
+    LISTING_CARD = "[class*='cards__item'], [class*='card--theme']"
+    TITLE_SEL = "[class*='title']"
+    PRICE_SEL = "[class*='price']"
     NEXT_PAGE = "a[class*='next'], button[class*='next']"
 
     MAX_PLAYHUB_PAGES = 5
@@ -1751,7 +1750,11 @@ class ZeusXScraper:
 
     NAME = "ZeusX"
 
-    LISTING_CARD = "div[class*='product'], div[class*='listing'], div[class*='card'], div[class*='offer']"
+    LISTING_CARD = "[class*='offer-card']"
+    TITLE_SEL = "[class*='product-title']"
+    PRICE_SEL = "[class*='offer-price']"
+    SELLER_SEL = "[class*='seller-name']"
+    RATING_SEL = "[class*='rating']"
     NEXT_PAGE = "a[class*='next'], button[class*='next']"
 
     MAX_ZEUSX_PAGES = 5
@@ -1819,24 +1822,29 @@ class ZeusXScraper:
 
         for card in cards:
             try:
-                card_text = safe_text(card)
-                lines = [l.strip() for l in card_text.split("\n") if l.strip()]
-                if len(lines) < 3:
-                    continue
-
-                title = self._extract_title(lines)
+                title_el = card.select_one(self.TITLE_SEL)
+                title = safe_text(title_el, "").strip()
                 if not title or len(title) < 3:
                     continue
 
-                price = self._extract_price(card_text)
-                seller = self._extract_seller(lines)
-                rating = self._extract_rating(lines)
+                price_el = card.select_one(self.PRICE_SEL)
+                price = parse_price(safe_text(price_el))
+
+                seller_el = card.select_one(self.SELLER_SEL)
+                seller = safe_text(seller_el)
+
+                rating_el = card.select_one(self.RATING_SEL)
+                rating = safe_text(rating_el)
 
                 url = ""
-                link = card.find("a", href=True)
-                if link:
+                link = card if card.name == "a" else card.find("a", href=True)
+                if link and link.get("href"):
                     href = link["href"]
-                    url = href if href.startswith("http") else f"https://zeusx.com{href}"
+                    if not href.startswith("javascript:"):
+                        url = href if href.startswith("http") else f"https://zeusx.com{href}"
+
+                if not url:
+                    continue
 
                 listings.append({
                     "title": title,
@@ -1851,28 +1859,6 @@ class ZeusXScraper:
                 continue
 
         return listings
-
-    def _extract_title(self, lines):
-        for line in lines:
-            if len(line) > 15 and "$" not in line and "(" not in line:
-                return line
-        return " | ".join(lines[:2]) if len(lines) > 1 else (lines[0] if lines else "")
-
-    def _extract_price(self, text):
-        match = re.search(r"\$[\d.,]+", text)
-        return parse_price(match.group()) if match else 0.0
-
-    def _extract_seller(self, lines):
-        for i, line in enumerate(lines):
-            if "(" in line and ")" in line and i > 0:
-                return lines[i - 1]
-        return ""
-
-    def _extract_rating(self, lines):
-        for line in lines:
-            if "(" in line and ")" in line and re.search(r"\d+\.?\d*", line):
-                return line
-        return ""
 
 
 # ============================================================================
