@@ -200,7 +200,7 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
 <div class="header">
   <h1><span>Roblox</span> Accounts Monitoring Dashboard</h1>
   <div class="header-meta">
-    <div id="headerDate">Last Updated: Apr 5, 2026</div>
+    <div id="headerDate">Last Updated: Loading...</div>
     <div id="headerSources">Sources: Loading...</div>
   </div>
 </div>
@@ -349,8 +349,8 @@ h4 { margin-top: 16px; margin-bottom: 12px; font-size: 14px; }
 </div>
 
 <script>
-// Embedded data
-const dashboardData = {
+// Load data dynamically from dashboard_data.json
+let dashboardData = {
   "metadata": {
     "generated_at": "2026-04-05T12:35:48.841145",
     "data_source": "Live scraping from Eldorado.gg, U7Buy, PlayerAuctions, Z2U, eBay, G2G, PlayHub, and ZeusX",
@@ -2265,8 +2265,33 @@ const platformColors = {
   'Steam': '#6c5ce7'
 };
 
-// Initialize
+// Initialize — fetch fresh data, fall back to embedded data on error
 document.addEventListener('DOMContentLoaded', function() {
+  fetch('dashboard_data.json')
+    .then(response => response.json())
+    .then(data => {
+      dashboardData = data;
+      initDashboard();
+    })
+    .catch(err => {
+      console.warn('Failed to fetch dashboard_data.json, using embedded data:', err);
+      initDashboard();
+    });
+});
+
+function initDashboard() {
+  // Update header date from live data
+  const scrapeDate = dashboardData.metadata && dashboardData.metadata.scrape_date;
+  if (scrapeDate) {
+    const d = new Date(scrapeDate + 'T00:00:00');
+    const formatted = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    document.getElementById('headerDate').textContent = 'Last Updated: ' + formatted;
+  }
+  const sources = dashboardData.metadata && dashboardData.metadata.sources;
+  if (sources) {
+    document.getElementById('headerSources').textContent = 'Sources: ' + sources.join(', ');
+  }
+
   initializeNavigation();
   renderOverview();
   renderListings();
@@ -2274,7 +2299,7 @@ document.addEventListener('DOMContentLoaded', function() {
   renderAgeVerified();
   renderSources();
   setupFilters();
-});
+}
 
 // Navigation
 function initializeNavigation() {
