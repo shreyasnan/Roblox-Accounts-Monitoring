@@ -2843,9 +2843,14 @@ function renderSources() {
       relevanceLabel = 'LOW'; relevanceColor = 'var(--text-dim)';
     }
 
+    const ebayWarning = source === 'eBay'
+      ? `<p style="margin: 6px 0 12px; font-size: 0.82em; color: var(--orange);">⚠ eBay actively removes account listings for ToS violations — links may expire within hours of being scraped. Dead links are filtered out at scrape time.</p>`
+      : '';
+
     html += `
       <div class="source-detail">
         <h3>${source} <span style="font-size: 12px; padding: 2px 8px; border-radius: 4px; background: ${relevanceColor}22; color: ${relevanceColor}; margin-left: 8px; font-weight: 600;">${relevanceLabel} RELEVANCE</span></h3>
+        ${ebayWarning}
 
         <div class="metric-row">
           <div class="metric-item">

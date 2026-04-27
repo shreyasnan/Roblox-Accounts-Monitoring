@@ -162,6 +162,40 @@ def polite_delay(extra: float = 0):
     time.sleep(random.uniform(MIN_DELAY, MAX_DELAY) + extra)
 
 
+def validate_ebay_listings(listings: list) -> list:
+    """Drop eBay listings whose URLs are already dead (404/removed by eBay)."""
+    if not listings:
+        return listings
+
+    headers = {
+        "User-Agent": random_ua(),
+        "Referer": "https://www.ebay.com/",
+    }
+    valid = []
+    dropped = 0
+
+    for listing in listings:
+        url = listing.get("url", "")
+        if not url:
+            dropped += 1
+            continue
+        try:
+            resp = _http.head(url, headers=headers, timeout=5, allow_redirects=True)
+            if resp.status_code == 404:
+                log.debug(f"    [eBay validate] Dead link dropped: {url}")
+                dropped += 1
+            else:
+                valid.append(listing)
+        except Exception:
+            # Network error — keep the listing rather than silently drop it
+            valid.append(listing)
+        time.sleep(0.3)
+
+    if dropped:
+        log.info(f"  [eBay validate] Dropped {dropped} dead listings, {len(valid)} remain")
+    return valid
+
+
 def random_ua():
     return random.choice(USER_AGENTS)
 
@@ -2191,6 +2225,11 @@ def run_scrape(games: list, max_pages: int, output_path: str, verbose: bool, fas
             except Exception as e:
                 log.warning(f"  eBay age-verified supplementary search failed for {game}: {e}")
             polite_delay(extra=1)
+
+        # Validate eBay URLs — drop listings already removed by eBay (404)
+        if scraped[game].get("eBay", {}).get("listings"):
+            log.info(f"  [eBay validate] Checking {len(scraped[game]['eBay']['listings'])} URLs for {game}...")
+            scraped[game]["eBay"]["listings"] = validate_ebay_listings(scraped[game]["eBay"]["listings"])
 
         # G2G (Roblox only for now)
         if game in G2G_URLS:
