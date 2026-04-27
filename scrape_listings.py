@@ -217,6 +217,15 @@ def safe_text(el, default=""):
     return el.get_text(strip=True) if el else default
 
 
+_EBAY_TITLE_JUNK = re.compile(
+    r"Opens in a new window or tab|New Listing\s*",
+    re.IGNORECASE,
+)
+
+def clean_ebay_title(title: str) -> str:
+    return _EBAY_TITLE_JUNK.sub("", title).strip()
+
+
 # ============================================================================
 # BROWSER MANAGER — wraps Playwright with fallback
 # ============================================================================
@@ -795,6 +804,8 @@ class U7BuyScraper:
         link = card if card.name == "a" else card.select_one("a[href]")
         if link and link.get("href"):
             href = link["href"]
+            if href.startswith("javascript:"):
+                return None
             url = href if href.startswith("http") else f"https://www.u7buy.com{href}"
             # Enrich URL with required params
             if "offerId=" in url and "spuId=" not in url:
@@ -803,6 +814,10 @@ class U7BuyScraper:
                     p = U7BUY_PARAMS.get(game, {})
                     if p:
                         url = f"https://www.u7buy.com/offer/other-detail?spuId={p['spuId']}&offerId={offer_match.group(1)}&businessId={p['businessId']}&isEntrance=0"
+
+        # Reject blog posts and non-listing pages
+        if url and ("/blog/" in url or "/news/" in url or "/guide/" in url):
+            return None
 
         return {
             "title": title,
@@ -1011,7 +1026,7 @@ class EbayScraper:
         for item in items:
             try:
                 title_el = item.select_one(".s-item__title span, .s-item__title")
-                title = safe_text(title_el)
+                title = clean_ebay_title(safe_text(title_el))
                 if not title or title.lower() in ("shop on ebay", "results matching fewer words"):
                     continue
                 if not self._is_relevant_listing(title):
@@ -1056,7 +1071,7 @@ class EbayScraper:
             try:
                 # Title — use .s-card__title (link's direct text is empty)
                 title_el = card.select_one(".s-card__title, a.s-card__link span")
-                title = safe_text(title_el)
+                title = clean_ebay_title(safe_text(title_el))
                 # Keep link element for URL extraction
                 title_link = card.select_one("a.s-card__link")
                 if not title or title.lower() in ("shop on ebay", "results matching fewer words"):
@@ -1416,12 +1431,18 @@ class Z2UScraper:
         url = ""
         if card.name == "a" and card.get("href"):
             href = card["href"]
-            url = href if href.startswith("http") else f"https://www.z2u.com{href}"
+            if not href.startswith("javascript:"):
+                url = href if href.startswith("http") else f"https://www.z2u.com{href}"
         else:
             link = card.select_one("a[href]")
             if link:
                 href = link["href"]
-                url = href if href.startswith("http") else f"https://www.z2u.com{href}"
+                if not href.startswith("javascript:"):
+                    url = href if href.startswith("http") else f"https://www.z2u.com{href}"
+
+        # Reject nav/promo links that aren't actual listing pages
+        if not url or "/blog/" in url or url.rstrip("/") == "https://www.z2u.com":
+            return None
 
         delivery = ""
         delivery_el = card.select_one("[class*='delivery'], [class*='Delivery']")
