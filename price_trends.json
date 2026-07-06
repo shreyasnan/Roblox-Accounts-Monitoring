@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T10:12:58.530938",
+  "generated_at": "2026-07-06T12:11:40.328622",
   "data_points": 91,
   "trends": [
     {
@@ -5235,9 +5235,9 @@
       "Eldorado.gg": {
         "status": "degraded",
         "scraped_count": 24,
-        "expected_count": 400,
+        "expected_count": 360,
         "is_suspect": true,
-        "note": "Got 24, expected ~400 (>50% drop)"
+        "note": "Got 24, expected ~360 (>50% drop)"
       },
       "U7Buy": {
         "status": "ok",
@@ -5261,11 +5261,11 @@
         "note": null
       },
       "eBay": {
-        "status": "failed",
-        "scraped_count": 0,
+        "status": "ok",
+        "scraped_count": 8,
         "expected_count": 8,
-        "is_suspect": true,
-        "note": "Got 0 listings, expected ~8"
+        "is_suspect": false,
+        "note": null
       },
       "G2G": {
         "status": "ok",
@@ -5293,9 +5293,9 @@
       "Eldorado.gg": {
         "status": "degraded",
         "scraped_count": 24,
-        "expected_count": 400,
+        "expected_count": 360,
         "is_suspect": true,
-        "note": "Got 24, expected ~400 (>50% drop)"
+        "note": "Got 24, expected ~360 (>50% drop)"
       },
       "U7Buy": {
         "status": "ok",
@@ -5319,20 +5319,20 @@
         "note": null
       },
       "eBay": {
-        "status": "failed",
-        "scraped_count": 0,
+        "status": "ok",
+        "scraped_count": 6,
         "expected_count": 4,
-        "is_suspect": true,
-        "note": "Got 0 listings, expected ~4"
+        "is_suspect": false,
+        "note": null
       }
     },
     "Minecraft": {
       "Eldorado.gg": {
         "status": "degraded",
         "scraped_count": 24,
-        "expected_count": 400,
+        "expected_count": 360,
         "is_suspect": true,
-        "note": "Got 24, expected ~400 (>50% drop)"
+        "note": "Got 24, expected ~360 (>50% drop)"
       },
       "U7Buy": {
         "status": "ok",
@@ -5356,20 +5356,20 @@
         "note": null
       },
       "eBay": {
-        "status": "failed",
-        "scraped_count": 0,
+        "status": "ok",
+        "scraped_count": 8,
         "expected_count": 8,
-        "is_suspect": true,
-        "note": "Got 0 listings, expected ~8"
+        "is_suspect": false,
+        "note": null
       }
     },
     "Steam": {
       "Eldorado.gg": {
         "status": "degraded",
         "scraped_count": 24,
-        "expected_count": 400,
+        "expected_count": 360,
         "is_suspect": true,
-        "note": "Got 24, expected ~400 (>50% drop)"
+        "note": "Got 24, expected ~360 (>50% drop)"
       },
       "U7Buy": {
         "status": "ok",
