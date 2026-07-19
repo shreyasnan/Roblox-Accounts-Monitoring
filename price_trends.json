@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T09:25:41.707870",
+  "generated_at": "2026-07-19T09:53:45.449745",
   "data_points": 91,
   "trends": [
     {
@@ -5247,11 +5247,11 @@
         "note": null
       },
       "PlayerAuctions": {
-        "status": "ok",
-        "scraped_count": 60,
+        "status": "failed",
+        "scraped_count": 0,
         "expected_count": 60,
-        "is_suspect": false,
-        "note": null
+        "is_suspect": true,
+        "note": "Got 0 listings, expected ~60"
       },
       "Z2U": {
         "status": "ok",
@@ -5262,8 +5262,8 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 4,
-        "expected_count": 8,
+        "scraped_count": 5,
+        "expected_count": 6,
         "is_suspect": false,
         "note": null
       },
@@ -5319,11 +5319,11 @@
         "note": null
       },
       "eBay": {
-        "status": "degraded",
-        "scraped_count": 3,
-        "expected_count": 10,
-        "is_suspect": true,
-        "note": "Got 3, expected ~10 (>50% drop)"
+        "status": "ok",
+        "scraped_count": 6,
+        "expected_count": 5,
+        "is_suspect": false,
+        "note": null
       }
     },
     "Minecraft": {
@@ -5394,8 +5394,8 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 38,
-        "expected_count": 28,
+        "scraped_count": 33,
+        "expected_count": 31,
         "is_suspect": false,
         "note": null
       }
