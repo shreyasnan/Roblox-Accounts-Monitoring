@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T09:53:45.449745",
+  "generated_at": "2026-07-20T10:50:21.053482",
   "data_points": 91,
   "trends": [
     {
@@ -5247,11 +5247,11 @@
         "note": null
       },
       "PlayerAuctions": {
-        "status": "failed",
-        "scraped_count": 0,
+        "status": "ok",
+        "scraped_count": 60,
         "expected_count": 60,
-        "is_suspect": true,
-        "note": "Got 0 listings, expected ~60"
+        "is_suspect": false,
+        "note": null
       },
       "Z2U": {
         "status": "ok",
@@ -5262,7 +5262,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 5,
+        "scraped_count": 6,
         "expected_count": 6,
         "is_suspect": false,
         "note": null
@@ -5320,8 +5320,8 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 6,
-        "expected_count": 5,
+        "scraped_count": 8,
+        "expected_count": 6,
         "is_suspect": false,
         "note": null
       }
@@ -5357,7 +5357,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 8,
+        "scraped_count": 7,
         "expected_count": 8,
         "is_suspect": false,
         "note": null
@@ -5394,7 +5394,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 33,
+        "scraped_count": 74,
         "expected_count": 31,
         "is_suspect": false,
         "note": null
