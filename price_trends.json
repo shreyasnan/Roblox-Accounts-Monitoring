@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T09:13:30.523377",
+  "generated_at": "2026-07-28T09:04:25.802877",
   "data_points": 91,
   "trends": [
     {
@@ -5262,7 +5262,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 7,
+        "scraped_count": 4,
         "expected_count": 6,
         "is_suspect": false,
         "note": null
@@ -5319,11 +5319,11 @@
         "note": null
       },
       "eBay": {
-        "status": "degraded",
-        "scraped_count": 4,
-        "expected_count": 9,
-        "is_suspect": true,
-        "note": "Got 4, expected ~9 (>50% drop)"
+        "status": "ok",
+        "scraped_count": 6,
+        "expected_count": 10,
+        "is_suspect": false,
+        "note": null
       }
     },
     "Minecraft": {
@@ -5357,7 +5357,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 9,
+        "scraped_count": 6,
         "expected_count": 8,
         "is_suspect": false,
         "note": null
@@ -5395,7 +5395,7 @@
       "eBay": {
         "status": "ok",
         "scraped_count": 30,
-        "expected_count": 40,
+        "expected_count": 34,
         "is_suspect": false,
         "note": null
       }
