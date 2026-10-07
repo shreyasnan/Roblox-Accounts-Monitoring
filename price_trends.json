@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T14:46:02.975271",
+  "generated_at": "2026-10-07T15:02:39.425666",
   "data_points": 91,
   "trends": [
     {
@@ -5261,11 +5261,11 @@
         "note": null
       },
       "eBay": {
-        "status": "failed",
-        "scraped_count": 0,
+        "status": "ok",
+        "scraped_count": 6,
         "expected_count": 7,
-        "is_suspect": true,
-        "note": "Got 0 listings, expected ~7"
+        "is_suspect": false,
+        "note": null
       },
       "G2G": {
         "status": "ok",
@@ -5320,7 +5320,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 13,
+        "scraped_count": 20,
         "expected_count": 16,
         "is_suspect": false,
         "note": null
@@ -5357,7 +5357,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 10,
+        "scraped_count": 9,
         "expected_count": 11,
         "is_suspect": false,
         "note": null
@@ -5393,11 +5393,11 @@
         "note": null
       },
       "eBay": {
-        "status": "ok",
-        "scraped_count": 27,
+        "status": "failed",
+        "scraped_count": 0,
         "expected_count": 29,
-        "is_suspect": false,
-        "note": null
+        "is_suspect": true,
+        "note": "Got 0 listings, expected ~29"
       }
     }
   }
