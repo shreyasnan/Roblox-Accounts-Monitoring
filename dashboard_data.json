@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-10-10T14:14:49.989670",
+    "generated_at": "2026-10-11T14:38:58.018639",
     "data_source": "Live scraping from Eldorado.gg, U7Buy, PlayerAuctions, Z2U, eBay, G2G, PlayHub, ZeusX",
-    "scrape_date": "2026-10-10",
+    "scrape_date": "2026-10-11",
     "platforms": [
       "Roblox",
       "Fortnite",
@@ -19,13 +19,13 @@
       "PlayHub",
       "ZeusX"
     ],
-    "total_listings_scraped": 249,
-    "total_on_site": 54409,
+    "total_listings_scraped": 235,
+    "total_on_site": 55178,
     "version": "3.1.0-live"
   },
   "platform_summary": {
     "Roblox": {
-      "total_listings_across_sources": 39,
+      "total_listings_across_sources": 38,
       "sources": {
         "Eldorado.gg": {
           "total_on_site": 24,
@@ -33,23 +33,23 @@
           "search_url": "https://www.eldorado.gg/roblox-accounts-for-sale/a/70-1-0"
         },
         "U7Buy": {
-          "total_on_site": 19770,
+          "total_on_site": 19322,
           "scraped_count": 0,
           "search_url": "https://www.u7buy.com/roblox/roblox-accounts"
         },
         "PlayerAuctions": {
-          "total_on_site": 9843,
+          "total_on_site": 9985,
           "scraped_count": 0,
           "search_url": "https://www.playerauctions.com/roblox-account/"
         },
         "Z2U": {
-          "total_on_site": 452,
+          "total_on_site": 450,
           "scraped_count": 1,
           "search_url": "https://www.z2u.com/rbl/accounts-5-2941"
         },
         "eBay": {
           "total_on_site": 0,
-          "scraped_count": 2,
+          "scraped_count": 1,
           "search_url": "https://www.ebay.com/sch/i.html?_nkw=roblox+account"
         },
         "G2G": {
@@ -68,17 +68,18 @@
           "search_url": "https://zeusx.com/game/roblox-in-game-items-for-sale/23/accounts"
         }
       },
-      "price_min": 3.0,
-      "price_max": 65.0,
+      "price_min": 2.99,
+      "price_max": 301.0,
       "categories": {
-        "General": 29,
-        "Items / Currency": 9,
-        "OG / Veteran Account": 2
+        "General": 30,
+        "Items / Currency": 6,
+        "OG / Veteran Account": 3,
+        "Age Verified": 3
       },
-      "avg_price_usd": 31.12
+      "avg_price_usd": 63.79
     },
     "Fortnite": {
-      "total_listings_across_sources": 96,
+      "total_listings_across_sources": 84,
       "sources": {
         "Eldorado.gg": {
           "total_on_site": 5,
@@ -86,12 +87,12 @@
           "search_url": "https://www.eldorado.gg/fortnite-accounts-for-sale/a/16-1-0"
         },
         "U7Buy": {
-          "total_on_site": 12489,
+          "total_on_site": 13771,
           "scraped_count": 0,
           "search_url": "https://www.u7buy.com/fortnite/fortnite-accounts"
         },
         "PlayerAuctions": {
-          "total_on_site": 806,
+          "total_on_site": 728,
           "scraped_count": 60,
           "search_url": "https://www.playerauctions.com/fortnite-account/"
         },
@@ -101,19 +102,19 @@
           "search_url": "https://www.z2u.com/fortnite/accounts-5-20"
         },
         "eBay": {
-          "total_on_site": 12,
-          "scraped_count": 12,
+          "total_on_site": 0,
+          "scraped_count": 0,
           "search_url": "https://www.ebay.com/sch/i.html?_nkw=fortnite+account"
         }
       },
-      "price_min": 20.0,
-      "price_max": 500.0,
+      "price_min": 0,
+      "price_max": 0,
       "categories": {
-        "General": 25,
-        "Items / Currency": 38,
-        "OG / Veteran Account": 18
+        "General": 24,
+        "Items / Currency": 30,
+        "OG / Veteran Account": 10
       },
-      "avg_price_usd": 163.75
+      "avg_price_usd": 0
     },
     "Minecraft": {
       "total_listings_across_sources": 94,
@@ -124,12 +125,12 @@
           "search_url": "https://www.eldorado.gg/minecraft-accounts/a/61-1-0"
         },
         "U7Buy": {
-          "total_on_site": 1307,
+          "total_on_site": 1282,
           "scraped_count": 0,
           "search_url": "https://www.u7buy.com/minecraft/minecraft-accounts"
         },
         "PlayerAuctions": {
-          "total_on_site": 44,
+          "total_on_site": 63,
           "scraped_count": 60,
           "search_url": "https://www.playerauctions.com/minecraft-account/"
         },
@@ -154,7 +155,7 @@
       "avg_price_usd": 67.25
     },
     "Steam": {
-      "total_listings_across_sources": 110,
+      "total_listings_across_sources": 109,
       "sources": {
         "Eldorado.gg": {
           "total_on_site": 24,
@@ -162,12 +163,12 @@
           "search_url": "https://www.eldorado.gg/steam-accounts/a/42-0-0"
         },
         "U7Buy": {
-          "total_on_site": 8216,
+          "total_on_site": 8109,
           "scraped_count": 0,
           "search_url": "https://www.u7buy.com/steam/steam-accounts"
         },
         "PlayerAuctions": {
-          "total_on_site": 1216,
+          "total_on_site": 1219,
           "scraped_count": 60,
           "search_url": "https://www.playerauctions.com/steam-account/"
         },
@@ -177,19 +178,19 @@
           "search_url": "https://www.z2u.com/steam/accounts-5-3271"
         },
         "eBay": {
-          "total_on_site": 155,
-          "scraped_count": 26,
+          "total_on_site": 150,
+          "scraped_count": 25,
           "search_url": "https://www.ebay.com/sch/i.html?_nkw=steam+account"
         }
       },
-      "price_min": 10.0,
+      "price_min": 8.0,
       "price_max": 2999.99,
       "categories": {
-        "General": 40,
+        "General": 39,
         "OG / Veteran Account": 22,
-        "Items / Currency": 26
+        "Items / Currency": 28
       },
-      "avg_price_usd": 295.62
+      "avg_price_usd": 299.24
     }
   },
   "source_summary": {
@@ -205,7 +206,7 @@
     },
     "U7Buy": {
       "total_listings": 0,
-      "total_on_site": 41782,
+      "total_on_site": 42484,
       "platforms": [
         "Roblox",
         "Fortnite",
@@ -215,7 +216,7 @@
     },
     "PlayerAuctions": {
       "total_listings": 180,
-      "total_on_site": 11909,
+      "total_on_site": 11995,
       "platforms": [
         "Roblox",
         "Fortnite",
@@ -225,7 +226,7 @@
     },
     "Z2U": {
       "total_listings": 1,
-      "total_on_site": 452,
+      "total_on_site": 450,
       "platforms": [
         "Roblox",
         "Fortnite",
@@ -234,8 +235,8 @@
       ]
     },
     "eBay": {
-      "total_listings": 50,
-      "total_on_site": 177,
+      "total_listings": 36,
+      "total_on_site": 160,
       "platforms": [
         "Roblox",
         "Fortnite",
@@ -267,30 +268,36 @@
   },
   "category_summary": {
     "General": {
-      "count": 121,
+      "count": 120,
       "platforms": {
-        "Roblox": 29,
-        "Fortnite": 25,
+        "Roblox": 30,
+        "Fortnite": 24,
         "Minecraft": 27,
-        "Steam": 40
+        "Steam": 39
       }
     },
     "Items / Currency": {
-      "count": 110,
+      "count": 101,
       "platforms": {
-        "Roblox": 9,
-        "Fortnite": 38,
+        "Roblox": 6,
+        "Fortnite": 30,
         "Minecraft": 37,
-        "Steam": 26
+        "Steam": 28
       }
     },
     "OG / Veteran Account": {
-      "count": 46,
+      "count": 39,
       "platforms": {
-        "Roblox": 2,
-        "Fortnite": 18,
+        "Roblox": 3,
+        "Fortnite": 10,
         "Minecraft": 4,
         "Steam": 22
+      }
+    },
+    "Age Verified": {
+      "count": 3,
+      "platforms": {
+        "Roblox": 3
       }
     }
   },
@@ -308,7 +315,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -323,7 +330,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -338,7 +345,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -353,7 +360,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -368,7 +375,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -383,7 +390,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -398,7 +405,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -413,7 +420,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -428,7 +435,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -443,7 +450,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -458,7 +465,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -473,7 +480,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -488,7 +495,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -503,7 +510,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -518,7 +525,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -533,7 +540,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -548,7 +555,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -563,7 +570,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -578,7 +585,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -593,7 +600,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -608,7 +615,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -623,7 +630,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -638,7 +645,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -653,7 +660,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
@@ -668,15 +675,15 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
       "source": "eBay",
-      "title": "Stacked 2008 Roblox “juniormoren”",
-      "price_usd": 50.0,
-      "url": "https://www.ebay.com/itm/227553502278",
-      "seller": "lebronjames100% positive (43)",
+      "title": "🦈 Roblox Jailbreak Megalodon | LIMITED Supercar | Fast & OG Vehicle | FAST DELI",
+      "price_usd": 2.99,
+      "url": "https://www.ebay.com/itm/318078308870",
+      "seller": "vulnar0100% positive (20)",
       "rating": "",
       "delivery": "",
       "sold": "",
@@ -684,202 +691,190 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
-      "source": "eBay",
-      "title": "⚡ ROBLOX  BOOST ⚡ 25–100 KILLS 🎮 ANY BATTLEGROUNDS GAME -no login need-",
-      "price_usd": 3.0,
-      "url": "https://www.ebay.com/itm/800127440474",
-      "seller": "citgen100% positive (22)",
-      "rating": "",
-      "delivery": "",
+      "source": "ZeusX",
+      "title": "15 lvl Gweed alt, Accounts",
+      "price_usd": 41.43,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/15-lvl-gweed-alt-accounts-24224459",
+      "seller": "SellGame",
+      "rating": "4.9(284)",
+      "delivery": "Auto",
       "sold": "",
       "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Roblox",
+      "source": "ZeusX",
+      "title": "Project Slayer | SLAYERS 2 | RENGOKU CLAN (SUPREME) | NO MAIL |",
+      "price_usd": 22.0,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/project-slayer-or-slayers-2-or-rengoku-clan-supreme-or-no-24224458",
+      "seller": "Gamefinity",
+      "rating": "4.9(300)",
+      "delivery": "Auto",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Roblox",
+      "source": "ZeusX",
+      "title": "Roblox Headless 2017 Account with lots of things",
+      "price_usd": 301.0,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/roblox-headless-2017-account-with-lots-of-things-24224442",
+      "seller": "ankhseram",
+      "rating": "5.0(18)",
+      "delivery": "Auto",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Roblox",
+      "source": "ZeusX",
+      "title": "Roblox Account! Steal An Egg! Anime Dice! No Email!",
+      "price_usd": 22.0,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/roblox-account-steal-an-egg-anime-dice-no-email-24185456",
+      "seller": "Serenity",
+      "rating": "5.0(69)",
+      "delivery": "Auto",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Roblox",
+      "source": "ZeusX",
+      "title": "Account from 2020🔥UGC for 20+K R$, Sale, Voice chat: No",
+      "price_usd": 101.17,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/account-from-2020ugc-for-20k-rdollar-sale-voice-chat-no-24224429",
+      "seller": "SellGame",
+      "rating": "4.9(284)",
+      "delivery": "Auto",
+      "sold": "",
+      "categories": [
+        "Age Verified"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Roblox",
+      "source": "ZeusX",
+      "title": "Project Slayer | SLAYERS 2 | SOYAMA CLAN (SUPREME) | NO MAIL |",
+      "price_usd": 22.0,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/project-slayer-or-slayers-2-or-soyama-clan-supreme-or-no-24224419",
+      "seller": "Gamefinity",
+      "rating": "4.9(300)",
+      "delivery": "Auto",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Roblox",
+      "source": "ZeusX",
+      "title": "[Selling main acc]Good acc in roblox, Sale, Voice chat: No",
+      "price_usd": 34.04,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/selling-main-accgood-acc-in-roblox-sale-voice-chat-no-24224410",
+      "seller": "SellGame",
+      "rating": "4.9(284)",
+      "delivery": "Auto",
+      "sold": "",
+      "categories": [
+        "Age Verified"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Roblox",
+      "source": "ZeusX",
+      "title": "An account that played Grow a Garden, Blox Fruits, and Steal a Barinrot,ink game, Sale, Voice chat:",
+      "price_usd": 194.51,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/an-account-that-played-grow-a-garden-blox-fruits-and-steal-a-24224396",
+      "seller": "SellGame",
+      "rating": "4.9(284)",
+      "delivery": "Auto",
+      "sold": "",
+      "categories": [
+        "Items / Currency",
+        "Age Verified"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Roblox",
+      "source": "ZeusX",
+      "title": "🏀 [Basketball: Zero] | Ultimate Account 🏀  ✨ TOP-TIER CHARACTER & SKINS  INVENTORY Mythic / Kira | Perfection V2 | Valentine | Johnny | Evolved | Golden Spin",
+      "price_usd": 11.9,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/basketball-zero-or-ultimate-account-top-tier-character-and-24224381",
+      "seller": "プルプル",
+      "rating": "4.9(5.88K)",
+      "delivery": "Auto",
+      "sold": "",
+      "categories": [
+        "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
       "source": "ZeusX",
-      "title": "[SLAYERS 2] 76 M1 | RANKED ACCESS | KAMADO | T3 NIGHTFALL TOP, BOTTOM, MASK, CAPE | T3 NIGHTFALL KATANA +9 | SERPENT BREATHING | 6.3 MILLION YEN | INSTANT DELIVERY",
-      "price_usd": 45.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/slayers-2-76-m1-or-ranked-access-or-kamado-or-t3-nightfall-24188119",
-      "seller": "Kwinzo",
-      "rating": "5.0(21)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "Brookhaven RP | Murder Mystery 2 | Roblox account with a total of 19,200 Robux spent (Not in balance) | A lot of donations in Brookhaven",
-      "price_usd": 52.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/brookhaven-rp-or-murder-mystery-2-or-roblox-account-with-a-24197209",
-      "seller": "Gamefinity",
-      "rating": "4.9(298)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "| A good account for switching to a certain pollen. |",
-      "price_usd": 33.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/or-a-good-account-for-switching-to-a-certain-pollen-or-24197162",
-      "seller": "Gamefinity",
-      "rating": "4.9(298)",
+      "title": "1, Accounts",
+      "price_usd": 27.96,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/1-accounts-24224375",
+      "seller": "SellGame",
+      "rating": "4.9(284)",
       "delivery": "Auto",
       "sold": "",
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
       "source": "ZeusX",
-      "title": "Anime Zero | Shadow Monarch / SungJinWoo Max Evo Account #V",
-      "price_usd": 20.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/anime-zero-or-shadow-monarch-sungjinwoo-max-evo-account-v-24197152",
-      "seller": "NXStore",
-      "rating": "5.0(20)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "General"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "Anime Mysterious 07⭐ : Lv.47 : 0.1% The last heir Evo : 0.1% Bodhod : [The Account and Password delivery system is automatic]",
-      "price_usd": 39.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/anime-mysterious-07-lv47-01percent-the-last-heir-evo-24197124",
-      "seller": "Sunshine",
-      "rating": "5.0(1.57K)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "General"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "Ghost Driver 27.2 Million 7 limited cars - Corsa Legends 10million - Roanoke Va 3.7million - unverified instant delivery",
-      "price_usd": 65.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/ghost-driver-272-million-7-limited-cars-corsa-legends-24197108",
-      "seller": "Abdurrehman riaz",
-      "rating": "4.9(1.25K)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "Blade Ball | Blox Fruits | RIVALS | VERY FAT ACCOUNT TOTAL 7000 | Robux spent (Not in balance) REQUIRED RECEIPT DESCRIPTION |",
-      "price_usd": 24.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/blade-ball-or-blox-fruits-or-rivals-or-very-fat-account-24197100",
+      "title": "| 150 Lv / ALL GAMEPASSES / 31b coins / 68k gems",
+      "price_usd": 18.0,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/or-150-lv-all-gamepasses-31b-coins-68k-gems-24224366",
       "seller": "Gamefinity",
-      "rating": "4.9(298)",
+      "rating": "4.9(300)",
       "delivery": "Auto",
       "sold": "",
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Roblox",
       "source": "ZeusX",
-      "title": "Ghost Driver - Level 44 + $18,487,832 + 3 Limited S-Tier Cars (NEW Sturm 920 and NEW Saleen S7 + 1 More) - ✅ Full Access",
-      "price_usd": 35.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/ghost-driver-level-44-dollar18487832-3-limited-s-tier-cars-24197073",
-      "seller": "Abdurrehman riaz",
-      "rating": "4.9(1.25K)",
+      "title": "🌸🌸OG RONIN + TSH(🌲) + TAICHOU + HIDARI + KISUKI🌸🌸NORMAL INVENTORY🌸🌸AUTO OUTPUT, Accounts",
+      "price_usd": 30.29,
+      "url": "https://zeusx.com/game/roblo1/23/accounts/og-ronin-tsh-taichou-hidari-kisukinormal-inventoryauto-24224364",
+      "seller": "SellGame",
+      "rating": "4.9(284)",
       "delivery": "Auto",
       "sold": "",
       "categories": [
-        "Items / Currency"
+        "Items / Currency",
+        "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "Ghost Driver - Level 43 + $16,014,579 + 3 Limited S-Tier Cars (NEW Strum 920 and NEW Saleen S7 + 1 More) - ✅ Full Access",
-      "price_usd": 35.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/ghost-driver-level-43-dollar16014579-3-limited-s-tier-cars-24197059",
-      "seller": "Abdurrehman riaz",
-      "rating": "4.9(1.25K)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "| Roblox Account | Region: USA | With Mail | With Voice | With Chat | 24/7 |",
-      "price_usd": 13.0,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/or-roblox-account-or-region-usa-or-with-mail-or-with-voice-24197040",
-      "seller": "Gamefinity",
-      "rating": "4.9(298)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "General"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "Blox Fruits Account | Sanguine Art | Race V4 | T10 | Angel Race | CDK (Dual Swords) | Random Fruit",
-      "price_usd": 8.75,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/blox-fruits-account-or-sanguine-art-or-race-v4-or-t10-or-24197036",
-      "seller": "Carrot shop",
-      "rating": "5.0(442)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Roblox",
-      "source": "ZeusX",
-      "title": "10 Million Cash | 30+ Levels - Ghost Driver instant delivery",
-      "price_usd": 12.99,
-      "url": "https://zeusx.com/game/roblo1/23/accounts/10-million-cash-or-30-levels-ghost-driver-instant-delivery-24197022",
-      "seller": "Abdurrehman riaz",
-      "rating": "4.9(1.25K)",
-      "delivery": "Auto",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -894,7 +889,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -909,7 +904,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -924,7 +919,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -939,7 +934,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -954,7 +949,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -969,7 +964,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -984,7 +979,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -999,7 +994,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1014,7 +1009,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1029,7 +1024,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1044,7 +1039,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1059,7 +1054,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1074,7 +1069,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1089,7 +1084,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1104,7 +1099,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1119,7 +1114,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1134,7 +1129,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1149,7 +1144,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1164,7 +1159,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1179,7 +1174,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1194,7 +1189,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1209,7 +1204,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1224,7 +1219,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1239,14 +1234,14 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "[STACKED] Skins: 204 | Eren Jaeger, Khaby Lame, Spiderman (Miles Morales), Spiderman 2099, Fishstick, Doom Slayer, [PC+PS4/5+XBOX+SWITCH] #14422",
+      "title": "[EMAIL CHANGEABLE] [STACKED] Skins: 111 | Spidergwen (Stacy), Eren Jaeger, Omega Knight, Darth Vader, Erisa, [PC+PS4/5+XBOX+SWITCH] #14151",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297693394a!stacked-skins-204--eren-jaeger-khaby-lame-spiderma/",
+      "url": "https://www.playerauctions.com/fortnite-account/297719475a!email-changeable-stacked-skins-111--spidergwen-sta/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -1254,37 +1249,39 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "[STACKED] Skins: 219 | Throwback Axe, Contract Giller, Sing Along, Galaxia, Tony Stark, Lara Croft, Crystal, Son Goku, [PC+PS4/5+XBOX+SWITCH] #14421",
+      "title": "[EMAIL CHANGEABLE] Skins: 125 | Hot Marat, Rogue Spider Knight, OG STW, Take The Elf, Buckets, Point It Out, Rage, Peely [PC+PS4/5+XBOX+SWITCH] #14167",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297693378a!stacked-skins-219--throwback-axe-contract-giller-s/",
+      "url": "https://www.playerauctions.com/fortnite-account/297719476a!email-changeable-skins-125--hot-marat-rogue-spider/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
       "sold": "",
       "categories": [
-        "Items / Currency"
+        "Items / Currency",
+        "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "[STACKED] Skins: 279 | Laugh It Up, Spidergwen (Aurelian), Neo's Bullet Time, Lara Croft, Neymar Jr, Backlash, Star Wand [PC+PS4/5+XBOX+SWITCH] #14420",
+      "title": "[EMAIL CHANGEABLE] [STACKED] Skins: 148 | TNTina (Fully Golden), Throwback Axe, Take The Elf,  Midas (Fully Golden), [PC+PS4/5+XBOX+SWITCH] #14173",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297693371a!stacked-skins-279--laugh-it-up-spidergwen-aurelian/",
+      "url": "https://www.playerauctions.com/fortnite-account/297719477a!email-changeable-stacked-skins-148--tntina-fully-g/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
       "sold": "",
       "categories": [
-        "Items / Currency"
+        "Items / Currency",
+        "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1299,7 +1296,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1314,7 +1311,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1329,7 +1326,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1345,14 +1342,59 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "[EMAIL CHANGEABLE] Skins: 285 | Throwback Axe, Take The Elf, Midas (Fully Golden), Trinity's Kick, Welcome!, [PC+PS4/5+XBOX+SWITCH] #14419",
+      "title": "[EMAIL CHANGEABLE] [STACKED] Skins: 127 | Laugh It Up, Throwback Axe, Galaxia, Tony Stark, Loki Laufeyson, Lara Croft, [PC+PS4/5+XBOX+SWITCH] #14174",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297693272a!email-changeable-skins-285--throwback-axe-take-the/",
+      "url": "https://www.playerauctions.com/fortnite-account/297719478a!email-changeable-stacked-skins-127--laugh-it-up-th/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "PlayerAuctions",
+      "title": "[EMAIL CHANGEABLE] [STACKED] Skins: 111 | Backlash, Star Wand, Ice Breaker, Reaper Axe, Surf Witch, Vegeta, Aura, [PC+PS4/5+XBOX+SWITCH] #14175",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/fortnite-account/297719479a!email-changeable-stacked-skins-111--backlash-star-/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "PlayerAuctions",
+      "title": "[EMAIL CHANGEABLE] [STACKED] Skins: 128 | Eren Jaeger, Erisa, Khaby Lame, Meow Skulls, Doom Slayer, Geralt Of Rivia, [PC+PS4/5+XBOX+SWITCH] #14176",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/fortnite-account/297719480a!email-changeable-stacked-skins-128--eren-jaeger-er/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "PlayerAuctions",
+      "title": "[EMAIL CHANGEABLE] [STACKED] Skins: 101 | Double Helix, Laugh It Up, Throwback Axe, Midas (Fully Golden), The Silencer, [PC+PS4/5+XBOX+SWITCH] #14183",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/fortnite-account/297719481a!email-changeable-stacked-skins-101--double-helix-l/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -1361,14 +1403,14 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "[EMAIL CHANGEABLE] [OG STW] [STACKED] Skins: 210 | Rogue Spider Knight, Spidergwen (Stacy), Lara Croft, Eren Jaeger [PC+PS4/5+XBOX+SWITCH] #14398",
+      "title": "[PSN/PC/XBOX/NIN]+163 SKINS+LEVIATHAN AXE+OG STW FOUNDERS+THOR",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297693257a!email-changeable-og-stw-stacked-skins-210--rogue-s/",
+      "url": "https://www.playerauctions.com/fortnite-account/297752075a!psnpcxboxnin163-skinsleviathan-axeog-stw-founderst/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -1377,29 +1419,14 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "[EMAIL CHANGEABLE] [STACKED] Skins: 346 | Nathan Drake, Son Gohan, The Axe Of Champions 2.0, Psycho Bandit, Chun Li, [PC+PS4/5+XBOX+SWITCH] #14379",
+      "title": "[PSN/PC/XBOX/NIN]+112 SKINS+IKONIK+THE REAPER+OG STW FOUNDERS",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297693235a!email-changeable-stacked-skins-346--nathan-drake-s/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "PlayerAuctions",
-      "title": "[EMAIL CHANGEABLE] [STACKED] Skins: 274 | Throwback Axe, Neo Versa, Midas (Fully Golden), Contract Giller, Hangtime, [PC+PS4/5+XBOX+SWITCH] #14385",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297693124a!email-changeable-stacked-skins-274--throwback-axe-/",
+      "url": "https://www.playerauctions.com/fortnite-account/297752072a!psnpcxboxnin112-skinsikonikthe-reaperog-stw-founde/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -1408,14 +1435,89 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "[PSN/PC/XBOX/NIN]+84 SKINS+FASHION BANSHEE+SHADY DOGGO+SPIDER-MAN MILES MORALES+SPIDER-MAN ZERO+SPIDER-GWEN STACY+501ST TROOPER+212TH BATTALION TROOPE",
+      "title": "[PSN/PC/XBOX/NIN]+125 SKINS+GENERAL GRIEVOUS+LADY OF CRANES+MORGAN MYST",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297684813a!psnpcxboxnin84-skinsfashion-bansheeshady-doggospid/",
+      "url": "https://www.playerauctions.com/fortnite-account/297752066a!psnpcxboxnin125-skinsgeneral-grievouslady-of-crane/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "PlayerAuctions",
+      "title": "[PC/XBOX/NIN]+104 SKINS+HELSIE+HATSUNE MIKU+HOPE",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/fortnite-account/297752062a!pcxboxnin104-skinshelsiehatsune-mikuhope/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "PlayerAuctions",
+      "title": "*Reaper* 21Skins|Mako,Omega,Take The L,Highland Warrior,Teknique,Battlehawk,Carbide,Raven,Orange Justice,Battle Bus| [PC/XBOX/PSN]",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/fortnite-account/297761224a!reaper-21skinsmakoomegatake-the-lhighland-warriort/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "PlayerAuctions",
+      "title": "*Reaper* 32Skins|Mako,Take The L,Omega,Funk Ops,Beef Boss,Elite Agent,Drift,Alpince Ace,Battle Bus,Battlehawk,Astro Jack| [PC/XBOX/PSN]",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/fortnite-account/297761046a!reaper-32skinsmakotake-the-lomegafunk-opsbeef-boss/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "PlayerAuctions",
+      "title": "MAIL CHG FA (SALE!) PC/PSN/XBOX/NIN (1991+COSMETICS) 201 SKINS | LARA CROFT+PADDLE ROYALE+SING ALONG+THE AXE OF CHAMPIONS 2.0+THROWBACK AXE+TONY STARK",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/fortnite-account/297746870a!mail-chg-fa-sale-pcpsnxboxnin-1991cosmetics-201-sk/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Fortnite",
+      "source": "PlayerAuctions",
+      "title": "MAIL CHG FA (SALE!) PC/PSN/XBOX/NIN (1608+COSMETICS) 189 SKINS | NEO VERSA+MIDAS (FULLY GOLDEN)+TAKE THE ELF+CROWBAR+CONTRACT GILLER+FLEX ON 'EM",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/fortnite-account/297746869a!mail-chg-fa-sale-pcpsnxboxnin-1608cosmetics-189-sk/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -1424,113 +1526,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "PlayerAuctions",
-      "title": "[PSN/PC/XBOX/NIN]+79 SKINS+SUB-ZERO MK3+OUTLAW MIDAS+AHSOKA TANO+MARIPOSA+COMBAT TECH JULES+DUPLI-KATE+JADE+VALENTINA+MEDUSA+APHRODITE+EMAIL CHANGEABL",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297684807a!psnpcxboxnin79-skinssubzero-mk3outlaw-midasahsoka-/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "PlayerAuctions",
-      "title": "[PSN/PC/XBOX/NIN]+55 SKINS+SUB-ZERO MK3+OUTLAW MIDAS+EMPEROR PALPATINE MAX+WOOKIE TEAM LEADER MAX+GENERAL GRIEVOUS MAX+POE DAMERON+APPRENTICE EVIE+AHS",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297684804a!psnpcxboxnin55-skinssubzero-mk3outlaw-midasemperor/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "PlayerAuctions",
-      "title": "[PSN/PC/XBOX/NIN]+79 SKINS+JOLTARA+GET GRIDDY+NARUTO+KAKASHI+CLARK KENT SUPERMAN+ARTEMIS+TSUKI 2.0+DUPLI-KATE+MEOW SKULLS+HOPE+ASTROWORLD CYCLONE+PEPP",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297684801a!psnpcxboxnin79-skinsjoltaraget-griddynarutokakashi/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "PlayerAuctions",
-      "title": "*Sparkle Specialist* 56Skins|Omega(Maxed),Mako,Floss,Drift,Catalyst,Ragnarok,Lynx,Dusk,Ember,Fable,Calamity,Battlehawk,Battle Bus| [PC/XBOX/PSN]",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297645146a!sparkle-specialist-56skinsomegamaxedmakoflossdrift/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "PlayerAuctions",
-      "title": "*Take The L* 107Skins|Naruto,Drift,Ragnarok,Omega,All Might,Son Goku,Kakashi,Cell,Fixer,Calamity,Izuku Midoriya,Lynx,Sultura,Battle Bus| [PC/XBOX/PSN]",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297644832a!take-the-l-107skinsnarutodriftragnarokomegaall-mig/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "PlayerAuctions",
-      "title": "MAIL CHG FA (SALE!) PC/PSN/XBOX/NIN (1011+COSMETICS) 139 SKINS | SPIDERGWEN (STACY)+NEO'S BULLET TIME+SING ALONG+THE SILENCER+THROWBACK AXE",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297689856a!mail-chg-fa-sale-pcpsnxboxnin-1011cosmetics-139-sk/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "PlayerAuctions",
-      "title": "MAIL CHG FA (SALE!) PC/PSN/XBOX/NIN (733+COSMETICS) 81 SKINS | OG STW+BLUE SQUIRE+THE REAPER+ELITE AGENT+TAKE THE L+LAUGH IT UP+TAKE THE ELF+CROWBAR",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297687329a!mail-chg-fa-sale-pcpsnxboxnin-733cosmetics-81-skin/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency",
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1545,7 +1541,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1560,7 +1556,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1575,7 +1571,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1590,7 +1586,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1605,7 +1601,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1621,7 +1617,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1636,7 +1632,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1652,7 +1648,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
@@ -1668,223 +1664,37 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "35 skins | T-60 Power Armor | Glacial Dummy | Yulejacket | Doom | Ringmaster Scarr | Sonic the Hedgehog | Santa Dogg | Wrixel | A5730",
+      "title": "165 skins | John Wick | Renegade Raider | Aerial Assault Trooper | Eren Jaeger | Peter Griffin | Mizuki | Spider-Man | Xander | A5471",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297683956a!35-skins--t60-power-armor--glacial-dummy--yulejack/",
+      "url": "https://www.playerauctions.com/fortnite-account/297750381a!165-skins--john-wick--renegade-raider--aerial-assa/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
       "sold": "",
       "categories": [
-        "Items / Currency",
-        "OG / Veteran Account"
+        "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Fortnite",
       "source": "PlayerAuctions",
-      "title": "38 skins | Mandalorian | Cloud Striker | Trilogy | Point Patroller | Joey | Kymera | Menace | Predator | Glacial Dummy | Felina | Lexa | A5729",
+      "title": "220 skins | Kylo Ren | Mizuki | Ronin | Renzo the Destroyer | Zeus | Hades | Kymera | Haylee Skye | Ned Flanders | Kingston | Ziggy | A5469",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/fortnite-account/297683950a!38-skins--mandalorian--cloud-striker--trilogy--poi/",
+      "url": "https://www.playerauctions.com/fortnite-account/297750374a!220-skins--kylo-ren--mizuki--ronin--renzo-the-dest/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
       "sold": "",
       "categories": [
-        "Items / Currency",
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "Ikonik Glow, S9 and higher battle pass, 400 vbucks account.",
-      "price_usd": 100.0,
-      "url": "https://www.ebay.com/itm/189063051227",
-      "seller": "brahow_9370% positive (2)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "85 SKINS | IKONIK ACCOUNT FOREVER [PC/XBOX]/Raceblox",
-      "price_usd": 159.99,
-      "url": "https://www.ebay.com/itm/900003004444",
-      "seller": "tixzkstudios100% positive (2)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "🎁 Random OG Pack | 50-100 Skins Guaranteed | Instant Delivery 🎁",
-      "price_usd": 39.99,
-      "url": "https://www.ebay.com/itm/398451572791",
-      "seller": "fn.eliteshop100% positive (20)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency",
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "🎁 Random  OG Pack | 100-300 Skins Guaranteed | Instant Delivery 🎁",
-      "price_usd": 59.99,
-      "url": "https://www.ebay.com/itm/920010658930",
-      "seller": "fn.eliteshop100% positive (20)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency",
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "It's An Xbox Account Got Progreeshen On It But I'm Switch To PC",
-      "price_usd": 25.0,
-      "url": "https://www.ebay.com/itm/198655904135",
-      "seller": "da_8167890% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "EPIC GAMES Complete account video in the description FULL ACCESS",
-      "price_usd": 290.0,
-      "url": "https://www.ebay.com/itm/307195392731",
-      "seller": "ivo_beys0% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "PlayStation Account OG Name",
-      "price_usd": 350.0,
-      "url": "https://www.ebay.com/itm/407161850332",
-      "seller": "skyisb0100% positive (24)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "ris and Summit Striker account with Psycho bundle Season 6 pass and others",
-      "price_usd": 150.0,
-      "url": "https://www.ebay.com/itm/820148058369",
-      "seller": "anhari_220% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "General"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "Stacked FN ACC 297 SKINS+ EXCLUSIVES",
-      "price_usd": 160.0,
-      "url": "https://www.ebay.com/itm/168770416075",
-      "seller": "she7935620% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "Black Knight OG Fortnite, Season 1 and 2 Player",
-      "price_usd": 500.0,
-      "url": "https://www.ebay.com/itm/147628331083",
-      "seller": "gilb-3492100% positive (11)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency",
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "fortnite og galaxy (look in description pls)",
-      "price_usd": 20.0,
-      "url": "https://www.ebay.com/itm/820127173256",
-      "seller": "czechi7100% positive (4)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency",
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Fortnite",
-      "source": "eBay",
-      "title": "Xbox OG Gamertag Trailer (Read Below)",
-      "price_usd": 110.0,
-      "url": "https://www.ebay.com/itm/128122805114",
-      "seller": "xboxtrophy100% positive (10)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -1899,7 +1709,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -1914,7 +1724,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -1929,7 +1739,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -1944,7 +1754,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -1959,7 +1769,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -1974,7 +1784,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -1989,7 +1799,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2004,7 +1814,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2019,7 +1829,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2034,7 +1844,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2049,7 +1859,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2064,7 +1874,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2079,7 +1889,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2094,7 +1904,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2109,7 +1919,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2124,7 +1934,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2139,7 +1949,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2154,7 +1964,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2169,7 +1979,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2184,7 +1994,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2199,7 +2009,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2214,7 +2024,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2229,7 +2039,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2244,22 +2054,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Minecraft",
-      "source": "PlayerAuctions",
-      "title": "Minecraft: PREMIUM JAVA/BEDROCK EDITION Hypixe/Available | Licensed Minecraft |Data Change|Full Access| Instant Delivery **uOHyPd1**",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/minecraft-account/297502156a!minecraft-premium-javabedrock-edition-hypixeavaila/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2274,7 +2069,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2289,7 +2084,22 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "PlayerAuctions",
+      "title": "Minecraft: PREMIUM JAVA/BEDROCK EDITION Hypixe/Available | Licensed Minecraft |Data Change|Full Access| Instant Delivery **uOHyPd1**",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/minecraft-account/297502159a!minecraft-premium-javabedrock-edition-hypixeavaila/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2304,7 +2114,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2319,22 +2129,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Minecraft",
-      "source": "PlayerAuctions",
-      "title": "Minecraft: PREMIUM JAVA & BEDROCK EDITION  Hypixe/Available | Licenced Minecraft |Data Change|Full Access| Instant Delivery",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/minecraft-account/297534634a!minecraft-premium-java--bedrock-edition--hypixeava/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2349,7 +2144,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2364,7 +2159,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2379,7 +2174,22 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "PlayerAuctions",
+      "title": "Minecraft: PREMIUM JAVA & BEDROCK EDITION | Home ,Menace | Hypixe/Available | Licenced Minecraft |Data Change|Full Access| Instant Delivery",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/minecraft-account/296642665a!minecraft-premium-java--bedrock-edition--home-mena/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2394,7 +2204,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2409,7 +2219,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2424,7 +2234,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2440,22 +2250,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Minecraft",
-      "source": "PlayerAuctions",
-      "title": "Minecraft Java Edition (Microsoft Account) full access | NO BAN Hypixe#51968#52363",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/minecraft-account/297533704a!minecraft-java-edition-microsoft-account-full-acce/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2470,7 +2265,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2485,14 +2280,14 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
       "source": "PlayerAuctions",
-      "title": "Minecraft: PREMIUM JAVA/BEDROCK EDITION Hypixe/Available | Licensed Minecraft |Data Change|Full Access| Instant Delivery **uOHyPd1**",
+      "title": "Minecraft Java Edition (Microsoft Account) full access | NO BAN Hypixe#51968#52360",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/minecraft-account/297502159a!minecraft-premium-javabedrock-edition-hypixeavaila/",
+      "url": "https://www.playerauctions.com/minecraft-account/297533581a!minecraft-java-edition-microsoft-account-full-acce/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -2500,7 +2295,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2515,7 +2310,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2530,7 +2325,22 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "PlayerAuctions",
+      "title": "Minecraft: PREMIUM JAVA/BEDROCK EDITION Hypixe/Available | Licensed Minecraft |Data Change|Full Access| Instant Delivery **uOHyPd1**",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/minecraft-account/297502162a!minecraft-premium-javabedrock-edition-hypixeavaila/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2545,7 +2355,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2560,7 +2370,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2575,7 +2385,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2590,7 +2400,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2605,7 +2415,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2621,14 +2431,14 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
       "source": "PlayerAuctions",
-      "title": "MINECRAFT JAVA | 2.45B NETWORTH | SB LVL 190 | MVP+ | 7 CAPES | 33 SKILL AVG | 2024 | AFTER SALES PROTECTION",
+      "title": "MINECRAFT JAVA | 390M NETWORTH | SB LVL 64 | VIP | 2 CAPES | 22 SKILL AVG | 2022 | AFTER SALES PROTECTION",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/minecraft-account/297669353a!minecraft-java--245b-networth--sb-lvl-190--mvp--7-/",
+      "url": "https://www.playerauctions.com/minecraft-account/297761540a!minecraft-java--390m-networth--sb-lvl-64--vip--2-c/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -2636,7 +2446,22 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Minecraft",
+      "source": "PlayerAuctions",
+      "title": "MVP+//HYPIXEL SKYBLOCK //80 LVL SKYBLOCK/5B NW /3B in purse/Skill avg 26 /HOTM10 /NO BAN ON HYPIXEL AUTO SEND/SOLO",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/minecraft-account/297739746a!mvphypixel-skyblock-80-lvl-skyblock5b-nw-3b-in-pur/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2652,7 +2477,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2668,7 +2493,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2683,22 +2508,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Minecraft",
-      "source": "PlayerAuctions",
-      "title": "| JAVA + BEDROCK | RANK VIP+ | 2 CAPES | NAMES OF CAPES Pan, Migrator | LEVEL ON HYPIXEL 47 | FULL ACCESS | HNm77 |",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/minecraft-account/297574860a!-java--bedrock--rank-vip--2-capes--names-of-capes-/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2713,7 +2523,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2728,7 +2538,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2743,7 +2553,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2758,7 +2568,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2773,7 +2583,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2788,7 +2598,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2803,7 +2613,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2818,7 +2628,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2833,7 +2643,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Minecraft",
@@ -2848,7 +2658,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2863,7 +2673,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2878,7 +2688,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2893,7 +2703,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2908,7 +2718,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2923,7 +2733,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2938,7 +2748,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2953,7 +2763,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2968,7 +2778,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2983,7 +2793,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -2998,7 +2808,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3013,7 +2823,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3028,7 +2838,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3043,7 +2853,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3058,7 +2868,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3073,7 +2883,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3088,7 +2898,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3103,7 +2913,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3118,7 +2928,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3133,7 +2943,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3148,7 +2958,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3163,7 +2973,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3178,7 +2988,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3193,7 +3003,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3208,14 +3018,14 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "PlayerAuctions",
       "title": "VERY RARE 3 CHARACTER STEAM USERNAME [XXX] | 9 MAY 2010 CREATED | 16 YEARS OLD SERVICE | NO BAN | INSTANT DELIVERY",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/steam-account/297361560a!very-rare-3-character-steam-username-xxx--9-may-20/",
+      "url": "https://www.playerauctions.com/steam-account/297714498a!very-rare-3-character-steam-username-xxx--9-may-20/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -3223,14 +3033,14 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "PlayerAuctions",
-      "title": "[STEAM] 23 SEPTEMBER 2003 CREATED | 23 YEARS OLD SERVICE | CS2 5 & 10 YEAR VETERAN COIN (NO PRIME) | 8 GAMES | 6 DIGIT ID | NO BAN | INSTANT DELIVERY",
+      "title": "[STEAM] 20 SEPTEMBER 2003 CREATED | 23 YEARS OLD SERVICE | CS2 5 & 10 YEAR VETERAN COIN (NO PRIME) | 8 GAMES | 6 DIGIT ID | NO BAN | INSTANT DELIVERY",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/steam-account/297361511a!steam-23-september-2003-created--23-years-old-serv/",
+      "url": "https://www.playerauctions.com/steam-account/297714479a!steam-20-september-2003-created--23-years-old-serv/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -3239,22 +3049,23 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "PlayerAuctions",
-      "title": "VERY RARE 5 LETTER STEAM USERNAME [XXXXX] | 14 NOVEMBER 2006 CREATED | 19 YEARS OLD SERVICE | ORIGINAL EMAIL | NO BAN | INSTANT DELIVERY",
+      "title": "[STEAM] 18 SEPTEMBER 2003 CREATED | 23 YEARS OLD SERVICE | CS2 5 & 10 YEAR VETERAN COIN (NO PRIME) | 8 GAMES | 6 DIGIT ID | NO BAN | INSTANT DELIVERY",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/steam-account/297361468a!very-rare-5-letter-steam-username-xxxxx--14-novemb/",
+      "url": "https://www.playerauctions.com/steam-account/297714480a!steam-18-september-2003-created--23-years-old-serv/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
       "sold": "",
       "categories": [
+        "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3269,7 +3080,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3284,7 +3095,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3299,7 +3110,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3314,7 +3125,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3329,7 +3140,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3344,7 +3155,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3359,7 +3170,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3374,7 +3185,23 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "PlayerAuctions",
+      "title": "[STEAM] 27 SEPTEMBER 2003 CREATED | 23 YEARS OLD SERVICE | CS2 5 & 10 YEAR VETERAN COIN (NO PRIME) | 8 GAMES | 6 DIGIT ID | NO BAN | INSTANT DELIVERY",
+      "price_usd": 0.0,
+      "url": "https://www.playerauctions.com/steam-account/297714481a!steam-27-september-2003-created--23-years-old-serv/",
+      "seller": "",
+      "rating": "",
+      "delivery": "Varies",
+      "sold": "",
+      "categories": [
+        "Items / Currency",
+        "OG / Veteran Account"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3389,7 +3216,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3404,7 +3231,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3419,22 +3246,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "PlayerAuctions",
-      "title": "VERY RARE 4 LETTER STEAM USERNAME [XXXX] | 5 AUGUST 2007 CREATED | 19 YEARS OLD SERVICE | NO BAN | INSTANT DELIVERY",
-      "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/steam-account/297133807a!very-rare-4-letter-steam-username-xxxx--5-august-2/",
-      "seller": "",
-      "rating": "",
-      "delivery": "Varies",
-      "sold": "",
-      "categories": [
-        "OG / Veteran Account"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3449,7 +3261,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3465,7 +3277,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3481,7 +3293,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3497,7 +3309,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3512,7 +3324,7 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3528,7 +3340,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3543,7 +3355,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3558,7 +3370,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3573,7 +3385,7 @@
       "categories": [
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3589,7 +3401,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3604,7 +3416,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3619,7 +3431,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3634,7 +3446,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3650,14 +3462,14 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "PlayerAuctions",
-      "title": "14 Years Old Account-(Games:Day Z + 7 other Games)-Full Email Access",
+      "title": "*80% OFF* [37 GAMES] $700 Value Steam - RED DEAD2, RESIDENT EVIL 1,2,3 & 4, BLASPHEMOUS 1&2, DARK SOULS 2 SOTFS, THE WITCHER TRILOGY, AGE OF MYTH",
       "price_usd": 0.0,
-      "url": "https://www.playerauctions.com/steam-account/297498885a!14-years-old-accountgamesday-z--7-other-gamesfull-/",
+      "url": "https://www.playerauctions.com/steam-account/297724806a!80-off-37-games-700-value-steam--red-dead2-residen/",
       "seller": "",
       "rating": "",
       "delivery": "Varies",
@@ -3666,7 +3478,7 @@
         "Items / Currency",
         "OG / Veteran Account"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3681,7 +3493,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3696,22 +3508,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "Cs2 Account 15k Premier Account Steam",
-      "price_usd": 50.0,
-      "url": "https://www.ebay.com/itm/188646060764",
-      "seller": "kzcrq72100% positive (18)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3726,67 +3523,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "War thunder account with multiple premiums and japan air tech tree",
-      "price_usd": 180.0,
-      "url": "https://www.ebay.com/itm/398241100762",
-      "seller": "kokoyank_00% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "General"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "steam account for sell (rust over 300 plus skins 8k hours played)",
-      "price_usd": 500.0,
-      "url": "https://www.ebay.com/itm/396720386062",
-      "seller": "cosch600% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "steam, legacy dead by daylight account, cenobite/hellraiser dlc, michael myers",
-      "price_usd": 350.0,
-      "url": "https://www.ebay.com/itm/398152718005",
-      "seller": "kar-8429650% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "[PC-FULL ACCESS] 🔥 Steam Account for Sale – 60+ Games | 1,385+ Hours | High Val",
-      "price_usd": 550.0,
-      "url": "https://www.ebay.com/itm/406682984879",
-      "seller": "savannah_8290% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3801,52 +3538,7 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "High Valued Steam Account Approximately 1300 Games",
-      "price_usd": 2999.99,
-      "url": "https://www.ebay.com/itm/168087911087",
-      "seller": "paboallen100% positive (1.2K)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "CHEAPEST Warframe MR22 Account | 159 Platinum | 10M Credits | 46 Warframe",
-      "price_usd": 219.0,
-      "url": "https://www.ebay.com/itm/128071160983",
-      "seller": "hypixel_seller100% positive (2)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "General"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "Brand New Epic Games Account | 200+ Games | $4,507.59 in value",
-      "price_usd": 149.0,
-      "url": "https://www.ebay.com/itm/186707176520",
-      "seller": "abm_530% positive (1)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3861,58 +3553,13 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "accounts for sale",
-      "price_usd": 120.0,
-      "url": "https://www.ebay.com/itm/286621789523",
-      "seller": "bre-1066060% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "General"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "THE FINALS Game Account – High Level | has ruby 3,6,7, 8 all battlepasses",
-      "price_usd": 900.0,
-      "url": "https://www.ebay.com/itm/389388706958",
-      "seller": "xxxaird-590% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "Marvel Snap Account 22k collection level",
-      "price_usd": 100.0,
-      "url": "https://www.ebay.com/itm/168689115497",
-      "seller": "jefrodr_43100% positive (35)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "Items / Currency"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "eBay",
       "title": "AION 2 EU Account Assassin Level 45 ,1625 GS, 80.43K Power, 4M Kinah",
-      "price_usd": 250.0,
+      "price_usd": 230.0,
       "url": "https://www.ebay.com/itm/137827695311",
       "seller": "tdlight100% positive (1)",
       "rating": "",
@@ -3921,37 +3568,22 @@
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "eBay",
-      "title": "Steam Account",
-      "price_usd": 150.0,
-      "url": "https://www.ebay.com/itm/389181733266",
-      "seller": "iv-5605910% positive (0)",
-      "rating": "",
-      "delivery": "",
-      "sold": "",
-      "categories": [
-        "General"
-      ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
-    },
-    {
-      "platform": "Steam",
-      "source": "eBay",
-      "title": "steam account with games",
-      "price_usd": 250.0,
-      "url": "https://www.ebay.com/itm/336373434049",
-      "seller": "mura73490% positive (0)",
+      "title": "High Valued Steam Account Approximately 1300 Games",
+      "price_usd": 2999.99,
+      "url": "https://www.ebay.com/itm/168087911087",
+      "seller": "paboallen100% positive (1.2K)",
       "rating": "",
       "delivery": "",
       "sold": "",
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -3966,37 +3598,157 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "eBay",
-      "title": "Black Desert Online SA Account",
-      "price_usd": 300.0,
-      "url": "https://www.ebay.com/itm/287626056540",
-      "seller": "marc63090% positive (0)",
+      "title": "Brand New Epic Games Account | 200+ Games | $4,507.59 in value",
+      "price_usd": 149.0,
+      "url": "https://www.ebay.com/itm/186707176520",
+      "seller": "abm_530% positive (1)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "CHEAPEST Warframe MR22 Account | 159 Platinum | 10M Credits | 46 Warframe",
+      "price_usd": 219.0,
+      "url": "https://www.ebay.com/itm/128071160983",
+      "seller": "hypixel_seller100% positive (2)",
       "rating": "",
       "delivery": "",
       "sold": "",
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "eBay",
-      "title": "steam account",
-      "price_usd": 47.0,
-      "url": "https://www.ebay.com/itm/197666281747",
-      "seller": "cucun180% positive (0)",
+      "title": "accounts for sale",
+      "price_usd": 120.0,
+      "url": "https://www.ebay.com/itm/286621789523",
+      "seller": "bre-1066060% positive (0)",
       "rating": "",
       "delivery": "",
       "sold": "",
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "Steam Account",
+      "price_usd": 150.0,
+      "url": "https://www.ebay.com/itm/389181733266",
+      "seller": "iv-5605910% positive (0)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "War thunder account with multiple premiums and japan air tech tree",
+      "price_usd": 180.0,
+      "url": "https://www.ebay.com/itm/398241100762",
+      "seller": "kokoyank_00% positive (0)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "steam account for sell (rust over 300 plus skins 8k hours played)",
+      "price_usd": 500.0,
+      "url": "https://www.ebay.com/itm/396720386062",
+      "seller": "cosch600% positive (0)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "Cs2 Account 15k Premier Account Steam",
+      "price_usd": 50.0,
+      "url": "https://www.ebay.com/itm/188646060764",
+      "seller": "kzcrq72100% positive (18)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "steam, legacy dead by daylight account, cenobite/hellraiser dlc, michael myers",
+      "price_usd": 350.0,
+      "url": "https://www.ebay.com/itm/398152718005",
+      "seller": "kar-8429650% positive (0)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "Colin McRae: DiRT 2 STEAM ACCOUNT",
+      "price_usd": 8.0,
+      "url": "https://www.ebay.com/itm/356423835351",
+      "seller": "gameaccountliebe0% positive (6)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "THE FINALS Game Account – High Level | has ruby 3,6,7, 8 all battlepasses",
+      "price_usd": 900.0,
+      "url": "https://www.ebay.com/itm/389388706958",
+      "seller": "xxxaird-590% positive (0)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
@@ -4011,52 +3763,97 @@
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "eBay",
-      "title": "Arc Raiders Steam Account PC Global Fast Delivery",
-      "price_usd": 23.0,
-      "url": "https://www.ebay.com/itm/317951618935",
-      "seller": "alkel-7387.5% positive (6)",
+      "title": "steam account",
+      "price_usd": 47.0,
+      "url": "https://www.ebay.com/itm/197666281747",
+      "seller": "cucun180% positive (0)",
       "rating": "",
       "delivery": "",
       "sold": "",
       "categories": [
         "General"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "eBay",
-      "title": "steam account with games",
-      "price_usd": 18.0,
-      "url": "https://www.ebay.com/itm/407084339869",
-      "seller": "zskarli_00% positive (0)",
+      "title": "Black Desert Online SA Account",
+      "price_usd": 300.0,
+      "url": "https://www.ebay.com/itm/287626056540",
+      "seller": "marc63090% positive (0)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "General"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "Steam account with games like Nba 2k26, BoneLab,  CyberPunk,  Madden NFL 26, etc",
+      "price_usd": 45.0,
+      "url": "https://www.ebay.com/itm/177439922049",
+      "seller": "as-2251100% positive (1)",
       "rating": "",
       "delivery": "",
       "sold": "",
       "categories": [
         "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
     },
     {
       "platform": "Steam",
       "source": "eBay",
-      "title": "Red Dead Redemption 2 /PC STEAM ACCOUNT/Global",
-      "price_usd": 22.0,
-      "url": "https://www.ebay.com/itm/157781780621",
-      "seller": "ka5350660% positive (0)",
+      "title": "Steam Account $500 Spent On Multiple Games and Passes Included See Photos",
+      "price_usd": 150.0,
+      "url": "https://www.ebay.com/itm/226861728644",
+      "seller": "559._810% positive (0)",
       "rating": "",
       "delivery": "",
       "sold": "",
       "categories": [
-        "General"
+        "Items / Currency"
       ],
-      "scraped_at": "2026-10-10T14:14:49.989670"
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "Marvel Rivals Steam Account | Celestial Rank Season 8.5 | Instant Delivery",
+      "price_usd": 25.0,
+      "url": "https://www.ebay.com/itm/398082194605",
+      "seller": "marvelmarket100% positive (14)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
+    },
+    {
+      "platform": "Steam",
+      "source": "eBay",
+      "title": "[PC-FULL ACCESS] 🔥 Steam Account for Sale – 60+ Games | 1,385+ Hours | High Val",
+      "price_usd": 550.0,
+      "url": "https://www.ebay.com/itm/406682984879",
+      "seller": "savannah_8290% positive (0)",
+      "rating": "",
+      "delivery": "",
+      "sold": "",
+      "categories": [
+        "Items / Currency"
+      ],
+      "scraped_at": "2026-10-11T14:38:58.018639"
     }
   ],
   "search_urls": {
