@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T18:06:59.665107",
+  "generated_at": "2026-11-10T16:06:45.522108",
   "data_points": 91,
   "trends": [
     {
@@ -5235,7 +5235,7 @@
       "Eldorado.gg": {
         "status": "ok",
         "scraped_count": 48,
-        "expected_count": 36,
+        "expected_count": 40,
         "is_suspect": false,
         "note": null
       },
@@ -5262,7 +5262,7 @@
       },
       "eBay": {
         "status": "ok",
-        "scraped_count": 3,
+        "scraped_count": 0,
         "expected_count": 2,
         "is_suspect": false,
         "note": null
@@ -5319,11 +5319,11 @@
         "note": null
       },
       "eBay": {
-        "status": "degraded",
-        "scraped_count": 17,
-        "expected_count": 37,
+        "status": "failed",
+        "scraped_count": 0,
+        "expected_count": 40,
         "is_suspect": true,
-        "note": "Got 17, expected ~37 (>50% drop)"
+        "note": "Got 0 listings, expected ~40"
       }
     },
     "Minecraft": {
@@ -5358,9 +5358,9 @@
       "eBay": {
         "status": "failed",
         "scraped_count": 0,
-        "expected_count": 5,
+        "expected_count": 6,
         "is_suspect": true,
-        "note": "Got 0 listings, expected ~5"
+        "note": "Got 0 listings, expected ~6"
       }
     },
     "Steam": {
@@ -5393,11 +5393,11 @@
         "note": null
       },
       "eBay": {
-        "status": "ok",
-        "scraped_count": 31,
+        "status": "failed",
+        "scraped_count": 0,
         "expected_count": 32,
-        "is_suspect": false,
-        "note": null
+        "is_suspect": true,
+        "note": "Got 0 listings, expected ~32"
       }
     }
   }
