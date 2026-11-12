@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T16:06:45.522108",
+  "generated_at": "2026-11-12T16:37:45.192323",
   "data_points": 91,
   "trends": [
     {
@@ -5235,7 +5235,7 @@
       "Eldorado.gg": {
         "status": "ok",
         "scraped_count": 48,
-        "expected_count": 40,
+        "expected_count": 48,
         "is_suspect": false,
         "note": null
       },
@@ -5319,11 +5319,11 @@
         "note": null
       },
       "eBay": {
-        "status": "failed",
+        "status": "ok",
         "scraped_count": 0,
-        "expected_count": 40,
-        "is_suspect": true,
-        "note": "Got 0 listings, expected ~40"
+        "expected_count": 0,
+        "is_suspect": false,
+        "note": null
       }
     },
     "Minecraft": {
